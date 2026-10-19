@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 NetrunnerDB 每周牌组摘要生成器
@@ -172,13 +172,16 @@ TYPE_LABEL = {
     "hardware": ("硬件", "Hardware"),
     "program": ("程序", "Program"),
     "resource": ("资源", "Resource"),
-    "agenda": ("议程", "Agenda"),
+    "agenda": ("议案", "Agenda"),
     "asset": ("资产", "Asset"),
     "upgrade": ("升级", "Upgrade"),
-    "operation": ("行动", "Operation"),
-    "ice": ("防御", "ICE"),
+    "operation": ("事务", "Operation"),
+    "ice": ("防火墙", "ICE"),
     "other": ("其他", "Other"),
 }
+
+# 双方阵营的中文叫法（潜袭者=Runner，公司=Corp）
+SIDE_LABEL = {"runner": "潜袭者", "corp": "公司"}
 
 
 def faction_display(code: str, side: str = ""):
@@ -826,7 +829,7 @@ def decklist_md(deck: dict) -> str:
         meta.append(deck["event"])
     meta.append(f'{deck.get("n_cards", 0)} 张')
     if deck.get("agenda_points"):
-        meta.append(f'{deck["agenda_points"]} 议程点')
+        meta.append(f'{deck["agenda_points"]} 议案点')
     meta.append(f'♥{deck["votes"]} ★{deck["favorites"]} 💬{deck["comments"]}')
     if deck.get("date"):
         meta.append(deck["date"][:10])
@@ -1135,7 +1138,7 @@ def render_deck(deck: dict, badge: str, imgs: set[str], rank: int | None = None)
 
     size_bits = [f'{deck.get("n_cards", 0)} 张']
     if deck.get("agenda_points"):
-        size_bits.append(f'{deck["agenda_points"]} 议程点')
+        size_bits.append(f'{deck["agenda_points"]} 议案点')
 
     ident_en = deck.get("identity_title", "")
     ident_zh = deck.get("identity_zh", "")
@@ -1204,7 +1207,7 @@ def render_week_html(issue: dict, decks_sections: list, stats: dict, imgs: set[s
         sections.append(render_section(str(idx), title, hint, decks, badge, imgs, ranked=idx >= 2))
         jumps.append(f'<a class="jumpitem" href="#s{idx}">{esc(title)} <b>{len(decks)}</b></a>')
 
-    side_bits = f'跑者 {stats["sides"]["runner"]} · 公司 {stats["sides"]["corp"]}'
+    side_bits = f'{SIDE_LABEL["runner"]} {stats["sides"]["runner"]} · {SIDE_LABEL["corp"]} {stats["sides"]["corp"]}'
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -1472,7 +1475,7 @@ def main() -> int:
     (week_dir / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
 
     md = [f"# NetrunnerDB 每周牌组摘要 · {week_id}", "", issue["window_text"], "",
-          f"本周新牌组 {stats['total']} 副 · 跑者 {stats['sides']['runner']} / 公司 {stats['sides']['corp']}", ""]
+          f"本周新牌组 {stats['total']} 副 · {SIDE_LABEL['runner']} {stats['sides']['runner']} / {SIDE_LABEL['corp']} {stats['sides']['corp']}", ""]
     for num, title, hint, decks, _badge in sections:
         if not decks:
             continue
