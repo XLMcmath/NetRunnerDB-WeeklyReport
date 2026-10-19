@@ -1,0 +1,32 @@
+;; title: Smuggle This You Filthy Casual
+;; identity-code: 30010
+;; notes: https://netrunnerdb.com/en/decklist/e8930cf9-0fd9-4fdd-9475-da295d29672d/smuggle-this-you-filthy-casual
+
+Event (14)
+2x Bravado
+3x Clean Getaway
+2x Mutual Favor
+2x Pinhole Threading
+3x Sure Gamble
+2x Transfer of Wealth
+
+Hardware (7)
+3x Boomerang
+1x Docklands Pass
+2x Hermes
+1x WAKE Implant v2A-JRJ
+
+Program (7)
+1x Carmen
+3x Cezve
+1x Curupira
+1x Revolver
+1x Shibboleth
+
+Resource (12)
+3x Daily Casts
+2x Dr. Nuka Vrolyck
+1x Mystic Maemi
+1x Paladin Poemu
+3x The Class Act
+2x The Twinning

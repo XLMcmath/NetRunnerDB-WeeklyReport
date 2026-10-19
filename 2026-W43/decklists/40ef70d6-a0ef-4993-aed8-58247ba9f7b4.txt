@@ -1,36 +1,34 @@
-KhusYUM [11th, 12th at Worlds 2026, Undefeated 7-0]
-
-Identity: Magdalene Keino-Chemutai: Cryptarchitect (35024)
+;; title: KhusYUM [11th, 12th at Worlds 2026, Undefeated 7-0]
+;; identity-code: 35024
+;; notes: https://netrunnerdb.com/en/decklist/40ef70d6-a0ef-4993-aed8-58247ba9f7b4/khusyum-11th-12th-at-worlds-2026-undefeated-7-0-
 
 Event (17)
-3x Burner (34085)
-3x Creative Commission (30020)
-1x Joy Ride (34021)
-3x Khusyuk (26021)
-2x Pinhole Threading (33013)
-3x Ritual (35026)
-2x Spec Work (26022)
+3x Burner
+3x Creative Commission
+1x Joy Ride
+3x Khusyuk
+2x Pinhole Threading
+3x Ritual
+2x Spec Work
 
 Hardware (9)
-3x DZMZ Optimizer (30022)
-3x Madani (35028)
-3x Simulchip (26085)
+3x DZMZ Optimizer
+3x Madani
+3x Simulchip
 
 Program (15)
-1x Botulus (30004)
-3x Coalescence (34089)
-1x Cupellation (34080)
-1x Euler (26087)
-2x Fermenter (30007)
-1x Gauss (26024)
-1x Hush (33071)
-3x Muse (34091)
-1x Propeller (33027)
-1x Revolver (33018)
+1x Botulus
+3x Coalescence
+1x Cupellation
+1x Euler
+2x Fermenter
+1x Gauss
+1x Hush
+3x Muse
+1x Propeller
+1x Revolver
 
 Resource (6)
-2x Daily Casts (26094)
-3x Dr. Nuka Vrolyck (33092)
-1x “Knickknack” O’Brian (35033)
-
-https://netrunnerdb.com/en/decklist/40ef70d6-a0ef-4993-aed8-58247ba9f7b4/khusyum-11th-12th-at-worlds-2026-undefeated-7-0-
+2x Daily Casts
+3x Dr. Nuka Vrolyck
+1x “Knickknack” O’Brian

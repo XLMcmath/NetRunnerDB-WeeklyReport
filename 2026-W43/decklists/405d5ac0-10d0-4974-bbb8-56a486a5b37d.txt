@@ -1,36 +1,34 @@
-How To Win Worlds (170th At Worlds 2026)
-
-Identity: René “Loup” Arcemont: Party Animal (30001)
+;; title: How To Win Worlds (170th At Worlds 2026)
+;; identity-code: 30001
+;; notes: https://netrunnerdb.com/en/decklist/405d5ac0-10d0-4974-bbb8-56a486a5b37d/how-to-win-worlds-170th-at-worlds-2026-
 
 Event (13)
-2x Pinhole Threading (33013)
-1x Privileged Access (34068)
-2x Raindrops Cut Stone (33068)
-3x Steelskin Scarring (33004)
-3x Sure Gamble (30030)
-2x The Price (34002)
+2x Pinhole Threading
+1x Privileged Access
+2x Raindrops Cut Stone
+3x Steelskin Scarring
+3x Sure Gamble
+2x The Price
 
 Hardware (5)
-3x Gachapon (26069)
-2x Keiko (26070)
+3x Gachapon
+2x Keiko
 
 Program (12)
-1x Afterimage (26079)
-1x Audrey v2 (34004)
-3x Fermenter (30007)
-1x Hush (33071)
-1x Lampades (36005)
-1x Mantle (26088)
-2x Penrose (26089)
-2x Rising Tide (35009)
+1x Afterimage
+1x Audrey v2
+3x Fermenter
+1x Hush
+1x Lampades
+1x Mantle
+2x Penrose
+2x Rising Tide
 
 Resource (12)
-2x Daily Casts (26094)
-2x Dr. Nuka Vrolyck (33092)
-1x Fencer Fueno (26007)
-1x Hannah "Wheels" Pilintra (34008)
-2x Paladin Poemu (26073)
-2x The Twinning (33010)
-2x Trickster Taka (26009)
-
-https://netrunnerdb.com/en/decklist/405d5ac0-10d0-4974-bbb8-56a486a5b37d/how-to-win-worlds-170th-at-worlds-2026-
+2x Daily Casts
+2x Dr. Nuka Vrolyck
+1x Fencer Fueno
+1x Hannah "Wheels" Pilintra
+2x Paladin Poemu
+2x The Twinning
+2x Trickster Taka

@@ -1,35 +1,33 @@
-Rattle that lock [6-1][13th@Worlds]
-
-Identity: Sebastião Souza Pessoa: Activist Organizer (34066)
+;; title: Rattle that lock [6-1][13th@Worlds]
+;; identity-code: 34066
+;; notes: https://netrunnerdb.com/en/decklist/c67898af-86a9-4fc5-b0ef-7f0c1c0a80b0/rattle-that-lock-6-1-13th-worlds-
 
 Event (17)
-2x Katorga Breakout (33067)
-3x Privileged Access (34068)
-2x Raindrops Cut Stone (33068)
-3x Steelskin Scarring (33004)
-3x Strike Fund (34001)
-3x Transfer of Wealth (35017)
-1x Tread Lightly (30012)
+2x Katorga Breakout
+3x Privileged Access
+2x Raindrops Cut Stone
+3x Steelskin Scarring
+3x Strike Fund
+3x Transfer of Wealth
+1x Tread Lightly
 
 Hardware (7)
-2x Amanuensis (34069)
-3x Devil Charm (26068)
-2x Solidarity Badge (34003)
+2x Amanuensis
+3x Devil Charm
+2x Solidarity Badge
 
 Program (8)
-2x Audrey v2 (34004)
-1x Botulus (30004)
-3x Gourmand (35007)
-1x Leech (30008)
-1x Rising Tide (35009)
+2x Audrey v2
+1x Botulus
+3x Gourmand
+1x Leech
+1x Rising Tide
 
 Resource (13)
-3x Arruaceiras Crew (34073)
-1x Dr. Nuka Vrolyck (33092)
-1x Eru Ayase-Pessoa (34007)
-3x Friend of a Friend (34074)
-2x Hannah "Wheels" Pilintra (34008)
-2x Manuel Lattes de Moura (34075)
-1x Valentina Ferreira Carvalho (34095)
-
-https://netrunnerdb.com/en/decklist/c67898af-86a9-4fc5-b0ef-7f0c1c0a80b0/rattle-that-lock-6-1-13th-worlds-
+3x Arruaceiras Crew
+1x Dr. Nuka Vrolyck
+1x Eru Ayase-Pessoa
+3x Friend of a Friend
+2x Hannah "Wheels" Pilintra
+2x Manuel Lattes de Moura
+1x Valentina Ferreira Carvalho

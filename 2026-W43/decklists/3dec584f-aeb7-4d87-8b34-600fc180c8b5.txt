@@ -1,0 +1,36 @@
+;; title: Totes Undefeated Leo (2026 Worlds Startup 1st Place) 🥇
+;; identity-code: 35035
+;; notes: https://netrunnerdb.com/en/decklist/3dec584f-aeb7-4d87-8b34-600fc180c8b5/totes-undefeated-leo-2026-worlds-startup-1st-place-
+
+Agenda (8)
+1x Luminal Transubstantiation
+3x Méliès City Luxury Line
+3x Project Ingatan
+1x Send a Message
+
+Asset (10)
+1x Anthill Excavation Contract
+3x Humanoid Resources
+3x Regolith Mining License
+3x Spin Doctor
+
+Upgrade (6)
+1x Anoetic Void
+1x Mahkota Langit Grid
+2x Manegarm Skunkworks
+2x The Red Room
+
+Operation (10)
+2x Caveat Emptor
+3x Hedge Fund
+2x Nanomanagement
+3x Petty Cash
+
+ICE (15)
+2x Ansel 1.0
+1x Ansel 2.0
+3x Brân 1.0
+3x Bumi 1.0
+2x Flyswatter
+1x Scatter Field
+3x Sleipnir

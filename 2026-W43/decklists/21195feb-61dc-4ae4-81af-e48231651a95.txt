@@ -1,30 +1,28 @@
-I Wanted to Use My Knife Alts (3rd @ PH Costume Party)
-
-Identity: MaxX: Maximum Punk Rock (07029)
+;; title: I Wanted to Use My Knife Alts (3rd @ PH Costume Party)
+;; identity-code: 07029
+;; notes: https://netrunnerdb.com/en/decklist/21195feb-61dc-4ae4-81af-e48231651a95/i-wanted-to-use-my-knife-alts-3rd-ph-costume-party-
 
 Event (27)
-3x Always Have a Backup Plan (26011)
-3x Bravado (26074)
-3x Carpe Diem (33012)
-3x Clean Getaway (35014)
-3x S-Dobrado (34012)
-3x Steelskin Scarring (33004)
-3x Strike Fund (34001)
-3x Sure Gamble (01050)
-3x Wildcat Strike (30002)
+3x Always Have a Backup Plan
+3x Bravado
+3x Carpe Diem
+3x Clean Getaway
+3x S-Dobrado
+3x Steelskin Scarring
+3x Strike Fund
+3x Sure Gamble
+3x Wildcat Strike
 
 Hardware (10)
-3x Buffer Drive (26093)
-3x Hermes (34014)
-3x Jeitinho (34079)
-1x Lucky Charm (26014)
+3x Buffer Drive
+3x Hermes
+3x Jeitinho
+1x Lucky Charm
 
 Program (9)
-3x Laser Pointer (34016)
-3x Malandragem (34081)
-3x Physarum Entangler (34082)
+3x Laser Pointer
+3x Malandragem
+3x Physarum Entangler
 
 Resource (3)
-3x Backstitching (33019)
-
-https://netrunnerdb.com/en/decklist/21195feb-61dc-4ae4-81af-e48231651a95/i-wanted-to-use-my-knife-alts-3rd-ph-costume-party-
+3x Backstitching

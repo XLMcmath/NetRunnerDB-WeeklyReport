@@ -1,0 +1,33 @@
+;; title: Runner: Event MuslihaT @ 2026.10 Hefei CTK
+;; identity-code: 35013
+;; notes: https://netrunnerdb.com/en/decklist/67b81467-9974-4be7-8a0b-e3a4b10c2e73/runner-event-muslihat-2026-10-hefei-ctk
+
+Event (25)
+2x Bahia Bands
+3x Bravado
+3x Carpe Diem
+3x Clean Getaway
+3x Overclock
+2x Pinhole Threading
+1x Reprise
+3x Sure Gamble
+3x Transfer of Wealth
+2x Tread Lightly
+
+Hardware (3)
+2x Hermes
+1x Touchstone
+
+Program (8)
+1x Carmen
+2x Cezve
+2x Curupira
+1x Revolver
+2x Sang Kancil
+
+Resource (9)
+1x Debbie "Downtown" Moreira
+1x Fencer Fueno
+2x Mystic Maemi
+3x The Class Act
+2x The Twinning

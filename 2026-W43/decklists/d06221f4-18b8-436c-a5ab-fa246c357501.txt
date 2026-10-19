@@ -1,32 +1,30 @@
-if it's not too broke... [13th @Worlds]
-
-Identity: Nebula Talent Management: Making Stars (35057)
+;; title: if it's not too broke... [13th @Worlds]
+;; identity-code: 35057
+;; notes: https://netrunnerdb.com/en/decklist/d06221f4-18b8-436c-a5ab-fa246c357501/if-it-s-not-too-broke-13th-worlds-
 
 Agenda (13)
-3x Embedded Reporting (35059)
-3x Kingmaking (34113)
-3x Post-Truth Dividend (33113)
-3x Superconducting Hub (30070)
-1x Tomorrowʼs Headline (30052)
+3x Embedded Reporting
+3x Kingmaking
+3x Post-Truth Dividend
+3x Superconducting Hub
+1x Tomorrowʼs Headline
 
 Asset (6)
-3x Moon Pool (33042)
-3x Spin Doctor (30053)
+3x Moon Pool
+3x Spin Doctor
 
 Operation (19)
-3x Hedge Fund (30075)
-2x Nonequivalent Exchange (33118)
-3x Petty Cash (35081)
-3x Predictive Planogram (30056)
-2x Sudden Commandment (34119)
-3x Top-Down Solutions (35044)
-3x Your Digital Life (34056)
+3x Hedge Fund
+2x Nonequivalent Exchange
+3x Petty Cash
+3x Predictive Planogram
+2x Sudden Commandment
+3x Top-Down Solutions
+3x Your Digital Life
 
 ICE (11)
-1x F2P (26115)
-2x Mestnichestvo (33053)
-2x Ping (30055)
-3x Piranhas (34117)
-3x Unsmiling Tsarevna (33117)
-
-https://netrunnerdb.com/en/decklist/d06221f4-18b8-436c-a5ab-fa246c357501/if-it-s-not-too-broke-13th-worlds-
+1x F2P
+2x Mestnichestvo
+2x Ping
+3x Piranhas
+3x Unsmiling Tsarevna

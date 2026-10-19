@@ -40,6 +40,9 @@ h1 .light{font-weight:300;color:var(--muted)}
   background:#ffffff07;color:#c9d5e3;transition:border-color .15s,background .15s}
 .jumpitem:hover{border-color:var(--accent);background:#4cc38a14;color:#fff}
 .jumpitem b{color:var(--accent);font-weight:700;margin-left:3px}
+.jumpitem.toggleall{font:inherit;font-size:12.6px;font-family:inherit;cursor:pointer;
+  background:#ffffff07;color:var(--muted)}
+.jumpitem.toggleall:hover{color:#fff}
 
 /* ---------- stat grid ---------- */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:0 0 26px}
@@ -67,10 +70,15 @@ h1 .light{font-weight:300;color:var(--muted)}
 /* ---------- section ---------- */
 section{margin-bottom:46px}
 .sec-head{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid var(--line);
-  padding-bottom:10px;margin-bottom:18px}
+  padding-bottom:10px;margin-bottom:18px;cursor:pointer;user-select:none}
+.sec-head:hover h2{color:#fff}
+.sec-head:focus-visible{outline:2px solid var(--accent2);outline-offset:3px;border-radius:4px}
 .sec-head h2{font-size:21px;margin:0;font-weight:750;letter-spacing:-.01em}
 .sec-head .num{font-size:13px;color:var(--accent);font-weight:700;letter-spacing:.1em}
 .sec-head .hint{margin-left:auto;font-size:12.5px;color:var(--dim)}
+.sec-head .caret{font-size:12px;color:var(--dim);margin-left:10px;transition:transform .18s}
+.sec-head[aria-expanded="false"] .caret{transform:rotate(-90deg)}
+.sec.is-collapsed .sec-body{display:none}
 
 /* ---------- deck card ---------- */
 .deck{background:linear-gradient(180deg,#ffffff07,#ffffff02);border:1px solid var(--line);
@@ -104,6 +112,8 @@ section{margin-bottom:46px}
 .score{font-size:23px;font-weight:800;letter-spacing:-.02em;line-height:1}
 .score small{display:block;font-size:10.5px;color:var(--dim);font-weight:600;letter-spacing:.08em;margin-top:2px}
 .size{font-size:12px;color:var(--muted)}
+.inftotal{border-bottom:1px dotted #5f708566}
+.inftotal.over{color:var(--warn);border-bottom-color:#f0a83c66}
 
 details{margin-top:12px;border-top:1px dashed #ffffff14;padding-top:10px}
 summary{cursor:pointer;font-size:13px;color:var(--muted);list-style:none;user-select:none;display:inline-flex;
@@ -124,7 +134,11 @@ summary:hover{color:var(--txt)}
 .gtype li .cz{color:#dbe4ee}
 .gtype li .cn{color:#c9d5e3}
 .gtype li .ce{font-size:11.2px;color:var(--dim);font-style:italic}
-.gtype li .cost{color:var(--dim);font-size:11.5px;font-variant-numeric:tabular-nums;flex:none}
+.gtype li .cost{color:var(--dim);font-size:11.5px;font-variant-numeric:tabular-nums;flex:none;
+  width:17px;text-align:right}
+.gtype li .cost.blank{visibility:hidden}
+.gtype li .inf{flex:none;font-size:10.8px;line-height:1.5;color:#f0a83c;background:#f0a83c14;
+  border:1px solid #f0a83c55;border-radius:4px;padding:0 4px;font-variant-numeric:tabular-nums}
 .gtype li.off .q{color:var(--warn)}
 .deckfoot{margin-top:10px;display:flex;align-items:center;gap:14px;font-size:12.3px}
 .deckfoot a{color:var(--accent2);opacity:.85}
@@ -169,7 +183,7 @@ footer a{color:var(--muted);text-decoration:underline;text-underline-offset:3px}
 </header>
 <section>
   <div class="sec-head"><h2>全部期数</h2><span class="hint">点击进入某一期</span></div>
-  <div class="arc"><a class="item" href="2026-W43/index.html"><div class="week">2026-W43 <span class="latest">最新</span></div><div class="sub">2026-10-12 → 2026-10-19（最近 7 天）</div><div class="sub">96 副牌组 · 22 副完整卡表</div></a></div>
+  <div class="arc"><a class="item" href="2026-W43/index.html"><div class="week">2026-W43 <span class="latest">最新</span></div><div class="sub">2026-10-12 → 2026-10-19（最近 7 天）</div><div class="sub">86 副牌组 · 23 副完整牌表</div></a></div>
 </section>
 <footer>数据来源 <a href="https://netrunnerdb.com/en/decklists/dotw">netrunnerdb.com</a> ·
 与 FFG / Null Signal Games 无关联。</footer>

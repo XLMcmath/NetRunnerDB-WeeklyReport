@@ -1,34 +1,32 @@
-New bananas [6th at Worlds Showdown] 🔥🎸🤘
-
-Identity: Ryō “Phoenix” Ōno: Out of the Ashes (35001)
+;; title: New bananas [6th at Worlds Showdown] 🔥🎸🤘
+;; identity-code: 35001
+;; notes: https://netrunnerdb.com/en/decklist/b0698f61-4fad-49b7-a974-7b37d2920193/new-bananas-6th-at-worlds-showdown-
 
 Event (14)
-1x Finality (33066)
-1x Pinhole Threading (33013)
-3x Raindrops Cut Stone (33068)
-3x Steelskin Scarring (33004)
-3x Sure Gamble (30030)
-3x Take a Dive (36002)
+1x Finality
+1x Pinhole Threading
+3x Raindrops Cut Stone
+3x Steelskin Scarring
+3x Sure Gamble
+3x Take a Dive
 
 Hardware (5)
-3x Gachapon (26069)
-2x Keiko (26070)
+3x Gachapon
+2x Keiko
 
 Program (14)
-2x Banner (34005)
-2x Botulus (30004)
-2x Cupellation (34080)
-2x Echelon (30025)
-3x Fermenter (30007)
-1x Rising Tide (35009)
-2x Unity (30026)
+2x Banner
+2x Botulus
+2x Cupellation
+2x Echelon
+3x Fermenter
+1x Rising Tide
+2x Unity
 
 Resource (12)
-3x Daily Casts (26094)
-3x Dr. Nuka Vrolyck (33092)
-1x Mystic Maemi (26072)
-2x Paladin Poemu (26073)
-2x The Twinning (33010)
-1x Trickster Taka (26009)
-
-https://netrunnerdb.com/en/decklist/b0698f61-4fad-49b7-a974-7b37d2920193/new-bananas-6th-at-worlds-showdown-
+3x Daily Casts
+3x Dr. Nuka Vrolyck
+1x Mystic Maemi
+2x Paladin Poemu
+2x The Twinning
+1x Trickster Taka

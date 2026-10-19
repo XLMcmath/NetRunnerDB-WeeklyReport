@@ -1,32 +1,30 @@
-butts in seats (Worlds 2026 winner)
-
-Identity: Haas-Bioroid: Precision Design (30035)
+;; title: butts in seats (Worlds 2026 winner)
+;; identity-code: 30035
+;; notes: https://netrunnerdb.com/en/decklist/d336f17d-d07b-4eb6-a0e2-d2c2c567182f/butts-in-seats-worlds-2026-winner-
 
 Agenda (6)
-3x Méliès City Luxury Line (36026)
-3x Send a Message (30069)
+3x Méliès City Luxury Line
+3x Send a Message
 
 Asset (14)
-2x Humanoid Resources (35039)
-3x Spin Doctor (30053)
-2x Synchrocyclotron (36027)
-2x The Powers That Be (34130)
-2x Tiered Subscription (26049)
-3x Wage Workers (34033)
+2x Humanoid Resources
+3x Spin Doctor
+2x Synchrocyclotron
+2x The Powers That Be
+2x Tiered Subscription
+3x Wage Workers
 
 Operation (11)
-2x Flood the Market (36053)
-3x Fully Operational (26036)
-1x Nanomanagement (35043)
-2x Predictive Planogram (30056)
-3x Top-Down Solutions (35044)
+2x Flood the Market
+3x Fully Operational
+1x Nanomanagement
+2x Predictive Planogram
+3x Top-Down Solutions
 
 ICE (13)
-3x Ablative Barrier (34034)
-3x Drafter (26101)
-1x Flyswatter (35079)
-1x Reverb (36029)
-3x Scatter Field (35042)
-2x Sleipnir (36030)
-
-https://netrunnerdb.com/en/decklist/d336f17d-d07b-4eb6-a0e2-d2c2c567182f/butts-in-seats-worlds-2026-winner-
+3x Ablative Barrier
+3x Drafter
+1x Flyswatter
+1x Reverb
+3x Scatter Field
+2x Sleipnir

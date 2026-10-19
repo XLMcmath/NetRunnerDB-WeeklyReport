@@ -1,34 +1,32 @@
-Technically the reigning best Earth SEA in the world (4-2-0)
-
-Identity: Earth Station: SEA Headquarters (26120)
+;; title: Technically the reigning best Earth SEA in the world (4-2-0)
+;; identity-code: 26120
+;; notes: https://netrunnerdb.com/en/decklist/d6315b47-28a0-4a91-a44a-daf3feaba308/technically-the-reigning-best-earth-sea-in-the-world-4-2-0-
 
 Agenda (9)
-1x Above the Law (30060)
-2x Let Them Dream (36066)
-3x Sacrifice Zone Expansion (36056)
-3x The Basalt Spire (34123)
+1x Above the Law
+2x Let Them Dream
+3x Sacrifice Zone Expansion
+3x The Basalt Spire
 
 Asset (7)
-2x Anthill Excavation Contract (35072)
-2x Regolith Mining License (30071)
-3x Spin Doctor (30053)
+2x Anthill Excavation Contract
+2x Regolith Mining License
+3x Spin Doctor
 
 Operation (17)
-1x Digital Rights Management (27006)
-3x Hedge Fund (30075)
-2x Key Performance Indicators (35077)
-2x Measured Response (35078)
-3x Petty Cash (35081)
-3x Predictive Planogram (30056)
-3x Seamless Launch (30040)
+1x Digital Rights Management
+3x Hedge Fund
+2x Key Performance Indicators
+2x Measured Response
+3x Petty Cash
+3x Predictive Planogram
+3x Seamless Launch
 
 ICE (16)
-2x Afshar (26058)
-3x Event Horizon (36058)
-2x Logjam (34127)
-2x Pharos (30063)
-1x Syailendra (35076)
-3x Tree Line (34059)
-3x Winchester (26125)
-
-https://netrunnerdb.com/en/decklist/d6315b47-28a0-4a91-a44a-daf3feaba308/technically-the-reigning-best-earth-sea-in-the-world-4-2-0-
+2x Afshar
+3x Event Horizon
+2x Logjam
+2x Pharos
+1x Syailendra
+3x Tree Line
+3x Winchester

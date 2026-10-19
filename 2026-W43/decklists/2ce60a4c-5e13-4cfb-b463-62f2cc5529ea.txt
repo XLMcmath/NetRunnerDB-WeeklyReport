@@ -1,42 +1,40 @@
-Graphic Design is My Prison (3rd @ PH Costume Party)
-
-Identity: NBN: Controlling the Message (11017)
+;; title: Graphic Design is My Prison (3rd @ PH Costume Party)
+;; identity-code: 11017
+;; notes: https://netrunnerdb.com/en/decklist/2ce60a4c-5e13-4cfb-b463-62f2cc5529ea/graphic-design-is-my-prison-3rd-ph-costume-party-
 
 Agenda (14)
-3x Fujii Asset Retrieval (34040)
-2x Hybrid Release (33105)
-2x Let Them Dream (36066)
-1x Longevity Serum (30044)
-3x Orbital Superiority (30068)
-3x Regenesis (33040)
+3x Fujii Asset Retrieval
+2x Hybrid Release
+2x Let Them Dream
+1x Longevity Serum
+3x Orbital Superiority
+3x Regenesis
 
 Asset (21)
-1x Bladderwort (33041)
-1x Byte! (35050)
-3x Charlotte Caçador (34107)
-3x Cohort Guidance Program (34108)
-3x Front Company (34041)
-3x Moon Pool (33042)
-3x Phật Gioan Baotixita (35051)
-3x Spin Doctor (30053)
-1x The Powers That Be (34130)
+1x Bladderwort
+1x Byte!
+3x Charlotte Caçador
+3x Cohort Guidance Program
+3x Front Company
+3x Moon Pool
+3x Phật Gioan Baotixita
+3x Spin Doctor
+1x The Powers That Be
 
 Upgrade (3)
-3x La Costa Grid (26112)
+3x La Costa Grid
 
 Operation (12)
-3x Hansei Review (30048)
-3x Mindscaping (34045)
-2x Oppo Research (34055)
-2x Retribution (30065)
-2x Unleash (36044)
+3x Hansei Review
+3x Mindscaping
+2x Oppo Research
+2x Retribution
+2x Unleash
 
 ICE (14)
-2x Anemone (32005)
-3x Attini (34042)
-1x Bathynomus (33044)
-3x Boto (34109)
-2x Cloud Eater (34110)
-3x Tatu-Bola (34044)
-
-https://netrunnerdb.com/en/decklist/2ce60a4c-5e13-4cfb-b463-62f2cc5529ea/graphic-design-is-my-prison-3rd-ph-costume-party-
+2x Anemone
+3x Attini
+1x Bathynomus
+3x Boto
+2x Cloud Eater
+3x Tatu-Bola

@@ -14,7 +14,7 @@ NetrunnerDB 每周牌组摘要生成器
     index.html      主视图（离线可看，含本地缓存的牌组身份卡图）
     decks.md        Markdown 版（可直接贴到聊天/笔记）
     decks.json      结构化数据（便于二次处理、画趋势图）
-    decklists/*.txt  NetrunnerDB 纯文本卡表（可导入 jnet）
+    decklists/*.txt  NetrunnerDB 纯文本牌表（可导入 jnet）
 并刷新 <脚本目录>/index.html 作为所有期数的存档目录。
 
 用法:
@@ -325,6 +325,9 @@ def load_cards() -> tuple[dict, dict]:
             "cost": card.get("cost"),
             "faction_cost": card.get("faction_cost"),
             "agenda_points": card.get("agenda_points"),
+            # 特性牌才有：影响力上限、牌组张数下限
+            "influence_limit": card.get("influence_limit"),
+            "minimum_deck_size": card.get("minimum_deck_size"),
         }
         by_code[meta["code"]] = meta
         by_title.setdefault(meta["title"].lower(), meta)
@@ -783,6 +786,17 @@ def build_deck(deck: dict, raw: dict, cards: dict, names=({}, {})) -> dict:
         for g in groups if g["type"] == "agenda" for i in g["items"]
     )
 
+    # 影响力：只跳过「与本特性同派系」的卡；中立卡也可能带影响力成本（如 Baba Yaga 2）
+    influence = 0
+    for group in groups:
+        for item in group["items"]:
+            if item["faction"] and item["faction"] == faction_code:
+                continue
+            influence += int(item["qty"]) * int(item["faction_cost"] or 0)
+            # 外派系卡标出自身影响力，方便逐张核对
+            if (item["faction_cost"] or 0) > 0:
+                item["inf"] = int(item["faction_cost"])
+
     fname, _, color = faction_display(faction_code, side)
     ident_en = identity_name or deck.get("identity_title", "")
     return {
@@ -795,6 +809,9 @@ def build_deck(deck: dict, raw: dict, cards: dict, names=({}, {})) -> dict:
         "side": side,
         "n_cards": n_cards,
         "agenda_points": agenda_pts,
+        "influence": influence,
+        "influence_limit": ident_meta.get("influence_limit"),
+        "min_deck_size": ident_meta.get("minimum_deck_size"),
         "score": hot_score(deck),
         "groups": groups,
         # 作者写的 deck 说明不转载（体积大、版权归作者），需要时去 NetrunnerDB 看
@@ -805,14 +822,26 @@ def build_deck(deck: dict, raw: dict, cards: dict, names=({}, {})) -> dict:
 
 
 def decklist_txt(deck: dict) -> str:
-    lines = [deck["title"], "", f'Identity: {deck["identity_title"]} ({deck["identity_code"]})', ""]
+    """jnet 可直接粘贴导入的牌表格式。
+
+    jnet 的解析规则（deckbuilder.cljs）：
+      · 每张卡：`<数量>x <英文卡名>`，卡名后面不能再跟任何东西（(12345) 会被当成卡名的一部分）
+      · 特性：`;; identity-code: <编号>` 或 `;; identity: <英文名>`
+      · 其它元信息：`;; title:` / `;; notes:`
+    所以这里不写编号，编号在 decks.json 里。
+    """
+    lines = [
+        f';; title: {deck["title"]}',
+        f';; identity-code: {deck["identity_code"]}',
+    ]
+    if deck.get("url"):
+        lines.append(f';; notes: {deck["url"]}')
+    lines.append("")
     for group in deck["groups"]:
         lines.append(f'{group["label_en"]} ({group["count"]})')
         for item in group["items"]:
-            lines.append(f'{item["qty"]}x {item["title"]} ({item["code"]})')
+            lines.append(f'{item["qty"]}x {item["title"]}')
         lines.append("")
-    if deck.get("url"):
-        lines.append(deck["url"])
     return "\n".join(lines)
 
 
@@ -829,7 +858,7 @@ def decklist_md(deck: dict) -> str:
         meta.append(deck["event"])
     meta.append(f'{deck.get("n_cards", 0)} 张')
     if deck.get("agenda_points"):
-        meta.append(f'{deck["agenda_points"]} 议案点')
+        meta.append(f'{deck["agenda_points"]} 议案分数')
     meta.append(f'♥{deck["votes"]} ★{deck["favorites"]} 💬{deck["comments"]}')
     if deck.get("date"):
         meta.append(deck["date"][:10])
@@ -952,6 +981,9 @@ h1 .light{font-weight:300;color:var(--muted)}
   background:#ffffff07;color:#c9d5e3;transition:border-color .15s,background .15s}
 .jumpitem:hover{border-color:var(--accent);background:#4cc38a14;color:#fff}
 .jumpitem b{color:var(--accent);font-weight:700;margin-left:3px}
+.jumpitem.toggleall{font:inherit;font-size:12.6px;font-family:inherit;cursor:pointer;
+  background:#ffffff07;color:var(--muted)}
+.jumpitem.toggleall:hover{color:#fff}
 
 /* ---------- stat grid ---------- */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:0 0 26px}
@@ -979,10 +1011,15 @@ h1 .light{font-weight:300;color:var(--muted)}
 /* ---------- section ---------- */
 section{margin-bottom:46px}
 .sec-head{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid var(--line);
-  padding-bottom:10px;margin-bottom:18px}
+  padding-bottom:10px;margin-bottom:18px;cursor:pointer;user-select:none}
+.sec-head:hover h2{color:#fff}
+.sec-head:focus-visible{outline:2px solid var(--accent2);outline-offset:3px;border-radius:4px}
 .sec-head h2{font-size:21px;margin:0;font-weight:750;letter-spacing:-.01em}
 .sec-head .num{font-size:13px;color:var(--accent);font-weight:700;letter-spacing:.1em}
 .sec-head .hint{margin-left:auto;font-size:12.5px;color:var(--dim)}
+.sec-head .caret{font-size:12px;color:var(--dim);margin-left:10px;transition:transform .18s}
+.sec-head[aria-expanded="false"] .caret{transform:rotate(-90deg)}
+.sec.is-collapsed .sec-body{display:none}
 
 /* ---------- deck card ---------- */
 .deck{background:linear-gradient(180deg,#ffffff07,#ffffff02);border:1px solid var(--line);
@@ -1016,6 +1053,8 @@ section{margin-bottom:46px}
 .score{font-size:23px;font-weight:800;letter-spacing:-.02em;line-height:1}
 .score small{display:block;font-size:10.5px;color:var(--dim);font-weight:600;letter-spacing:.08em;margin-top:2px}
 .size{font-size:12px;color:var(--muted)}
+.inftotal{border-bottom:1px dotted #5f708566}
+.inftotal.over{color:var(--warn);border-bottom-color:#f0a83c66}
 
 details{margin-top:12px;border-top:1px dashed #ffffff14;padding-top:10px}
 summary{cursor:pointer;font-size:13px;color:var(--muted);list-style:none;user-select:none;display:inline-flex;
@@ -1036,7 +1075,11 @@ summary:hover{color:var(--txt)}
 .gtype li .cz{color:#dbe4ee}
 .gtype li .cn{color:#c9d5e3}
 .gtype li .ce{font-size:11.2px;color:var(--dim);font-style:italic}
-.gtype li .cost{color:var(--dim);font-size:11.5px;font-variant-numeric:tabular-nums;flex:none}
+.gtype li .cost{color:var(--dim);font-size:11.5px;font-variant-numeric:tabular-nums;flex:none;
+  width:17px;text-align:right}
+.gtype li .cost.blank{visibility:hidden}
+.gtype li .inf{flex:none;font-size:10.8px;line-height:1.5;color:#f0a83c;background:#f0a83c14;
+  border:1px solid #f0a83c55;border-radius:4px;padding:0 4px;font-variant-numeric:tabular-nums}
 .gtype li.off .q{color:var(--warn)}
 .deckfoot{margin-top:10px;display:flex;align-items:center;gap:14px;font-size:12.3px}
 .deckfoot a{color:var(--accent2);opacity:.85}
@@ -1075,6 +1118,82 @@ footer a{color:var(--muted);text-decoration:underline;text-underline-offset:3px}
 """
 
 FACTION_ORDER = ["Anarch", "Criminal", "Shaper", "Haas-Bioroid", "Jinteki", "NBN", "Weyland", "Neutral", "Unknown"]
+
+# 区块折叠（点标题收起 / 展开，状态记在 localStorage）
+JS_COLLAPSE = r"""
+(function () {
+  var KEY = "nrdb-collapsed-v1";
+
+  function sections() {
+    return Array.prototype.slice.call(document.querySelectorAll(".sec"));
+  }
+
+  function apply(sec, collapsed) {
+    sec.classList.toggle("is-collapsed", collapsed);
+    var head = sec.querySelector(".sec-head");
+    if (head) head.setAttribute("aria-expanded", collapsed ? "false" : "true");
+  }
+
+  function readState() {
+    try { return JSON.parse(localStorage.getItem(KEY) || "[]") || []; }
+    catch (e) { return []; }
+  }
+
+  function saveState() {
+    var ids = sections()
+      .filter(function (s) { return s.classList.contains("is-collapsed"); })
+      .map(function (s) { return s.id; });
+    try { localStorage.setItem(KEY, JSON.stringify(ids)); } catch (e) {}
+    updateToggleLabel();
+  }
+
+  function updateToggleLabel() {
+    var btn = document.querySelector(".toggleall");
+    if (!btn) return;
+    var anyOpen = sections().some(function (s) { return !s.classList.contains("is-collapsed"); });
+    btn.textContent = anyOpen ? "全部收起" : "全部展开";
+    btn.setAttribute("data-all", anyOpen ? "collapse" : "expand");
+  }
+
+  function init() {
+    var collapsed = readState();
+    sections().forEach(function (s) {
+      if (collapsed.indexOf(s.id) >= 0) apply(s, true);
+    });
+    updateToggleLabel();
+  }
+
+  document.addEventListener("click", function (ev) {
+    var t = ev.target;
+    if (t.closest && t.closest("a")) return;
+
+    var btn = t.closest && t.closest(".toggleall");
+    if (btn) {
+      var anyOpen = sections().some(function (s) { return !s.classList.contains("is-collapsed"); });
+      sections().forEach(function (s) { apply(s, anyOpen); });
+      saveState();
+      return;
+    }
+
+    var head = t.closest && t.closest(".sec-head");
+    if (head) {
+      var sec = head.parentElement;
+      apply(sec, !sec.classList.contains("is-collapsed"));
+      saveState();
+    }
+  });
+
+  document.addEventListener("keydown", function (ev) {
+    if (ev.key !== "Enter" && ev.key !== " ") return;
+    var head = ev.target.closest && ev.target.closest(".sec-head");
+    if (!head) return;
+    ev.preventDefault();
+    head.click();
+  });
+
+  init();
+})();
+"""
 
 
 def render_bar(label: str, count: int, total: int, color: str) -> str:
@@ -1133,8 +1252,13 @@ def render_deck(deck: dict, badge: str, imgs: set[str], rank: int | None = None)
     groups_html = []
     for group in deck.get("groups", []):
         items = "".join(
-            f'<li><span class="q">{i["qty"]}×</span>{name_html(i["title"], i.get("title_zh", ""))}'
-            + (f'<span class="cost">{esc(str(i["cost"]))}</span>' if i.get("cost") is not None else "")
+            f'<li><span class="q">{i["qty"]}×</span>'
+            + (
+                f'<span class="cost" title="费用">{esc(str(i["cost"]))}</span>'
+                if i.get("cost") is not None else '<span class="cost blank"></span>'
+            )
+            + name_html(i["title"], i.get("title_zh", ""))
+            + (f'<span class="inf" title="影响力消耗">{i["inf"]}</span>' if i.get("inf") else "")
             + "</li>"
             for i in group["items"]
         )
@@ -1144,8 +1268,17 @@ def render_deck(deck: dict, badge: str, imgs: set[str], rank: int | None = None)
         )
 
     size_bits = [f'{deck.get("n_cards", 0)} 张']
+    inf_total = deck.get("influence", 0)
+    inf_limit = deck.get("influence_limit")
+    over = bool(inf_limit) and inf_total > inf_limit
+    if inf_limit:
+        size_bits.append(f'<span class="inftotal{" over" if over else ""}" '
+                         f'title="影响力 = 外派系卡的影响力之和（含带影响力的中立卡）">'
+                         f'影响力 {inf_total}/{inf_limit}</span>')
+    else:
+        size_bits.append(f'<span class="inftotal">影响力 {inf_total}</span>')
     if deck.get("agenda_points"):
-        size_bits.append(f'{deck["agenda_points"]} 议案点')
+        size_bits.append(f'{deck["agenda_points"]} 议案分数')
 
     ident_en = deck.get("identity_title", "")
     ident_zh = deck.get("identity_zh", "")
@@ -1171,7 +1304,7 @@ def render_deck(deck: dict, badge: str, imgs: set[str], rank: int | None = None)
     </div>
   </div>
   <details>
-    <summary>展开完整卡表 · {deck.get('n_cards', 0)} 张</summary>
+    <summary>展开完整牌表 · {deck.get('n_cards', 0)} 张</summary>
     <div class="lists">{''.join(groups_html)}</div>
   </details>
   <div class="deckfoot">
@@ -1180,7 +1313,7 @@ def render_deck(deck: dict, badge: str, imgs: set[str], rank: int | None = None)
       <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2 0v8h6V2H6z"/><path d="M2 5a2 2 0 0 1 2-2v1.5A.5.5 0 0 0 3.5 5v8a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5H12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5z"/></svg>
       <span class="copybtn-label">复制链接</span>
     </button>
-    <a href="decklists/{esc(deck['uuid'])}.txt">纯文本卡表</a>
+    <a href="decklists/{esc(deck['uuid'])}.txt">纯文本牌表</a>
     <a href="{esc(deck['url'])}" target="_blank" rel="noopener">NetrunnerDB 页面 ↗</a>
   </div>
 </article>"""
@@ -1192,11 +1325,15 @@ def render_section(num: str, title: str, hint: str, decks: list[dict], badge: st
         render_deck(d, badge, imgs, rank=(i + 1) if ranked else None)
         for i, d in enumerate(decks)
     ) or '<p class="meta">本期没有符合条件的牌组。</p>'
+    sec_id = f"s{num}"
     return f"""
-<section id="s{num}">
-  <div class="sec-head"><span class="num">{num}</span><h2>{esc(title)}</h2>
-    <span class="hint">{esc(hint)}</span></div>
-  {body}
+<section class="sec" id="{sec_id}">
+  <div class="sec-head" role="button" tabindex="0" aria-expanded="true" aria-controls="body-{sec_id}"
+       data-sec="{sec_id}">
+    <span class="num">{num}</span><h2>{esc(title)}</h2>
+    <span class="hint">{esc(hint)}</span><span class="caret" aria-hidden="true">▾</span>
+  </div>
+  <div class="sec-body" id="body-{sec_id}">{body}</div>
 </section>"""
 
 
@@ -1241,33 +1378,46 @@ def render_week_html(issue: dict, decks_sections: list, stats: dict, imgs: set[s
     <span class="htag">统计窗口 <b>{issue['days']} 天</b></span>
     <span class="htag">阵营 <b>{side_bits}</b></span>
   </div>
-  <nav class="jump">{''.join(jumps)}</nav>
+  <nav class="jump">
+    <a class="jumpitem" href="#s0">概览 <b>{stats['total']}</b></a>
+    {''.join(jumps)}
+    <button type="button" class="jumpitem toggleall" data-all="collapse">全部收起</button>
+  </nav>
 </header>
 
-<div class="stats">
-  <div class="stat"><div class="k">本周新牌组</div><div class="v">{stats['total']}<small>副</small></div></div>
-  <div class="stat"><div class="k">社区互动</div><div class="v">{stats['votes'] + stats['favorites'] + stats['comments']}<small>次</small></div></div>
-  <div class="stat"><div class="k">出现身份</div><div class="v">{stats['unique_identities']}<small>种</small></div></div>
-  <div class="stat"><div class="k">本页收录</div><div class="v">{sum(len(s[3]) for s in decks_sections)}<small>副完整卡表</small></div></div>
-</div>
+<section class="sec" id="s0">
+  <div class="sec-head" role="button" tabindex="0" aria-expanded="true" aria-controls="body-s0"
+       data-sec="s0">
+    <span class="num">◆</span><h2>本周概览</h2>
+    <span class="hint">派系分布 · 特性（ID）Top 8</span><span class="caret" aria-hidden="true">▾</span>
+  </div>
+  <div class="sec-body" id="body-s0">
+    <div class="stats">
+      <div class="stat"><div class="k">本周新牌组</div><div class="v">{stats['total']}<small>副</small></div></div>
+      <div class="stat"><div class="k">社区互动</div><div class="v">{stats['votes'] + stats['favorites'] + stats['comments']}<small>次</small></div></div>
+      <div class="stat"><div class="k">出现特性</div><div class="v">{stats['unique_identities']}<small>种</small></div></div>
+      <div class="stat"><div class="k">本页收录</div><div class="v">{sum(len(s[3]) for s in decks_sections)}<small>副完整牌表</small></div></div>
+    </div>
 
-<div class="panels">
-  <div class="panel">
-    <h3>阵营分布 · 本周新牌组</h3>
-    {faction_bars}
+    <div class="panels">
+      <div class="panel">
+        <h3>派系分布 · 本周新牌组</h3>
+        {faction_bars}
+      </div>
+      <div class="panel">
+        <h3>热门特性（ID）Top 8 · 本周新牌组中出现次数</h3>
+        <div class="idlist">{id_rows}</div>
+      </div>
+    </div>
   </div>
-  <div class="panel">
-    <h3>热门身份 Top 8 · 本周新牌组中出现次数</h3>
-    <div class="idlist">{id_rows}</div>
-  </div>
-</div>
+</section>
 
 {''.join(sections)}
 
 <footer>
   <b>说明</b>：热度 = 点赞×3 + 收藏×2 + 评论×1，数据取自 NetrunnerDB 列表页；
   「本周热门」先按时间窗口筛选新牌组，再按热度排序；「官方人气榜」是站点自带的
-  Popular 排序（偏近期热度，与本页算法不同）。卡表通过公开 API
+  Popular 排序（偏近期热度，与本页算法不同）。牌表通过公开 API
   <code>/api/2.0/public/decklist/&lt;uuid&gt;</code> 获取。<br>
   卡牌中文名来自同目录的 <code>card_names_zh.xlsx</code>（可选，未填写的显示英文原名）。<br>
   本站与 Fantasy Flight Games / Null Signal Games 无关联，卡牌文字版权归其所有。
@@ -1319,6 +1469,7 @@ def render_week_html(issue: dict, decks_sections: list, stats: dict, imgs: set[s
   }});
 }})();
 </script>
+<script>{JS_COLLAPSE}</script>
 </body>
 </html>
 """
@@ -1332,7 +1483,7 @@ def render_archive_html(issues: list[dict]) -> str:
             f'<a class="item" href="{esc(issue["dir"])}/index.html">'
             f'<div class="week">{esc(issue["week_id"])}{latest}</div>'
             f'<div class="sub">{esc(issue.get("window_text", ""))}</div>'
-            f'<div class="sub">{issue.get("total", 0)} 副牌组 · {issue.get("decks_shown", 0)} 副完整卡表</div>'
+            f'<div class="sub">{issue.get("total", 0)} 副牌组 · {issue.get("decks_shown", 0)} 副完整牌表</div>'
             f"</a>"
         )
     return f"""<!DOCTYPE html>
