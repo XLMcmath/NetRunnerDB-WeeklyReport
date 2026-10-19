@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 NetrunnerDB 每周牌组摘要生成器
@@ -1038,9 +1038,16 @@ summary:hover{color:var(--txt)}
 .gtype li .ce{font-size:11.2px;color:var(--dim);font-style:italic}
 .gtype li .cost{color:var(--dim);font-size:11.5px;font-variant-numeric:tabular-nums;flex:none}
 .gtype li.off .q{color:var(--warn)}
-.deckfoot{margin-top:10px;display:flex;gap:14px;font-size:12.3px}
+.deckfoot{margin-top:10px;display:flex;align-items:center;gap:14px;font-size:12.3px}
 .deckfoot a{color:var(--accent2);opacity:.85}
 .deckfoot a:hover{opacity:1;text-decoration:underline}
+.copybtn{font:inherit;font-size:12.2px;line-height:1.5;color:#9ecbff;cursor:pointer;
+  background:#58a6ff14;border:1px solid #58a6ff38;border-radius:6px;padding:2px 10px;
+  display:inline-flex;align-items:center;gap:5px;transition:background .15s,border-color .15s,color .15s}
+.copybtn:hover{background:#58a6ff24;border-color:#58a6ff70;color:#cfe4ff}
+.copybtn:active{transform:translateY(1px)}
+.copybtn.copied{color:#8fe0b4;background:#4cc38a1f;border-color:#4cc38a66}
+.copybtn svg{width:12px;height:12px;flex:none}
 
 /* ---------- archive ---------- */
 .arc{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:14px}
@@ -1168,6 +1175,11 @@ def render_deck(deck: dict, badge: str, imgs: set[str], rank: int | None = None)
     <div class="lists">{''.join(groups_html)}</div>
   </details>
   <div class="deckfoot">
+    <button type="button" class="copybtn" data-url="{esc(deck['url'])}"
+            title="复制 NetrunnerDB 牌组链接，粘到 jnet 的 Import 里即可导入">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2 0v8h6V2H6z"/><path d="M2 5a2 2 0 0 1 2-2v1.5A.5.5 0 0 0 3.5 5v8a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5H12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5z"/></svg>
+      <span class="copybtn-label">复制链接</span>
+    </button>
     <a href="decklists/{esc(deck['uuid'])}.txt">纯文本卡表</a>
     <a href="{esc(deck['url'])}" target="_blank" rel="noopener">NetrunnerDB 页面 ↗</a>
   </div>
@@ -1264,6 +1276,49 @@ def render_week_html(issue: dict, decks_sections: list, stats: dict, imgs: set[s
 </footer>
 
 </div>
+
+<script>
+(function () {{
+  function copyText(text) {{
+    if (navigator.clipboard && window.isSecureContext) {{
+      return navigator.clipboard.writeText(text);
+    }}
+    return new Promise(function (resolve, reject) {{
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "fixed";
+      ta.style.top = "-1000px";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try {{ document.execCommand("copy"); resolve(); }}
+      catch (e) {{ reject(e); }}
+      finally {{ document.body.removeChild(ta); }}
+    }});
+  }}
+
+  document.addEventListener("click", function (ev) {{
+    var btn = ev.target && ev.target.closest ? ev.target.closest(".copybtn") : null;
+    if (!btn) return;
+    ev.preventDefault();
+    var label = btn.querySelector(".copybtn-label");
+    var text = btn.getAttribute("data-url") || "";
+    copyText(text).then(function () {{
+      label.textContent = "已复制 ✓";
+      btn.classList.add("copied");
+      clearTimeout(btn._timer);
+      btn._timer = setTimeout(function () {{
+        label.textContent = "复制链接";
+        btn.classList.remove("copied");
+      }}, 1500);
+    }}).catch(function () {{
+      label.textContent = "复制失败，请手动复制";
+      setTimeout(function () {{ label.textContent = "复制链接"; }}, 2200);
+    }});
+  }});
+}})();
+</script>
 </body>
 </html>
 """
