@@ -56,7 +56,7 @@
 
 | 来源 | 内容 |
 | --- | --- |
-| [isNovel/NetrunnerDB_Chinese_Tools](https://github.com/isNovel/NetrunnerDB_Chinese_Tools) | 同一个作者的「NetrunnerDB 简中工具」扩展，内含 879 条译名（身份牌尤其全） |
+| [isNovel/NetrunnerDB_Chinese_Tools](https://github.com/isNovel/NetrunnerDB_Chinese_Tools) | 来自`Novel`大佬的「NetrunnerDB 简中工具」扩展，内含 879 条译名 |
 | [Sneakdoor-BETA/netrunner-card-text-zhCN](https://github.com/Sneakdoor-BETA/netrunner-card-text-zhCN) | 《矩阵潜袭》卡牌中文文本数据，2000+ 张 |
 
 - 想重新拉一遍/补新系列：`python nrdb_weekly.py --import-names`
@@ -130,6 +130,8 @@ python nrdb_weekly.py --dry-run
 需要 Python 3.9+ 和 `lxml`（DSH 自带运行时已满足）。
 
 ## 备注
+代码借助Ds Harness进行编写维护
+
 
 - 站点结构若改版，`parse_listing()` 里的 XPath 可能需要跟着调。
 - 请求间隔 0.35s、失败重试 3 次，避免给站点添麻烦，请勿把 `--days` 调得过大。
