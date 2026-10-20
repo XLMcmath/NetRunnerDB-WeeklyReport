@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 NetrunnerDB 每周牌组摘要生成器
@@ -1151,7 +1151,19 @@ summary:hover{color:var(--txt)}
 .fchip.is-on{background:#4cc38a1f;border-color:#4cc38a66;color:#b7f0d2;font-weight:600}
 .fcount{margin-left:auto;font-size:12.5px;color:var(--dim);font-variant-numeric:tabular-nums}
 .fcount b{color:var(--accent)}
-.fempty{margin:-14px 0 34px;font-size:13.5px;color:var(--dim);text-align:center;
+/* ---------- 悬停卡图预览 ---------- */
+.gtype li[data-code]{cursor:help}
+.cardpop{position:fixed;z-index:80;width:318px;background:#0b1017;border:1px solid #2c3f56;
+  border-radius:10px;box-shadow:0 18px 48px #000a;overflow:hidden;pointer-events:none;
+  opacity:0;transition:opacity .12s;display:flex;flex-direction:column}
+.cardpop.on{opacity:1}
+.cardpop[hidden]{display:none}
+.cardpop img{display:block;width:100%;height:auto;background:#0b1017}
+.cardpop.nocover img{display:none}
+.cardpop .cappop{padding:7px 10px 8px;font-size:12.4px;color:#c9d5e3;line-height:1.45;
+  border-top:1px solid #ffffff10;background:#ffffff06}
+.cardpop .cappop .en{color:var(--dim);font-style:italic;font-size:11.4px;margin-left:5px}
+.cardpop .cappop .src{display:block;margin-top:3px;font-size:10.5px;color:#4c5a6d}.fempty{margin:-14px 0 34px;font-size:13.5px;color:var(--dim);text-align:center;
   padding:22px;border:1px dashed #2c3f56;border-radius:12px}
 .deck[hidden]{display:none !important}
 .sec.filtered-out{display:none}
@@ -1335,6 +1347,132 @@ JS_FILTER = r"""
 })();
 """
 
+# 鼠标悬停显示中文卡图预览：首选社群 Sneakdoor Beta 的简中卡图，取不到回退 NRDB 英文图
+JS_PREVIEW = r"""
+(function () {
+  var pop = document.createElement("div");
+  pop.className = "cardpop";
+  pop.hidden = true;
+  var img = document.createElement("img");
+  img.alt = "";
+  img.decoding = "async";
+  var cap = document.createElement("div");
+  cap.className = "cappop";
+  pop.appendChild(img);
+  pop.appendChild(cap);
+  document.body.appendChild(pop);
+
+  var current = null;
+  var timer = null;
+
+  function esc(s) {
+    return String(s || "").replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  }
+
+  function zhURL(code) {
+    return "https://play.sneakdoorbeta.net/img/cards/zh-simp/default/stock/" + code + ".webp";
+  }
+  function enURL(code) {
+    return "https://card-images.netrunnerdb.com/v2/medium/" + code + ".jpg";
+  }
+
+  function place(row) {
+    var r = row.getBoundingClientRect();
+    var w = pop.offsetWidth || 318;
+    var h = pop.offsetHeight || 470;
+    var gap = 16;
+    var x = r.right + gap;
+    var y = r.top + r.height / 2 - h / 2;
+    if (x + w > window.innerWidth - 12) x = r.left - gap - w;
+    if (x < 12) x = 12;
+    if (y + h > window.innerHeight - 12) y = window.innerHeight - 12 - h;
+    if (y < 12) y = 12;
+    pop.style.left = x + "px";
+    pop.style.top = y + "px";
+  }
+
+  function load(code) {
+    var tries = [zhURL(code), enURL(code)];
+    var i = 0;
+    pop.classList.remove("nocover");
+    img.onerror = function () {
+      i++;
+      if (i < tries.length) {
+        img.src = tries[i];
+      } else {
+        img.removeAttribute("src");
+        pop.classList.add("nocover");
+      }
+    };
+    img.onload = function () {
+      pop.classList.remove("nocover");
+      if (current) place(current);
+    };
+    img.src = tries[0];
+  }
+
+  function show(row) {
+    var code = row.getAttribute("data-code");
+    if (!code) return;
+    current = row;
+    var zhEl = row.querySelector(".cz");
+    var enEl = row.querySelector(".ce");
+    var cnEl = row.querySelector(".cn");
+    var zh = zhEl ? zhEl.textContent : "";
+    var en = enEl ? enEl.textContent : (cnEl ? cnEl.textContent : "");
+    cap.innerHTML = (zh ? esc(zh) + '<span class="en">' + esc(en) + "</span>" : esc(en)) +
+      '<span class="src">卡图：Sneakdoor Beta · 中文</span>';
+    pop.hidden = false;
+    if (img.getAttribute("data-code") !== code) {
+      img.setAttribute("data-code", code);
+      load(code);
+    }
+    place(row);
+    requestAnimationFrame(function () { pop.classList.add("on"); });
+  }
+
+  function hide() {
+    clearTimeout(timer);
+    current = null;
+    pop.hidden = true;
+    pop.classList.remove("on");
+  }
+
+  document.addEventListener("mouseover", function (ev) {
+    var row = ev.target.closest && ev.target.closest("li[data-code]");
+    if (!row || row === current) return;
+    clearTimeout(timer);
+    timer = setTimeout(function () { show(row); }, 140);
+  });
+
+  document.addEventListener("mouseout", function (ev) {
+    var row = ev.target.closest && ev.target.closest("li[data-code]");
+    if (!row) return;
+    if (ev.relatedTarget && row.contains(ev.relatedTarget)) return;
+    hide();
+  });
+
+  window.addEventListener("scroll", hide, { passive: true });
+  document.addEventListener("keydown", function (ev) {
+    if (ev.key === "Escape") hide();
+  });
+
+  if (window.matchMedia && window.matchMedia("(hover: none)").matches) {
+    document.addEventListener("click", function (ev) {
+      var row = ev.target.closest && ev.target.closest("li[data-code]");
+      if (row) {
+        show(row);
+        ev.preventDefault();
+      } else {
+        hide();
+      }
+    });
+  }
+})();
+"""
+
 
 def render_bar(label: str, count: int, total: int, color: str) -> str:
     pct = (count / total * 100) if total else 0
@@ -1397,7 +1535,7 @@ def render_deck(deck: dict, badge: str, imgs: set[str], rank: int | None = None)
     groups_html = []
     for group in deck.get("groups", []):
         items = "".join(
-            f'<li><span class="q">{i["qty"]}×</span>'
+            f'<li data-code="{esc(i["code"])}"><span class="q">{i["qty"]}×</span>'
             + (
                 f'<span class="cost" title="费用">{esc(str(i["cost"]))}</span>'
                 if i.get("cost") is not None else '<span class="cost blank"></span>'
@@ -1631,6 +1769,7 @@ def render_week_html(issue: dict, decks_sections: list, stats: dict, imgs: set[s
 </script>
 <script>{JS_COLLAPSE}</script>
 <script>{JS_FILTER}</script>
+<script>{JS_PREVIEW}</script>
 </body>
 </html>
 """
