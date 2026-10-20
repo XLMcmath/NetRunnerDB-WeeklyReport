@@ -1,8 +1,8 @@
 # NetrunnerDB 每周牌组摘要 · 2026-W43
 
-2026-10-12 → 2026-10-19（最近 7 天）
+2026-10-13 → 2026-10-20（最近 7 天）
 
-本周新牌组 86 副 · 潜袭者 44 / 公司 42
+本周新牌组 70 副 · 潜袭者 35 / 公司 35
 
 ## 1. 官方每周精选
 
@@ -174,7 +174,7 @@
 ---
 
 ### 52 card pickup and other cultural experiences (16th @Worlds)
-**墨丘利: 铬金解放者（Mercury: Chrome Libertador）** · 作者 [OF15-15](https://netrunnerdb.com/en/profile/34833/OF15-15) · 2026 World Champs · 52 张 · ♥24 ★13 💬5 · 2026-10-18
+**墨丘利: 铬金解放者（Mercury: Chrome Libertador）** · 作者 [OF15-15](https://netrunnerdb.com/en/profile/34833/OF15-15) · 2026 World Champs · 52 张 · ♥25 ★15 💬7 · 2026-10-18
 
 [在 NetrunnerDB 打开](https://netrunnerdb.com/en/decklist/b3dad49d-7727-471a-a404-6630be5fd993/52-card-pickup-and-other-cultural-experiences-16th-worlds-)
 
@@ -197,7 +197,7 @@
 ---
 
 ### Rattle that lock [6-1][13th@Worlds]
-**塞巴斯蒂昂·索萨·佩索阿: 激进分子组织者（Sebastião Souza Pessoa: Activist Organizer）** · 作者 [nervousnightjar](https://netrunnerdb.com/en/profile/46476/nervousnightjar) · 2026 World Champs · 45 张 · ♥17 ★7 💬5 · 2026-10-16
+**塞巴斯蒂昂·索萨·佩索阿: 激进分子组织者（Sebastião Souza Pessoa: Activist Organizer）** · 作者 [nervousnightjar](https://netrunnerdb.com/en/profile/46476/nervousnightjar) · 2026 World Champs · 45 张 · ♥18 ★7 💬5 · 2026-10-16
 
 [在 NetrunnerDB 打开](https://netrunnerdb.com/en/decklist/c67898af-86a9-4fc5-b0ef-7f0c1c0a80b0/rattle-that-lock-6-1-13th-worlds-)
 
@@ -242,71 +242,6 @@
 
 ---
 
-### Technically the reigning best Earth SEA in the world (4-2-0)
-**地球站: 空梯管理局总部（Earth Station: SEA Headquarters）** · 作者 [soarix](https://netrunnerdb.com/en/profile/44842/soarix) · 2026 World Champs · 49 张 · 21 议案分数 · ♥16 ★3 💬1 · 2026-10-12
-
-[在 NetrunnerDB 打开](https://netrunnerdb.com/en/decklist/d6315b47-28a0-4a91-a44a-daf3feaba308/technically-the-reigning-best-earth-sea-in-the-world-4-2-0-)
-
-**议案 / Agenda (9)**
-
-1× 凌驾法律, 2× 让他们做个美梦, 3× 牺牲区扩张, 3× 玄武岩尖塔
-
-**资产 / Asset (7)**
-
-2× 蚁丘挖掘合约, 2× 表岩屑开采许可, 3× 舆论操盘手
-
-**事务 / Operation (17)**
-
-1× 数据权管理, 3× 对冲基金, 2× 关键绩效指标, 2× 精准响应, 3× 零用现金, 3× 消费预测智慧商城, 3× 无瑕发布会
-
-**防火墙 / ICE (16)**
-
-2× 阿夫沙尔, 3× 事件视界, 2× 阻塞, 2× 大灯塔, 1× 夏连特拉, 3× 林木线, 3× 温彻斯特
-
----
-
-### Musli-hanDs (or the story of how I let Musli down)
-**穆斯莉哈特: 多面营销专家（MuslihaT: Multifarious Marketeer）** · 作者 [Redino987](https://netrunnerdb.com/en/profile/19119/Redino987) · 46 张 · ♥12 ★6 💬4 · 2026-10-12
-
-[在 NetrunnerDB 打开](https://netrunnerdb.com/en/decklist/93b9e26c-19ef-43b1-b0ba-387617bdae1b/musli-hands-or-the-story-of-how-i-let-musli-down-)
-
-**事件 / Event (26)**
-
-3× 巴伊亚手环, 3× 虚张声势, 3× 时不再来, 3× 利落脱身, 3× 协奏曲, 1× 终局, 2× 穿针引线, 1× 再现部, 3× 胜券在握, 1× 尾随, 3× 财富转移
-
-**硬件 / Hardware (2)**
-
-2× 赫耳墨斯
-
-**程序 / Program (11)**
-
-1× 卡门, 2× 土耳其咖啡壶, 2× 库鲁皮拉, 2× 街头智慧, 2× 左轮手枪, 2× 百灵鹿
-
-**资源 / Resource (7)**
-
-1× 剑术师弗恩诺, 1× 秘法师鸣蝉, 1× 圣骑士诗梦, 3× 一流选手, 1× 孪晶
-
----
-
-### Just Here for the Clean Getaway Zipline (3rd in Startup)
-**穆斯莉哈特: 多面营销专家（MuslihaT: Multifarious Marketeer）** · 作者 [Ghost Meat](https://netrunnerdb.com/en/profile/14280/Ghost%2520Meat) · 2026 World Champs · 45 张 · ♥9 ★4 💬2 · 2026-10-12
-
-[在 NetrunnerDB 打开](https://netrunnerdb.com/en/decklist/374aa40b-3527-4481-b587-4d5495d10a68/just-here-for-the-clean-getaway-zipline-3rd-in-startup-)
-
-**事件 / Event (31)**
-
-3× 利落脱身, 3× 创作委托, 3× 越狱, 3× 黑材料, 2× 避风头, 2× 检修通道, 2× 互惠互利, 2× 超频, 3× 胜券在握, 2× 尾随, 3× 财富转移, 3× 蹑手蹑脚
-
-**硬件 / Hardware (4)**
-
-1× 码头区通行证, 2× 便士刮刀, 1× 试金石
-
-**程序 / Program (10)**
-
-2× 卡门, 2× 发酵罐, 2× 水蛭, 1× 玛雅娜, 1× 原理, 2× 百灵鹿
-
----
-
 ### Big Maggie, Big Thanks (3-2, 184th at Worlds 2026)
 **玛格达琳·凯诺-切穆泰: 幕后建筑师（Magdalene Keino-Chemutai: Cryptarchitect）** · 作者 [Diluvian](https://netrunnerdb.com/en/profile/1224/Diluvian) · 2026 World Champs · 69 张 · ♥9 ★3 💬3 · 2026-10-15
 
@@ -327,29 +262,6 @@
 **资源 / Resource (13)**
 
 3× 每日播报, 3× 努卡·弗罗丽克博士, 2× 环境测试, 1× 汉娜·“驭手”·皮林特拉, 1× 石船海图室, 3× “珍奇阁主”奥布莱恩
-
----
-
-### Il y aura du sang (3rd in Worlds '26 Startup)
-**网际传媒: 身临其境（NBN: Reality Plus）** · 作者 [Ghost Meat](https://netrunnerdb.com/en/profile/14280/Ghost%2520Meat) · 2026 World Champs · 44 张 · 18 议案分数 · ♥6 ★4 💬7 · 2026-10-12
-
-[在 NetrunnerDB 打开](https://netrunnerdb.com/en/decklist/a9aa3920-a0b4-4724-bd40-0d5e95a447a8/il-y-aura-du-sang-3rd-in-worlds-26-startup-)
-
-**议案 / Agenda (9)**
-
-2× 卧底报道, 3× 轨道压制, 1× 明日头条, 3× 猎巫
-
-**资产 / Asset (15)**
-
-1× 0交1, 3× 拟饵, 2× 雷冯图莱长官, 3× 虚无特工, 3× 表岩屑开采许可, 3× 舆论操盘手
-
-**事务 / Operation (8)**
-
-3× 涌入市场, 3× 消费预测智慧商城, 2× 释放
-
-**防火墙 / ICE (12)**
-
-3× 末日刷屏, 1× 苍蝇拍, 2× 欢乐屋, 3× PING, 2× 维切克, 1× 空白
 
 ---
 
@@ -403,6 +315,33 @@
 
 ---
 
+### Totes Undefeated Leo (2026 Worlds Startup 1st Place) 🥇
+**利奥建工: 劳工解决方案（LEO Construction: Labor Solutions）** · 作者 [SkoolKnight4](https://netrunnerdb.com/en/profile/44167/SkoolKnight4) · 2026 World Champs · 49 张 · 20 议案分数 · ♥4 ★1 💬2 · 2026-10-18
+
+[在 NetrunnerDB 打开](https://netrunnerdb.com/en/decklist/3dec584f-aeb7-4d87-8b34-600fc180c8b5/totes-undefeated-leo-2026-worlds-startup-1st-place-)
+
+**议案 / Agenda (8)**
+
+1× 光脑体变, 3× 梅里爱城奢华线, 3× 忆存计划, 1× 以儆效尤
+
+**资产 / Asset (10)**
+
+1× 蚁丘挖掘合约, 3× 仿生人力资源, 3× 表岩屑开采许可, 3× 舆论操盘手
+
+**升级 / Upgrade (6)**
+
+1× 无明虚空, 1× 天冕网阵, 2× 逐月狼秘密开发部, 2× 红房间
+
+**事务 / Operation (10)**
+
+2× 买者自慎, 3× 对冲基金, 2× 纳米级管控, 3× 零用现金
+
+**防火墙 / ICE (15)**
+
+2× 安塞尔1.0, 1× 安塞尔2.0, 3× 布兰1.0, 3× 布米1.0, 2× 苍蝇拍, 1× 散射场, 3× 斯莱泼尼尔
+
+---
+
 ### Smuggle This You Filthy Casual
 **扎赫亚·萨迪吉: 多才多艺的走私者（Zahya Sadeghi: Versatile Smuggler）** · 作者 [OdessaSteppes](https://netrunnerdb.com/en/profile/54666/OdessaSteppes) · 40 张 · ♥3 ★1 💬1 · 2026-10-14
 
@@ -423,6 +362,75 @@
 **资源 / Resource (12)**
 
 3× 每日播报, 2× 努卡·弗罗丽克博士, 1× 秘法师鸣蝉, 1× 圣骑士诗梦, 3× 一流选手, 2× 孪晶
+
+---
+
+### Haunted House [costume party]
+**真理咨询: 政治解决方案（Pravdivost Consulting: Political Solutions）** · 作者 [TheOtherKT](https://netrunnerdb.com/en/profile/52842/TheOtherKT) · 49 张 · 20 议案分数 · ♥2 ★0 💬1 · 2026-10-17
+
+[在 NetrunnerDB 打开](https://netrunnerdb.com/en/decklist/673e7a11-0913-4525-abd5-a60753d8a0d2/haunted-house-costume-party-)
+
+**议案 / Agenda (9)**
+
+3× 血诱, 2× 藤井资产回收, 1× 长生精华液, 3× 蚕业扩张
+
+**资产 / Asset (24)**
+
+2× 0交1, 3× 脑部复写器, 3× 夏洛特·卡萨多尔, 2× 清算所, 2× 月池, 3× 死神函数, 3× 表岩屑开采许可, 3× 舆论操盘手, 3× 荨麻暗码
+
+**事务 / Operation (5)**
+
+2× 自我反省, 3× 零用现金
+
+**防火墙 / ICE (11)**
+
+2× 海葵, 1× 切叶蚁, 2× 亚马逊河鲀, 1× 苍蝇拍, 1× 狮鬃水母, 2× 灌木丛, 2× 三带犰狳
+
+---
+
+### [Standard] MillihaT
+**穆斯莉哈特: 多面营销专家（MuslihaT: Multifarious Marketeer）** · 作者 [IrisFlowers](https://netrunnerdb.com/en/profile/50064/IrisFlowers) · 47 张 · ♥2 ★0 💬1 · 2026-10-14
+
+[在 NetrunnerDB 打开](https://netrunnerdb.com/en/decklist/03c5a205-9a1f-4b9e-a25b-9b5da63822bc/-standard-millihat)
+
+**事件 / Event (26)**
+
+3× 虚张声势, 2× 时不再来, 3× 利落脱身, 1× 协奏曲, 1× 单刀直入, 1× 终局, 3× 越狱, 3× 穿针引线, 3× 胜券在握, 3× 财富转移, 2× 蹑手蹑脚, 1× 投机窗口
+
+**硬件 / Hardware (3)**
+
+1× 回力镖, 2× 雨燕
+
+**程序 / Program (9)**
+
+2× 土耳其咖啡壶, 2× 库鲁皮拉, 1× 梯队, 2× 左轮手枪, 2× 百灵鹿
+
+**资源 / Resource (9)**
+
+2× 秘法师鸣蝉, 2× 自由市场, 3× 一流选手, 2× 孪晶
+
+---
+
+### That Wheeling Feeling
+**塞巴斯蒂昂·索萨·佩索阿: 激进分子组织者（Sebastião Souza Pessoa: Activist Organizer）** · 作者 [MEAT](https://netrunnerdb.com/en/profile/49194/MEAT) · 45 张 · ♥1 ★1 💬1 · 2026-10-15
+
+[在 NetrunnerDB 打开](https://netrunnerdb.com/en/decklist/20556369-9ec8-4146-9f70-63e3c3eb793e/that-wheeling-feeling)
+
+**事件 / Event (16)**
+
+1× 卡托加脱逃, 2× 穿针引线, 3× 特权访问, 3× 钢肤疤痕, 3× 罢工基金, 2× 胜券在握, 2× 财富转移
+
+**硬件 / Hardware (7)**
+
+2× 誊写员, 3× 恶魔护符, 2× 团结徽章
+
+**程序 / Program (8)**
+
+2× “吸血花”奥黛丽v2, 1× 肉毒杆菌, 3× 贪食者, 1× 水蛭, 1× 暗潮汹涌
+
+**资源 / Resource (14)**
+
+3× 暴力团伙, 2× 努卡·弗罗丽克博士, 1× 爱瑠·绫濑·佩索阿, 3× 朋友的朋友, 2× 汉娜·“驭手”·皮林特拉, 2× 曼纽尔·拿铁·德莫拉, 1× 瓦伦蒂娜·费雷拉·卡瓦略
 
 ---
 
@@ -456,7 +464,7 @@
 ---
 
 ### butts in seats (Worlds 2026 winner)
-**哈斯生化: 精密设计（Haas-Bioroid: Precision Design）** · 作者 [Crunchums](https://netrunnerdb.com/en/profile/2219/Crunchums) · 2026 World Champs · 44 张 · 18 议案分数 · ♥69 ★31 💬14 · 2026-10-11
+**哈斯生化: 精密设计（Haas-Bioroid: Precision Design）** · 作者 [Crunchums](https://netrunnerdb.com/en/profile/2219/Crunchums) · 2026 World Champs · 44 张 · 18 议案分数 · ♥70 ★32 💬14 · 2026-10-11
 
 [在 NetrunnerDB 打开](https://netrunnerdb.com/en/decklist/d336f17d-d07b-4eb6-a0e2-d2c2c567182f/butts-in-seats-worlds-2026-winner-)
 
@@ -478,30 +486,26 @@
 
 ---
 
-### Totes Undefeated Leo (2026 Worlds Startup 1st Place) 🥇
-**利奥建工: 劳工解决方案（LEO Construction: Labor Solutions）** · 作者 [SkoolKnight4](https://netrunnerdb.com/en/profile/44167/SkoolKnight4) · 2026 World Champs · 49 张 · 20 议案分数 · ♥2 ★1 💬1 · 2026-10-18
+### 👺Face👺 - The write-up
+**艾萨·阿方托夫: 生态起义者（Esâ Afontov: Eco-Insurrectionist）** · 作者 [protheseus](https://netrunnerdb.com/en/profile/47246/protheseus) · 45 张 · ♥51 ★35 💬13 · 2026-10-10
 
-[在 NetrunnerDB 打开](https://netrunnerdb.com/en/decklist/3dec584f-aeb7-4d87-8b34-600fc180c8b5/totes-undefeated-leo-2026-worlds-startup-1st-place-)
+[在 NetrunnerDB 打开](https://netrunnerdb.com/en/decklist/d0d71459-b240-43ac-87f1-a0a8f93321a5/-face-the-write-up)
 
-**议案 / Agenda (8)**
+**事件 / Event (26)**
 
-1× 光脑体变, 3× 梅里爱城奢华线, 3× 忆存计划, 1× 以儆效尤
+2× 恰斯图什卡, 2× 创作委托, 2× 终局, 2× 卡托加脱逃, 2× 穿针引线, 3× 滴水穿石, 2× 过热运行, 3× 钢肤疤痕, 3× 罢工基金, 3× 胜券在握, 1× 代价, 1× 野猫罢工
 
-**资产 / Asset (10)**
+**硬件 / Hardware (5)**
 
-1× 蚁丘挖掘合约, 3× 仿生人力资源, 3× 表岩屑开采许可, 3× 舆论操盘手
+3× 幽灵之舌, 2× 骨髓
 
-**升级 / Upgrade (6)**
+**程序 / Program (10)**
 
-1× 无明虚空, 1× 天冕网阵, 2× 逐月狼秘密开发部, 2× 红房间
+1× 阿巴契, 1× 别格莫特, 3× 肉毒杆菌, 3× 发酵罐, 1× 左轮手枪, 1× 暗潮汹涌
 
-**事务 / Operation (10)**
+**资源 / Resource (4)**
 
-2× 买者自慎, 3× 对冲基金, 2× 纳米级管控, 3× 零用现金
-
-**防火墙 / ICE (15)**
-
-2× 安塞尔1.0, 1× 安塞尔2.0, 3× 布兰1.0, 3× 布米1.0, 2× 苍蝇拍, 1× 散射场, 3× 斯莱泼尼尔
+3× 努卡·弗罗丽克博士, 1× 幸护士
 
 ---
 

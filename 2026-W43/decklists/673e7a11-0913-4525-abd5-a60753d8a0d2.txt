@@ -1,35 +1,33 @@
-Haunted House [costume party]
-
-Identity: Pravdivost Consulting: Political Solutions (33048)
+;; title: Haunted House [costume party]
+;; identity-code: 33048
+;; notes: https://netrunnerdb.com/en/decklist/673e7a11-0913-4525-abd5-a60753d8a0d2/haunted-house-costume-party-
 
 Agenda (9)
-3x Blood in the Water (33039)
-2x Fujii Asset Retrieval (34040)
-1x Longevity Serum (30044)
-3x Sericulture Expansion (35049)
+3x Blood in the Water
+2x Fujii Asset Retrieval
+1x Longevity Serum
+3x Sericulture Expansion
 
 Asset (24)
-2x Byte! (35050)
-3x Cerebral Overwriter (26099)
-3x Charlotte Caçador (34107)
-2x Clearinghouse (30061)
-2x Moon Pool (33042)
-3x Reaper Function (33107)
-3x Regolith Mining License (30071)
-3x Spin Doctor (30053)
-3x Urtica Cipher (30045)
+2x Byte!
+3x Cerebral Overwriter
+3x Charlotte Caçador
+2x Clearinghouse
+2x Moon Pool
+3x Reaper Function
+3x Regolith Mining License
+3x Spin Doctor
+3x Urtica Cipher
 
 Operation (5)
-2x Hansei Review (30048)
-3x Petty Cash (35081)
+2x Hansei Review
+3x Petty Cash
 
 ICE (11)
-2x Anemone (33043)
-1x Attini (34042)
-2x Boto (34109)
-1x Flyswatter (35079)
-1x Lionsmane (36041)
-2x Semak-samun (35054)
-2x Tatu-Bola (34044)
-
-https://netrunnerdb.com/en/decklist/673e7a11-0913-4525-abd5-a60753d8a0d2/haunted-house-costume-party-
+2x Anemone
+1x Attini
+2x Boto
+1x Flyswatter
+1x Lionsmane
+2x Semak-samun
+2x Tatu-Bola

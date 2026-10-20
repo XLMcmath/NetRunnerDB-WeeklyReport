@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 NetrunnerDB 每周牌组摘要生成器
@@ -325,6 +325,7 @@ def load_cards() -> tuple[dict, dict]:
             "cost": card.get("cost"),
             "faction_cost": card.get("faction_cost"),
             "agenda_points": card.get("agenda_points"),
+            "pack": card.get("pack_code", ""),
             # 特性牌才有：影响力上限、牌组张数下限
             "influence_limit": card.get("influence_limit"),
             "minimum_deck_size": card.get("minimum_deck_size"),
@@ -332,6 +333,35 @@ def load_cards() -> tuple[dict, dict]:
         by_code[meta["code"]] = meta
         by_title.setdefault(meta["title"].lower(), meta)
     return by_code, by_title
+
+
+# --------------------------------------------------------------------------
+# 赛制（标准 / 新启）
+# --------------------------------------------------------------------------
+# NRDB 不记录牌组的赛制（v3 的 decklist 属性里没有 format，?filter[format] 也会被忽略），
+# 所以只能推断：
+#   1. 标题/简介里写了 startup → 确定是新启
+#   2. 整副牌（含特性）都用「新启卡池」里的系列 → 可能是新启（也可能只是标准牌组没带老卡）
+#   3. 只要有一张卡在新启池外 → 一定是标准
+# 新启卡池直接从 v3 的 formats/startup → active snapshot 的 card_cycle_ids 推出。
+
+V3_API = "https://api-preview.netrunnerdb.com/api/v3/public"
+
+
+def load_startup_packs() -> set[str]:
+    """返回新启卡池涉及的 v2 pack code 集合；失败时返回空集（退化为只按关键词判定）。"""
+    try:
+        fmt = cached_json(f"{V3_API}/formats/startup", "startup_format.json", max_age_days=7)
+        snap_id = fmt["data"]["attributes"]["active_snapshot_id"]
+        snap = cached_json(f"{V3_API}/snapshots/{snap_id}", f"startup_snapshot.json", max_age_days=7)
+        cycles = {c.replace("_", "-") for c in snap["data"]["attributes"]["card_cycle_ids"]}
+        packs = cached_json(f"{API}/packs", "packs.json", max_age_days=30)
+        codes = {p["code"] for p in packs["data"] if p.get("cycle_code") in cycles}
+        log(f"   新启卡池：{snap_id} · 系列 {', '.join(sorted(cycles))} · {len(codes)} 个卡包")
+        return codes
+    except Exception as e:  # noqa: BLE001 - 拿不到就退化
+        log(f"   ! 新启卡池获取失败（赛制将只按标题关键词判定）：{e}")
+        return set()
 
 
 def resolve_identities(rows: list[dict], by_code: dict, by_title: dict) -> list[dict]:
@@ -734,7 +764,7 @@ def fetch_deck(uuid: str) -> dict | None:
 # 牌组详情整理
 # --------------------------------------------------------------------------
 
-def build_deck(deck: dict, raw: dict, cards: dict, names=({}, {})) -> dict:
+def build_deck(deck: dict, raw: dict, cards: dict, names=({}, {}), startup_packs=frozenset()) -> dict:
     """把 API 详情整理成模板需要的结构。names = (code→中文, 英文名→中文)。"""
     slots = raw.get("cards") or {}
     identity_code, identity_name, identity_faction = "", "", ""
@@ -752,6 +782,7 @@ def build_deck(deck: dict, raw: dict, cards: dict, names=({}, {})) -> dict:
             "code": code,
             "title": meta.get("title", f"[{code}]"),
             "title_zh": translate(code, meta.get("title", ""), names),
+            "pack": meta.get("pack", ""),
             "cost": meta.get("cost"),
             "faction": meta.get("faction", ""),
             "faction_cost": meta.get("faction_cost"),
@@ -797,6 +828,20 @@ def build_deck(deck: dict, raw: dict, cards: dict, names=({}, {})) -> dict:
             if (item["faction_cost"] or 0) > 0:
                 item["inf"] = int(item["faction_cost"])
 
+    # 赛制推断（见 load_startup_packs 的说明）
+    probe = f'{deck.get("title", "")} {raw.get("description") or ""}'.lower()
+    if "startup" in probe:
+        fmt, fmt_sure = "startup", True
+    else:
+        used = {i["pack"] for g in groups for i in g["items"]}
+        if ident_meta.get("pack"):
+            used.add(ident_meta["pack"])
+        used.discard("")
+        if startup_packs and used and used <= set(startup_packs):
+            fmt, fmt_sure = "startup_maybe", False
+        else:
+            fmt, fmt_sure = "standard", False
+
     fname, _, color = faction_display(faction_code, side)
     ident_en = identity_name or deck.get("identity_title", "")
     return {
@@ -804,6 +849,8 @@ def build_deck(deck: dict, raw: dict, cards: dict, names=({}, {})) -> dict:
         "identity_code": identity_code or deck.get("identity_code", ""),
         "identity_title": ident_en,
         "identity_zh": translate(identity_code, ident_en, names),
+        "format": fmt,
+        "format_confident": fmt_sure,
         "faction_name": fname,
         "faction_color": color,
         "side": side,
@@ -1092,6 +1139,25 @@ summary:hover{color:var(--txt)}
 .copybtn.copied{color:#8fe0b4;background:#4cc38a1f;border-color:#4cc38a66}
 .copybtn svg{width:12px;height:12px;flex:none}
 
+/* ---------- 筛选条 ---------- */
+.filters{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;margin:-8px 0 30px;
+  padding:12px 16px;border:1px solid var(--line);border-radius:12px;background:#ffffff05}
+.fgroup{display:flex;align-items:center;gap:6px}
+.flabel{font-size:12.5px;color:var(--dim);margin-right:2px}
+.fchip{font:inherit;font-size:12.8px;line-height:1.5;cursor:pointer;color:var(--muted);
+  background:transparent;border:1px solid #2c3f56;border-radius:7px;padding:3px 11px;
+  transition:background .15s,color .15s,border-color .15s}
+.fchip:hover{color:#fff;border-color:#3d5a7a}
+.fchip.is-on{background:#4cc38a1f;border-color:#4cc38a66;color:#b7f0d2;font-weight:600}
+.fcount{margin-left:auto;font-size:12.5px;color:var(--dim);font-variant-numeric:tabular-nums}
+.fcount b{color:var(--accent)}
+.fempty{margin:-14px 0 34px;font-size:13.5px;color:var(--dim);text-align:center;
+  padding:22px;border:1px dashed #2c3f56;border-radius:12px}
+.deck[hidden]{display:none !important}
+.sec.filtered-out{display:none}
+.tag.fmt{background:#6f7bf71f;color:#b9bffb;border-color:#6f7bf755}
+.tag.fmt.maybe{background:#ffffff08;color:var(--dim);border-color:#ffffff1a}
+
 /* ---------- archive ---------- */
 .arc{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:14px}
 .arc a.item{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;
@@ -1195,6 +1261,80 @@ JS_COLLAPSE = r"""
 })();
 """
 
+# 阵营 / 赛制筛选（纯前端过滤，状态写进 URL hash 便于分享）
+JS_FILTER = r"""
+(function () {
+  var chips = Array.prototype.slice.call(document.querySelectorAll(".fchip"));
+  if (!chips.length) return;
+  var state = { side: "all", fmt: "all" };
+
+  function decks() {
+    return Array.prototype.slice.call(document.querySelectorAll("article.deck"));
+  }
+
+  function parseHash() {
+    var raw = (location.hash || "").replace(/^#/, "");
+    if (!raw) return;
+    raw.split("&").forEach(function (kv) {
+      var p = kv.split("=");
+      if (p[0] === "side" && p[1]) state.side = p[1];
+      if (p[0] === "fmt" && p[1]) state.fmt = p[1];
+    });
+  }
+
+  function syncChips() {
+    chips.forEach(function (c) {
+      var on = state[c.getAttribute("data-f")] === c.getAttribute("data-v");
+      c.classList.toggle("is-on", on);
+    });
+  }
+
+  function apply() {
+    var all = decks(), shown = 0;
+    all.forEach(function (d) {
+      var side = d.getAttribute("data-side") || "";
+      var fmt = d.getAttribute("data-fmt") || "standard";
+      var okSide = state.side === "all" || side === state.side;
+      var okFmt = state.fmt === "all" ||
+        (state.fmt === "startup" ? fmt.indexOf("startup") === 0 : fmt === "standard");
+      var on = okSide && okFmt;
+      d.hidden = !on;
+      if (on) shown++;
+    });
+
+    Array.prototype.slice.call(document.querySelectorAll("section.sec")).forEach(function (sec) {
+      if (sec.id === "s0") return;
+      sec.classList.toggle("filtered-out", sec.querySelectorAll("article.deck:not([hidden])").length === 0);
+    });
+
+    var out = document.getElementById("fcount");
+    if (out) out.innerHTML = "显示 <b>" + shown + "</b> / " + all.length + " 副";
+    var empty = document.getElementById("fempty");
+    if (empty) empty.hidden = shown > 0;
+
+    var parts = [];
+    if (state.side !== "all") parts.push("side=" + state.side);
+    if (state.fmt !== "all") parts.push("fmt=" + state.fmt);
+    var hash = parts.length ? "#" + parts.join("&") : "";
+    if (location.hash !== hash) {
+      history.replaceState(null, "", hash || location.pathname + location.search);
+    }
+  }
+
+  document.addEventListener("click", function (ev) {
+    var c = ev.target.closest && ev.target.closest(".fchip");
+    if (!c) return;
+    state[c.getAttribute("data-f")] = c.getAttribute("data-v");
+    syncChips();
+    apply();
+  });
+
+  parseHash();
+  syncChips();
+  apply();
+})();
+"""
+
 
 def render_bar(label: str, count: int, total: int, color: str) -> str:
     pct = (count / total * 100) if total else 0
@@ -1223,6 +1363,11 @@ def render_deck(deck: dict, badge: str, imgs: set[str], rank: int | None = None)
         tags.append(f'<span class="tag">{esc(deck["faction_name"])}</span>')
     if deck.get("rotation"):
         tags.append(f'<span class="tag">{esc(deck["rotation"])}</span>')
+    if deck.get("format") == "startup":
+        tags.append('<span class="tag fmt" title="标题或简介里标了 Startup">新启</span>')
+    elif deck.get("format") == "startup_maybe":
+        tags.append('<span class="tag fmt maybe" '
+                    'title="整副牌只用到新启卡池里的系列，可能也是标准牌组">新启?</span>')
 
     code = deck.get("identity_code", "")
     if code and code in imgs:
@@ -1288,7 +1433,7 @@ def render_deck(deck: dict, badge: str, imgs: set[str], rank: int | None = None)
         ident_html = f"<b>{esc(ident_en)}</b>"
 
     return f"""
-<article class="deck" style="--fc:{deck.get('faction_color', '#4cc38a')}">
+<article class="deck" style="--fc:{deck.get('faction_color', '#4cc38a')}" data-side="{deck.get('side', '')}" data-fmt="{deck.get('format', 'standard')}">
   <div class="deck-top">
     {img}
     <div class="dmain">
@@ -1385,6 +1530,21 @@ def render_week_html(issue: dict, decks_sections: list, stats: dict, imgs: set[s
   </nav>
 </header>
 
+<div class="filters">
+  <div class="fgroup"><span class="flabel">阵营</span>
+    <button type="button" class="fchip is-on" data-f="side" data-v="all">全部</button>
+    <button type="button" class="fchip" data-f="side" data-v="corp">公司</button>
+    <button type="button" class="fchip" data-f="side" data-v="runner">潜袭者</button>
+  </div>
+  <div class="fgroup"><span class="flabel">赛制</span>
+    <button type="button" class="fchip is-on" data-f="fmt" data-v="all">全部</button>
+    <button type="button" class="fchip" data-f="fmt" data-v="standard">标准</button>
+    <button type="button" class="fchip" data-f="fmt" data-v="startup">新启</button>
+  </div>
+  <span class="fcount" id="fcount" title="只过滤下面的牌组卡片；上方概览仍是全周统计"></span>
+</div>
+<p class="fempty" id="fempty" hidden>当前筛选下没有牌组，放宽一下条件试试。</p>
+
 <section class="sec" id="s0">
   <div class="sec-head" role="button" tabindex="0" aria-expanded="true" aria-controls="body-s0"
        data-sec="s0">
@@ -1470,6 +1630,7 @@ def render_week_html(issue: dict, decks_sections: list, stats: dict, imgs: set[s
 }})();
 </script>
 <script>{JS_COLLAPSE}</script>
+<script>{JS_FILTER}</script>
 </body>
 </html>
 """
@@ -1596,6 +1757,8 @@ def main() -> int:
 
     log(f"   收录: 周精选 {len(dotw_pick)} · 本周热门 {len(hot_pick)} · 人气榜 {len(alltime_pick)}")
 
+    startup_packs = load_startup_packs()
+
     log("[4/5] 下载牌组详情 …")
     selected = dotw_pick + hot_pick + alltime_pick
     detailed: list[dict] = []
@@ -1603,7 +1766,7 @@ def main() -> int:
         raw = fetch_deck(row["uuid"])
         if not raw:
             continue
-        detailed.append(build_deck(row, raw, cards, names))
+        detailed.append(build_deck(row, raw, cards, names, startup_packs))
         log(f"   ({i}/{len(selected)}) {row['title'][:56]} — {detailed[-1]['n_cards']} 张")
 
     by_uuid = {d["uuid"]: d for d in detailed}

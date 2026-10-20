@@ -1,0 +1,34 @@
+;; title: [Standard] MillihaT
+;; identity-code: 35013
+;; notes: https://netrunnerdb.com/en/decklist/03c5a205-9a1f-4b9e-a25b-9b5da63822bc/-standard-millihat
+
+Event (26)
+3x Bravado
+2x Carpe Diem
+3x Clean Getaway
+1x Concerto
+1x Direct Access
+1x Finality
+3x Jailbreak
+3x Pinhole Threading
+3x Sure Gamble
+3x Transfer of Wealth
+2x Tread Lightly
+1x Window of Opportunity
+
+Hardware (3)
+1x Boomerang
+2x Swift
+
+Program (9)
+2x Cezve
+2x Curupira
+1x Echelon
+2x Revolver
+2x Sang Kancil
+
+Resource (9)
+2x Mystic Maemi
+2x Open Market
+3x The Class Act
+2x The Twinning

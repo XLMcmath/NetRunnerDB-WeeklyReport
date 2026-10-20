@@ -1,0 +1,33 @@
+;; title: That Wheeling Feeling
+;; identity-code: 34066
+;; notes: https://netrunnerdb.com/en/decklist/20556369-9ec8-4146-9f70-63e3c3eb793e/that-wheeling-feeling
+
+Event (16)
+1x Katorga Breakout
+2x Pinhole Threading
+3x Privileged Access
+3x Steelskin Scarring
+3x Strike Fund
+2x Sure Gamble
+2x Transfer of Wealth
+
+Hardware (7)
+2x Amanuensis
+3x Devil Charm
+2x Solidarity Badge
+
+Program (8)
+2x Audrey v2
+1x Botulus
+3x Gourmand
+1x Leech
+1x Rising Tide
+
+Resource (14)
+3x Arruaceiras Crew
+2x Dr. Nuka Vrolyck
+1x Eru Ayase-Pessoa
+3x Friend of a Friend
+2x Hannah "Wheels" Pilintra
+2x Manuel Lattes de Moura
+1x Valentina Ferreira Carvalho

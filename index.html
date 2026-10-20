@@ -151,6 +151,25 @@ summary:hover{color:var(--txt)}
 .copybtn.copied{color:#8fe0b4;background:#4cc38a1f;border-color:#4cc38a66}
 .copybtn svg{width:12px;height:12px;flex:none}
 
+/* ---------- 筛选条 ---------- */
+.filters{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;margin:-8px 0 30px;
+  padding:12px 16px;border:1px solid var(--line);border-radius:12px;background:#ffffff05}
+.fgroup{display:flex;align-items:center;gap:6px}
+.flabel{font-size:12.5px;color:var(--dim);margin-right:2px}
+.fchip{font:inherit;font-size:12.8px;line-height:1.5;cursor:pointer;color:var(--muted);
+  background:transparent;border:1px solid #2c3f56;border-radius:7px;padding:3px 11px;
+  transition:background .15s,color .15s,border-color .15s}
+.fchip:hover{color:#fff;border-color:#3d5a7a}
+.fchip.is-on{background:#4cc38a1f;border-color:#4cc38a66;color:#b7f0d2;font-weight:600}
+.fcount{margin-left:auto;font-size:12.5px;color:var(--dim);font-variant-numeric:tabular-nums}
+.fcount b{color:var(--accent)}
+.fempty{margin:-14px 0 34px;font-size:13.5px;color:var(--dim);text-align:center;
+  padding:22px;border:1px dashed #2c3f56;border-radius:12px}
+.deck[hidden]{display:none !important}
+.sec.filtered-out{display:none}
+.tag.fmt{background:#6f7bf71f;color:#b9bffb;border-color:#6f7bf755}
+.tag.fmt.maybe{background:#ffffff08;color:var(--dim);border-color:#ffffff1a}
+
 /* ---------- archive ---------- */
 .arc{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:14px}
 .arc a.item{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;
@@ -183,7 +202,7 @@ footer a{color:var(--muted);text-decoration:underline;text-underline-offset:3px}
 </header>
 <section>
   <div class="sec-head"><h2>全部期数</h2><span class="hint">点击进入某一期</span></div>
-  <div class="arc"><a class="item" href="2026-W43/index.html"><div class="week">2026-W43 <span class="latest">最新</span></div><div class="sub">2026-10-12 → 2026-10-19（最近 7 天）</div><div class="sub">86 副牌组 · 23 副完整牌表</div></a></div>
+  <div class="arc"><a class="item" href="2026-W43/index.html"><div class="week">2026-W43 <span class="latest">最新</span></div><div class="sub">2026-10-13 → 2026-10-20（最近 7 天）</div><div class="sub">70 副牌组 · 23 副完整牌表</div></a></div>
 </section>
 <footer>数据来源 <a href="https://netrunnerdb.com/en/decklists/dotw">netrunnerdb.com</a> ·
 与 FFG / Null Signal Games 无关联。</footer>
