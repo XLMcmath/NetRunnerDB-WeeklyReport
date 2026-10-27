@@ -1,0 +1,34 @@
+;; title: Adhesive tape and saliva
+;; identity-code: 33048
+;; notes: https://netrunnerdb.com/en/decklist/3e73af4b-6b19-4829-a5b6-66eb1a9e1ab8/adhesive-tape-and-saliva
+
+Agenda (10)
+3x Artificial Cryptocrash
+3x Let Them Dream
+3x Stoke the Embers
+1x Tomorrowʼs Headline
+
+Asset (12)
+1x Chekist Scion
+1x Idiosyncresis
+3x Magistrate Revontulet
+1x Public Access Plaza
+3x Regolith Mining License
+3x Spin Doctor
+
+Upgrade (3)
+3x Vladisibirsk City Grid
+
+Operation (12)
+3x Hedge Fund
+3x Measured Response
+3x NAPD Cordon
+3x Predictive Planogram
+
+ICE (12)
+3x F2P
+1x Flyswatter
+3x Mestnichestvo
+2x Paywall
+2x Ping
+1x Whitespace

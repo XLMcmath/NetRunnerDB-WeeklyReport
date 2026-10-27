@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 NetrunnerDB 每周牌组摘要生成器
@@ -23,7 +23,7 @@ NetrunnerDB 每周牌组摘要生成器
     python nrdb_weekly.py --no-images    # 不下载卡图
     python nrdb_weekly.py --dry-run      # 只抓数据，不写文件
 
-只依赖标准库 + lxml。
+依赖：标准库 + lxml；读 .xlsx 译名表时需要 openpyxl（缺失会自动退化成英文名）。
 """
 
 from __future__ import annotations
@@ -448,7 +448,15 @@ def load_name_table(path: Path) -> tuple[dict, dict, dict]:
         return by_code, by_title, info
 
     path = Path(path)
-    rows = _rows_from_xlsx(path) if path.suffix.lower() in (".xlsx", ".xlsm") else _rows_from_csv(path)
+    try:
+        rows = _rows_from_xlsx(path) if path.suffix.lower() in (".xlsx", ".xlsm") else _rows_from_csv(path)
+    except ModuleNotFoundError as e:  # 没装 openpyxl（比如干净的 CI 环境）
+        log(f"   ! 读不了 {path.name}：{e}")
+        log("     → pip install openpyxl（或把译名表另存为 .csv）；本次先按英文名显示")
+        return by_code, by_title, info
+    except Exception as e:  # noqa: BLE001 - 表格坏了也不该让整期跑挂
+        log(f"   ! 译名表读取失败，本次按英文名显示：{type(e).__name__}: {e}")
+        return by_code, by_title, info
 
     header_idx, roles = None, {}
     for idx, row in enumerate(rows[:10]):
@@ -513,7 +521,15 @@ def read_name_sheet(path: Path) -> list[dict]:
     if not path or not Path(path).exists():
         return []
     path = Path(path)
-    rows = _rows_from_xlsx(path) if path.suffix.lower() in (".xlsx", ".xlsm") else _rows_from_csv(path)
+    try:
+        rows = _rows_from_xlsx(path) if path.suffix.lower() in (".xlsx", ".xlsm") else _rows_from_csv(path)
+    except ModuleNotFoundError as e:  # 没装 openpyxl（比如干净的 CI 环境）
+        log(f"   ! 读不了 {path.name}：{e}")
+        log("     → pip install openpyxl（或把译名表另存为 .csv）；本次跳过已有译名")
+        return []
+    except Exception as e:  # noqa: BLE001
+        log(f"   ! 译名表读取失败，本次跳过已有译名：{type(e).__name__}: {e}")
+        return []
     header_idx, roles = None, {}
     for idx, row in enumerate(rows[:10]):
         found = {}

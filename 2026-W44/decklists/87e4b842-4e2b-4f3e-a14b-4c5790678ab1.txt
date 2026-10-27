@@ -1,0 +1,36 @@
+;; title: eternal - flood asa (3rd @ astro delivery 3)
+;; identity-code: 21009
+;; notes: https://netrunnerdb.com/en/decklist/87e4b842-4e2b-4f3e-a14b-4c5790678ab1/eternal-flood-asa-3rd-astro-delivery-3-
+
+Agenda (6)
+3x Global Food Initiative
+1x Méliès City Luxury Line
+2x Vanity Project
+
+Asset (17)
+1x Bass CH1R180G4
+1x Daily Business Show
+2x Estelle Moon
+2x Humanoid Resources
+1x Jeeves Model Bioroids
+1x Malia Z0L0K4
+1x Rashida Jaheem
+3x Spin Doctor
+3x Tech Startup
+2x Wage Workers
+
+Operation (15)
+1x Biotic Labor
+1x Enforced Curfew
+2x Flood the Market
+3x Friends in High Places
+3x Fully Operational
+1x Red Level Clearance
+1x Shipment from MirrorMorph
+3x Top-Down Solutions
+
+ICE (11)
+3x Drafter
+3x Gatekeeper
+2x Macrophage
+3x Vanilla

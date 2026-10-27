@@ -1,0 +1,29 @@
+;; title: Expert in a Dying Field (Top 32 Worlds '26)
+;; identity-code: 30001
+;; notes: https://netrunnerdb.com/en/decklist/241a289c-f46a-4a64-a0aa-98a65297d347/expert-in-a-dying-field-top-32-worlds-26-
+
+Event (10)
+1x Creative Commission
+3x Pinhole Threading
+3x Steelskin Scarring
+3x Sure Gamble
+
+Hardware (5)
+3x Gachapon
+2x Hermes
+
+Program (14)
+1x Audrey v2
+2x Buzzsaw
+1x Echelon
+3x Fermenter
+3x Gourmand
+1x Revolver
+3x Rising Tide
+
+Resource (11)
+3x Daily Casts
+1x Eru Ayase-Pessoa
+3x Paladin Poemu
+3x The Twinning
+1x Trickster Taka

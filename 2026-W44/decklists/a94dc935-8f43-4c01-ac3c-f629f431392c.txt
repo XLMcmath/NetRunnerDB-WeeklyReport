@@ -1,0 +1,35 @@
+;; title: R+ Seamless (2nd Place @ Hefei H1 CTK, 35 Players, 3-1-1)
+;; identity-code: 30051
+;; notes: https://netrunnerdb.com/en/decklist/a94dc935-8f43-4c01-ac3c-f629f431392c/r-seamless-2nd-place-hefei-h1-ctk-35-players-3-1-1-
+
+Agenda (9)
+3x Artificial Cryptocrash
+2x Freedom of Information
+1x Tomorrowʼs Headline
+3x Witch Hunt
+
+Asset (6)
+3x Humanoid Resources
+3x Spin Doctor
+
+Upgrade (1)
+1x AMAZE Amusements
+
+Operation (17)
+1x Bigger Picture
+3x Hedge Fund
+3x Oppo Research
+1x Pivot
+1x Retribution
+3x Seamless Launch
+2x Shipment from Vladisibirsk
+3x Your Digital Life
+
+ICE (11)
+2x Doomscroll
+1x Flyswatter
+1x Funhouse
+1x Mestnichestvo
+3x Ping
+2x Unsmiling Tsarevna
+1x Virtual Service Agent

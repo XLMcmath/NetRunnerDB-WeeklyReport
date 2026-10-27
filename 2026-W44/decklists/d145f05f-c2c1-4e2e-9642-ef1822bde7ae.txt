@@ -1,0 +1,37 @@
+;; title: Drinking Age (2nd @ zamn24's Oops all IDs!)
+;; identity-code: 22008
+;; notes: https://netrunnerdb.com/en/decklist/d145f05f-c2c1-4e2e-9642-ef1822bde7ae/drinking-age-2nd-zamn24-s-oops-all-ids-
+
+Event (28)
+3x Bravado
+3x Carpe Diem
+3x Clean Getaway
+1x Creative Commission
+2x Finality
+3x Jailbreak
+1x Mutual Favor
+1x Overclock
+3x Pinhole Threading
+3x Sure Gamble
+2x Tailgate
+3x Transfer of Wealth
+
+Hardware (8)
+2x Boomerang
+1x Borrowed Goods
+2x Hermes
+1x Touchstone
+2x WAKE Implant v2A-JRJ
+
+Program (10)
+1x Carmen
+2x Cezve
+1x Cupellation
+2x Curupira
+1x Leech
+1x Revolver
+2x Sang Kancil
+
+Resource (5)
+2x Manuel Lattes de Moura
+3x The Class Act

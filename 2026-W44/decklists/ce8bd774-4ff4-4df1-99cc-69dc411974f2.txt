@@ -1,0 +1,30 @@
+;; title: Hot Ones (9th @ Worlds 2026)
+;; identity-code: 35024
+;; notes: https://netrunnerdb.com/en/decklist/ce8bd774-4ff4-4df1-99cc-69dc411974f2/hot-ones-9th-worlds-2026-
+
+Event (23)
+3x Creative Commission
+3x Deep Dive
+2x Joy Ride
+3x Ritual
+3x Running Hot
+3x Spec Work
+3x Sure Gamble
+3x VRcation
+
+Hardware (3)
+3x Simulchip
+
+Program (11)
+3x Coalescence
+1x Cupellation
+1x Euler
+1x Gauss
+1x Hush
+3x Read-Write Share
+1x Revolver
+
+Resource (8)
+2x Daily Casts
+3x Dr. Nuka Vrolyck
+3x Stoneship Chart Room

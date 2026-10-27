@@ -24,7 +24,8 @@ jobs:
           python-version: "3.12"
 
       - name: 安装依赖
-        run: pip install lxml
+        # openpyxl 用于读 card_names_zh.xlsx（译名表）；缺了会自动退化成英文名
+        run: pip install lxml openpyxl
 
       - name: 抓取并生成（写到仓库根目录，历史期数会累积）
         run: python nrdb_weekly.py --out .

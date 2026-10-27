@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NetrunnerDB 每周牌组摘要 · 2026-W44</title>
+<style>
+:root{
+  --bg:#0d1117; --bg2:#131a24; --card:#161e2b; --line:#233042;
+  --txt:#e6edf3; --muted:#8b9bb0; --dim:#5f7085;
+  --accent:#4cc38a; --accent2:#58a6ff; --warn:#f0a83c;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:
+    radial-gradient(1100px 500px at 12% -10%, #16304a 0%, transparent 60%),
+    radial-gradient(900px 420px at 88% 0%, #1c3a2e 0%, transparent 55%),
+    var(--bg);
+  color:var(--txt);
+  font:15px/1.62 "Noto Sans SC","Microsoft YaHei","PingFang SC",-apple-system,"Segoe UI",Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px 64px}
+code,.mono{font-family:ui-monospace,"Cascadia Mono",Consolas,monospace}
+
+/* ---------- hero ---------- */
+.hero{padding:46px 0 26px;border-bottom:1px solid var(--line);margin-bottom:30px}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent);font-weight:600}
+.kicker .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
+h1{font-size:42px;line-height:1.12;margin:14px 0 10px;letter-spacing:-.02em;font-weight:800}
+h1 .light{font-weight:300;color:var(--muted)}
+.hero p{margin:0;color:var(--muted);font-size:15.5px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.htag{font-size:12.5px;color:var(--muted);border:1px solid var(--line);border-radius:999px;
+  padding:4px 11px;background:#ffffff05}
+.htag b{color:var(--txt);font-weight:600}
+.jump{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+.jumpitem{font-size:13px;border:1px solid #2c3f56;border-radius:9px;padding:6px 12px;
+  background:#ffffff07;color:#c9d5e3;transition:border-color .15s,background .15s}
+.jumpitem:hover{border-color:var(--accent);background:#4cc38a14;color:#fff}
+.jumpitem b{color:var(--accent);font-weight:700;margin-left:3px}
+.jumpitem.toggleall{font:inherit;font-size:12.6px;font-family:inherit;cursor:pointer;
+  background:#ffffff07;color:var(--muted)}
+.jumpitem.toggleall:hover{color:#fff}
+
+/* ---------- stat grid ---------- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:0 0 26px}
+.stat{background:linear-gradient(180deg,#ffffff08,#ffffff02);border:1px solid var(--line);
+  border-radius:var(--radius);padding:16px 18px}
+.stat .k{font-size:12.5px;color:var(--dim);letter-spacing:.06em}
+.stat .v{font-size:29px;font-weight:750;letter-spacing:-.02em;margin-top:2px}
+.stat .v small{font-size:13px;font-weight:500;color:var(--muted);margin-left:5px}
+
+/* ---------- panels ---------- */
+.panels{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;margin-bottom:36px}
+.panel{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
+.panel h3{margin:0 0 14px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);font-weight:700}
+.bar{margin-bottom:9px}
+.bar .lab{display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:4px}
+.bar .lab span:last-child{color:var(--muted);font-variant-numeric:tabular-nums}
+.bar .track{height:7px;border-radius:4px;background:#ffffff0d;overflow:hidden}
+.bar .fill{height:100%;border-radius:4px;background:var(--accent);transition:width .3s}
+.idlist{display:flex;flex-direction:column;gap:7px}
+.idrow{display:flex;align-items:center;gap:10px;font-size:13.8px}
+.idrow .n{color:var(--dim);width:18px;text-align:right;font-variant-numeric:tabular-nums}
+.idrow .t{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.idrow .c{color:var(--muted);font-variant-numeric:tabular-nums}
+
+/* ---------- section ---------- */
+section{margin-bottom:46px}
+.sec-head{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid var(--line);
+  padding-bottom:10px;margin-bottom:18px;cursor:pointer;user-select:none}
+.sec-head:hover h2{color:#fff}
+.sec-head:focus-visible{outline:2px solid var(--accent2);outline-offset:3px;border-radius:4px}
+.sec-head h2{font-size:21px;margin:0;font-weight:750;letter-spacing:-.01em}
+.sec-head .num{font-size:13px;color:var(--accent);font-weight:700;letter-spacing:.1em}
+.sec-head .hint{margin-left:auto;font-size:12.5px;color:var(--dim)}
+.sec-head .caret{font-size:12px;color:var(--dim);margin-left:10px;transition:transform .18s}
+.sec-head[aria-expanded="false"] .caret{transform:rotate(-90deg)}
+.sec.is-collapsed .sec-body{display:none}
+
+/* ---------- deck card ---------- */
+.deck{background:linear-gradient(180deg,#ffffff07,#ffffff02);border:1px solid var(--line);
+  border-left:3px solid var(--fc,#4cc38a);border-radius:var(--radius);padding:16px 18px;margin-bottom:14px}
+.deck-top{display:flex;gap:16px;align-items:flex-start}
+.idimg{width:66px;height:92px;border-radius:8px;object-fit:cover;flex:none;
+  background:#0b1017;border:1px solid #ffffff14;box-shadow:0 6px 18px #0006}
+.idimg.empty{display:flex;align-items:center;justify-content:center;color:var(--dim);font-size:10px}
+.dmain{flex:1;min-width:0}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}
+.tag{font-size:11.5px;padding:2.5px 8px;border-radius:6px;background:#ffffff0d;color:var(--muted);
+  border:1px solid #ffffff10;white-space:nowrap}
+.tag.hot{background:#f0a83c1f;color:#f0a83c;border-color:#f0a83c40}
+.tag.dotw{background:#4cc38a1f;color:var(--accent);border-color:#4cc38a40}
+.tag.alltime{background:#58a6ff1f;color:var(--accent2);border-color:#58a6ff40}
+.tag.rank{background:#ffffff12;color:#e6edf3;border-color:#ffffff26;font-weight:700;
+  font-variant-numeric:tabular-nums;min-width:28px;text-align:center}
+.tchips{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.tchip{font-size:11.5px;color:var(--dim);border:1px solid #ffffff12;border-radius:5px;
+  padding:1.5px 7px;background:#ffffff05}
+.tchip b{color:#9fb0c6;font-weight:600}
+.deck h4{margin:0 0 4px;font-size:17.5px;font-weight:700;line-height:1.35;letter-spacing:-.01em}
+.deck h4 a:hover{color:var(--accent2)}
+.idname{font-size:13.5px;color:var(--muted);margin-bottom:8px}
+.idname b{color:#c9d5e3;font-weight:600}
+.idname .ce{font-size:12.2px;color:var(--dim);font-style:italic;margin-left:6px}
+.meta{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--dim)}
+.meta b{color:var(--muted);font-weight:600}
+.meta .social{color:#c9d5e3;font-variant-numeric:tabular-nums}
+.right{flex:none;text-align:right;display:flex;flex-direction:column;gap:4px;align-items:flex-end}
+.score{font-size:23px;font-weight:800;letter-spacing:-.02em;line-height:1}
+.score small{display:block;font-size:10.5px;color:var(--dim);font-weight:600;letter-spacing:.08em;margin-top:2px}
+.size{font-size:12px;color:var(--muted)}
+.inftotal{border-bottom:1px dotted #5f708566}
+.inftotal.over{color:var(--warn);border-bottom-color:#f0a83c66}
+
+details{margin-top:12px;border-top:1px dashed #ffffff14;padding-top:10px}
+summary{cursor:pointer;font-size:13px;color:var(--muted);list-style:none;user-select:none;display:inline-flex;
+  align-items:center;gap:7px}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"▸";color:var(--accent);transition:transform .15s}
+details[open] summary:before{transform:rotate(90deg)}
+summary:hover{color:var(--txt)}
+.lists{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:6px 22px;margin-top:14px}
+.gtype{break-inside:avoid}
+.gtype h5{margin:0 0 5px;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);
+  font-weight:700;border-bottom:1px solid #ffffff0d;padding-bottom:4px}
+.gtype h5 em{font-style:normal;color:var(--dim);font-weight:500;letter-spacing:0}
+.gtype ul{margin:0;padding:0;list-style:none}
+.gtype li{display:flex;gap:7px;font-size:13.2px;line-height:1.72;color:#c9d5e3}
+.gtype li .q{color:var(--accent);font-weight:700;font-variant-numeric:tabular-nums;min-width:16px}
+.gtype li .nm{flex:1;min-width:0}
+.gtype li .cz{color:#dbe4ee}
+.gtype li .cn{color:#c9d5e3}
+.gtype li .ce{font-size:11.2px;color:var(--dim);font-style:italic}
+.gtype li .cost{color:var(--dim);font-size:11.5px;font-variant-numeric:tabular-nums;flex:none;
+  width:17px;text-align:right}
+.gtype li .cost.blank{visibility:hidden}
+.gtype li .inf{flex:none;font-size:10.8px;line-height:1.5;color:#f0a83c;background:#f0a83c14;
+  border:1px solid #f0a83c55;border-radius:4px;padding:0 4px;font-variant-numeric:tabular-nums}
+.gtype li.off .q{color:var(--warn)}
+.deckfoot{margin-top:10px;display:flex;align-items:center;gap:14px;font-size:12.3px}
+.deckfoot a{color:var(--accent2);opacity:.85}
+.deckfoot a:hover{opacity:1;text-decoration:underline}
+.copybtn{font:inherit;font-size:12.2px;line-height:1.5;color:#9ecbff;cursor:pointer;
+  background:#58a6ff14;border:1px solid #58a6ff38;border-radius:6px;padding:2px 10px;
+  display:inline-flex;align-items:center;gap:5px;transition:background .15s,border-color .15s,color .15s}
+.copybtn:hover{background:#58a6ff24;border-color:#58a6ff70;color:#cfe4ff}
+.copybtn:active{transform:translateY(1px)}
+.copybtn.copied{color:#8fe0b4;background:#4cc38a1f;border-color:#4cc38a66}
+.copybtn svg{width:12px;height:12px;flex:none}
+
+/* ---------- 筛选条 ---------- */
+.filters{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;margin:-8px 0 30px;
+  padding:12px 16px;border:1px solid var(--line);border-radius:12px;background:#ffffff05}
+.fgroup{display:flex;align-items:center;gap:6px}
+.flabel{font-size:12.5px;color:var(--dim);margin-right:2px}
+.fchip{font:inherit;font-size:12.8px;line-height:1.5;cursor:pointer;color:var(--muted);
+  background:transparent;border:1px solid #2c3f56;border-radius:7px;padding:3px 11px;
+  transition:background .15s,color .15s,border-color .15s}
+.fchip:hover{color:#fff;border-color:#3d5a7a}
+.fchip.is-on{background:#4cc38a1f;border-color:#4cc38a66;color:#b7f0d2;font-weight:600}
+.fcount{margin-left:auto;font-size:12.5px;color:var(--dim);font-variant-numeric:tabular-nums}
+.fcount b{color:var(--accent)}
+/* ---------- 悬停卡图预览 ---------- */
+.gtype li[data-code]{cursor:help}
+.cardpop{position:fixed;z-index:80;width:318px;background:#0b1017;border:1px solid #2c3f56;
+  border-radius:10px;box-shadow:0 18px 48px #000a;overflow:hidden;pointer-events:none;
+  opacity:0;transition:opacity .12s;display:flex;flex-direction:column}
+.cardpop.on{opacity:1}
+.cardpop[hidden]{display:none}
+.cardpop img{display:block;width:100%;height:auto;background:#0b1017}
+.cardpop.nocover img{display:none}
+.cardpop .cappop{padding:7px 10px 8px;font-size:12.4px;color:#c9d5e3;line-height:1.45;
+  border-top:1px solid #ffffff10;background:#ffffff06}
+.cardpop .cappop .en{color:var(--dim);font-style:italic;font-size:11.4px;margin-left:5px}
+.cardpop .cappop .src{display:block;margin-top:3px;font-size:10.5px;color:#4c5a6d}.fempty{margin:-14px 0 34px;font-size:13.5px;color:var(--dim);text-align:center;
+  padding:22px;border:1px dashed #2c3f56;border-radius:12px}
+.deck[hidden]{display:none !important}
+.sec.filtered-out{display:none}
+.tag.fmt{background:#6f7bf71f;color:#b9bffb;border-color:#6f7bf755}
+.tag.fmt.maybe{background:#ffffff08;color:var(--dim);border-color:#ffffff1a}
+
+/* ---------- archive ---------- */
+.arc{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:14px}
+.arc a.item{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:15px 17px;transition:border-color .15s,transform .15s}
+.arc a.item:hover{border-color:#3d5a7a;transform:translateY(-2px)}
+.arc .week{font-size:16.5px;font-weight:700;letter-spacing:-.01em}
+.arc .sub{font-size:12.5px;color:var(--dim);margin-top:3px}
+.arc .latest{color:var(--accent);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+
+footer{border-top:1px solid var(--line);margin-top:20px;padding-top:22px;color:var(--dim);font-size:12.5px;line-height:1.9}
+footer a{color:var(--muted);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:900px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .panels{grid-template-columns:1fr}
+  h1{font-size:32px}
+  .lists{grid-template-columns:1fr}
+}
+@media print{
+  body{background:#fff;color:#111}
+  .deck,.panel,.stat{background:#fff;border-color:#ddd;break-inside:avoid}
+  details{open:true}
+  .gtype li{color:#222}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="kicker"><span class="dot"></span>NetrunnerDB · Weekly Meta Digest</div>
+  <h1>每周牌组摘要 <span class="light">/ 2026 年第 44 周</span></h1>
+  <p>2026-10-20 → 2026-10-27（最近 7 天） · 共追踪 <b>90</b> 副本周新牌组</p>
+  <div class="hero-tags">
+    <span class="htag">数据来源 <b>netrunnerdb.com</b></span>
+    <span class="htag">生成时间 <b>2026-10-27 12:03</b></span>
+    <span class="htag">统计窗口 <b>7 天</b></span>
+    <span class="htag">阵营 <b>潜袭者 51 · 公司 39</b></span>
+  </div>
+  <nav class="jump">
+    <a class="jumpitem" href="#s0">概览 <b>90</b></a>
+    <a class="jumpitem" href="#s1">官方每周精选 <b>6</b></a><a class="jumpitem" href="#s2">本周热门 Top 12 <b>12</b></a><a class="jumpitem" href="#s3">官方人气榜 <b>3</b></a>
+    <button type="button" class="jumpitem toggleall" data-all="collapse">全部收起</button>
+  </nav>
+</header>
+
+<div class="filters">
+  <div class="fgroup"><span class="flabel">阵营</span>
+    <button type="button" class="fchip is-on" data-f="side" data-v="all">全部</button>
+    <button type="button" class="fchip" data-f="side" data-v="corp">公司</button>
+    <button type="button" class="fchip" data-f="side" data-v="runner">潜袭者</button>
+  </div>
+  <div class="fgroup"><span class="flabel">赛制</span>
+    <button type="button" class="fchip is-on" data-f="fmt" data-v="all">全部</button>
+    <button type="button" class="fchip" data-f="fmt" data-v="standard">标准</button>
+    <button type="button" class="fchip" data-f="fmt" data-v="startup">新启</button>
+  </div>
+  <span class="fcount" id="fcount" title="只过滤下面的牌组卡片；上方概览仍是全周统计"></span>
+</div>
+<p class="fempty" id="fempty" hidden>当前筛选下没有牌组，放宽一下条件试试。</p>
+
+<section class="sec" id="s0">
+  <div class="sec-head" role="button" tabindex="0" aria-expanded="true" aria-controls="body-s0"
+       data-sec="s0">
+    <span class="num">◆</span><h2>本周概览</h2>
+    <span class="hint">派系分布 · 特性（ID）Top 8</span><span class="caret" aria-hidden="true">▾</span>
+  </div>
+  <div class="sec-body" id="body-s0">
+    <div class="stats">
+      <div class="stat"><div class="k">本周新牌组</div><div class="v">90<small>副</small></div></div>
+      <div class="stat"><div class="k">社区互动</div><div class="v">221<small>次</small></div></div>
+      <div class="stat"><div class="k">出现特性</div><div class="v">46<small>种</small></div></div>
+      <div class="stat"><div class="k">本页收录</div><div class="v">21<small>副完整牌表</small></div></div>
+    </div>
+
+    <div class="panels">
+      <div class="panel">
+        <h3>派系分布 · 本周新牌组</h3>
+        <div class="bar"><div class="lab"><span>Criminal</span><span>21 · 23%</span></div><div class="track"><div class="fill" style="width:23.3%;background:#3b82f6"></div></div></div><div class="bar"><div class="lab"><span>Anarch</span><span>16 · 18%</span></div><div class="track"><div class="fill" style="width:17.8%;background:#e08b0c"></div></div></div><div class="bar"><div class="lab"><span>Shaper</span><span>14 · 16%</span></div><div class="track"><div class="fill" style="width:15.6%;background:#22a05a"></div></div></div><div class="bar"><div class="lab"><span>Jinteki</span><span>13 · 14%</span></div><div class="track"><div class="fill" style="width:14.4%;background:#e5484d"></div></div></div><div class="bar"><div class="lab"><span>NBN</span><span>11 · 12%</span></div><div class="track"><div class="fill" style="width:12.2%;background:#eab308"></div></div></div><div class="bar"><div class="lab"><span>Haas-Bioroid</span><span>10 · 11%</span></div><div class="track"><div class="fill" style="width:11.1%;background:#8b5cf6"></div></div></div><div class="bar"><div class="lab"><span>Weyland</span><span>5 · 6%</span></div><div class="track"><div class="fill" style="width:5.6%;background:#0e9f8a"></div></div></div>
+      </div>
+      <div class="panel">
+        <h3>热门特性（ID）Top 8 · 本周新牌组中出现次数</h3>
+        <div class="idlist"><div class="idrow"><span class="n">1</span><span class="t">虚拟智能私家侦探: “你可以叫我维克”</span><span class="c">8</span></div><div class="idrow"><span class="n">2</span><span class="t">傲金公司: 克隆体的黄金标准</span><span class="c">7</span></div><div class="idrow"><span class="n">3</span><span class="t">勒内·“野狼”·阿斯蒙特: 派对野兽</span><span class="c">6</span></div><div class="idrow"><span class="n">4</span><span class="t">穆斯莉哈特: 多面营销专家</span><span class="c">5</span></div><div class="idrow"><span class="n">5</span><span class="t">哈斯生化: 精密设计</span><span class="c">4</span></div><div class="idrow"><span class="n">6</span><span class="t">白星子: 未名主演</span><span class="c">4</span></div><div class="idrow"><span class="n">7</span><span class="t">利奥建工: 劳工解决方案</span><span class="c">3</span></div><div class="idrow"><span class="n">8</span><span class="t">托潘: 民间组织领袖</span><span class="c">3</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec" id="s1">
+  <div class="sec-head" role="button" tabindex="0" aria-expanded="true" aria-controls="body-s1"
+       data-sec="s1">
+    <span class="num">1</span><h2>官方每周精选</h2>
+    <span class="hint">netrunnerdb.com/en/decklists/dotw · 最新几期</span><span class="caret" aria-hidden="true">▾</span>
+  </div>
+  <div class="sec-body" id="body-s1">
+<article class="deck" style="--fc:#3b82f6" data-side="runner" data-fmt="standard">
+  <div class="deck-top">
+    <img class="idimg" src="img/34010.jpg" alt="Mercury: Chrome Libertador" loading="lazy">
+    <div class="dmain">
+      <div class="tags"><span class="tag dotw">官方精选</span><span class="tag">Criminal</span><span class="tag">Seventh Rotation</span></div>
+      <h4><a href="https://netrunnerdb.com/en/decklist/b3dad49d-7727-471a-a404-6630be5fd993/52-card-pickup-and-other-cultural-experiences-16th-worlds-" target="_blank" rel="noopener">52 card pickup and other cultural experiences (16th @Worlds)</a></h4>
+      <div class="idname"><b>墨丘利: 铬金解放者</b><span class="ce">Mercury: Chrome Libertador</span></div>
+      <div class="meta"><span>作者 <b>OF15-15</b> · 879 rep</span><span class="social"><b>36</b> 赞 &nbsp;<b>22</b> 藏 &nbsp;<b>10</b> 评</span><span>2026-10-18</span><span>2026 World Champs</span></div>
+      <div class="tchips"><span class="tchip">事件 <b>35</b></span><span class="tchip">硬件 <b>5</b></span><span class="tchip">程序 <b>7</b></span><span class="tchip">资源 <b>5</b></span></div>
+    </div>
+    <div class="right">
+      <div class="score" title="热度 = 赞×3 + 藏×2 + 评×1">162<small>热度</small></div>
+      <div class="size">52 张 · <span class="inftotal" title="影响力 = 外派系卡的影响力之和（含带影响力的中立卡）">影响力 15/15</span></div>
+    </div>
+  </div>
+  <details>
+    <summary>展开完整牌表 · 52 张</summary>
+    <div class="lists"><div class="gtype"><h5>Event <em>· 事件 35</em></h5><ul><li data-code="26074"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">虚张声势</span> <span class="ce">Bravado</span></span></li><li data-code="33012"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">时不再来</span> <span class="ce">Carpe Diem</span></span></li><li data-code="35014"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">利落脱身</span> <span class="ce">Clean Getaway</span></span></li><li data-code="35015"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">避风头</span> <span class="ce">Lie Low</span></span></li><li data-code="35016"><span class="q">2×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">检修通道</span> <span class="ce">Maintenance Access</span></span></li><li data-code="33013"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">穿针引线</span> <span class="ce">Pinhole Threading</span></span></li><li data-code="33076"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">再现部</span> <span class="ce">Reprise</span></span></li><li data-code="34012"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">S型猴翻</span> <span class="ce">S-Dobrado</span></span></li><li data-code="33004"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">钢肤疤痕</span> <span class="ce">Steelskin Scarring</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="30030"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">胜券在握</span> <span class="ce">Sure Gamble</span></span></li><li data-code="35017"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">财富转移</span> <span class="ce">Transfer of Wealth</span></span></li><li data-code="30012"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">蹑手蹑脚</span> <span class="ce">Tread Lightly</span></span></li><li data-code="30002"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">野猫罢工</span> <span class="ce">Wildcat Strike</span></span><span class="inf" title="影响力消耗">1</span></li></ul></div><div class="gtype"><h5>Hardware <em>· 硬件 5</em></h5><ul><li data-code="34014"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">赫耳墨斯</span> <span class="ce">Hermes</span></span></li><li data-code="33078"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">尾迹植入体v2A-JRJ</span> <span class="ce">WAKE Implant v2A-JRJ</span></span></li></ul></div><div class="gtype"><h5>Program <em>· 程序 7</em></h5><ul><li data-code="34080"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">灰吹精炼</span> <span class="ce">Cupellation</span></span></li><li data-code="34081"><span class="q">3×</span><span class="cost" title="费用">4</span><span class="nm"><span class="cz">街头智慧</span> <span class="ce">Malandragem</span></span></li><li data-code="34082"><span class="q">2×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">纠缠绒泡菌</span> <span class="ce">Physarum Entangler</span></span></li></ul></div><div class="gtype"><h5>Resource <em>· 资源 5</em></h5><ul><li data-code="34073"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">暴力团伙</span> <span class="ce">Arruaceiras Crew</span></span><span class="inf" title="影响力消耗">3</span></li><li data-code="26018"><span class="q">3×</span><span class="cost" title="费用">4</span><span class="nm"><span class="cz">一流选手</span> <span class="ce">The Class Act</span></span></li></ul></div></div>
+  </details>
+  <div class="deckfoot">
+    <button type="button" class="copybtn" data-url="https://netrunnerdb.com/en/decklist/b3dad49d-7727-471a-a404-6630be5fd993/52-card-pickup-and-other-cultural-experiences-16th-worlds-"
+            title="复制 NetrunnerDB 牌组链接，粘到 jnet 的 Import 里即可导入">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2 0v8h6V2H6z"/><path d="M2 5a2 2 0 0 1 2-2v1.5A.5.5 0 0 0 3.5 5v8a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5H12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5z"/></svg>
+      <span class="copybtn-label">复制链接</span>
+    </button>
+    <a href="decklists/b3dad49d-7727-471a-a404-6630be5fd993.txt">纯文本牌表</a>
+    <a href="https://netrunnerdb.com/en/decklist/b3dad49d-7727-471a-a404-6630be5fd993/52-card-pickup-and-other-cultural-experiences-16th-worlds-" target="_blank" rel="noopener">NetrunnerDB 页面 ↗</a>
+  </div>
+</article>
+<article class="deck" style="--fc:#e08b0c" data-side="runner" data-fmt="standard">
+  <div class="deck-top">
+    <img class="idimg" src="img/30001.jpg" alt="René “Loup” Arcemont: Party Animal" loading="lazy">
+    <div class="dmain">
+      <div class="tags"><span class="tag dotw">官方精选</span><span class="tag">Anarch</span><span class="tag">Seventh Rotation</span></div>
+      <h4><a href="https://netrunnerdb.com/en/decklist/405d5ac0-10d0-4974-bbb8-56a486a5b37d/how-to-win-worlds-170th-at-worlds-2026-" target="_blank" rel="noopener">How To Win Worlds (170th At Worlds 2026)</a></h4>
+      <div class="idname"><b>勒内·“野狼”·阿斯蒙特: 派对野兽</b><span class="ce">René “Loup” Arcemont: Party Animal</span></div>
+      <div class="meta"><span>作者 <b>rongydoge</b> · 1971 rep</span><span class="social"><b>79</b> 赞 &nbsp;<b>38</b> 藏 &nbsp;<b>22</b> 评</span><span>2026-10-11</span><span>2026 World Champs</span></div>
+      <div class="tchips"><span class="tchip">事件 <b>13</b></span><span class="tchip">硬件 <b>5</b></span><span class="tchip">程序 <b>12</b></span><span class="tchip">资源 <b>12</b></span></div>
+    </div>
+    <div class="right">
+      <div class="score" title="热度 = 赞×3 + 藏×2 + 评×1">335<small>热度</small></div>
+      <div class="size">42 张 · <span class="inftotal" title="影响力 = 外派系卡的影响力之和（含带影响力的中立卡）">影响力 15/15</span></div>
+    </div>
+  </div>
+  <details>
+    <summary>展开完整牌表 · 42 张</summary>
+    <div class="lists"><div class="gtype"><h5>Event <em>· 事件 13</em></h5><ul><li data-code="33013"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">穿针引线</span> <span class="ce">Pinhole Threading</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="34068"><span class="q">1×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">特权访问</span> <span class="ce">Privileged Access</span></span></li><li data-code="33068"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">滴水穿石</span> <span class="ce">Raindrops Cut Stone</span></span></li><li data-code="33004"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">钢肤疤痕</span> <span class="ce">Steelskin Scarring</span></span></li><li data-code="30030"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">胜券在握</span> <span class="ce">Sure Gamble</span></span></li><li data-code="34002"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">代价</span> <span class="ce">The Price</span></span></li></ul></div><div class="gtype"><h5>Hardware <em>· 硬件 5</em></h5><ul><li data-code="26069"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">扭蛋机</span> <span class="ce">Gachapon</span></span></li><li data-code="26070"><span class="q">2×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">惠子</span> <span class="ce">Keiko</span></span></li></ul></div><div class="gtype"><h5>Program <em>· 程序 12</em></h5><ul><li data-code="26079"><span class="q">1×</span><span class="cost" title="费用">4</span><span class="nm"><span class="cz">残影</span> <span class="ce">Afterimage</span></span><span class="inf" title="影响力消耗">3</span></li><li data-code="34004"><span class="q">1×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">“吸血花”奥黛丽v2</span> <span class="ce">Audrey v2</span></span></li><li data-code="30007"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">发酵罐</span> <span class="ce">Fermenter</span></span></li><li data-code="33071"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">消音</span> <span class="ce">Hush</span></span></li><li data-code="36005"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">拉姆帕德斯</span> <span class="ce">Lampades</span></span></li><li data-code="26088"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">披风</span> <span class="ce">Mantle</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="26089"><span class="q">2×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">彭罗斯</span> <span class="ce">Penrose</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="35009"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">暗潮汹涌</span> <span class="ce">Rising Tide</span></span></li></ul></div><div class="gtype"><h5>Resource <em>· 资源 12</em></h5><ul><li data-code="26094"><span class="q">2×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">每日播报</span> <span class="ce">Daily Casts</span></span></li><li data-code="33092"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">努卡·弗罗丽克博士</span> <span class="ce">Dr. Nuka Vrolyck</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="26007"><span class="q">1×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">剑术师弗恩诺</span> <span class="ce">Fencer Fueno</span></span></li><li data-code="34008"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">汉娜·“驭手”·皮林特拉</span> <span class="ce">Hannah &quot;Wheels&quot; Pilintra</span></span></li><li data-code="26073"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">圣骑士诗梦</span> <span class="ce">Paladin Poemu</span></span></li><li data-code="33010"><span class="q">2×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">孪晶</span> <span class="ce">The Twinning</span></span></li><li data-code="26009"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">诡术师塔卡</span> <span class="ce">Trickster Taka</span></span></li></ul></div></div>
+  </details>
+  <div class="deckfoot">
+    <button type="button" class="copybtn" data-url="https://netrunnerdb.com/en/decklist/405d5ac0-10d0-4974-bbb8-56a486a5b37d/how-to-win-worlds-170th-at-worlds-2026-"
+            title="复制 NetrunnerDB 牌组链接，粘到 jnet 的 Import 里即可导入">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2 0v8h6V2H6z"/><path d="M2 5a2 2 0 0 1 2-2v1.5A.5.5 0 0 0 3.5 5v8a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5H12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5z"/></svg>
+      <span class="copybtn-label">复制链接</span>
+    </button>
+    <a href="decklists/405d5ac0-10d0-4974-bbb8-56a486a5b37d.txt">纯文本牌表</a>
+    <a href="https://netrunnerdb.com/en/decklist/405d5ac0-10d0-4974-bbb8-56a486a5b37d/how-to-win-worlds-170th-at-worlds-2026-" target="_blank" rel="noopener">NetrunnerDB 页面 ↗</a>
+  </div>
+</article>
+<article class="deck" style="--fc:#22a05a" data-side="runner" data-fmt="standard">
+  <div class="deck-top">
+    <img class="idimg" src="img/35024.jpg" alt="Magdalene Keino-Chemutai: Cryptarchitect" loading="lazy">
+    <div class="dmain">
+      <div class="tags"><span class="tag dotw">官方精选</span><span class="tag">Shaper</span><span class="tag">Seventh Rotation</span></div>
+      <h4><a href="https://netrunnerdb.com/en/decklist/40ef70d6-a0ef-4993-aed8-58247ba9f7b4/khusyum-11th-12th-at-worlds-2026-undefeated-7-0-" target="_blank" rel="noopener">KhusYUM [11th, 12th at Worlds 2026, Undefeated 7-0]</a></h4>
+      <div class="idname"><b>玛格达琳·凯诺-切穆泰: 幕后建筑师</b><span class="ce">Magdalene Keino-Chemutai: Cryptarchitect</span></div>
+      <div class="meta"><span>作者 <b>London</b> · 1422 rep</span><span class="social"><b>127</b> 赞 &nbsp;<b>77</b> 藏 &nbsp;<b>28</b> 评</span><span>2026-10-06</span><span>2026 World Champs</span></div>
+      <div class="tchips"><span class="tchip">事件 <b>17</b></span><span class="tchip">硬件 <b>9</b></span><span class="tchip">程序 <b>15</b></span><span class="tchip">资源 <b>6</b></span></div>
+    </div>
+    <div class="right">
+      <div class="score" title="热度 = 赞×3 + 藏×2 + 评×1">563<small>热度</small></div>
+      <div class="size">47 张 · <span class="inftotal" title="影响力 = 外派系卡的影响力之和（含带影响力的中立卡）">影响力 15/15</span></div>
+    </div>
+  </div>
+  <details>
+    <summary>展开完整牌表 · 47 张</summary>
+    <div class="lists"><div class="gtype"><h5>Event <em>· 事件 17</em></h5><ul><li data-code="34085"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">大涂鸦</span> <span class="ce">Burner</span></span></li><li data-code="30020"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">创作委托</span> <span class="ce">Creative Commission</span></span></li><li data-code="34021"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">兜风</span> <span class="ce">Joy Ride</span></span></li><li data-code="26021"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">庄严肃穆</span> <span class="ce">Khusyuk</span></span></li><li data-code="33013"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">穿针引线</span> <span class="ce">Pinhole Threading</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="35026"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">仪式</span> <span class="ce">Ritual</span></span></li><li data-code="26022"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">竞稿</span> <span class="ce">Spec Work</span></span></li></ul></div><div class="gtype"><h5>Hardware <em>· 硬件 9</em></h5><ul><li data-code="30022"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">DZMZ优化器</span> <span class="ce">DZMZ Optimizer</span></span></li><li data-code="35028"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">承创</span> <span class="ce">Madani</span></span></li><li data-code="26085"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">模拟芯片</span> <span class="ce">Simulchip</span></span></li></ul></div><div class="gtype"><h5>Program <em>· 程序 15</em></h5><ul><li data-code="30004"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">肉毒杆菌</span> <span class="ce">Botulus</span></span><span class="inf" title="影响力消耗">3</span></li><li data-code="34089"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">凝露</span> <span class="ce">Coalescence</span></span></li><li data-code="34080"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">灰吹精炼</span> <span class="ce">Cupellation</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="26087"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">欧拉</span> <span class="ce">Euler</span></span></li><li data-code="30007"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">发酵罐</span> <span class="ce">Fermenter</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="26024"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">高斯</span> <span class="ce">Gauss</span></span></li><li data-code="33071"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">消音</span> <span class="ce">Hush</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="34091"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">缪斯</span> <span class="ce">Muse</span></span></li><li data-code="33027"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">螺旋桨</span> <span class="ce">Propeller</span></span></li><li data-code="33018"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">左轮手枪</span> <span class="ce">Revolver</span></span><span class="inf" title="影响力消耗">3</span></li></ul></div><div class="gtype"><h5>Resource <em>· 资源 6</em></h5><ul><li data-code="26094"><span class="q">2×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">每日播报</span> <span class="ce">Daily Casts</span></span></li><li data-code="33092"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">努卡·弗罗丽克博士</span> <span class="ce">Dr. Nuka Vrolyck</span></span></li><li data-code="35033"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">“珍奇阁主”奥布莱恩</span> <span class="ce">“Knickknack” O’Brian</span></span></li></ul></div></div>
+  </details>
+  <div class="deckfoot">
+    <button type="button" class="copybtn" data-url="https://netrunnerdb.com/en/decklist/40ef70d6-a0ef-4993-aed8-58247ba9f7b4/khusyum-11th-12th-at-worlds-2026-undefeated-7-0-"
+            title="复制 NetrunnerDB 牌组链接，粘到 jnet 的 Import 里即可导入">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2 0v8h6V2H6z"/><path d="M2 5a2 2 0 0 1 2-2v1.5A.5.5 0 0 0 3.5 5v8a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5H12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5z"/></svg>
+      <span class="copybtn-label">复制链接</span>
+    </button>
+    <a href="decklists/40ef70d6-a0ef-4993-aed8-58247ba9f7b4.txt">纯文本牌表</a>
+    <a href="https://netrunnerdb.com/en/decklist/40ef70d6-a0ef-4993-aed8-58247ba9f7b4/khusyum-11th-12th-at-worlds-2026-undefeated-7-0-" target="_blank" rel="noopener">NetrunnerDB 页面 ↗</a>
+  </div>
+</article>
+<article class="deck" style="--fc:#e5484d" data-side="corp" data-fmt="standard">
+  <div class="deck-top">
+    <img class="idimg" src="img/35046.jpg" alt="AU Co.: The Gold Standard in Clones" loading="lazy">
+    <div class="dmain">
+      <div class="tags"><span class="tag dotw">官方精选</span><span class="tag">Jinteki</span><span class="tag">Seventh Rotation</span></div>
+      <h4><a href="https://netrunnerdb.com/en/decklist/6a4f3102-4110-470b-aefd-b06199338b34/the-biawak-holder-my-year-in-netrunner" target="_blank" rel="noopener">The Biawak-Holder - My Year in Netrunner</a></h4>
+      <div class="idname"><b>傲金公司: 克隆体的黄金标准</b><span class="ce">AU Co.: The Gold Standard in Clones</span></div>
+      <div class="meta"><span>作者 <b>KomodoCommodore</b> · 607 rep</span><span class="social"><b>34</b> 赞 &nbsp;<b>20</b> 藏 &nbsp;<b>8</b> 评</span><span>2026-09-26</span></div>
+      <div class="tchips"><span class="tchip">议案 <b>11</b></span><span class="tchip">资产 <b>15</b></span><span class="tchip">事务 <b>11</b></span><span class="tchip">防火墙 <b>12</b></span></div>
+    </div>
+    <div class="right">
+      <div class="score" title="热度 = 赞×3 + 藏×2 + 评×1">150<small>热度</small></div>
+      <div class="size">49 张 · <span class="inftotal" title="影响力 = 外派系卡的影响力之和（含带影响力的中立卡）">影响力 15/15</span> · 20 议案分数</div>
+    </div>
+  </div>
+  <details>
+    <summary>展开完整牌表 · 49 张</summary>
+    <div class="lists"><div class="gtype"><h5>Agenda <em>· 议案 11</em></h5><ul><li data-code="33039"><span class="q">1×</span><span class="cost blank"></span><span class="nm"><span class="cz">血诱</span> <span class="ce">Blood in the Water</span></span></li><li data-code="34040"><span class="q">3×</span><span class="cost blank"></span><span class="nm"><span class="cz">藤井资产回收</span> <span class="ce">Fujii Asset Retrieval</span></span></li><li data-code="33105"><span class="q">2×</span><span class="cost blank"></span><span class="nm"><span class="cz">杂交人投放</span> <span class="ce">Hybrid Release</span></span></li><li data-code="33040"><span class="q">3×</span><span class="cost blank"></span><span class="nm"><span class="cz">二度起源</span> <span class="ce">Regenesis</span></span></li><li data-code="34105"><span class="q">2×</span><span class="cost blank"></span><span class="nm"><span class="cz">观其逃路</span> <span class="ce">See How They Run</span></span></li></ul></div><div class="gtype"><h5>Asset <em>· 资产 15</em></h5><ul><li data-code="33041"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">狸藻</span> <span class="ce">Bladderwort</span></span></li><li data-code="34108"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">追随者指导项目</span> <span class="ce">Cohort Guidance Program</span></span></li><li data-code="33042"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">月池</span> <span class="ce">Moon Pool</span></span></li><li data-code="35051"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">释·觉安·保谛西塔</span> <span class="ce">Phật Gioan Baotixita</span></span></li><li data-code="30053"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">舆论操盘手</span> <span class="ce">Spin Doctor</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="34130"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">当权者</span> <span class="ce">The Powers That Be</span></span><span class="inf" title="影响力消耗">1</span></li></ul></div><div class="gtype"><h5>Operation <em>· 事务 11</em></h5><ul><li data-code="30048"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">自我反省</span> <span class="ce">Hansei Review</span></span></li><li data-code="35081"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">零用现金</span> <span class="ce">Petty Cash</span></span></li><li data-code="30056"><span class="q">1×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">消费预测智慧商城</span> <span class="ce">Predictive Planogram</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="30057"><span class="q">2×</span><span class="cost" title="费用">4</span><span class="nm"><span class="cz">公开足迹</span> <span class="ce">Public Trail</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="36044"><span class="q">2×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">释放</span> <span class="ce">Unleash</span></span></li></ul></div><div class="gtype"><h5>ICE <em>· 防火墙 12</em></h5><ul><li data-code="32005"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">海葵</span> <span class="ce">Anemone</span></span></li><li data-code="35074"><span class="q">2×</span><span class="cost" title="费用">14</span><span class="nm"><span class="cz">巨蜥</span> <span class="ce">Biawak</span></span><span class="inf" title="影响力消耗">3</span></li><li data-code="34110"><span class="q">1×</span><span class="cost" title="费用">10</span><span class="nm"><span class="cz">食云者</span> <span class="ce">Cloud Eater</span></span></li><li data-code="34043"><span class="q">2×</span><span class="cost" title="费用">4</span><span class="nm"><span class="cz">游走蛛</span> <span class="ce">Phoneutria</span></span></li><li data-code="35054"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">灌木丛</span> <span class="ce">Semak-samun</span></span></li><li data-code="30074"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">空白</span> <span class="ce">Whitespace</span></span></li></ul></div></div>
+  </details>
+  <div class="deckfoot">
+    <button type="button" class="copybtn" data-url="https://netrunnerdb.com/en/decklist/6a4f3102-4110-470b-aefd-b06199338b34/the-biawak-holder-my-year-in-netrunner"
+            title="复制 NetrunnerDB 牌组链接，粘到 jnet 的 Import 里即可导入">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2 0v8h6V2H6z"/><path d="M2 5a2 2 0 0 1 2-2v1.5A.5.5 0 0 0 3.5 5v8a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5H12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5z"/></svg>
+      <span class="copybtn-label">复制链接</span>
+    </button>
+    <a href="decklists/6a4f3102-4110-470b-aefd-b06199338b34.txt">纯文本牌表</a>
+    <a href="https://netrunnerdb.com/en/decklist/6a4f3102-4110-470b-aefd-b06199338b34/the-biawak-holder-my-year-in-netrunner" target="_blank" rel="noopener">NetrunnerDB 页面 ↗</a>
+  </div>
+</article>
+<article class="deck" style="--fc:#e08b0c" data-side="runner" data-fmt="standard">
+  <div class="deck-top">
+    <img class="idimg" src="img/35001.jpg" alt="Ryō “Phoenix” Ōno: Out of the Ashes" loading="lazy">
+    <div class="dmain">
+      <div class="tags"><span class="tag dotw">官方精选</span><span class="tag">Anarch</span><span class="tag">Seventh Rotation</span></div>
+      <h4><a href="https://netrunnerdb.com/en/decklist/b0698f61-4fad-49b7-a974-7b37d2920193/new-bananas-6th-at-worlds-showdown-" target="_blank" rel="noopener">New bananas [6th at Worlds Showdown] 🔥🎸🤘</a></h4>
+      <div class="idname"><b>大野·“凤凰”·燎: 烬中再起</b><span class="ce">Ryō “Phoenix” Ōno: Out of the Ashes</span></div>
+      <div class="meta"><span>作者 <b>Santa</b> · 2080 rep</span><span class="social"><b>37</b> 赞 &nbsp;<b>15</b> 藏 &nbsp;<b>18</b> 评</span><span>2026-09-20</span></div>
+      <div class="tchips"><span class="tchip">事件 <b>14</b></span><span class="tchip">硬件 <b>5</b></span><span class="tchip">程序 <b>14</b></span><span class="tchip">资源 <b>12</b></span></div>
+    </div>
+    <div class="right">
+      <div class="score" title="热度 = 赞×3 + 藏×2 + 评×1">159<small>热度</small></div>
+      <div class="size">45 张 · <span class="inftotal" title="影响力 = 外派系卡的影响力之和（含带影响力的中立卡）">影响力 17/17</span></div>
+    </div>
+  </div>
+  <details>
+    <summary>展开完整牌表 · 45 张</summary>
+    <div class="lists"><div class="gtype"><h5>Event <em>· 事件 14</em></h5><ul><li data-code="33066"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">终局</span> <span class="ce">Finality</span></span></li><li data-code="33013"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">穿针引线</span> <span class="ce">Pinhole Threading</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="33068"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">滴水穿石</span> <span class="ce">Raindrops Cut Stone</span></span></li><li data-code="33004"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">钢肤疤痕</span> <span class="ce">Steelskin Scarring</span></span></li><li data-code="30030"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">胜券在握</span> <span class="ce">Sure Gamble</span></span></li><li data-code="36002"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">假摔</span> <span class="ce">Take a Dive</span></span></li></ul></div><div class="gtype"><h5>Hardware <em>· 硬件 5</em></h5><ul><li data-code="26069"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">扭蛋机</span> <span class="ce">Gachapon</span></span></li><li data-code="26070"><span class="q">2×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">惠子</span> <span class="ce">Keiko</span></span></li></ul></div><div class="gtype"><h5>Program <em>· 程序 14</em></h5><ul><li data-code="34005"><span class="q">2×</span><span class="cost" title="费用">4</span><span class="nm"><span class="cz">旗帜</span> <span class="ce">Banner</span></span></li><li data-code="30004"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">肉毒杆菌</span> <span class="ce">Botulus</span></span></li><li data-code="34080"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">灰吹精炼</span> <span class="ce">Cupellation</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="30025"><span class="q">2×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">梯队</span> <span class="ce">Echelon</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="30007"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">发酵罐</span> <span class="ce">Fermenter</span></span></li><li data-code="35009"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">暗潮汹涌</span> <span class="ce">Rising Tide</span></span></li><li data-code="30026"><span class="q">2×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">团结</span> <span class="ce">Unity</span></span><span class="inf" title="影响力消耗">2</span></li></ul></div><div class="gtype"><h5>Resource <em>· 资源 12</em></h5><ul><li data-code="26094"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">每日播报</span> <span class="ce">Daily Casts</span></span></li><li data-code="33092"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">努卡·弗罗丽克博士</span> <span class="ce">Dr. Nuka Vrolyck</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="26072"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">秘法师鸣蝉</span> <span class="ce">Mystic Maemi</span></span></li><li data-code="26073"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">圣骑士诗梦</span> <span class="ce">Paladin Poemu</span></span></li><li data-code="33010"><span class="q">2×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">孪晶</span> <span class="ce">The Twinning</span></span></li><li data-code="26009"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">诡术师塔卡</span> <span class="ce">Trickster Taka</span></span></li></ul></div></div>
+  </details>
+  <div class="deckfoot">
+    <button type="button" class="copybtn" data-url="https://netrunnerdb.com/en/decklist/b0698f61-4fad-49b7-a974-7b37d2920193/new-bananas-6th-at-worlds-showdown-"
+            title="复制 NetrunnerDB 牌组链接，粘到 jnet 的 Import 里即可导入">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2 0v8h6V2H6z"/><path d="M2 5a2 2 0 0 1 2-2v1.5A.5.5 0 0 0 3.5 5v8a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5H12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5z"/></svg>
+      <span class="copybtn-label">复制链接</span>
+    </button>
+    <a href="decklists/b0698f61-4fad-49b7-a974-7b37d2920193.txt">纯文本牌表</a>
+    <a href="https://netrunnerdb.com/en/decklist/b0698f61-4fad-49b7-a974-7b37d2920193/new-bananas-6th-at-worlds-showdown-" target="_blank" rel="noopener">NetrunnerDB 页面 ↗</a>
+  </div>
+</article>
+<article class="deck" style="--fc:#0e9f8a" data-side="corp" data-fmt="standard">
+  <div class="deck-top">
+    <img class="idimg" src="img/33057.jpg" alt="Ob Superheavy Logistics: Extract. Export. Excel." loading="lazy">
+    <div class="dmain">
+      <div class="tags"><span class="tag dotw">官方精选</span><span class="tag">Weyland</span><span class="tag">Seventh Rotation</span></div>
+      <h4><a href="https://netrunnerdb.com/en/decklist/6e4af616-07c8-49c6-83b6-52c8330ec649/-expend-expand-exact-continentals-" target="_blank" rel="noopener">📖 Expend. Expand. Exact. (@Continentals)</a></h4>
+      <div class="idname"><b>鄂毕超重型物流: 采出 运出 杰出</b><span class="ce">Ob Superheavy Logistics: Extract. Export. Excel.</span></div>
+      <div class="meta"><span>作者 <b>jan tuno</b> · 5976 rep</span><span class="social"><b>65</b> 赞 &nbsp;<b>40</b> 藏 &nbsp;<b>13</b> 评</span><span>2026-09-14</span><span>2026 Continentals</span></div>
+      <div class="tchips"><span class="tchip">议案 <b>11</b></span><span class="tchip">资产 <b>12</b></span><span class="tchip">升级 <b>6</b></span><span class="tchip">事务 <b>8</b></span><span class="tchip">防火墙 <b>17</b></span></div>
+    </div>
+    <div class="right">
+      <div class="score" title="热度 = 赞×3 + 藏×2 + 评×1">288<small>热度</small></div>
+      <div class="size">54 张 · <span class="inftotal" title="影响力 = 外派系卡的影响力之和（含带影响力的中立卡）">影响力 15/15</span> · 22 议案分数</div>
+    </div>
+  </div>
+  <details>
+    <summary>展开完整牌表 · 54 张</summary>
+    <div class="lists"><div class="gtype"><h5>Agenda <em>· 议案 11</em></h5><ul><li data-code="30060"><span class="q">1×</span><span class="cost blank"></span><span class="nm"><span class="cz">凌驾法律</span> <span class="ce">Above the Law</span></span></li><li data-code="33058"><span class="q">2×</span><span class="cost blank"></span><span class="nm"><span class="cz">阿泽夫协议</span> <span class="ce">Azef Protocol</span></span></li><li data-code="34122"><span class="q">3×</span><span class="cost blank"></span><span class="nm"><span class="cz">土地征用权</span> <span class="ce">Eminent Domain</span></span></li><li data-code="34057"><span class="q">2×</span><span class="cost blank"></span><span class="nm"><span class="cz">刀耕火种</span> <span class="ce">Slash and Burn Agriculture</span></span></li><li data-code="34123"><span class="q">3×</span><span class="cost blank"></span><span class="nm"><span class="cz">玄武岩尖塔</span> <span class="ce">The Basalt Spire</span></span></li></ul></div><div class="gtype"><h5>Asset <em>· 资产 12</em></h5><ul><li data-code="35072"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">蚁丘挖掘合约</span> <span class="ce">Anthill Excavation Contract</span></span></li><li data-code="30071"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">表岩屑开采许可</span> <span class="ce">Regolith Mining License</span></span></li><li data-code="30053"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">舆论操盘手</span> <span class="ce">Spin Doctor</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="33059"><span class="q">2×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">斯维亚托戈尔号挖掘机</span> <span class="ce">Svyatogor Excavator</span></span></li><li data-code="26122"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">地毯式投放</span> <span class="ce">Wall to Wall</span></span></li></ul></div><div class="gtype"><h5>Upgrade <em>· 升级 6</em></h5><ul><li data-code="33047"><span class="q">2×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">噬病毒体</span> <span class="ce">Mavirus</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="35045"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">梅西娅 B4LL4RD</span> <span class="ce">Mercia B4LL4RD</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="35056"><span class="q">1×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">友安</span> <span class="ce">Mitra Aman</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="34120"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">全息人</span> <span class="ce">The Holo Man</span></span><span class="inf" title="影响力消耗">3</span></li><li data-code="36045"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">红房间</span> <span class="ce">The Red Room</span></span><span class="inf" title="影响力消耗">3</span></li></ul></div><div class="gtype"><h5>Operation <em>· 事务 8</em></h5><ul><li data-code="34061"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">武装资产保护</span> <span class="ce">Armed Asset Protection</span></span></li><li data-code="30075"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">对冲基金</span> <span class="ce">Hedge Fund</span></span></li><li data-code="35078"><span class="q">2×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">精准响应</span> <span class="ce">Measured Response</span></span></li></ul></div><div class="gtype"><h5>ICE <em>· 防火墙 17</em></h5><ul><li data-code="26058"><span class="q">1×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">阿夫沙尔</span> <span class="ce">Afshar</span></span></li><li data-code="35074"><span class="q">2×</span><span class="cost" title="费用">14</span><span class="nm"><span class="cz">巨蜥</span> <span class="ce">Biawak</span></span></li><li data-code="34125"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">下降</span> <span class="ce">Descent</span></span></li><li data-code="36058"><span class="q">3×</span><span class="cost" title="费用">4</span><span class="nm"><span class="cz">事件视界</span> <span class="ce">Event Horizon</span></span></li><li data-code="34127"><span class="q">3×</span><span class="cost" title="费用">6</span><span class="nm"><span class="cz">阻塞</span> <span class="ce">Logjam</span></span></li><li data-code="33061"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">伪装</span> <span class="ce">Maskirovka</span></span></li><li data-code="33062"><span class="q">1×</span><span class="cost" title="费用">4</span><span class="nm"><span class="cz">最高统帅部</span> <span class="ce">Stavka</span></span></li><li data-code="30073"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">什一税</span> <span class="ce">Tithe</span></span></li><li data-code="34060"><span class="q">1×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">霸凌者</span> <span class="ce">Valentão</span></span></li></ul></div></div>
+  </details>
+  <div class="deckfoot">
+    <button type="button" class="copybtn" data-url="https://netrunnerdb.com/en/decklist/6e4af616-07c8-49c6-83b6-52c8330ec649/-expend-expand-exact-continentals-"
+            title="复制 NetrunnerDB 牌组链接，粘到 jnet 的 Import 里即可导入">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2 0v8h6V2H6z"/><path d="M2 5a2 2 0 0 1 2-2v1.5A.5.5 0 0 0 3.5 5v8a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5H12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5z"/></svg>
+      <span class="copybtn-label">复制链接</span>
+    </button>
+    <a href="decklists/6e4af616-07c8-49c6-83b6-52c8330ec649.txt">纯文本牌表</a>
+    <a href="https://netrunnerdb.com/en/decklist/6e4af616-07c8-49c6-83b6-52c8330ec649/-expend-expand-exact-continentals-" target="_blank" rel="noopener">NetrunnerDB 页面 ↗</a>
+  </div>
+</article></div>
+</section>
+<section class="sec" id="s2">
+  <div class="sec-head" role="button" tabindex="0" aria-expanded="true" aria-controls="body-s2"
+       data-sec="s2">
+    <span class="num">2</span><h2>本周热门 Top 12</h2>
+    <span class="hint">最近 7 天新牌组，按热度排序</span><span class="caret" aria-hidden="true">▾</span>
+  </div>
+  <div class="sec-body" id="body-s2">
+<article class="deck" style="--fc:#3b82f6" data-side="runner" data-fmt="standard">
+  <div class="deck-top">
+    <img class="idimg" src="img/35013.jpg" alt="MuslihaT: Multifarious Marketeer" loading="lazy">
+    <div class="dmain">
+      <div class="tags"><span class="tag rank">#1</span><span class="tag hot">本周热门</span><span class="tag">Criminal</span><span class="tag">Seventh Rotation</span></div>
+      <h4><a href="https://netrunnerdb.com/en/decklist/9cc37751-7395-4dd2-a495-a7b4a1cb4e00/goodstuff-muslihat-worlds-2026-winner-" target="_blank" rel="noopener">goodstuff MuslihaT (Worlds 2026 winner)</a></h4>
+      <div class="idname"><b>穆斯莉哈特: 多面营销专家</b><span class="ce">MuslihaT: Multifarious Marketeer</span></div>
+      <div class="meta"><span>作者 <b>Crunchums</b> · 768 rep</span><span class="social"><b>35</b> 赞 &nbsp;<b>17</b> 藏 &nbsp;<b>7</b> 评</span><span>2026-10-25</span><span>2026 World Champs</span></div>
+      <div class="tchips"><span class="tchip">事件 <b>25</b></span><span class="tchip">硬件 <b>3</b></span><span class="tchip">程序 <b>9</b></span><span class="tchip">资源 <b>8</b></span></div>
+    </div>
+    <div class="right">
+      <div class="score" title="热度 = 赞×3 + 藏×2 + 评×1">146<small>热度</small></div>
+      <div class="size">45 张 · <span class="inftotal" title="影响力 = 外派系卡的影响力之和（含带影响力的中立卡）">影响力 15/15</span></div>
+    </div>
+  </div>
+  <details>
+    <summary>展开完整牌表 · 45 张</summary>
+    <div class="lists"><div class="gtype"><h5>Event <em>· 事件 25</em></h5><ul><li data-code="34030"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">巴伊亚手环</span> <span class="ce">Bahia Bands</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="26074"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">虚张声势</span> <span class="ce">Bravado</span></span></li><li data-code="33012"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">时不再来</span> <span class="ce">Carpe Diem</span></span></li><li data-code="35014"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">利落脱身</span> <span class="ce">Clean Getaway</span></span></li><li data-code="33066"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">终局</span> <span class="ce">Finality</span></span><span class="inf" title="影响力消耗">3</span></li><li data-code="30028"><span class="q">2×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">越狱</span> <span class="ce">Jailbreak</span></span></li><li data-code="30029"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">超频</span> <span class="ce">Overclock</span></span></li><li data-code="33013"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">穿针引线</span> <span class="ce">Pinhole Threading</span></span></li><li data-code="30030"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">胜券在握</span> <span class="ce">Sure Gamble</span></span></li><li data-code="35017"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">财富转移</span> <span class="ce">Transfer of Wealth</span></span></li></ul></div><div class="gtype"><h5>Hardware <em>· 硬件 3</em></h5><ul><li data-code="26075"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">回力镖</span> <span class="ce">Boomerang</span></span></li><li data-code="34014"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">赫耳墨斯</span> <span class="ce">Hermes</span></span></li></ul></div><div class="gtype"><h5>Program <em>· 程序 9</em></h5><ul><li data-code="33017"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">土耳其咖啡壶</span> <span class="ce">Cezve</span></span></li><li data-code="34015"><span class="q">2×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">库鲁皮拉</span> <span class="ce">Curupira</span></span></li><li data-code="30008"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">水蛭</span> <span class="ce">Leech</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="32002"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">左轮手枪</span> <span class="ce">Revolver</span></span></li><li data-code="34018"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">示播列</span> <span class="ce">Shibboleth</span></span></li></ul></div><div class="gtype"><h5>Resource <em>· 资源 8</em></h5><ul><li data-code="34019"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">黛比·“闹市”·莫雷拉</span> <span class="ce">Debbie &quot;Downtown&quot; Moreira</span></span></li><li data-code="26007"><span class="q">1×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">剑术师弗恩诺</span> <span class="ce">Fencer Fueno</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="26072"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">秘法师鸣蝉</span> <span class="ce">Mystic Maemi</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="26018"><span class="q">3×</span><span class="cost" title="费用">4</span><span class="nm"><span class="cz">一流选手</span> <span class="ce">The Class Act</span></span></li><li data-code="33010"><span class="q">1×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">孪晶</span> <span class="ce">The Twinning</span></span><span class="inf" title="影响力消耗">3</span></li></ul></div></div>
+  </details>
+  <div class="deckfoot">
+    <button type="button" class="copybtn" data-url="https://netrunnerdb.com/en/decklist/9cc37751-7395-4dd2-a495-a7b4a1cb4e00/goodstuff-muslihat-worlds-2026-winner-"
+            title="复制 NetrunnerDB 牌组链接，粘到 jnet 的 Import 里即可导入">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2 0v8h6V2H6z"/><path d="M2 5a2 2 0 0 1 2-2v1.5A.5.5 0 0 0 3.5 5v8a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5H12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5z"/></svg>
+      <span class="copybtn-label">复制链接</span>
+    </button>
+    <a href="decklists/9cc37751-7395-4dd2-a495-a7b4a1cb4e00.txt">纯文本牌表</a>
+    <a href="https://netrunnerdb.com/en/decklist/9cc37751-7395-4dd2-a495-a7b4a1cb4e00/goodstuff-muslihat-worlds-2026-winner-" target="_blank" rel="noopener">NetrunnerDB 页面 ↗</a>
+  </div>
+</article>
+<article class="deck" style="--fc:#eab308" data-side="corp" data-fmt="standard">
+  <div class="deck-top">
+    <img class="idimg" src="img/30051.jpg" alt="NBN: Reality Plus" loading="lazy">
+    <div class="dmain">
+      <div class="tags"><span class="tag rank">#2</span><span class="tag hot">本周热门</span><span class="tag">NBN</span><span class="tag">Seventh Rotation</span></div>
+      <h4><a href="https://netrunnerdb.com/en/decklist/34119e3c-a840-4aa6-995f-da38f08de9ff/next-bzz-sting-" target="_blank" rel="noopener">Next Bzz Sting!</a></h4>
+      <div class="idname"><b>网际传媒: 身临其境</b><span class="ce">NBN: Reality Plus</span></div>
+      <div class="meta"><span>作者 <b>protheseus</b> · 656 rep</span><span class="social"><b>15</b> 赞 &nbsp;<b>7</b> 藏 &nbsp;<b>4</b> 评</span><span>2026-10-21</span></div>
+      <div class="tchips"><span class="tchip">议案 <b>6</b></span><span class="tchip">资产 <b>21</b></span><span class="tchip">升级 <b>2</b></span><span class="tchip">事务 <b>10</b></span><span class="tchip">防火墙 <b>5</b></span></div>
+    </div>
+    <div class="right">
+      <div class="score" title="热度 = 赞×3 + 藏×2 + 评×1">63<small>热度</small></div>
+      <div class="size">44 张 · <span class="inftotal" title="影响力 = 外派系卡的影响力之和（含带影响力的中立卡）">影响力 15/15</span> · 18 议案分数</div>
+    </div>
+  </div>
+  <details>
+    <summary>展开完整牌表 · 44 张</summary>
+    <div class="lists"><div class="gtype"><h5>Agenda <em>· 议案 6</em></h5><ul><li data-code="35060"><span class="q">3×</span><span class="cost blank"></span><span class="nm"><span class="cz">下一波热潮</span> <span class="ce">Next Big Thing</span></span></li><li data-code="30069"><span class="q">3×</span><span class="cost blank"></span><span class="nm"><span class="cz">以儆效尤</span> <span class="ce">Send a Message</span></span></li></ul></div><div class="gtype"><h5>Asset <em>· 资产 21</em></h5><ul><li data-code="34051"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">看啊!</span> <span class="ce">Behold!</span></span></li><li data-code="26033"><span class="q">1×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">卡尔文B4L3Y</span> <span class="ce">Calvin B4L3Y</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="33050"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">契卡子弟</span> <span class="ce">Chekist Scion</span></span></li><li data-code="33114"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">煤气灯下</span> <span class="ce">Gaslight</span></span></li><li data-code="36049"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">虚无特工</span> <span class="ce">Nihilo Agent</span></span></li><li data-code="35062"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">公共接入广场</span> <span class="ce">Public Access Plaza</span></span></li><li data-code="30053"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">舆论操盘手</span> <span class="ce">Spin Doctor</span></span></li><li data-code="26049"><span class="q">2×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">分级订阅</span> <span class="ce">Tiered Subscription</span></span></li></ul></div><div class="gtype"><h5>Upgrade <em>· 升级 2</em></h5><ul><li data-code="34120"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">全息人</span> <span class="ce">The Holo Man</span></span></li></ul></div><div class="gtype"><h5>Operation <em>· 事务 10</em></h5><ul><li data-code="33064"><span class="q">1×</span><span class="cost" title="费用">4</span><span class="nm"><span class="cz">共同毁灭原则</span> <span class="ce">Mutually Assured Destruction</span></span><span class="inf" title="影响力消耗">4</span></li><li data-code="34055"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">竞对调研</span> <span class="ce">Oppo Research</span></span></li><li data-code="30056"><span class="q">1×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">消费预测智慧商城</span> <span class="ce">Predictive Planogram</span></span></li><li data-code="34119"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">突发指令</span> <span class="ce">Sudden Commandment</span></span></li><li data-code="36044"><span class="q">2×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">释放</span> <span class="ce">Unleash</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="34056"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">你的数字生活</span> <span class="ce">Your Digital Life</span></span></li></ul></div><div class="gtype"><h5>ICE <em>· 防火墙 5</em></h5><ul><li data-code="30055"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">PING</span> <span class="ce">Ping</span></span></li><li data-code="36042"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">维切克</span> <span class="ce">Vicsek</span></span><span class="inf" title="影响力消耗">3</span></li></ul></div></div>
+  </details>
+  <div class="deckfoot">
+    <button type="button" class="copybtn" data-url="https://netrunnerdb.com/en/decklist/34119e3c-a840-4aa6-995f-da38f08de9ff/next-bzz-sting-"
+            title="复制 NetrunnerDB 牌组链接，粘到 jnet 的 Import 里即可导入">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2 0v8h6V2H6z"/><path d="M2 5a2 2 0 0 1 2-2v1.5A.5.5 0 0 0 3.5 5v8a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5H12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5z"/></svg>
+      <span class="copybtn-label">复制链接</span>
+    </button>
+    <a href="decklists/34119e3c-a840-4aa6-995f-da38f08de9ff.txt">纯文本牌表</a>
+    <a href="https://netrunnerdb.com/en/decklist/34119e3c-a840-4aa6-995f-da38f08de9ff/next-bzz-sting-" target="_blank" rel="noopener">NetrunnerDB 页面 ↗</a>
+  </div>
+</article>
+<article class="deck" style="--fc:#eab308" data-side="corp" data-fmt="standard">
+  <div class="deck-top">
+    <img class="idimg" src="img/30051.jpg" alt="NBN: Reality Plus" loading="lazy">
+    <div class="dmain">
+      <div class="tags"><span class="tag rank">#3</span><span class="tag hot">本周热门</span><span class="tag">NBN</span><span class="tag">Third Rotation</span></div>
+      <h4><a href="https://netrunnerdb.com/en/decklist/a94dc935-8f43-4c01-ac3c-f629f431392c/r-seamless-2nd-place-hefei-h1-ctk-35-players-3-1-1-" target="_blank" rel="noopener">R+ Seamless (2nd Place @ Hefei H1 CTK, 35 Players, 3-1-1)</a></h4>
+      <div class="idname"><b>网际传媒: 身临其境</b><span class="ce">NBN: Reality Plus</span></div>
+      <div class="meta"><span>作者 <b>Empty_World</b> · 236 rep</span><span class="social"><b>11</b> 赞 &nbsp;<b>7</b> 藏 &nbsp;<b>6</b> 评</span><span>2026-10-20</span></div>
+      <div class="tchips"><span class="tchip">议案 <b>9</b></span><span class="tchip">资产 <b>6</b></span><span class="tchip">升级 <b>1</b></span><span class="tchip">事务 <b>17</b></span><span class="tchip">防火墙 <b>11</b></span></div>
+    </div>
+    <div class="right">
+      <div class="score" title="热度 = 赞×3 + 藏×2 + 评×1">53<small>热度</small></div>
+      <div class="size">44 张 · <span class="inftotal" title="影响力 = 外派系卡的影响力之和（含带影响力的中立卡）">影响力 15/15</span> · 18 议案分数</div>
+    </div>
+  </div>
+  <details>
+    <summary>展开完整牌表 · 44 张</summary>
+    <div class="lists"><div class="gtype"><h5>Agenda <em>· 议案 9</em></h5><ul><li data-code="33049"><span class="q">3×</span><span class="cost blank"></span><span class="nm"><span class="cz">币圈洗盘</span> <span class="ce">Artificial Cryptocrash</span></span></li><li data-code="33112"><span class="q">2×</span><span class="cost blank"></span><span class="nm"><span class="cz">信息自由</span> <span class="ce">Freedom of Information</span></span></li><li data-code="30052"><span class="q">1×</span><span class="cost blank"></span><span class="nm"><span class="cz">明日头条</span> <span class="ce">Tomorrowʼs Headline</span></span></li><li data-code="36047"><span class="q">3×</span><span class="cost blank"></span><span class="nm"><span class="cz">猎巫</span> <span class="ce">Witch Hunt</span></span></li></ul></div><div class="gtype"><h5>Asset <em>· 资产 6</em></h5><ul><li data-code="35039"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">仿生人力资源</span> <span class="ce">Humanoid Resources</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="30053"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">舆论操盘手</span> <span class="ce">Spin Doctor</span></span></li></ul></div><div class="gtype"><h5>Upgrade <em>· 升级 1</em></h5><ul><li data-code="30058"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">惊奇迷乐园</span> <span class="ce">AMAZE Amusements</span></span></li></ul></div><div class="gtype"><h5>Operation <em>· 事务 17</em></h5><ul><li data-code="35065"><span class="q">1×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">广阔视野</span> <span class="ce">Bigger Picture</span></span></li><li data-code="25146"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">对冲基金</span> <span class="ce">Hedge Fund</span></span></li><li data-code="34055"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">竞对调研</span> <span class="ce">Oppo Research</span></span></li><li data-code="34062"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">转变策略</span> <span class="ce">Pivot</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="30065"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">打击报复</span> <span class="ce">Retribution</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="30040"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">无瑕发布会</span> <span class="ce">Seamless Launch</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="33119"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">符拉迪西比尔斯克的货物</span> <span class="ce">Shipment from Vladisibirsk</span></span></li><li data-code="34056"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">你的数字生活</span> <span class="ce">Your Digital Life</span></span></li></ul></div><div class="gtype"><h5>ICE <em>· 防火墙 11</em></h5><ul><li data-code="35063"><span class="q">2×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">末日刷屏</span> <span class="ce">Doomscroll</span></span></li><li data-code="35079"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">苍蝇拍</span> <span class="ce">Flyswatter</span></span></li><li data-code="30054"><span class="q">1×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">欢乐屋</span> <span class="ce">Funhouse</span></span></li><li data-code="33053"><span class="q">1×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">门第选官制</span> <span class="ce">Mestnichestvo</span></span></li><li data-code="30055"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">PING</span> <span class="ce">Ping</span></span></li><li data-code="33117"><span class="q">2×</span><span class="cost" title="费用">4</span><span class="nm"><span class="cz">不会笑的查瑞芙娜</span> <span class="ce">Unsmiling Tsarevna</span></span></li><li data-code="34054"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">虚拟服务代理</span> <span class="ce">Virtual Service Agent</span></span></li></ul></div></div>
+  </details>
+  <div class="deckfoot">
+    <button type="button" class="copybtn" data-url="https://netrunnerdb.com/en/decklist/a94dc935-8f43-4c01-ac3c-f629f431392c/r-seamless-2nd-place-hefei-h1-ctk-35-players-3-1-1-"
+            title="复制 NetrunnerDB 牌组链接，粘到 jnet 的 Import 里即可导入">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2 0v8h6V2H6z"/><path d="M2 5a2 2 0 0 1 2-2v1.5A.5.5 0 0 0 3.5 5v8a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5H12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5z"/></svg>
+      <span class="copybtn-label">复制链接</span>
+    </button>
+    <a href="decklists/a94dc935-8f43-4c01-ac3c-f629f431392c.txt">纯文本牌表</a>
+    <a href="https://netrunnerdb.com/en/decklist/a94dc935-8f43-4c01-ac3c-f629f431392c/r-seamless-2nd-place-hefei-h1-ctk-35-players-3-1-1-" target="_blank" rel="noopener">NetrunnerDB 页面 ↗</a>
+  </div>
+</article>
+<article class="deck" style="--fc:#3b82f6" data-side="runner" data-fmt="standard">
+  <div class="deck-top">
+    <img class="idimg" src="img/30010.jpg" alt="Zahya Sadeghi: Versatile Smuggler" loading="lazy">
+    <div class="dmain">
+      <div class="tags"><span class="tag rank">#4</span><span class="tag hot">本周热门</span><span class="tag">Criminal</span></div>
+      <h4><a href="https://netrunnerdb.com/en/decklist/18d99019-e065-4260-a8a0-cfa8289e6b30/reg-zahya-2nd-place-hefei-h1-ctk-35-players-4-1-" target="_blank" rel="noopener">Reg Zahya (2nd Place @ Hefei H1 CTK, 35 Players, 4-1)</a></h4>
+      <div class="idname"><b>扎赫亚·萨迪吉: 多才多艺的走私者</b><span class="ce">Zahya Sadeghi: Versatile Smuggler</span></div>
+      <div class="meta"><span>作者 <b>Empty_World</b> · 236 rep</span><span class="social"><b>9</b> 赞 &nbsp;<b>6</b> 藏 &nbsp;<b>7</b> 评</span><span>2026-10-20</span></div>
+      <div class="tchips"><span class="tchip">事件 <b>15</b></span><span class="tchip">硬件 <b>4</b></span><span class="tchip">程序 <b>8</b></span><span class="tchip">资源 <b>13</b></span></div>
+    </div>
+    <div class="right">
+      <div class="score" title="热度 = 赞×3 + 藏×2 + 评×1">46<small>热度</small></div>
+      <div class="size">40 张 · <span class="inftotal" title="影响力 = 外派系卡的影响力之和（含带影响力的中立卡）">影响力 15/15</span></div>
+    </div>
+  </div>
+  <details>
+    <summary>展开完整牌表 · 40 张</summary>
+    <div class="lists"><div class="gtype"><h5>Event <em>· 事件 15</em></h5><ul><li data-code="26074"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">虚张声势</span> <span class="ce">Bravado</span></span></li><li data-code="35014"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">利落脱身</span> <span class="ce">Clean Getaway</span></span></li><li data-code="33066"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">终局</span> <span class="ce">Finality</span></span><span class="inf" title="影响力消耗">3</span></li><li data-code="33013"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">穿针引线</span> <span class="ce">Pinhole Threading</span></span></li><li data-code="01050"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">胜券在握</span> <span class="ce">Sure Gamble</span></span></li><li data-code="35017"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">财富转移</span> <span class="ce">Transfer of Wealth</span></span></li></ul></div><div class="gtype"><h5>Hardware <em>· 硬件 4</em></h5><ul><li data-code="26075"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">回力镖</span> <span class="ce">Boomerang</span></span></li><li data-code="34014"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">赫耳墨斯</span> <span class="ce">Hermes</span></span></li></ul></div><div class="gtype"><h5>Program <em>· 程序 8</em></h5><ul><li data-code="30015"><span class="q">1×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">卡门</span> <span class="ce">Carmen</span></span></li><li data-code="33017"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">土耳其咖啡壶</span> <span class="ce">Cezve</span></span></li><li data-code="34080"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">灰吹精炼</span> <span class="ce">Cupellation</span></span></li><li data-code="34015"><span class="q">2×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">库鲁皮拉</span> <span class="ce">Curupira</span></span></li><li data-code="32002"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">左轮手枪</span> <span class="ce">Revolver</span></span></li><li data-code="34018"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">示播列</span> <span class="ce">Shibboleth</span></span></li><li data-code="30026"><span class="q">1×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">团结</span> <span class="ce">Unity</span></span><span class="inf" title="影响力消耗">2</span></li></ul></div><div class="gtype"><h5>Resource <em>· 资源 13</em></h5><ul><li data-code="26094"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">每日播报</span> <span class="ce">Daily Casts</span></span></li><li data-code="33092"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">努卡·弗罗丽克博士</span> <span class="ce">Dr. Nuka Vrolyck</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="35022"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">自由市场</span> <span class="ce">Open Market</span></span></li><li data-code="26018"><span class="q">3×</span><span class="cost" title="费用">4</span><span class="nm"><span class="cz">一流选手</span> <span class="ce">The Class Act</span></span></li><li data-code="33010"><span class="q">1×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">孪晶</span> <span class="ce">The Twinning</span></span><span class="inf" title="影响力消耗">3</span></li><li data-code="26009"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">诡术师塔卡</span> <span class="ce">Trickster Taka</span></span><span class="inf" title="影响力消耗">3</span></li></ul></div></div>
+  </details>
+  <div class="deckfoot">
+    <button type="button" class="copybtn" data-url="https://netrunnerdb.com/en/decklist/18d99019-e065-4260-a8a0-cfa8289e6b30/reg-zahya-2nd-place-hefei-h1-ctk-35-players-4-1-"
+            title="复制 NetrunnerDB 牌组链接，粘到 jnet 的 Import 里即可导入">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2 0v8h6V2H6z"/><path d="M2 5a2 2 0 0 1 2-2v1.5A.5.5 0 0 0 3.5 5v8a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5H12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5z"/></svg>
+      <span class="copybtn-label">复制链接</span>
+    </button>
+    <a href="decklists/18d99019-e065-4260-a8a0-cfa8289e6b30.txt">纯文本牌表</a>
+    <a href="https://netrunnerdb.com/en/decklist/18d99019-e065-4260-a8a0-cfa8289e6b30/reg-zahya-2nd-place-hefei-h1-ctk-35-players-4-1-" target="_blank" rel="noopener">NetrunnerDB 页面 ↗</a>
+  </div>
+</article>
+<article class="deck" style="--fc:#8b5cf6" data-side="corp" data-fmt="startup">
+  <div class="deck-top">
+    <img class="idimg" src="img/35035.jpg" alt="LEO Construction: Labor Solutions" loading="lazy">
+    <div class="dmain">
+      <div class="tags"><span class="tag rank">#5</span><span class="tag hot">本周热门</span><span class="tag">Haas-Bioroid</span><span class="tag">Seventh Rotation</span><span class="tag fmt" title="标题或简介里标了 Startup">新启</span></div>
+      <h4><a href="https://netrunnerdb.com/en/decklist/943e643a-82f3-40f5-983d-2eca16c2ce25/our-thoughts-travel-with-you-1-4-1-at-worlds-198th-overall" target="_blank" rel="noopener">Our Thoughts Travel With You (1-4-1 at Worlds, 198th overall</a></h4>
+      <div class="idname"><b>利奥建工: 劳工解决方案</b><span class="ce">LEO Construction: Labor Solutions</span></div>
+      <div class="meta"><span>作者 <b>zhansonic</b> · 119 rep</span><span class="social"><b>8</b> 赞 &nbsp;<b>0</b> 藏 &nbsp;<b>4</b> 评</span><span>2026-10-20</span></div>
+      <div class="tchips"><span class="tchip">议案 <b>8</b></span><span class="tchip">资产 <b>7</b></span><span class="tchip">升级 <b>7</b></span><span class="tchip">事务 <b>13</b></span><span class="tchip">防火墙 <b>14</b></span></div>
+    </div>
+    <div class="right">
+      <div class="score" title="热度 = 赞×3 + 藏×2 + 评×1">28<small>热度</small></div>
+      <div class="size">49 张 · <span class="inftotal" title="影响力 = 外派系卡的影响力之和（含带影响力的中立卡）">影响力 15/15</span> · 20 议案分数</div>
+    </div>
+  </div>
+  <details>
+    <summary>展开完整牌表 · 49 张</summary>
+    <div class="lists"><div class="gtype"><h5>Agenda <em>· 议案 8</em></h5><ul><li data-code="36066"><span class="q">3×</span><span class="cost blank"></span><span class="nm"><span class="cz">让他们做个美梦</span> <span class="ce">Let Them Dream</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="36026"><span class="q">3×</span><span class="cost blank"></span><span class="nm"><span class="cz">梅里爱城奢华线</span> <span class="ce">Méliès City Luxury Line</span></span></li><li data-code="35038"><span class="q">1×</span><span class="cost blank"></span><span class="nm"><span class="cz">忆存计划</span> <span class="ce">Project Ingatan</span></span></li><li data-code="30069"><span class="q">1×</span><span class="cost blank"></span><span class="nm"><span class="cz">以儆效尤</span> <span class="ce">Send a Message</span></span></li></ul></div><div class="gtype"><h5>Asset <em>· 资产 7</em></h5><ul><li data-code="35039"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">仿生人力资源</span> <span class="ce">Humanoid Resources</span></span></li><li data-code="30071"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">表岩屑开采许可</span> <span class="ce">Regolith Mining License</span></span></li><li data-code="30053"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">舆论操盘手</span> <span class="ce">Spin Doctor</span></span><span class="inf" title="影响力消耗">1</span></li></ul></div><div class="gtype"><h5>Upgrade <em>· 升级 7</em></h5><ul><li data-code="30042"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">逐月狼秘密开发部</span> <span class="ce">Manegarm Skunkworks</span></span></li><li data-code="35045"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">梅西娅 B4LL4RD</span> <span class="ce">Mercia B4LL4RD</span></span></li><li data-code="26105"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">宁静家园网阵</span> <span class="ce">Tranquility Home Grid</span></span></li></ul></div><div class="gtype"><h5>Operation <em>· 事务 13</em></h5><ul><li data-code="36032"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">买者自慎</span> <span class="ce">Caveat Emptor</span></span></li><li data-code="30075"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">对冲基金</span> <span class="ce">Hedge Fund</span></span></li><li data-code="35081"><span class="q">2×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">零用现金</span> <span class="ce">Petty Cash</span></span></li><li data-code="30056"><span class="q">1×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">消费预测智慧商城</span> <span class="ce">Predictive Planogram</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="26104"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">盛景网络</span> <span class="ce">Scapenet</span></span></li><li data-code="30040"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">无瑕发布会</span> <span class="ce">Seamless Launch</span></span></li></ul></div><div class="gtype"><h5>ICE <em>· 防火墙 14</em></h5><ul><li data-code="34109"><span class="q">1×</span><span class="cost" title="费用">6</span><span class="nm"><span class="cz">亚马逊河鲀</span> <span class="ce">Boto</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="30039"><span class="q">3×</span><span class="cost" title="费用">6</span><span class="nm"><span class="cz">布兰1.0</span> <span class="ce">Brân 1.0</span></span></li><li data-code="35041"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">布米1.0</span> <span class="ce">Bumi 1.0</span></span></li><li data-code="26101"><span class="q">1×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">制图师</span> <span class="ce">Drafter</span></span></li><li data-code="36058"><span class="q">2×</span><span class="cost" title="费用">4</span><span class="nm"><span class="cz">事件视界</span> <span class="ce">Event Horizon</span></span><span class="inf" title="影响力消耗">3</span></li><li data-code="35079"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">苍蝇拍</span> <span class="ce">Flyswatter</span></span></li><li data-code="36030"><span class="q">3×</span><span class="cost" title="费用">4</span><span class="nm"><span class="cz">斯莱泼尼尔</span> <span class="ce">Sleipnir</span></span></li></ul></div></div>
+  </details>
+  <div class="deckfoot">
+    <button type="button" class="copybtn" data-url="https://netrunnerdb.com/en/decklist/943e643a-82f3-40f5-983d-2eca16c2ce25/our-thoughts-travel-with-you-1-4-1-at-worlds-198th-overall"
+            title="复制 NetrunnerDB 牌组链接，粘到 jnet 的 Import 里即可导入">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2 0v8h6V2H6z"/><path d="M2 5a2 2 0 0 1 2-2v1.5A.5.5 0 0 0 3.5 5v8a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5H12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5z"/></svg>
+      <span class="copybtn-label">复制链接</span>
+    </button>
+    <a href="decklists/943e643a-82f3-40f5-983d-2eca16c2ce25.txt">纯文本牌表</a>
+    <a href="https://netrunnerdb.com/en/decklist/943e643a-82f3-40f5-983d-2eca16c2ce25/our-thoughts-travel-with-you-1-4-1-at-worlds-198th-overall" target="_blank" rel="noopener">NetrunnerDB 页面 ↗</a>
+  </div>
+</article>
+<article class="deck" style="--fc:#e08b0c" data-side="runner" data-fmt="standard">
+  <div class="deck-top">
+    <img class="idimg" src="img/30001.jpg" alt="René “Loup” Arcemont: Party Animal" loading="lazy">
+    <div class="dmain">
+      <div class="tags"><span class="tag rank">#6</span><span class="tag hot">本周热门</span><span class="tag">Anarch</span><span class="tag">Seventh Rotation</span></div>
+      <h4><a href="https://netrunnerdb.com/en/decklist/241a289c-f46a-4a64-a0aa-98a65297d347/expert-in-a-dying-field-top-32-worlds-26-" target="_blank" rel="noopener">Expert in a Dying Field (Top 32 Worlds &#x27;26)</a></h4>
+      <div class="idname"><b>勒内·“野狼”·阿斯蒙特: 派对野兽</b><span class="ce">René “Loup” Arcemont: Party Animal</span></div>
+      <div class="meta"><span>作者 <b>AbyssStaresBack</b> · 498 rep</span><span class="social"><b>6</b> 赞 &nbsp;<b>2</b> 藏 &nbsp;<b>4</b> 评</span><span>2026-10-24</span><span>2026 World Champs</span></div>
+      <div class="tchips"><span class="tchip">事件 <b>10</b></span><span class="tchip">硬件 <b>5</b></span><span class="tchip">程序 <b>14</b></span><span class="tchip">资源 <b>11</b></span></div>
+    </div>
+    <div class="right">
+      <div class="score" title="热度 = 赞×3 + 藏×2 + 评×1">26<small>热度</small></div>
+      <div class="size">40 张 · <span class="inftotal" title="影响力 = 外派系卡的影响力之和（含带影响力的中立卡）">影响力 15/15</span></div>
+    </div>
+  </div>
+  <details>
+    <summary>展开完整牌表 · 40 张</summary>
+    <div class="lists"><div class="gtype"><h5>Event <em>· 事件 10</em></h5><ul><li data-code="30020"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">创作委托</span> <span class="ce">Creative Commission</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="33013"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">穿针引线</span> <span class="ce">Pinhole Threading</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="33004"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">钢肤疤痕</span> <span class="ce">Steelskin Scarring</span></span></li><li data-code="30030"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">胜券在握</span> <span class="ce">Sure Gamble</span></span></li></ul></div><div class="gtype"><h5>Hardware <em>· 硬件 5</em></h5><ul><li data-code="26069"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">扭蛋机</span> <span class="ce">Gachapon</span></span></li><li data-code="34014"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">赫耳墨斯</span> <span class="ce">Hermes</span></span><span class="inf" title="影响力消耗">3</span></li></ul></div><div class="gtype"><h5>Program <em>· 程序 14</em></h5><ul><li data-code="34004"><span class="q">1×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">“吸血花”奥黛丽v2</span> <span class="ce">Audrey v2</span></span></li><li data-code="30005"><span class="q">2×</span><span class="cost" title="费用">4</span><span class="nm"><span class="cz">电锯</span> <span class="ce">Buzzsaw</span></span></li><li data-code="30025"><span class="q">1×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">梯队</span> <span class="ce">Echelon</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="30007"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">发酵罐</span> <span class="ce">Fermenter</span></span></li><li data-code="35007"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">贪食者</span> <span class="ce">Gourmand</span></span></li><li data-code="33018"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">左轮手枪</span> <span class="ce">Revolver</span></span><span class="inf" title="影响力消耗">3</span></li><li data-code="35009"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">暗潮汹涌</span> <span class="ce">Rising Tide</span></span></li></ul></div><div class="gtype"><h5>Resource <em>· 资源 11</em></h5><ul><li data-code="26094"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">每日播报</span> <span class="ce">Daily Casts</span></span></li><li data-code="34007"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">爱瑠·绫濑·佩索阿</span> <span class="ce">Eru Ayase-Pessoa</span></span></li><li data-code="26073"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">圣骑士诗梦</span> <span class="ce">Paladin Poemu</span></span></li><li data-code="33010"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">孪晶</span> <span class="ce">The Twinning</span></span></li><li data-code="26009"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">诡术师塔卡</span> <span class="ce">Trickster Taka</span></span></li></ul></div></div>
+  </details>
+  <div class="deckfoot">
+    <button type="button" class="copybtn" data-url="https://netrunnerdb.com/en/decklist/241a289c-f46a-4a64-a0aa-98a65297d347/expert-in-a-dying-field-top-32-worlds-26-"
+            title="复制 NetrunnerDB 牌组链接，粘到 jnet 的 Import 里即可导入">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2 0v8h6V2H6z"/><path d="M2 5a2 2 0 0 1 2-2v1.5A.5.5 0 0 0 3.5 5v8a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5H12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5z"/></svg>
+      <span class="copybtn-label">复制链接</span>
+    </button>
+    <a href="decklists/241a289c-f46a-4a64-a0aa-98a65297d347.txt">纯文本牌表</a>
+    <a href="https://netrunnerdb.com/en/decklist/241a289c-f46a-4a64-a0aa-98a65297d347/expert-in-a-dying-field-top-32-worlds-26-" target="_blank" rel="noopener">NetrunnerDB 页面 ↗</a>
+  </div>
+</article>
+<article class="deck" style="--fc:#3b82f6" data-side="runner" data-fmt="standard">
+  <div class="deck-top">
+    <img class="idimg" src="img/22008.jpg" alt="Liza Talking Thunder: Prominent Legislator" loading="lazy">
+    <div class="dmain">
+      <div class="tags"><span class="tag rank">#7</span><span class="tag hot">本周热门</span><span class="tag">Criminal</span><span class="tag">Sixth Rotation</span></div>
+      <h4><a href="https://netrunnerdb.com/en/decklist/d145f05f-c2c1-4e2e-9642-ef1822bde7ae/drinking-age-2nd-zamn24-s-oops-all-ids-" target="_blank" rel="noopener">Drinking Age (2nd @ zamn24&#x27;s Oops all IDs!)</a></h4>
+      <div class="idname"><b>丽莎·雷鸣：知名立法者</b><span class="ce">Liza Talking Thunder: Prominent Legislator</span></div>
+      <div class="meta"><span>作者 <b>zamn24</b> · 147 rep</span><span class="social"><b>5</b> 赞 &nbsp;<b>2</b> 藏 &nbsp;<b>0</b> 评</span><span>2026-10-24</span></div>
+      <div class="tchips"><span class="tchip">事件 <b>28</b></span><span class="tchip">硬件 <b>8</b></span><span class="tchip">程序 <b>10</b></span><span class="tchip">资源 <b>5</b></span></div>
+    </div>
+    <div class="right">
+      <div class="score" title="热度 = 赞×3 + 藏×2 + 评×1">19<small>热度</small></div>
+      <div class="size">51 张 · <span class="inftotal" title="影响力 = 外派系卡的影响力之和（含带影响力的中立卡）">影响力 15/15</span></div>
+    </div>
+  </div>
+  <details>
+    <summary>展开完整牌表 · 51 张</summary>
+    <div class="lists"><div class="gtype"><h5>Event <em>· 事件 28</em></h5><ul><li data-code="26074"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">虚张声势</span> <span class="ce">Bravado</span></span></li><li data-code="33012"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">时不再来</span> <span class="ce">Carpe Diem</span></span></li><li data-code="35014"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">利落脱身</span> <span class="ce">Clean Getaway</span></span></li><li data-code="30020"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">创作委托</span> <span class="ce">Creative Commission</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="33066"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">终局</span> <span class="ce">Finality</span></span><span class="inf" title="影响力消耗">3</span></li><li data-code="30028"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">越狱</span> <span class="ce">Jailbreak</span></span></li><li data-code="30011"><span class="q">1×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">互惠互利</span> <span class="ce">Mutual Favor</span></span></li><li data-code="30029"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">超频</span> <span class="ce">Overclock</span></span></li><li data-code="33013"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">穿针引线</span> <span class="ce">Pinhole Threading</span></span></li><li data-code="30030"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">胜券在握</span> <span class="ce">Sure Gamble</span></span></li><li data-code="36012"><span class="q">2×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">尾随</span> <span class="ce">Tailgate</span></span></li><li data-code="35017"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">财富转移</span> <span class="ce">Transfer of Wealth</span></span></li></ul></div><div class="gtype"><h5>Hardware <em>· 硬件 8</em></h5><ul><li data-code="26075"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">回力镖</span> <span class="ce">Boomerang</span></span></li><li data-code="36013"><span class="q">1×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">借来之物</span> <span class="ce">Borrowed Goods</span></span></li><li data-code="34014"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">赫耳墨斯</span> <span class="ce">Hermes</span></span></li><li data-code="36021"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">试金石</span> <span class="ce">Touchstone</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="33078"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">尾迹植入体v2A-JRJ</span> <span class="ce">WAKE Implant v2A-JRJ</span></span></li></ul></div><div class="gtype"><h5>Program <em>· 程序 10</em></h5><ul><li data-code="30015"><span class="q">1×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">卡门</span> <span class="ce">Carmen</span></span></li><li data-code="33017"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">土耳其咖啡壶</span> <span class="ce">Cezve</span></span></li><li data-code="34080"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">灰吹精炼</span> <span class="ce">Cupellation</span></span></li><li data-code="34015"><span class="q">2×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">库鲁皮拉</span> <span class="ce">Curupira</span></span></li><li data-code="30008"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">水蛭</span> <span class="ce">Leech</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="33018"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">左轮手枪</span> <span class="ce">Revolver</span></span></li><li data-code="35020"><span class="q">2×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">百灵鹿</span> <span class="ce">Sang Kancil</span></span></li></ul></div><div class="gtype"><h5>Resource <em>· 资源 5</em></h5><ul><li data-code="34075"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">曼纽尔·拿铁·德莫拉</span> <span class="ce">Manuel Lattes de Moura</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="26018"><span class="q">3×</span><span class="cost" title="费用">4</span><span class="nm"><span class="cz">一流选手</span> <span class="ce">The Class Act</span></span></li></ul></div></div>
+  </details>
+  <div class="deckfoot">
+    <button type="button" class="copybtn" data-url="https://netrunnerdb.com/en/decklist/d145f05f-c2c1-4e2e-9642-ef1822bde7ae/drinking-age-2nd-zamn24-s-oops-all-ids-"
+            title="复制 NetrunnerDB 牌组链接，粘到 jnet 的 Import 里即可导入">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2 0v8h6V2H6z"/><path d="M2 5a2 2 0 0 1 2-2v1.5A.5.5 0 0 0 3.5 5v8a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5H12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5z"/></svg>
+      <span class="copybtn-label">复制链接</span>
+    </button>
+    <a href="decklists/d145f05f-c2c1-4e2e-9642-ef1822bde7ae.txt">纯文本牌表</a>
+    <a href="https://netrunnerdb.com/en/decklist/d145f05f-c2c1-4e2e-9642-ef1822bde7ae/drinking-age-2nd-zamn24-s-oops-all-ids-" target="_blank" rel="noopener">NetrunnerDB 页面 ↗</a>
+  </div>
+</article>
+<article class="deck" style="--fc:#22a05a" data-side="runner" data-fmt="standard">
+  <div class="deck-top">
+    <img class="idimg" src="img/26019.jpg" alt="Lat: Ethical Freelancer" loading="lazy">
+    <div class="dmain">
+      <div class="tags"><span class="tag rank">#8</span><span class="tag hot">本周热门</span><span class="tag">Shaper</span><span class="tag">Seventh Rotation</span></div>
+      <h4><a href="https://netrunnerdb.com/en/decklist/fe9248f9-f7b4-401f-80f5-c8cc34362d08/not-stonks-3-2-at-worlds-198th-overall-" target="_blank" rel="noopener">Not Stonks (3-2 at Worlds, 198th overall)</a></h4>
+      <div class="idname"><b>拉特: 正派自由职业者</b><span class="ce">Lat: Ethical Freelancer</span></div>
+      <div class="meta"><span>作者 <b>zhansonic</b> · 119 rep</span><span class="social"><b>4</b> 赞 &nbsp;<b>0</b> 藏 &nbsp;<b>4</b> 评</span><span>2026-10-20</span></div>
+      <div class="tchips"><span class="tchip">事件 <b>18</b></span><span class="tchip">硬件 <b>8</b></span><span class="tchip">程序 <b>12</b></span><span class="tchip">资源 <b>7</b></span></div>
+    </div>
+    <div class="right">
+      <div class="score" title="热度 = 赞×3 + 藏×2 + 评×1">16<small>热度</small></div>
+      <div class="size">45 张 · <span class="inftotal" title="影响力 = 外派系卡的影响力之和（含带影响力的中立卡）">影响力 15/15</span></div>
+    </div>
+  </div>
+  <details>
+    <summary>展开完整牌表 · 45 张</summary>
+    <div class="lists"><div class="gtype"><h5>Event <em>· 事件 18</em></h5><ul><li data-code="30020"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">创作委托</span> <span class="ce">Creative Commission</span></span></li><li data-code="30029"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">超频</span> <span class="ce">Overclock</span></span></li><li data-code="33013"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">穿针引线</span> <span class="ce">Pinhole Threading</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="33024"><span class="q">2×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">设备装配</span> <span class="ce">Rigging Up</span></span></li><li data-code="35026"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">仪式</span> <span class="ce">Ritual</span></span></li><li data-code="30030"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">胜券在握</span> <span class="ce">Sure Gamble</span></span></li><li data-code="35017"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">财富转移</span> <span class="ce">Transfer of Wealth</span></span><span class="inf" title="影响力消耗">4</span></li></ul></div><div class="gtype"><h5>Hardware <em>· 硬件 8</em></h5><ul><li data-code="26084"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">诸行无常</span> <span class="ce">Aniccam</span></span></li><li data-code="34088"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">编目器</span> <span class="ce">Cataloguer</span></span></li><li data-code="30013"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">码头区通行证</span> <span class="ce">Docklands Pass</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="26085"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">模拟芯片</span> <span class="ce">Simulchip</span></span></li></ul></div><div class="gtype"><h5>Program <em>· 程序 12</em></h5><ul><li data-code="35029"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">阿齐玛灵符</span> <span class="ce">Azimat</span></span></li><li data-code="34089"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">凝露</span> <span class="ce">Coalescence</span></span></li><li data-code="30024"><span class="q">1×</span><span class="cost" title="费用">4</span><span class="nm"><span class="cz">灵媒</span> <span class="ce">Conduit</span></span></li><li data-code="30025"><span class="q">1×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">梯队</span> <span class="ce">Echelon</span></span></li><li data-code="26025"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">虹彩</span> <span class="ce">Pelangi</span></span></li><li data-code="33027"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">螺旋桨</span> <span class="ce">Propeller</span></span></li><li data-code="26090"><span class="q">2×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">自修正代码</span> <span class="ce">Self-modifying Code</span></span></li><li data-code="30026"><span class="q">1×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">团结</span> <span class="ce">Unity</span></span></li></ul></div><div class="gtype"><h5>Resource <em>· 资源 7</em></h5><ul><li data-code="26094"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">每日播报</span> <span class="ce">Daily Casts</span></span></li><li data-code="33092"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">努卡·弗罗丽克博士</span> <span class="ce">Dr. Nuka Vrolyck</span></span></li><li data-code="30027"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">远程工作合约</span> <span class="ce">Telework Contract</span></span></li></ul></div></div>
+  </details>
+  <div class="deckfoot">
+    <button type="button" class="copybtn" data-url="https://netrunnerdb.com/en/decklist/fe9248f9-f7b4-401f-80f5-c8cc34362d08/not-stonks-3-2-at-worlds-198th-overall-"
+            title="复制 NetrunnerDB 牌组链接，粘到 jnet 的 Import 里即可导入">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2 0v8h6V2H6z"/><path d="M2 5a2 2 0 0 1 2-2v1.5A.5.5 0 0 0 3.5 5v8a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5H12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5z"/></svg>
+      <span class="copybtn-label">复制链接</span>
+    </button>
+    <a href="decklists/fe9248f9-f7b4-401f-80f5-c8cc34362d08.txt">纯文本牌表</a>
+    <a href="https://netrunnerdb.com/en/decklist/fe9248f9-f7b4-401f-80f5-c8cc34362d08/not-stonks-3-2-at-worlds-198th-overall-" target="_blank" rel="noopener">NetrunnerDB 页面 ↗</a>
+  </div>
+</article>
+<article class="deck" style="--fc:#e5484d" data-side="corp" data-fmt="standard">
+  <div class="deck-top">
+    <img class="idimg" src="img/30043.jpg" alt="Jinteki: Restoring Humanity" loading="lazy">
+    <div class="dmain">
+      <div class="tags"><span class="tag rank">#9</span><span class="tag hot">本周热门</span><span class="tag">Jinteki</span><span class="tag">Seventh Rotation</span></div>
+      <h4><a href="https://netrunnerdb.com/en/decklist/2d026c35-8700-46f5-a47f-1e05d4dd04e9/i-big-snek" target="_blank" rel="noopener">I ♥︎ Big Snek</a></h4>
+      <div class="idname"><b>人间会社: 修复人性</b><span class="ce">Jinteki: Restoring Humanity</span></div>
+      <div class="meta"><span>作者 <b>TheOtherKT</b> · 169 rep</span><span class="social"><b>3</b> 赞 &nbsp;<b>1</b> 藏 &nbsp;<b>2</b> 评</span><span>2026-10-25</span></div>
+      <div class="tchips"><span class="tchip">议案 <b>7</b></span><span class="tchip">资产 <b>7</b></span><span class="tchip">升级 <b>6</b></span><span class="tchip">事务 <b>11</b></span><span class="tchip">防火墙 <b>13</b></span></div>
+    </div>
+    <div class="right">
+      <div class="score" title="热度 = 赞×3 + 藏×2 + 评×1">13<small>热度</small></div>
+      <div class="size">44 张 · <span class="inftotal" title="影响力 = 外派系卡的影响力之和（含带影响力的中立卡）">影响力 15/15</span> · 18 议案分数</div>
+    </div>
+  </div>
+  <details>
+    <summary>展开完整牌表 · 44 张</summary>
+    <div class="lists"><div class="gtype"><h5>Agenda <em>· 议案 7</em></h5><ul><li data-code="34040"><span class="q">1×</span><span class="cost blank"></span><span class="nm"><span class="cz">藤井资产回收</span> <span class="ce">Fujii Asset Retrieval</span></span></li><li data-code="35048"><span class="q">3×</span><span class="cost blank"></span><span class="nm"><span class="cz">本体否定</span> <span class="ce">Proprionegation</span></span></li><li data-code="30069"><span class="q">3×</span><span class="cost blank"></span><span class="nm"><span class="cz">以儆效尤</span> <span class="ce">Send a Message</span></span></li></ul></div><div class="gtype"><h5>Asset <em>· 资产 7</em></h5><ul><li data-code="34107"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">夏洛特·卡萨多尔</span> <span class="ce">Charlotte Caçador</span></span></li><li data-code="30071"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">表岩屑开采许可</span> <span class="ce">Regolith Mining License</span></span></li><li data-code="30053"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">舆论操盘手</span> <span class="ce">Spin Doctor</span></span><span class="inf" title="影响力消耗">1</span></li></ul></div><div class="gtype"><h5>Upgrade <em>· 升级 6</em></h5><ul><li data-code="30050"><span class="q">2×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">无明虚空</span> <span class="ce">Anoetic Void</span></span></li><li data-code="26112"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">拉科斯塔网阵</span> <span class="ce">La Costa Grid</span></span></li><li data-code="33047"><span class="q">1×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">噬病毒体</span> <span class="ce">Mavirus</span></span></li></ul></div><div class="gtype"><h5>Operation <em>· 事务 11</em></h5><ul><li data-code="36043"><span class="q">2×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">培育</span> <span class="ce">Cultivate</span></span></li><li data-code="30048"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">自我反省</span> <span class="ce">Hansei Review</span></span></li><li data-code="30075"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">对冲基金</span> <span class="ce">Hedge Fund</span></span></li><li data-code="30040"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">无瑕发布会</span> <span class="ce">Seamless Launch</span></span><span class="inf" title="影响力消耗">2</span></li></ul></div><div class="gtype"><h5>ICE <em>· 防火墙 13</em></h5><ul><li data-code="30039"><span class="q">3×</span><span class="cost" title="费用">6</span><span class="nm"><span class="cz">布兰1.0</span> <span class="ce">Brân 1.0</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="34110"><span class="q">2×</span><span class="cost" title="费用">10</span><span class="nm"><span class="cz">食云者</span> <span class="ce">Cloud Eater</span></span></li><li data-code="35052"><span class="q">2×</span><span class="cost" title="费用">7</span><span class="nm"><span class="cz">经验主义者</span> <span class="ce">Empiricist</span></span></li><li data-code="35079"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">苍蝇拍</span> <span class="ce">Flyswatter</span></span></li><li data-code="36040"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">求知者</span> <span class="ce">Knowledge Seeker</span></span></li><li data-code="34044"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">三带犰狳</span> <span class="ce">Tatu-Bola</span></span></li></ul></div></div>
+  </details>
+  <div class="deckfoot">
+    <button type="button" class="copybtn" data-url="https://netrunnerdb.com/en/decklist/2d026c35-8700-46f5-a47f-1e05d4dd04e9/i-big-snek"
+            title="复制 NetrunnerDB 牌组链接，粘到 jnet 的 Import 里即可导入">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2 0v8h6V2H6z"/><path d="M2 5a2 2 0 0 1 2-2v1.5A.5.5 0 0 0 3.5 5v8a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5H12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5z"/></svg>
+      <span class="copybtn-label">复制链接</span>
+    </button>
+    <a href="decklists/2d026c35-8700-46f5-a47f-1e05d4dd04e9.txt">纯文本牌表</a>
+    <a href="https://netrunnerdb.com/en/decklist/2d026c35-8700-46f5-a47f-1e05d4dd04e9/i-big-snek" target="_blank" rel="noopener">NetrunnerDB 页面 ↗</a>
+  </div>
+</article>
+<article class="deck" style="--fc:#8b5cf6" data-side="corp" data-fmt="startup">
+  <div class="deck-top">
+    <img class="idimg" src="img/21009.jpg" alt="Asa Group: Security Through Vigilance" loading="lazy">
+    <div class="dmain">
+      <div class="tags"><span class="tag rank">#10</span><span class="tag hot">本周热门</span><span class="tag">Haas-Bioroid</span><span class="tag">First Rotation</span><span class="tag fmt" title="标题或简介里标了 Startup">新启</span></div>
+      <h4><a href="https://netrunnerdb.com/en/decklist/87e4b842-4e2b-4f3e-a14b-4c5790678ab1/eternal-flood-asa-3rd-astro-delivery-3-" target="_blank" rel="noopener">eternal - flood asa (3rd @ astro delivery 3)</a></h4>
+      <div class="idname"><b>亚撒集团：安全戒备</b><span class="ce">Asa Group: Security Through Vigilance</span></div>
+      <div class="meta"><span>作者 <b>bubblingbeebles</b> · 5644 rep</span><span class="social"><b>3</b> 赞 &nbsp;<b>0</b> 藏 &nbsp;<b>2</b> 评</span><span>2026-10-25</span></div>
+      <div class="tchips"><span class="tchip">议案 <b>6</b></span><span class="tchip">资产 <b>17</b></span><span class="tchip">事务 <b>15</b></span><span class="tchip">防火墙 <b>11</b></span></div>
+    </div>
+    <div class="right">
+      <div class="score" title="热度 = 赞×3 + 藏×2 + 评×1">11<small>热度</small></div>
+      <div class="size">49 张 · <span class="inftotal" title="影响力 = 外派系卡的影响力之和（含带影响力的中立卡）">影响力 15/15</span> · 20 议案分数</div>
+    </div>
+  </div>
+  <details>
+    <summary>展开完整牌表 · 49 张</summary>
+    <div class="lists"><div class="gtype"><h5>Agenda <em>· 议案 6</em></h5><ul><li data-code="09026"><span class="q">3×</span><span class="cost blank"></span><span class="nm"><span class="cz">全球食品新倡议</span> <span class="ce">Global Food Initiative</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="36026"><span class="q">1×</span><span class="cost blank"></span><span class="nm"><span class="cz">梅里爱城奢华线</span> <span class="ce">Méliès City Luxury Line</span></span></li><li data-code="08100"><span class="q">2×</span><span class="cost blank"></span><span class="nm"><span class="cz">形象工程</span> <span class="ce">Vanity Project</span></span><span class="inf" title="影响力消耗">1</span></li></ul></div><div class="gtype"><h5>Asset <em>· 资产 17</em></h5><ul><li data-code="26098"><span class="q">1×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">巴斯 7里8加</span> <span class="ce">Bass CH1R180G4</span></span></li><li data-code="31063"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">每日商业秀</span> <span class="ce">Daily Business Show</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="13032"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">艾斯黛拉·文</span> <span class="ce">Estelle Moon</span></span></li><li data-code="35039"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">仿生人力资源</span> <span class="ce">Humanoid Resources</span></span></li><li data-code="10067"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">吉夫斯型生化人</span> <span class="ce">Jeeves Model Bioroids</span></span></li><li data-code="21069"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">马里雅Z0L0K4</span> <span class="ce">Malia Z0L0K4</span></span></li><li data-code="21080"><span class="q">1×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">拉什达·哲希姆</span> <span class="ce">Rashida Jaheem</span></span></li><li data-code="30053"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">舆论操盘手</span> <span class="ce">Spin Doctor</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="08020"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">科技创业</span> <span class="ce">Tech Startup</span></span></li><li data-code="34033"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">受雇工人</span> <span class="ce">Wage Workers</span></span></li></ul></div><div class="gtype"><h5>Operation <em>· 事务 15</em></h5><ul><li data-code="31048"><span class="q">1×</span><span class="cost" title="费用">4</span><span class="nm"><span class="cz">生化人劳工</span> <span class="ce">Biotic Labor</span></span></li><li data-code="11100"><span class="q">1×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">厉行宵禁</span> <span class="ce">Enforced Curfew</span></span></li><li data-code="36053"><span class="q">2×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">涌入市场</span> <span class="ce">Flood the Market</span></span><span class="inf" title="影响力消耗">3</span></li><li data-code="11090"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">高处的朋友</span> <span class="ce">Friends in High Places</span></span></li><li data-code="26036"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">满载运行</span> <span class="ce">Fully Operational</span></span></li><li data-code="26037"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">红色许可</span> <span class="ce">Red Level Clearance</span></span></li><li data-code="20074"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">幻镜所的货物</span> <span class="ce">Shipment from MirrorMorph</span></span></li><li data-code="35044"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">自顶向下法</span> <span class="ce">Top-Down Solutions</span></span></li></ul></div><div class="gtype"><h5>ICE <em>· 防火墙 11</em></h5><ul><li data-code="26101"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">制图师</span> <span class="ce">Drafter</span></span></li><li data-code="22029"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">门岗</span> <span class="ce">Gatekeeper</span></span></li><li data-code="11119"><span class="q">2×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">巨噬细胞</span> <span class="ce">Macrophage</span></span></li><li data-code="10095"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">香草</span> <span class="ce">Vanilla</span></span></li></ul></div></div>
+  </details>
+  <div class="deckfoot">
+    <button type="button" class="copybtn" data-url="https://netrunnerdb.com/en/decklist/87e4b842-4e2b-4f3e-a14b-4c5790678ab1/eternal-flood-asa-3rd-astro-delivery-3-"
+            title="复制 NetrunnerDB 牌组链接，粘到 jnet 的 Import 里即可导入">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2 0v8h6V2H6z"/><path d="M2 5a2 2 0 0 1 2-2v1.5A.5.5 0 0 0 3.5 5v8a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5H12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5z"/></svg>
+      <span class="copybtn-label">复制链接</span>
+    </button>
+    <a href="decklists/87e4b842-4e2b-4f3e-a14b-4c5790678ab1.txt">纯文本牌表</a>
+    <a href="https://netrunnerdb.com/en/decklist/87e4b842-4e2b-4f3e-a14b-4c5790678ab1/eternal-flood-asa-3rd-astro-delivery-3-" target="_blank" rel="noopener">NetrunnerDB 页面 ↗</a>
+  </div>
+</article>
+<article class="deck" style="--fc:#3b82f6" data-side="runner" data-fmt="standard">
+  <div class="deck-top">
+    <img class="idimg" src="img/36009.jpg" alt="Virtual Intelligence, P.I.: “You Can Call Me Vic”" loading="lazy">
+    <div class="dmain">
+      <div class="tags"><span class="tag rank">#11</span><span class="tag hot">本周热门</span><span class="tag">Criminal</span><span class="tag">Seventh Rotation</span></div>
+      <h4><a href="https://netrunnerdb.com/en/decklist/d9dda927-5be7-466c-8709-e494b5b0f39d/random-access-memories-1-0-9th-warsaw-ctk-" target="_blank" rel="noopener">Random Access Memories 1.0 (9th @ Warsaw CTK)</a></h4>
+      <div class="idname"><b>虚拟智能私家侦探: “你可以叫我维克”</b><span class="ce">Virtual Intelligence, P.I.: “You Can Call Me Vic”</span></div>
+      <div class="meta"><span>作者 <b>BluShtoff</b> · 94 rep</span><span class="social"><b>3</b> 赞 &nbsp;<b>1</b> 藏 &nbsp;<b>0</b> 评</span><span>2026-10-25</span></div>
+      <div class="tchips"><span class="tchip">事件 <b>15</b></span><span class="tchip">硬件 <b>4</b></span><span class="tchip">程序 <b>10</b></span><span class="tchip">资源 <b>16</b></span></div>
+    </div>
+    <div class="right">
+      <div class="score" title="热度 = 赞×3 + 藏×2 + 评×1">11<small>热度</small></div>
+      <div class="size">45 张 · <span class="inftotal" title="影响力 = 外派系卡的影响力之和（含带影响力的中立卡）">影响力 15/15</span></div>
+    </div>
+  </div>
+  <details>
+    <summary>展开完整牌表 · 45 张</summary>
+    <div class="lists"><div class="gtype"><h5>Event <em>· 事件 15</em></h5><ul><li data-code="26074"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">虚张声势</span> <span class="ce">Bravado</span></span></li><li data-code="35014"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">利落脱身</span> <span class="ce">Clean Getaway</span></span></li><li data-code="33013"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">穿针引线</span> <span class="ce">Pinhole Threading</span></span></li><li data-code="30030"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">胜券在握</span> <span class="ce">Sure Gamble</span></span></li><li data-code="35017"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">财富转移</span> <span class="ce">Transfer of Wealth</span></span></li></ul></div><div class="gtype"><h5>Hardware <em>· 硬件 4</em></h5><ul><li data-code="26075"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">回力镖</span> <span class="ce">Boomerang</span></span></li><li data-code="34014"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">赫耳墨斯</span> <span class="ce">Hermes</span></span></li></ul></div><div class="gtype"><h5>Program <em>· 程序 10</em></h5><ul><li data-code="30015"><span class="q">1×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">卡门</span> <span class="ce">Carmen</span></span></li><li data-code="33017"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">土耳其咖啡壶</span> <span class="ce">Cezve</span></span></li><li data-code="34080"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">灰吹精炼</span> <span class="ce">Cupellation</span></span></li><li data-code="34015"><span class="q">2×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">库鲁皮拉</span> <span class="ce">Curupira</span></span></li><li data-code="30008"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">水蛭</span> <span class="ce">Leech</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="33018"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">左轮手枪</span> <span class="ce">Revolver</span></span></li><li data-code="34018"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">示播列</span> <span class="ce">Shibboleth</span></span></li></ul></div><div class="gtype"><h5>Resource <em>· 资源 16</em></h5><ul><li data-code="33092"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">努卡·弗罗丽克博士</span> <span class="ce">Dr. Nuka Vrolyck</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="26095"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">梦网</span> <span class="ce">DreamNet</span></span></li><li data-code="34007"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">爱瑠·绫濑·佩索阿</span> <span class="ce">Eru Ayase-Pessoa</span></span><span class="inf" title="影响力消耗">3</span></li><li data-code="26007"><span class="q">1×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">剑术师弗恩诺</span> <span class="ce">Fencer Fueno</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="33020"><span class="q">2×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">没有免费午餐定理</span> <span class="ce">No Free Lunch</span></span></li><li data-code="35022"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">自由市场</span> <span class="ce">Open Market</span></span></li><li data-code="26073"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">圣骑士诗梦</span> <span class="ce">Paladin Poemu</span></span><span class="inf" title="影响力消耗">3</span></li><li data-code="26018"><span class="q">2×</span><span class="cost" title="费用">4</span><span class="nm"><span class="cz">一流选手</span> <span class="ce">The Class Act</span></span></li><li data-code="33010"><span class="q">1×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">孪晶</span> <span class="ce">The Twinning</span></span><span class="inf" title="影响力消耗">3</span></li></ul></div></div>
+  </details>
+  <div class="deckfoot">
+    <button type="button" class="copybtn" data-url="https://netrunnerdb.com/en/decklist/d9dda927-5be7-466c-8709-e494b5b0f39d/random-access-memories-1-0-9th-warsaw-ctk-"
+            title="复制 NetrunnerDB 牌组链接，粘到 jnet 的 Import 里即可导入">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2 0v8h6V2H6z"/><path d="M2 5a2 2 0 0 1 2-2v1.5A.5.5 0 0 0 3.5 5v8a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5H12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5z"/></svg>
+      <span class="copybtn-label">复制链接</span>
+    </button>
+    <a href="decklists/d9dda927-5be7-466c-8709-e494b5b0f39d.txt">纯文本牌表</a>
+    <a href="https://netrunnerdb.com/en/decklist/d9dda927-5be7-466c-8709-e494b5b0f39d/random-access-memories-1-0-9th-warsaw-ctk-" target="_blank" rel="noopener">NetrunnerDB 页面 ↗</a>
+  </div>
+</article>
+<article class="deck" style="--fc:#e5484d" data-side="corp" data-fmt="standard">
+  <div class="deck-top">
+    <img class="idimg" src="img/35046.jpg" alt="AU Co.: The Gold Standard in Clones" loading="lazy">
+    <div class="dmain">
+      <div class="tags"><span class="tag rank">#12</span><span class="tag hot">本周热门</span><span class="tag">Jinteki</span><span class="tag">Seventh Rotation</span></div>
+      <h4><a href="https://netrunnerdb.com/en/decklist/9f10ba42-4602-4452-b479-d4b20ef3485f/atrocity-exhibition-2-0-9th-warsaw-ctk-" target="_blank" rel="noopener">Atrocity Exhibition 2.0 (9th @ Warsaw CTK)</a></h4>
+      <div class="idname"><b>傲金公司: 克隆体的黄金标准</b><span class="ce">AU Co.: The Gold Standard in Clones</span></div>
+      <div class="meta"><span>作者 <b>BluShtoff</b> · 94 rep</span><span class="social"><b>3</b> 赞 &nbsp;<b>1</b> 藏 &nbsp;<b>0</b> 评</span><span>2026-10-25</span></div>
+      <div class="tchips"><span class="tchip">议案 <b>11</b></span><span class="tchip">资产 <b>15</b></span><span class="tchip">事务 <b>10</b></span><span class="tchip">防火墙 <b>13</b></span></div>
+    </div>
+    <div class="right">
+      <div class="score" title="热度 = 赞×3 + 藏×2 + 评×1">11<small>热度</small></div>
+      <div class="size">49 张 · <span class="inftotal" title="影响力 = 外派系卡的影响力之和（含带影响力的中立卡）">影响力 15/15</span> · 20 议案分数</div>
+    </div>
+  </div>
+  <details>
+    <summary>展开完整牌表 · 49 张</summary>
+    <div class="lists"><div class="gtype"><h5>Agenda <em>· 议案 11</em></h5><ul><li data-code="33039"><span class="q">2×</span><span class="cost blank"></span><span class="nm"><span class="cz">血诱</span> <span class="ce">Blood in the Water</span></span></li><li data-code="34040"><span class="q">3×</span><span class="cost blank"></span><span class="nm"><span class="cz">藤井资产回收</span> <span class="ce">Fujii Asset Retrieval</span></span></li><li data-code="33105"><span class="q">2×</span><span class="cost blank"></span><span class="nm"><span class="cz">杂交人投放</span> <span class="ce">Hybrid Release</span></span></li><li data-code="30044"><span class="q">1×</span><span class="cost blank"></span><span class="nm"><span class="cz">长生精华液</span> <span class="ce">Longevity Serum</span></span></li><li data-code="33040"><span class="q">3×</span><span class="cost blank"></span><span class="nm"><span class="cz">二度起源</span> <span class="ce">Regenesis</span></span></li></ul></div><div class="gtype"><h5>Asset <em>· 资产 15</em></h5><ul><li data-code="33041"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">狸藻</span> <span class="ce">Bladderwort</span></span></li><li data-code="34107"><span class="q">2×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">夏洛特·卡萨多尔</span> <span class="ce">Charlotte Caçador</span></span></li><li data-code="34108"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">追随者指导项目</span> <span class="ce">Cohort Guidance Program</span></span></li><li data-code="33042"><span class="q">2×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">月池</span> <span class="ce">Moon Pool</span></span></li><li data-code="35051"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">释·觉安·保谛西塔</span> <span class="ce">Phật Gioan Baotixita</span></span></li><li data-code="30053"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">舆论操盘手</span> <span class="ce">Spin Doctor</span></span><span class="inf" title="影响力消耗">1</span></li></ul></div><div class="gtype"><h5>Operation <em>· 事务 10</em></h5><ul><li data-code="30048"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">自我反省</span> <span class="ce">Hansei Review</span></span></li><li data-code="30075"><span class="q">2×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">对冲基金</span> <span class="ce">Hedge Fund</span></span></li><li data-code="35078"><span class="q">2×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">精准响应</span> <span class="ce">Measured Response</span></span><span class="inf" title="影响力消耗">4</span></li><li data-code="35081"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">零用现金</span> <span class="ce">Petty Cash</span></span></li></ul></div><div class="gtype"><h5>ICE <em>· 防火墙 13</em></h5><ul><li data-code="33043"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">海葵</span> <span class="ce">Anemone</span></span></li><li data-code="34109"><span class="q">2×</span><span class="cost" title="费用">6</span><span class="nm"><span class="cz">亚马逊河鲀</span> <span class="ce">Boto</span></span></li><li data-code="35079"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">苍蝇拍</span> <span class="ce">Flyswatter</span></span></li><li data-code="33108"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">明蛤</span> <span class="ce">Hafrún</span></span></li><li data-code="35054"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">灌木丛</span> <span class="ce">Semak-samun</span></span></li><li data-code="36030"><span class="q">2×</span><span class="cost" title="费用">4</span><span class="nm"><span class="cz">斯莱泼尼尔</span> <span class="ce">Sleipnir</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="30074"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">空白</span> <span class="ce">Whitespace</span></span></li></ul></div></div>
+  </details>
+  <div class="deckfoot">
+    <button type="button" class="copybtn" data-url="https://netrunnerdb.com/en/decklist/9f10ba42-4602-4452-b479-d4b20ef3485f/atrocity-exhibition-2-0-9th-warsaw-ctk-"
+            title="复制 NetrunnerDB 牌组链接，粘到 jnet 的 Import 里即可导入">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2 0v8h6V2H6z"/><path d="M2 5a2 2 0 0 1 2-2v1.5A.5.5 0 0 0 3.5 5v8a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5H12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5z"/></svg>
+      <span class="copybtn-label">复制链接</span>
+    </button>
+    <a href="decklists/9f10ba42-4602-4452-b479-d4b20ef3485f.txt">纯文本牌表</a>
+    <a href="https://netrunnerdb.com/en/decklist/9f10ba42-4602-4452-b479-d4b20ef3485f/atrocity-exhibition-2-0-9th-warsaw-ctk-" target="_blank" rel="noopener">NetrunnerDB 页面 ↗</a>
+  </div>
+</article></div>
+</section>
+<section class="sec" id="s3">
+  <div class="sec-head" role="button" tabindex="0" aria-expanded="true" aria-controls="body-s3"
+       data-sec="s3">
+    <span class="num">3</span><h2>官方人气榜</h2>
+    <span class="hint">netrunnerdb.com 自带 Popular 排序 · 偏近期热度</span><span class="caret" aria-hidden="true">▾</span>
+  </div>
+  <div class="sec-body" id="body-s3">
+<article class="deck" style="--fc:#22a05a" data-side="runner" data-fmt="standard">
+  <div class="deck-top">
+    <img class="idimg" src="img/21025.jpg" alt="Kabonesa Wu: Netspace Thrillseeker" loading="lazy">
+    <div class="dmain">
+      <div class="tags"><span class="tag rank">#1</span><span class="tag alltime">人气榜</span><span class="tag">Shaper</span></div>
+      <h4><a href="https://netrunnerdb.com/en/decklist/9595cb23-3262-40ac-b0be-0e8f05922a4b/wu-asd-3-" target="_blank" rel="noopener">Wu (ASD 3)</a></h4>
+      <div class="idname"><b>卡波尼萨·吴：网域觅险者</b><span class="ce">Kabonesa Wu: Netspace Thrillseeker</span></div>
+      <div class="meta"><span>作者 <b>OF15-15</b> · 879 rep</span><span class="social"><b>1</b> 赞 &nbsp;<b>0</b> 藏 &nbsp;<b>0</b> 评</span><span>2026-10-26</span></div>
+      <div class="tchips"><span class="tchip">事件 <b>18</b></span><span class="tchip">硬件 <b>9</b></span><span class="tchip">程序 <b>13</b></span><span class="tchip">资源 <b>5</b></span></div>
+    </div>
+    <div class="right">
+      <div class="score" title="热度 = 赞×3 + 藏×2 + 评×1">3<small>热度</small></div>
+      <div class="size">45 张 · <span class="inftotal" title="影响力 = 外派系卡的影响力之和（含带影响力的中立卡）">影响力 15/15</span></div>
+    </div>
+  </div>
+  <details>
+    <summary>展开完整牌表 · 45 张</summary>
+    <div class="lists"><div class="gtype"><h5>Event <em>· 事件 18</em></h5><ul><li data-code="31027"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">迪燃</span> <span class="ce">Diesel</span></span></li><li data-code="03035"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">接入利维前景实验室</span> <span class="ce">Levy AR Lab Access</span></span></li><li data-code="30029"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">超频</span> <span class="ce">Overclock</span></span></li><li data-code="02087"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">美好时光</span> <span class="ce">Quality Time</span></span></li><li data-code="30030"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">胜券在握</span> <span class="ce">Sure Gamble</span></span></li><li data-code="34087"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">特技球</span> <span class="ce">Trick Shot</span></span></li></ul></div><div class="gtype"><h5>Hardware <em>· 硬件 9</em></h5><ul><li data-code="03038"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">克隆芯片</span> <span class="ce">Clone Chip</span></span></li><li data-code="26085"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">模拟芯片</span> <span class="ce">Simulchip</span></span></li><li data-code="11101"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">零位</span> <span class="ce">Şifr</span></span><span class="inf" title="影响力消耗">1</span></li></ul></div><div class="gtype"><h5>Program <em>· 程序 13</em></h5><ul><li data-code="10062"><span class="q">1×</span><span class="cost" title="费用">4</span><span class="nm"><span class="cz">梵天</span> <span class="ce">Brahman</span></span></li><li data-code="26003"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">凿子</span> <span class="ce">Chisel</span></span><span class="inf" title="影响力消耗">4</span></li><li data-code="34089"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">凝露</span> <span class="ce">Coalescence</span></span></li><li data-code="30024"><span class="q">1×</span><span class="cost" title="费用">4</span><span class="nm"><span class="cz">灵媒</span> <span class="ce">Conduit</span></span></li><li data-code="11085"><span class="q">1×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">错引</span> <span class="ce">Misdirection</span></span></li><li data-code="29002"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">寄生虫</span> <span class="ce">Parasite</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="26090"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">自修正代码</span> <span class="ce">Self-modifying Code</span></span></li></ul></div><div class="gtype"><h5>Resource <em>· 资源 5</em></h5><ul><li data-code="08086"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">影评家</span> <span class="ce">Film Critic</span></span></li><li data-code="10084"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">古鲁达温德</span> <span class="ce">Guru Davinder</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="02109"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">新洛杉矶市政厅</span> <span class="ce">New Angeles City Hall</span></span></li></ul></div></div>
+  </details>
+  <div class="deckfoot">
+    <button type="button" class="copybtn" data-url="https://netrunnerdb.com/en/decklist/9595cb23-3262-40ac-b0be-0e8f05922a4b/wu-asd-3-"
+            title="复制 NetrunnerDB 牌组链接，粘到 jnet 的 Import 里即可导入">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2 0v8h6V2H6z"/><path d="M2 5a2 2 0 0 1 2-2v1.5A.5.5 0 0 0 3.5 5v8a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5H12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5z"/></svg>
+      <span class="copybtn-label">复制链接</span>
+    </button>
+    <a href="decklists/9595cb23-3262-40ac-b0be-0e8f05922a4b.txt">纯文本牌表</a>
+    <a href="https://netrunnerdb.com/en/decklist/9595cb23-3262-40ac-b0be-0e8f05922a4b/wu-asd-3-" target="_blank" rel="noopener">NetrunnerDB 页面 ↗</a>
+  </div>
+</article>
+<article class="deck" style="--fc:#eab308" data-side="corp" data-fmt="standard">
+  <div class="deck-top">
+    <img class="idimg" src="img/33048.jpg" alt="Pravdivost Consulting: Political Solutions" loading="lazy">
+    <div class="dmain">
+      <div class="tags"><span class="tag rank">#2</span><span class="tag alltime">人气榜</span><span class="tag">NBN</span><span class="tag">Seventh Rotation</span></div>
+      <h4><a href="https://netrunnerdb.com/en/decklist/3e73af4b-6b19-4829-a5b6-66eb1a9e1ab8/adhesive-tape-and-saliva" target="_blank" rel="noopener">Adhesive tape and saliva</a></h4>
+      <div class="idname"><b>真理咨询: 政治解决方案</b><span class="ce">Pravdivost Consulting: Political Solutions</span></div>
+      <div class="meta"><span>作者 <b>giventofly</b> · 132 rep</span><span class="social"><b>2</b> 赞 &nbsp;<b>1</b> 藏 &nbsp;<b>0</b> 评</span><span>2026-10-25</span></div>
+      <div class="tchips"><span class="tchip">议案 <b>10</b></span><span class="tchip">资产 <b>12</b></span><span class="tchip">升级 <b>3</b></span><span class="tchip">事务 <b>12</b></span><span class="tchip">防火墙 <b>12</b></span></div>
+    </div>
+    <div class="right">
+      <div class="score" title="热度 = 赞×3 + 藏×2 + 评×1">8<small>热度</small></div>
+      <div class="size">49 张 · <span class="inftotal" title="影响力 = 外派系卡的影响力之和（含带影响力的中立卡）">影响力 15/15</span> · 20 议案分数</div>
+    </div>
+  </div>
+  <details>
+    <summary>展开完整牌表 · 49 张</summary>
+    <div class="lists"><div class="gtype"><h5>Agenda <em>· 议案 10</em></h5><ul><li data-code="33049"><span class="q">3×</span><span class="cost blank"></span><span class="nm"><span class="cz">币圈洗盘</span> <span class="ce">Artificial Cryptocrash</span></span></li><li data-code="36066"><span class="q">3×</span><span class="cost blank"></span><span class="nm"><span class="cz">让他们做个美梦</span> <span class="ce">Let Them Dream</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="34114"><span class="q">3×</span><span class="cost blank"></span><span class="nm"><span class="cz">点燃余烬</span> <span class="ce">Stoke the Embers</span></span></li><li data-code="30052"><span class="q">1×</span><span class="cost blank"></span><span class="nm"><span class="cz">明日头条</span> <span class="ce">Tomorrowʼs Headline</span></span></li></ul></div><div class="gtype"><h5>Asset <em>· 资产 12</em></h5><ul><li data-code="33050"><span class="q">1×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">契卡子弟</span> <span class="ce">Chekist Scion</span></span></li><li data-code="35061"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">特质融合</span> <span class="ce">Idiosyncresis</span></span></li><li data-code="36048"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">雷冯图莱长官</span> <span class="ce">Magistrate Revontulet</span></span></li><li data-code="35062"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">公共接入广场</span> <span class="ce">Public Access Plaza</span></span></li><li data-code="30071"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">表岩屑开采许可</span> <span class="ce">Regolith Mining License</span></span></li><li data-code="30053"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">舆论操盘手</span> <span class="ce">Spin Doctor</span></span></li></ul></div><div class="gtype"><h5>Upgrade <em>· 升级 3</em></h5><ul><li data-code="33056"><span class="q">3×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">符拉迪西比尔斯克城际网阵</span> <span class="ce">Vladisibirsk City Grid</span></span></li></ul></div><div class="gtype"><h5>Operation <em>· 事务 12</em></h5><ul><li data-code="30075"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">对冲基金</span> <span class="ce">Hedge Fund</span></span></li><li data-code="35078"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">精准响应</span> <span class="ce">Measured Response</span></span><span class="inf" title="影响力消耗">4</span></li><li data-code="26130"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">新洛杉矶警察局封锁线</span> <span class="ce">NAPD Cordon</span></span></li><li data-code="30056"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">消费预测智慧商城</span> <span class="ce">Predictive Planogram</span></span></li></ul></div><div class="gtype"><h5>ICE <em>· 防火墙 12</em></h5><ul><li data-code="26115"><span class="q">3×</span><span class="cost" title="费用">4</span><span class="nm"><span class="cz">免付费内容</span> <span class="ce">F2P</span></span></li><li data-code="35079"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">苍蝇拍</span> <span class="ce">Flyswatter</span></span></li><li data-code="33053"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">门第选官制</span> <span class="ce">Mestnichestvo</span></span></li><li data-code="36052"><span class="q">2×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">付费墙</span> <span class="ce">Paywall</span></span></li><li data-code="30055"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">PING</span> <span class="ce">Ping</span></span></li><li data-code="30074"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">空白</span> <span class="ce">Whitespace</span></span></li></ul></div></div>
+  </details>
+  <div class="deckfoot">
+    <button type="button" class="copybtn" data-url="https://netrunnerdb.com/en/decklist/3e73af4b-6b19-4829-a5b6-66eb1a9e1ab8/adhesive-tape-and-saliva"
+            title="复制 NetrunnerDB 牌组链接，粘到 jnet 的 Import 里即可导入">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2 0v8h6V2H6z"/><path d="M2 5a2 2 0 0 1 2-2v1.5A.5.5 0 0 0 3.5 5v8a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5H12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5z"/></svg>
+      <span class="copybtn-label">复制链接</span>
+    </button>
+    <a href="decklists/3e73af4b-6b19-4829-a5b6-66eb1a9e1ab8.txt">纯文本牌表</a>
+    <a href="https://netrunnerdb.com/en/decklist/3e73af4b-6b19-4829-a5b6-66eb1a9e1ab8/adhesive-tape-and-saliva" target="_blank" rel="noopener">NetrunnerDB 页面 ↗</a>
+  </div>
+</article>
+<article class="deck" style="--fc:#22a05a" data-side="runner" data-fmt="standard">
+  <div class="deck-top">
+    <img class="idimg" src="img/35024.jpg" alt="Magdalene Keino-Chemutai: Cryptarchitect" loading="lazy">
+    <div class="dmain">
+      <div class="tags"><span class="tag rank">#3</span><span class="tag alltime">人气榜</span><span class="tag">Shaper</span><span class="tag">Seventh Rotation</span></div>
+      <h4><a href="https://netrunnerdb.com/en/decklist/ce8bd774-4ff4-4df1-99cc-69dc411974f2/hot-ones-9th-worlds-2026-" target="_blank" rel="noopener">Hot Ones (9th @ Worlds 2026)</a></h4>
+      <div class="idname"><b>玛格达琳·凯诺-切穆泰: 幕后建筑师</b><span class="ce">Magdalene Keino-Chemutai: Cryptarchitect</span></div>
+      <div class="meta"><span>作者 <b>sebastiank</b> · 3291 rep</span><span class="social"><b>68</b> 赞 &nbsp;<b>30</b> 藏 &nbsp;<b>18</b> 评</span><span>2026-10-13</span><span>2026 World Champs</span></div>
+      <div class="tchips"><span class="tchip">事件 <b>23</b></span><span class="tchip">硬件 <b>3</b></span><span class="tchip">程序 <b>11</b></span><span class="tchip">资源 <b>8</b></span></div>
+    </div>
+    <div class="right">
+      <div class="score" title="热度 = 赞×3 + 藏×2 + 评×1">282<small>热度</small></div>
+      <div class="size">45 张 · <span class="inftotal" title="影响力 = 外派系卡的影响力之和（含带影响力的中立卡）">影响力 15/15</span></div>
+    </div>
+  </div>
+  <details>
+    <summary>展开完整牌表 · 45 张</summary>
+    <div class="lists"><div class="gtype"><h5>Event <em>· 事件 23</em></h5><ul><li data-code="30020"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">创作委托</span> <span class="ce">Creative Commission</span></span></li><li data-code="33022"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">深潜</span> <span class="ce">Deep Dive</span></span></li><li data-code="34021"><span class="q">2×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">兜风</span> <span class="ce">Joy Ride</span></span></li><li data-code="35026"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">仪式</span> <span class="ce">Ritual</span></span></li><li data-code="33003"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">过热运行</span> <span class="ce">Running Hot</span></span><span class="inf" title="影响力消耗">3</span></li><li data-code="26022"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">竞稿</span> <span class="ce">Spec Work</span></span></li><li data-code="30030"><span class="q">3×</span><span class="cost" title="费用">5</span><span class="nm"><span class="cz">胜券在握</span> <span class="ce">Sure Gamble</span></span></li><li data-code="30021"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">虚幻假日</span> <span class="ce">VRcation</span></span></li></ul></div><div class="gtype"><h5>Hardware <em>· 硬件 3</em></h5><ul><li data-code="26085"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">模拟芯片</span> <span class="ce">Simulchip</span></span></li></ul></div><div class="gtype"><h5>Program <em>· 程序 11</em></h5><ul><li data-code="34089"><span class="q">3×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">凝露</span> <span class="ce">Coalescence</span></span></li><li data-code="34080"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">灰吹精炼</span> <span class="ce">Cupellation</span></span><span class="inf" title="影响力消耗">2</span></li><li data-code="26087"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">欧拉</span> <span class="ce">Euler</span></span></li><li data-code="26024"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">高斯</span> <span class="ce">Gauss</span></span></li><li data-code="33071"><span class="q">1×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">消音</span> <span class="ce">Hush</span></span><span class="inf" title="影响力消耗">1</span></li><li data-code="36022"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">读写共享</span> <span class="ce">Read-Write Share</span></span></li><li data-code="33018"><span class="q">1×</span><span class="cost" title="费用">2</span><span class="nm"><span class="cz">左轮手枪</span> <span class="ce">Revolver</span></span><span class="inf" title="影响力消耗">3</span></li></ul></div><div class="gtype"><h5>Resource <em>· 资源 8</em></h5><ul><li data-code="26094"><span class="q">2×</span><span class="cost" title="费用">3</span><span class="nm"><span class="cz">每日播报</span> <span class="ce">Daily Casts</span></span></li><li data-code="33092"><span class="q">3×</span><span class="cost" title="费用">1</span><span class="nm"><span class="cz">努卡·弗罗丽克博士</span> <span class="ce">Dr. Nuka Vrolyck</span></span></li><li data-code="33030"><span class="q">3×</span><span class="cost" title="费用">0</span><span class="nm"><span class="cz">石船海图室</span> <span class="ce">Stoneship Chart Room</span></span></li></ul></div></div>
+  </details>
+  <div class="deckfoot">
+    <button type="button" class="copybtn" data-url="https://netrunnerdb.com/en/decklist/ce8bd774-4ff4-4df1-99cc-69dc411974f2/hot-ones-9th-worlds-2026-"
+            title="复制 NetrunnerDB 牌组链接，粘到 jnet 的 Import 里即可导入">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2zm2 0v8h6V2H6z"/><path d="M2 5a2 2 0 0 1 2-2v1.5A.5.5 0 0 0 3.5 5v8a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5H12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5z"/></svg>
+      <span class="copybtn-label">复制链接</span>
+    </button>
+    <a href="decklists/ce8bd774-4ff4-4df1-99cc-69dc411974f2.txt">纯文本牌表</a>
+    <a href="https://netrunnerdb.com/en/decklist/ce8bd774-4ff4-4df1-99cc-69dc411974f2/hot-ones-9th-worlds-2026-" target="_blank" rel="noopener">NetrunnerDB 页面 ↗</a>
+  </div>
+</article></div>
+</section>
+
+<footer>
+  <b>说明</b>：热度 = 点赞×3 + 收藏×2 + 评论×1，数据取自 NetrunnerDB 列表页；
+  「本周热门」先按时间窗口筛选新牌组，再按热度排序；「官方人气榜」是站点自带的
+  Popular 排序（偏近期热度，与本页算法不同）。牌表通过公开 API
+  <code>/api/2.0/public/decklist/&lt;uuid&gt;</code> 获取。<br>
+  卡牌中文名来自同目录的 <code>card_names_zh.xlsx</code>（可选，未填写的显示英文原名）。<br>
+  本站与 Fantasy Flight Games / Null Signal Games 无关联，卡牌文字版权归其所有。
+  牌组内容版权归各作者所有。<br>
+  生成脚本：<code>nrdb_weekly.py</code> · 上一期见 <a href="../index.html">存档目录</a>。
+</footer>
+
+</div>
+
+<script>
+(function () {
+  function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text);
+    }
+    return new Promise(function (resolve, reject) {
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "fixed";
+      ta.style.top = "-1000px";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); resolve(); }
+      catch (e) { reject(e); }
+      finally { document.body.removeChild(ta); }
+    });
+  }
+
+  document.addEventListener("click", function (ev) {
+    var btn = ev.target && ev.target.closest ? ev.target.closest(".copybtn") : null;
+    if (!btn) return;
+    ev.preventDefault();
+    var label = btn.querySelector(".copybtn-label");
+    var text = btn.getAttribute("data-url") || "";
+    copyText(text).then(function () {
+      label.textContent = "已复制 ✓";
+      btn.classList.add("copied");
+      clearTimeout(btn._timer);
+      btn._timer = setTimeout(function () {
+        label.textContent = "复制链接";
+        btn.classList.remove("copied");
+      }, 1500);
+    }).catch(function () {
+      label.textContent = "复制失败，请手动复制";
+      setTimeout(function () { label.textContent = "复制链接"; }, 2200);
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  var KEY = "nrdb-collapsed-v1";
+
+  function sections() {
+    return Array.prototype.slice.call(document.querySelectorAll(".sec"));
+  }
+
+  function apply(sec, collapsed) {
+    sec.classList.toggle("is-collapsed", collapsed);
+    var head = sec.querySelector(".sec-head");
+    if (head) head.setAttribute("aria-expanded", collapsed ? "false" : "true");
+  }
+
+  function readState() {
+    try { return JSON.parse(localStorage.getItem(KEY) || "[]") || []; }
+    catch (e) { return []; }
+  }
+
+  function saveState() {
+    var ids = sections()
+      .filter(function (s) { return s.classList.contains("is-collapsed"); })
+      .map(function (s) { return s.id; });
+    try { localStorage.setItem(KEY, JSON.stringify(ids)); } catch (e) {}
+    updateToggleLabel();
+  }
+
+  function updateToggleLabel() {
+    var btn = document.querySelector(".toggleall");
+    if (!btn) return;
+    var anyOpen = sections().some(function (s) { return !s.classList.contains("is-collapsed"); });
+    btn.textContent = anyOpen ? "全部收起" : "全部展开";
+    btn.setAttribute("data-all", anyOpen ? "collapse" : "expand");
+  }
+
+  function init() {
+    var collapsed = readState();
+    sections().forEach(function (s) {
+      if (collapsed.indexOf(s.id) >= 0) apply(s, true);
+    });
+    updateToggleLabel();
+  }
+
+  document.addEventListener("click", function (ev) {
+    var t = ev.target;
+    if (t.closest && t.closest("a")) return;
+
+    var btn = t.closest && t.closest(".toggleall");
+    if (btn) {
+      var anyOpen = sections().some(function (s) { return !s.classList.contains("is-collapsed"); });
+      sections().forEach(function (s) { apply(s, anyOpen); });
+      saveState();
+      return;
+    }
+
+    var head = t.closest && t.closest(".sec-head");
+    if (head) {
+      var sec = head.parentElement;
+      apply(sec, !sec.classList.contains("is-collapsed"));
+      saveState();
+    }
+  });
+
+  document.addEventListener("keydown", function (ev) {
+    if (ev.key !== "Enter" && ev.key !== " ") return;
+    var head = ev.target.closest && ev.target.closest(".sec-head");
+    if (!head) return;
+    ev.preventDefault();
+    head.click();
+  });
+
+  init();
+})();
+</script>
+<script>
+(function () {
+  var chips = Array.prototype.slice.call(document.querySelectorAll(".fchip"));
+  if (!chips.length) return;
+  var state = { side: "all", fmt: "all" };
+
+  function decks() {
+    return Array.prototype.slice.call(document.querySelectorAll("article.deck"));
+  }
+
+  function parseHash() {
+    var raw = (location.hash || "").replace(/^#/, "");
+    if (!raw) return;
+    raw.split("&").forEach(function (kv) {
+      var p = kv.split("=");
+      if (p[0] === "side" && p[1]) state.side = p[1];
+      if (p[0] === "fmt" && p[1]) state.fmt = p[1];
+    });
+  }
+
+  function syncChips() {
+    chips.forEach(function (c) {
+      var on = state[c.getAttribute("data-f")] === c.getAttribute("data-v");
+      c.classList.toggle("is-on", on);
+    });
+  }
+
+  function apply() {
+    var all = decks(), shown = 0;
+    all.forEach(function (d) {
+      var side = d.getAttribute("data-side") || "";
+      var fmt = d.getAttribute("data-fmt") || "standard";
+      var okSide = state.side === "all" || side === state.side;
+      var okFmt = state.fmt === "all" ||
+        (state.fmt === "startup" ? fmt.indexOf("startup") === 0 : fmt === "standard");
+      var on = okSide && okFmt;
+      d.hidden = !on;
+      if (on) shown++;
+    });
+
+    Array.prototype.slice.call(document.querySelectorAll("section.sec")).forEach(function (sec) {
+      if (sec.id === "s0") return;
+      sec.classList.toggle("filtered-out", sec.querySelectorAll("article.deck:not([hidden])").length === 0);
+    });
+
+    var out = document.getElementById("fcount");
+    if (out) out.innerHTML = "显示 <b>" + shown + "</b> / " + all.length + " 副";
+    var empty = document.getElementById("fempty");
+    if (empty) empty.hidden = shown > 0;
+
+    var parts = [];
+    if (state.side !== "all") parts.push("side=" + state.side);
+    if (state.fmt !== "all") parts.push("fmt=" + state.fmt);
+    var hash = parts.length ? "#" + parts.join("&") : "";
+    if (location.hash !== hash) {
+      history.replaceState(null, "", hash || location.pathname + location.search);
+    }
+  }
+
+  document.addEventListener("click", function (ev) {
+    var c = ev.target.closest && ev.target.closest(".fchip");
+    if (!c) return;
+    state[c.getAttribute("data-f")] = c.getAttribute("data-v");
+    syncChips();
+    apply();
+  });
+
+  parseHash();
+  syncChips();
+  apply();
+})();
+</script>
+<script>
+(function () {
+  var pop = document.createElement("div");
+  pop.className = "cardpop";
+  pop.hidden = true;
+  var img = document.createElement("img");
+  img.alt = "";
+  img.decoding = "async";
+  var cap = document.createElement("div");
+  cap.className = "cappop";
+  pop.appendChild(img);
+  pop.appendChild(cap);
+  document.body.appendChild(pop);
+
+  var current = null;
+  var timer = null;
+
+  function esc(s) {
+    return String(s || "").replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  }
+
+  function zhURL(code) {
+    return "https://play.sneakdoorbeta.net/img/cards/zh-simp/default/stock/" + code + ".webp";
+  }
+  function enURL(code) {
+    return "https://card-images.netrunnerdb.com/v2/medium/" + code + ".jpg";
+  }
+
+  function place(row) {
+    var r = row.getBoundingClientRect();
+    var w = pop.offsetWidth || 318;
+    var h = pop.offsetHeight || 470;
+    var gap = 16;
+    var x = r.right + gap;
+    var y = r.top + r.height / 2 - h / 2;
+    if (x + w > window.innerWidth - 12) x = r.left - gap - w;
+    if (x < 12) x = 12;
+    if (y + h > window.innerHeight - 12) y = window.innerHeight - 12 - h;
+    if (y < 12) y = 12;
+    pop.style.left = x + "px";
+    pop.style.top = y + "px";
+  }
+
+  function load(code) {
+    var tries = [zhURL(code), enURL(code)];
+    var i = 0;
+    pop.classList.remove("nocover");
+    img.onerror = function () {
+      i++;
+      if (i < tries.length) {
+        img.src = tries[i];
+      } else {
+        img.removeAttribute("src");
+        pop.classList.add("nocover");
+      }
+    };
+    img.onload = function () {
+      pop.classList.remove("nocover");
+      if (current) place(current);
+    };
+    img.src = tries[0];
+  }
+
+  function show(row) {
+    var code = row.getAttribute("data-code");
+    if (!code) return;
+    current = row;
+    var zhEl = row.querySelector(".cz");
+    var enEl = row.querySelector(".ce");
+    var cnEl = row.querySelector(".cn");
+    var zh = zhEl ? zhEl.textContent : "";
+    var en = enEl ? enEl.textContent : (cnEl ? cnEl.textContent : "");
+    cap.innerHTML = (zh ? esc(zh) + '<span class="en">' + esc(en) + "</span>" : esc(en)) +
+      '<span class="src">卡图：Sneakdoor Beta · 中文</span>';
+    pop.hidden = false;
+    if (img.getAttribute("data-code") !== code) {
+      img.setAttribute("data-code", code);
+      load(code);
+    }
+    place(row);
+    requestAnimationFrame(function () { pop.classList.add("on"); });
+  }
+
+  function hide() {
+    clearTimeout(timer);
+    current = null;
+    pop.hidden = true;
+    pop.classList.remove("on");
+  }
+
+  document.addEventListener("mouseover", function (ev) {
+    var row = ev.target.closest && ev.target.closest("li[data-code]");
+    if (!row || row === current) return;
+    clearTimeout(timer);
+    timer = setTimeout(function () { show(row); }, 140);
+  });
+
+  document.addEventListener("mouseout", function (ev) {
+    var row = ev.target.closest && ev.target.closest("li[data-code]");
+    if (!row) return;
+    if (ev.relatedTarget && row.contains(ev.relatedTarget)) return;
+    hide();
+  });
+
+  window.addEventListener("scroll", hide, { passive: true });
+  document.addEventListener("keydown", function (ev) {
+    if (ev.key === "Escape") hide();
+  });
+
+  if (window.matchMedia && window.matchMedia("(hover: none)").matches) {
+    document.addEventListener("click", function (ev) {
+      var row = ev.target.closest && ev.target.closest("li[data-code]");
+      if (row) {
+        show(row);
+        ev.preventDefault();
+      } else {
+        hide();
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>

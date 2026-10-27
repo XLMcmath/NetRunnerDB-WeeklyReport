@@ -1,0 +1,33 @@
+;; title: Not Stonks (3-2 at Worlds, 198th overall)
+;; identity-code: 26019
+;; notes: https://netrunnerdb.com/en/decklist/fe9248f9-f7b4-401f-80f5-c8cc34362d08/not-stonks-3-2-at-worlds-198th-overall-
+
+Event (18)
+3x Creative Commission
+3x Overclock
+1x Pinhole Threading
+2x Rigging Up
+3x Ritual
+3x Sure Gamble
+3x Transfer of Wealth
+
+Hardware (8)
+3x Aniccam
+1x Cataloguer
+1x Docklands Pass
+3x Simulchip
+
+Program (12)
+1x Azimat
+2x Coalescence
+1x Conduit
+1x Echelon
+1x Pelangi
+3x Propeller
+2x Self-modifying Code
+1x Unity
+
+Resource (7)
+3x Daily Casts
+2x Dr. Nuka Vrolyck
+2x Telework Contract

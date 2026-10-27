@@ -1,0 +1,32 @@
+;; title: Reg Zahya (2nd Place @ Hefei H1 CTK, 35 Players, 4-1)
+;; identity-code: 30010
+;; notes: https://netrunnerdb.com/en/decklist/18d99019-e065-4260-a8a0-cfa8289e6b30/reg-zahya-2nd-place-hefei-h1-ctk-35-players-4-1-
+
+Event (15)
+3x Bravado
+3x Clean Getaway
+1x Finality
+2x Pinhole Threading
+3x Sure Gamble
+3x Transfer of Wealth
+
+Hardware (4)
+2x Boomerang
+2x Hermes
+
+Program (8)
+1x Carmen
+1x Cezve
+1x Cupellation
+2x Curupira
+1x Revolver
+1x Shibboleth
+1x Unity
+
+Resource (13)
+3x Daily Casts
+2x Dr. Nuka Vrolyck
+3x Open Market
+3x The Class Act
+1x The Twinning
+1x Trickster Taka

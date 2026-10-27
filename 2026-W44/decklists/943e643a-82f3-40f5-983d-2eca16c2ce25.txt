@@ -1,0 +1,36 @@
+;; title: Our Thoughts Travel With You (1-4-1 at Worlds, 198th overall
+;; identity-code: 35035
+;; notes: https://netrunnerdb.com/en/decklist/943e643a-82f3-40f5-983d-2eca16c2ce25/our-thoughts-travel-with-you-1-4-1-at-worlds-198th-overall
+
+Agenda (8)
+3x Let Them Dream
+3x Méliès City Luxury Line
+1x Project Ingatan
+1x Send a Message
+
+Asset (7)
+3x Humanoid Resources
+1x Regolith Mining License
+3x Spin Doctor
+
+Upgrade (7)
+1x Manegarm Skunkworks
+3x Mercia B4LL4RD
+3x Tranquility Home Grid
+
+Operation (13)
+3x Caveat Emptor
+3x Hedge Fund
+2x Petty Cash
+1x Predictive Planogram
+1x Scapenet
+3x Seamless Launch
+
+ICE (14)
+1x Boto
+3x Brân 1.0
+3x Bumi 1.0
+1x Drafter
+2x Event Horizon
+1x Flyswatter
+3x Sleipnir

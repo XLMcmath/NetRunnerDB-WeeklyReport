@@ -1,0 +1,33 @@
+;; title: Atrocity Exhibition 2.0 (9th @ Warsaw CTK)
+;; identity-code: 35046
+;; notes: https://netrunnerdb.com/en/decklist/9f10ba42-4602-4452-b479-d4b20ef3485f/atrocity-exhibition-2-0-9th-warsaw-ctk-
+
+Agenda (11)
+2x Blood in the Water
+3x Fujii Asset Retrieval
+2x Hybrid Release
+1x Longevity Serum
+3x Regenesis
+
+Asset (15)
+2x Bladderwort
+2x Charlotte Caçador
+3x Cohort Guidance Program
+2x Moon Pool
+3x Phật Gioan Baotixita
+3x Spin Doctor
+
+Operation (10)
+3x Hansei Review
+2x Hedge Fund
+2x Measured Response
+3x Petty Cash
+
+ICE (13)
+3x Anemone
+2x Boto
+1x Flyswatter
+1x Hafrún
+3x Semak-samun
+2x Sleipnir
+1x Whitespace

@@ -1,0 +1,30 @@
+;; title: Wu (ASD 3)
+;; identity-code: 21025
+;; notes: https://netrunnerdb.com/en/decklist/9595cb23-3262-40ac-b0be-0e8f05922a4b/wu-asd-3-
+
+Event (18)
+3x Diesel
+3x Levy AR Lab Access
+3x Overclock
+3x Quality Time
+3x Sure Gamble
+3x Trick Shot
+
+Hardware (9)
+3x Clone Chip
+3x Simulchip
+3x Şifr
+
+Program (13)
+1x Brahman
+1x Chisel
+3x Coalescence
+1x Conduit
+1x Misdirection
+3x Parasite
+3x Self-modifying Code
+
+Resource (5)
+2x Film Critic
+2x Guru Davinder
+1x New Angeles City Hall

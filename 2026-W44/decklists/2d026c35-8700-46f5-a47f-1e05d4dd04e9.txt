@@ -1,0 +1,32 @@
+;; title: I ♥︎ Big Snek
+;; identity-code: 30043
+;; notes: https://netrunnerdb.com/en/decklist/2d026c35-8700-46f5-a47f-1e05d4dd04e9/i-big-snek
+
+Agenda (7)
+1x Fujii Asset Retrieval
+3x Proprionegation
+3x Send a Message
+
+Asset (7)
+3x Charlotte Caçador
+1x Regolith Mining License
+3x Spin Doctor
+
+Upgrade (6)
+2x Anoetic Void
+3x La Costa Grid
+1x Mavirus
+
+Operation (11)
+2x Cultivate
+3x Hansei Review
+3x Hedge Fund
+3x Seamless Launch
+
+ICE (13)
+3x Brân 1.0
+2x Cloud Eater
+2x Empiricist
+1x Flyswatter
+3x Knowledge Seeker
+2x Tatu-Bola

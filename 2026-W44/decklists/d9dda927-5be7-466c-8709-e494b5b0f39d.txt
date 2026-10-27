@@ -1,0 +1,34 @@
+;; title: Random Access Memories 1.0 (9th @ Warsaw CTK)
+;; identity-code: 36009
+;; notes: https://netrunnerdb.com/en/decklist/d9dda927-5be7-466c-8709-e494b5b0f39d/random-access-memories-1-0-9th-warsaw-ctk-
+
+Event (15)
+3x Bravado
+3x Clean Getaway
+3x Pinhole Threading
+3x Sure Gamble
+3x Transfer of Wealth
+
+Hardware (4)
+2x Boomerang
+2x Hermes
+
+Program (10)
+1x Carmen
+2x Cezve
+1x Cupellation
+2x Curupira
+1x Leech
+1x Revolver
+2x Shibboleth
+
+Resource (16)
+2x Dr. Nuka Vrolyck
+3x DreamNet
+1x Eru Ayase-Pessoa
+1x Fencer Fueno
+2x No Free Lunch
+3x Open Market
+1x Paladin Poemu
+2x The Class Act
+1x The Twinning

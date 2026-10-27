@@ -1,0 +1,32 @@
+;; title: Next Bzz Sting!
+;; identity-code: 30051
+;; notes: https://netrunnerdb.com/en/decklist/34119e3c-a840-4aa6-995f-da38f08de9ff/next-bzz-sting-
+
+Agenda (6)
+3x Next Big Thing
+3x Send a Message
+
+Asset (21)
+3x Behold!
+1x Calvin B4L3Y
+3x Chekist Scion
+3x Gaslight
+3x Nihilo Agent
+3x Public Access Plaza
+3x Spin Doctor
+2x Tiered Subscription
+
+Upgrade (2)
+2x The Holo Man
+
+Operation (10)
+1x Mutually Assured Destruction
+2x Oppo Research
+1x Predictive Planogram
+2x Sudden Commandment
+2x Unleash
+2x Your Digital Life
+
+ICE (5)
+3x Ping
+2x Vicsek
