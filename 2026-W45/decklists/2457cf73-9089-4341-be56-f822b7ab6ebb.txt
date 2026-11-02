@@ -1,0 +1,33 @@
+;; title: [Torsaug Throwback+Costume Party] MuslihaT funds the bus
+;; identity-code: 35013
+;; notes: https://netrunnerdb.com/en/decklist/2457cf73-9089-4341-be56-f822b7ab6ebb/-torsaug-throwback-costume-party-muslihat-funds-the-bus
+
+Event (25)
+2x Burner
+3x Creative Commission
+2x Jailbreak
+3x Overclock
+2x Rigging Up
+3x Ritual
+1x Spec Work
+3x Sure Gamble
+3x The Maker’s Eye
+3x Transfer of Wealth
+
+Hardware (7)
+3x Aniccam
+3x Simulchip
+1x Touchstone
+
+Program (12)
+1x Azimat
+1x Conduit
+1x Euler
+1x Gauss
+1x Pelangi
+3x Propeller
+1x Revolver
+3x Self-modifying Code
+
+Resource (1)
+1x Dr. Nuka Vrolyck

@@ -1,0 +1,33 @@
+;; title: 2026 Torsaug Costume Party: Criminal Whizzard
+;; identity-code: 02001
+;; notes: https://netrunnerdb.com/en/decklist/d2d17aa6-b070-4515-8a70-bfa63d60858c/2026-torsaug-costume-party-criminal-whizzard
+
+Event (19)
+3x Account Siphon
+1x Bahia Bands
+3x Bravado
+3x Clean Getaway
+3x Pinhole Threading
+1x Reprise
+2x Sure Gamble
+3x Transfer of Wealth
+
+Hardware (5)
+2x Boomerang
+2x Hermes
+1x WAKE Implant v2A-JRJ
+
+Program (9)
+1x Carmen
+2x Cezve
+2x Curupira
+2x Revolver
+2x Shibboleth
+
+Resource (12)
+3x Dr. Nuka Vrolyck
+1x Hannah "Wheels" Pilintra
+3x Open Market
+1x Paladin Poemu
+3x The Class Act
+1x The Twinning

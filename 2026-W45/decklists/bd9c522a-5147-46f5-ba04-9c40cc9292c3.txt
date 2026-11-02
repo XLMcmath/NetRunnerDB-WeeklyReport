@@ -1,0 +1,31 @@
+;; title: Good intentions
+;; identity-code: 35058
+;; notes: https://netrunnerdb.com/en/decklist/bd9c522a-5147-46f5-ba04-9c40cc9292c3/good-intentions
+
+Agenda (9)
+2x Embedded Reporting
+1x Let Them Dream
+2x Next Big Thing
+1x Tomorrowʼs Headline
+3x Witch Hunt
+
+Asset (12)
+3x Nihilo Agent
+3x Public Access Plaza
+3x Spin Doctor
+3x Tiered Subscription
+
+Operation (15)
+1x Backroom Machinations
+2x End of the Line
+3x Flood the Market
+3x Oppo Research
+3x Predictive Planogram
+3x Top-Down Solutions
+
+ICE (13)
+3x Congratulations!
+3x Doomscroll
+3x Paywall
+3x Ping
+1x Virtual Service Agent

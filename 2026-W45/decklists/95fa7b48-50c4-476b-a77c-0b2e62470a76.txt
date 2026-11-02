@@ -1,0 +1,36 @@
+;; title: 2026 Torsaug Costume Party: Yellow Ob
+;; identity-code: 33057
+;; notes: https://netrunnerdb.com/en/decklist/95fa7b48-50c4-476b-a77c-0b2e62470a76/2026-torsaug-costume-party-yellow-ob
+
+Agenda (10)
+3x AstroScript Pilot Program
+3x Embedded Reporting
+3x Let Them Dream
+1x Tomorrowʼs Headline
+
+Asset (12)
+3x Anthill Excavation Contract
+3x Regolith Mining License
+3x Spin Doctor
+2x Svyatogor Excavator
+1x The Powers That Be
+
+Upgrade (8)
+3x Hype Machine
+3x Mavirus
+2x The Holo Man
+
+Operation (4)
+1x Digital Rights Management
+3x Predictive Planogram
+
+ICE (15)
+1x Doomscroll
+2x Flyswatter
+1x Gold Farmer
+1x Grubber
+2x Mestnichestvo
+1x Palisade
+3x Ping
+2x Tithe
+2x Unsmiling Tsarevna

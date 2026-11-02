@@ -1,0 +1,31 @@
+;; title: The 22nd Annual Torsaug Ribfest [Costume Party+Throwback]
+;; identity-code: 35002
+;; notes: https://netrunnerdb.com/en/decklist/bbbec4b1-bb1b-429b-8f78-7021813fb681/the-22nd-annual-torsaug-ribfest-costume-party-throwback-
+
+Event (20)
+2x Burner
+3x Creative Commission
+3x Pinhole Threading
+3x Ritual
+3x Spec Work
+3x Steelskin Scarring
+3x Sure Gamble
+
+Hardware (10)
+2x Aniccam
+2x Buffer Drive
+1x DZMZ Optimizer
+3x Simulchip
+2x Titanium Ribs
+
+Program (14)
+3x Coalescence
+1x Conduit
+1x Echelon
+2x Pelangi
+3x Propeller
+3x Self-modifying Code
+1x Unity
+
+Resource (3)
+3x Daily Casts

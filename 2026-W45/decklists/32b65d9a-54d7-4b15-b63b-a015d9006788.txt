@@ -1,0 +1,37 @@
+;; title: [Torsaug Throwback+Costume Party] BANGUN like PJ taught me
+;; identity-code: 35068
+;; notes: https://netrunnerdb.com/en/decklist/32b65d9a-54d7-4b15-b63b-a015d9006788/-torsaug-throwback-costume-party-bangun-like-pj-taught-me
+
+Agenda (10)
+3x Artificial Cryptocrash
+1x Embedded Reporting
+2x Freedom of Information
+1x Tomorrowʼs Headline
+3x Witch Hunt
+
+Asset (3)
+3x Spin Doctor
+
+Upgrade (4)
+2x AMAZE Amusements
+2x Ganked!
+
+Operation (19)
+1x Bigger Picture
+1x End of the Line
+3x Hansei Review
+2x Hedge Fund
+1x Measured Response
+2x Oppo Research
+3x Petty Cash
+2x Pivot
+3x Predictive Planogram
+1x Shipment from Vladisibirsk
+
+ICE (13)
+3x Data Loop
+2x F2P
+2x Funhouse
+3x Ping
+2x Unsmiling Tsarevna
+1x Virtual Service Agent

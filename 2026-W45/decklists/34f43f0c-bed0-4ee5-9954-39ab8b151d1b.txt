@@ -1,0 +1,34 @@
+;; title: Offseason Sports (Costume Party+)
+;; identity-code: 22026
+;; notes: https://netrunnerdb.com/en/decklist/34f43f0c-bed0-4ee5-9954-39ab8b151d1b/offseason-sports-costume-party-
+
+Agenda (13)
+1x Above the Law
+3x Eminent Domain
+3x Greenmail
+3x Let Them Dream
+3x Sacrifice Zone Expansion
+
+Asset (2)
+2x Spin Doctor
+
+Upgrade (3)
+3x Malapert Data Vault
+
+Operation (17)
+3x End of the Line
+3x Government Subsidy
+2x Hansei Review
+3x Hedge Fund
+2x Midseason Replacements
+1x Myōshu
+3x Petty Cash
+
+ICE (14)
+1x Afshar
+3x Biawak
+2x Descent
+3x Event Horizon
+3x Maskirovka
+1x Sandstone
+1x Winchester

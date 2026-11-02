@@ -1,0 +1,32 @@
+;; title: Bizarro Sun [Torsaug Costume Party+Throwback]
+;; identity-code: 25123
+;; notes: https://netrunnerdb.com/en/decklist/071b5c44-3b7e-4f77-ab7c-f2a73a6ccab5/bizarro-sun-torsaug-costume-party-throwback-
+
+Agenda (8)
+3x Méliès City Luxury Line
+3x Send a Message
+2x Élivágar Bifurcation
+
+Asset (3)
+3x Spin Doctor
+
+Upgrade (5)
+3x Mercia B4LL4RD
+2x Perfect Recall
+
+Operation (19)
+3x Big Deal
+3x Corporate Hospitality
+3x Hansei Review
+3x Hedge Fund
+1x NEXT Activation Command
+3x Petty Cash
+3x Reanimation Protocol
+
+ICE (14)
+1x Ablative Barrier
+3x Brân 1.0
+3x Fairchild
+3x M.I.C.
+2x Sleipnir
+2x Týr

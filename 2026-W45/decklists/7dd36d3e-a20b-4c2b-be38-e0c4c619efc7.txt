@@ -1,0 +1,34 @@
+;; title: purple sun [costume party]
+;; identity-code: 25123
+;; notes: https://netrunnerdb.com/en/decklist/7dd36d3e-a20b-4c2b-be38-e0c4c619efc7/purple-sun-costume-party-
+
+Agenda (8)
+3x Midnight-3 Arcology
+3x Méliès City Luxury Line
+1x Project Ingatan
+1x Send a Message
+
+Asset (8)
+2x Anthill Excavation Contract
+3x Humanoid Resources
+3x Spin Doctor
+
+Upgrade (9)
+1x Anoetic Void
+2x Manegarm Skunkworks
+3x Perfect Recall
+3x Tranquility Home Grid
+
+Operation (8)
+3x Hedge Fund
+2x Petty Cash
+3x Seamless Launch
+
+ICE (16)
+1x Ansel 2.0
+3x Brân 1.0
+3x Drafter
+3x Gatekeeper
+2x M.I.C.
+2x Sleipnir
+2x Tatu-Bola

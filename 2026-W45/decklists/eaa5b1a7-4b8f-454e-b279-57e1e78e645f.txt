@@ -1,0 +1,34 @@
+;; title: Costume Party: I just want formerteen to be proud of me
+;; identity-code: 33048
+;; notes: https://netrunnerdb.com/en/decklist/eaa5b1a7-4b8f-454e-b279-57e1e78e645f/costume-party-i-just-want-formerteen-to-be-proud-of-me
+
+Agenda (7)
+1x Blood in the Water
+3x Fujii Asset Retrieval
+3x Send a Message
+
+Asset (19)
+2x Byte!
+3x Cerebral Overwriter
+3x Charlotte Caçador
+2x Gaslight
+3x Reaper Function
+3x Spin Doctor
+3x Urtica Cipher
+
+Operation (11)
+2x Hedge Fund
+3x Mitosis
+3x Mushin No Shin
+1x Myōshu
+2x Petty Cash
+
+ICE (12)
+1x Attini
+1x Flyswatter
+1x Lionsmane
+2x Semak-samun
+2x Tatu-Bola
+2x Tithe
+1x Vampyronassa
+2x Whitespace

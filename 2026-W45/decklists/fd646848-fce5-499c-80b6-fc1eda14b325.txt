@@ -1,0 +1,34 @@
+;; title: rielle anarch [costume party]
+;; identity-code: 31026
+;; notes: https://netrunnerdb.com/en/decklist/fd646848-fce5-499c-80b6-fc1eda14b325/rielle-anarch-costume-party-
+
+Event (14)
+1x Finality
+1x Katorga Breakout
+3x Raindrops Cut Stone
+3x Spooned
+3x Steelskin Scarring
+3x Sure Gamble
+
+Hardware (6)
+2x Gachapon
+2x Keiko
+1x Solidarity Badge
+1x The Tungsten Tailor
+
+Program (13)
+2x Botulus
+2x Echelon
+3x Fermenter
+2x Leech
+2x Rising Tide
+2x Unity
+
+Resource (12)
+3x Daily Casts
+2x Dr. Nuka Vrolyck
+1x Fencer Fueno
+1x Mystic Maemi
+2x Paladin Poemu
+2x The Twinning
+1x Trickster Taka

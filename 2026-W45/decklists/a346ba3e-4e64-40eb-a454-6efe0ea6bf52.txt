@@ -1,0 +1,32 @@
+;; title: John Tempo
+;; identity-code: 36009
+;; notes: https://netrunnerdb.com/en/decklist/a346ba3e-4e64-40eb-a454-6efe0ea6bf52/john-tempo
+
+Event (16)
+2x Bravado
+3x Clean Getaway
+2x Illumination
+3x Pinhole Threading
+3x Sure Gamble
+3x Transfer of Wealth
+
+Hardware (5)
+2x Boomerang
+1x Docklands Pass
+2x Hermes
+
+Program (10)
+1x Cezve
+2x Cupellation
+2x Curupira
+3x Revolver
+2x Shibboleth
+
+Resource (15)
+2x Daily Casts
+2x Dr. Nuka Vrolyck
+3x DreamNet
+1x Mystic Maemi
+3x Open Market
+3x The Class Act
+1x The Twinning

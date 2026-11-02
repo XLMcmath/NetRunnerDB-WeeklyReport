@@ -1,0 +1,30 @@
+;; title: Green Pocs (Costume Party+)
+;; identity-code: 01033
+;; notes: https://netrunnerdb.com/en/decklist/c4b9b741-ea7e-4f21-b08a-778ce6b18eed/green-pocs-costume-party-
+
+Event (23)
+3x Apocalypse
+3x Bravado
+3x Carpe Diem
+3x Clean Getaway
+1x Maintenance Access
+1x Mutual Favor
+3x S-Dobrado
+3x Sure Gamble
+3x Transfer of Wealth
+
+Hardware (6)
+3x Boomerang
+3x Swift
+
+Program (10)
+2x Curupira
+2x Devadatta Drone
+2x Malandragem
+2x Revolver
+2x Shibboleth
+
+Resource (7)
+2x Backstitching
+2x Dr. Nuka Vrolyck
+3x The Class Act
