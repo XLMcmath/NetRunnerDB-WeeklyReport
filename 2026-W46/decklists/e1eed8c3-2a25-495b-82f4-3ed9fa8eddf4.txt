@@ -1,0 +1,31 @@
+;; title: Merc with a Win Con - 2nd @ ATX Hack O' Lantern VII (2-1)
+;; identity-code: 09029
+;; notes: https://netrunnerdb.com/en/decklist/e1eed8c3-2a25-495b-82f4-3ed9fa8eddf4/merc-with-a-win-con-2nd-atx-hack-o-lantern-vii-2-1-
+
+Event (26)
+3x Apocalypse
+3x Bravado
+3x Carpe Diem
+3x Clean Getaway
+1x Creative Commission
+3x Jailbreak
+1x Katorga Breakout
+3x Ritual
+3x S-Dobrado
+3x Sure Gamble
+
+Hardware (7)
+1x AirbladeX (JSRF Ed.)
+3x Boomerang
+1x Simulchip
+2x Swift
+
+Program (6)
+1x Endless Hunger
+3x Malandragem
+1x Mayfly
+1x Physarum Entangler
+
+Resource (6)
+3x Backstitching
+3x DreamNet

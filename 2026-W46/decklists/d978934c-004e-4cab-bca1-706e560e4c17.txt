@@ -1,0 +1,32 @@
+;; title: [Costume Party + Throwback] Red Geist
+;; identity-code: 08063
+;; notes: https://netrunnerdb.com/en/decklist/d978934c-004e-4cab-bca1-706e560e4c17/-costume-party-throwback-red-geist
+
+Event (12)
+1x Finality
+3x Jailbreak
+2x Privileged Access
+3x Steelskin Scarring
+3x Strike Fund
+
+Hardware (10)
+2x Bling
+2x Boomerang
+2x Devil Charm
+3x Gachapon
+1x WAKE Implant v2A-JRJ
+
+Program (12)
+2x Audrey v2
+2x Botulus
+3x Fermenter
+3x Gourmand
+2x Leech
+
+Resource (13)
+3x Arruaceiras Crew
+1x Eru Ayase-Pessoa
+1x Hannah "Wheels" Pilintra
+3x No Free Lunch
+2x Stoneship Chart Room
+3x Tech Trader

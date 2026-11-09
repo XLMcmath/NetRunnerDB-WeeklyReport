@@ -1,0 +1,31 @@
+;; title: [Costume Party + Throwback] Asa Flood (fixed)
+;; identity-code: 21009
+;; notes: https://netrunnerdb.com/en/decklist/f7e36282-7cba-4761-88fe-639b65df8c81/-costume-party-throwback-asa-flood-fixed-
+
+Agenda (10)
+3x Artificial Cryptocrash
+2x Embedded Reporting
+1x Freedom of Information
+3x Remastered Edition
+1x Tomorrowʼs Headline
+
+Asset (17)
+3x Amani Senai
+3x Magistrate Revontulet
+2x Regolith Mining License
+3x Spin Doctor
+3x Tiered Subscription
+3x Wage Workers
+
+Operation (9)
+3x Flood the Market
+3x Fully Operational
+3x Predictive Planogram
+
+ICE (13)
+2x Doomscroll
+2x Flyswatter
+3x Paywall
+3x Ping
+1x Unsmiling Tsarevna
+2x Whitespace

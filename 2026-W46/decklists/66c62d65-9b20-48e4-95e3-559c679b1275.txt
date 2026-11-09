@@ -1,0 +1,36 @@
+;; title: [Costume Party + Throwback] Blue Sun (4-0)
+;; identity-code: 09045
+;; notes: https://netrunnerdb.com/en/decklist/66c62d65-9b20-48e4-95e3-559c679b1275/-costume-party-throwback-blue-sun-4-0-
+
+Event (19)
+3x Bravado
+3x Clean Getaway
+1x Mutual Favor
+3x Pinhole Threading
+3x Steelskin Scarring
+3x Sure Gamble
+3x Transfer of Wealth
+
+Hardware (5)
+2x Boomerang
+2x Hermes
+1x WAKE Implant v2A-JRJ
+
+Program (9)
+2x Cezve
+2x Curupira
+3x Revolver
+2x Shibboleth
+
+Resource (24)
+3x Daily Casts
+3x Dr. Nuka Vrolyck
+3x DreamNet
+1x Hannah "Wheels" Pilintra
+1x Mystic Maemi
+1x No Free Lunch
+3x Open Market
+1x Paladin Poemu
+3x The Class Act
+2x The Twinning
+3x Underworld Contact

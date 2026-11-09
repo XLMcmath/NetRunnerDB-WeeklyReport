@@ -1,0 +1,33 @@
+;; title: The Biawak-Holder - My Year in Netrunner
+;; identity-code: 35046
+;; notes: https://netrunnerdb.com/en/decklist/6a4f3102-4110-470b-aefd-b06199338b34/the-biawak-holder-my-year-in-netrunner
+
+Agenda (11)
+1x Blood in the Water
+3x Fujii Asset Retrieval
+2x Hybrid Release
+3x Regenesis
+2x See How They Run
+
+Asset (15)
+2x Bladderwort
+3x Cohort Guidance Program
+3x Moon Pool
+3x Phật Gioan Baotixita
+3x Spin Doctor
+1x The Powers That Be
+
+Operation (11)
+3x Hansei Review
+3x Petty Cash
+1x Predictive Planogram
+2x Public Trail
+2x Unleash
+
+ICE (12)
+3x Anemone
+2x Biawak
+1x Cloud Eater
+2x Phoneutria
+3x Semak-samun
+1x Whitespace

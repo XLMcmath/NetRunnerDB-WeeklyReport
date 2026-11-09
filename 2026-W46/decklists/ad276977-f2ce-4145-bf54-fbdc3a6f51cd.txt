@@ -1,0 +1,32 @@
+;; title: baz light year v6: where were going we dont need breakers
+;; identity-code: 35012
+;; notes: https://netrunnerdb.com/en/decklist/ad276977-f2ce-4145-bf54-fbdc3a6f51cd/baz-light-year-v6-where-were-going-we-dont-need-breakers
+
+Event (18)
+3x Bravado
+1x Maintenance Access
+2x S-Dobrado
+1x Spec Work
+2x Steelskin Scarring
+3x Sure Gamble
+3x Transfer of Wealth
+3x Window of Opportunity
+
+Hardware (7)
+3x Boomerang
+1x Hermes
+2x Maglectric Rapid (748 Mod)
+1x WAKE Implant v2A-JRJ
+
+Program (9)
+2x Cupellation
+2x Devadatta Drone
+2x Malandragem
+3x Saci
+
+Resource (11)
+1x Debbie "Downtown" Moreira
+2x Dr. Nuka Vrolyck
+3x No Free Lunch
+3x Stoneship Chart Room
+2x Underdome Irregulars

@@ -1,0 +1,33 @@
+;; title: The Emerald Tablet (1st, 4-0 at NGN Async CTK)
+;; identity-code: 35024
+;; notes: https://netrunnerdb.com/en/decklist/2f8770bc-cbf1-4f70-b962-2b83772527fa/the-emerald-tablet-1st-4-0-at-ngn-async-ctk-
+
+Event (14)
+2x Burner
+3x Creative Commission
+3x Khusyuk
+2x Pinhole Threading
+3x Ritual
+1x VRcation
+
+Hardware (10)
+3x DZMZ Optimizer
+2x Hermes
+3x Simulchip
+2x Touchstone
+
+Program (13)
+1x Azimat
+3x Coalescence
+1x Cupellation
+1x Euler
+1x Fermenter
+1x Gauss
+3x Muse
+1x Propeller
+1x Revolver
+
+Resource (8)
+3x Daily Casts
+3x Dr. Nuka Vrolyck
+2x “Knickknack” O’Brian

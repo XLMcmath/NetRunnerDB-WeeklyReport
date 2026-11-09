@@ -1,0 +1,37 @@
+;; title: Glacier Idio
+;; identity-code: 35047
+;; notes: https://netrunnerdb.com/en/decklist/574dae17-3a17-401d-bc90-5e77612cdfc6/glacier-idio
+
+Agenda (10)
+1x Longevity Serum
+1x Orbital Superiority
+3x Proprionegation
+2x Send a Message
+3x Sericulture Expansion
+
+Asset (15)
+3x Byte!
+2x Esca
+3x Idiosyncresis
+1x Phật Gioan Baotixita
+3x Spin Doctor
+3x Urtica Cipher
+
+Upgrade (1)
+1x Anoetic Void
+
+Operation (16)
+3x Cultivate
+3x Hansei Review
+3x Hedge Fund
+3x Peer Review
+3x Petty Cash
+1x Unleash
+
+ICE (12)
+3x Empiricist
+2x Flyswatter
+3x Mycoweb
+1x Palisade
+2x Pharos
+1x Tithe

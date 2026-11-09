@@ -1,0 +1,35 @@
+;; title: Dullumination Vic (Undefeated 1st at UK nationals)
+;; identity-code: 36009
+;; notes: https://netrunnerdb.com/en/decklist/0bfe7758-0083-4302-a5ed-7c060a63f4fa/dullumination-vic-undefeated-1st-at-uk-nationals-
+
+Event (16)
+1x Bahia Bands
+2x Bravado
+3x Clean Getaway
+1x Illumination
+3x Pinhole Threading
+3x Sure Gamble
+3x Transfer of Wealth
+
+Hardware (5)
+2x Boomerang
+1x Docklands Pass
+2x Hermes
+
+Program (10)
+1x Cezve
+1x Cupellation
+2x Curupira
+1x Leech
+3x Revolver
+2x Shibboleth
+
+Resource (16)
+2x Daily Casts
+2x Dr. Nuka Vrolyck
+3x DreamNet
+1x Fencer Fueno
+1x Mystic Maemi
+3x Open Market
+3x The Class Act
+1x The Twinning

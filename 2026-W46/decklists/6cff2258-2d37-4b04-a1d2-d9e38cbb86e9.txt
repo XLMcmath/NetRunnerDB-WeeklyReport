@@ -1,0 +1,33 @@
+;; title: Bones [Glacier 101]
+;; identity-code: 35035
+;; notes: https://netrunnerdb.com/en/decklist/6cff2258-2d37-4b04-a1d2-d9e38cbb86e9/bones-glacier-101-
+
+Agenda (7)
+3x Méliès City Luxury Line
+1x Project Ingatan
+3x Send a Message
+
+Asset (9)
+3x Charlotte Caçador
+3x Humanoid Resources
+3x Spin Doctor
+
+Upgrade (6)
+2x La Costa Grid
+3x Mercia B4LL4RD
+1x Vovô Ozetti
+
+Operation (11)
+2x Greasing the Palm
+3x Hedge Fund
+3x Petty Cash
+3x Seamless Launch
+
+ICE (16)
+3x Ansel 1.0
+3x Brân 1.0
+3x Bumi 1.0
+3x Drafter
+1x Flyswatter
+2x M.I.C.
+1x Sleipnir

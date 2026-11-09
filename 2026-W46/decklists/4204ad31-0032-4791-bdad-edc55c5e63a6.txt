@@ -1,0 +1,36 @@
+;; title: Tag Fulcrum
+;; identity-code: 34048
+;; notes: https://netrunnerdb.com/en/decklist/4204ad31-0032-4791-bdad-edc55c5e63a6/tag-fulcrum
+
+Agenda (10)
+3x Freedom of Information
+2x Let Them Dream
+2x Orbital Superiority
+2x Stoke the Embers
+1x Tomorrowʼs Headline
+
+Asset (22)
+2x Balanced Coverage
+2x Behold!
+1x Bladderwort
+2x Byte!
+3x Federal Fundraising
+3x Gaslight
+2x Humanoid Resources
+2x Public Access Plaza
+2x Regolith Mining License
+3x Spin Doctor
+
+Upgrade (2)
+2x The Holo Man
+
+Operation (6)
+2x Backroom Machinations
+2x Oppo Research
+2x Public Trail
+
+ICE (9)
+2x Doomscroll
+2x Funhouse
+2x Lamplighter
+3x Ping

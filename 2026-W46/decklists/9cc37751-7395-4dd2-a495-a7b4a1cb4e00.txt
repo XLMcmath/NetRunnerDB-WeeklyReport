@@ -1,0 +1,33 @@
+;; title: goodstuff MuslihaT (Worlds 2026 winner)
+;; identity-code: 35013
+;; notes: https://netrunnerdb.com/en/decklist/9cc37751-7395-4dd2-a495-a7b4a1cb4e00/goodstuff-muslihat-worlds-2026-winner-
+
+Event (25)
+3x Bahia Bands
+3x Bravado
+3x Carpe Diem
+3x Clean Getaway
+1x Finality
+2x Jailbreak
+1x Overclock
+3x Pinhole Threading
+3x Sure Gamble
+3x Transfer of Wealth
+
+Hardware (3)
+1x Boomerang
+2x Hermes
+
+Program (9)
+1x Cezve
+2x Curupira
+1x Leech
+3x Revolver
+2x Shibboleth
+
+Resource (8)
+1x Debbie "Downtown" Moreira
+1x Fencer Fueno
+2x Mystic Maemi
+3x The Class Act
+1x The Twinning

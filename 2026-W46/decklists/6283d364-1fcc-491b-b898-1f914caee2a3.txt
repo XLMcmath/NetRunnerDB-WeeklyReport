@@ -1,0 +1,32 @@
+;; title: Deck Incinerator
+;; identity-code: 30001
+;; notes: https://netrunnerdb.com/en/decklist/6283d364-1fcc-491b-b898-1f914caee2a3/deck-incinerator
+
+Event (13)
+3x Raindrops Cut Stone
+2x Rigging Up
+2x Ritual
+3x Steelskin Scarring
+3x Sure Gamble
+
+Hardware (7)
+1x Demolisher
+3x Gachapon
+1x Keiko
+2x The Tungsten Tailor
+
+Program (10)
+1x Afterimage
+1x Azimat
+2x Buzzsaw
+1x Echelon
+2x Leech
+3x Rising Tide
+
+Resource (10)
+2x Daily Casts
+1x Fencer Fueno
+2x Paladin Poemu
+2x The Twinning
+2x Trickster Taka
+1x Valentina Ferreira Carvalho

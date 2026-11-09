@@ -1,0 +1,40 @@
+;; title: Angry, Angry Asa - 2nd @ ATX Hack O' Lantern VII (3-0)
+;; identity-code: 21009
+;; notes: https://netrunnerdb.com/en/decklist/870ad36b-e0cb-4ba9-ae47-bed06b136711/angry-angry-asa-2nd-atx-hack-o-lantern-vii-3-0-
+
+Agenda (10)
+1x Blood in the Water
+3x Fujii Asset Retrieval
+3x Let Them Dream
+3x Regenesis
+
+Asset (14)
+2x Byte!
+3x Charlotte Caçador
+2x Moon Pool
+2x Phật Gioan Baotixita
+1x Reaper Function
+2x Spin Doctor
+1x The Powers That Be
+1x Urtica Cipher
+
+Upgrade (6)
+2x Adrian Seis
+3x La Costa Grid
+1x Mitra Aman
+
+Operation (5)
+1x Flood the Market
+2x Fully Operational
+2x Hansei Review
+
+ICE (14)
+3x Anemone
+1x Attini
+1x Boto
+1x Flyswatter
+1x Lionsmane
+1x Saisentan
+1x Semak-samun
+3x Tatu-Bola
+2x Whitespace

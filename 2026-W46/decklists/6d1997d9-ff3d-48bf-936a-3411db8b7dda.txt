@@ -1,0 +1,30 @@
+;; title: Good Luck
+;; identity-code: 30001
+;; notes: https://netrunnerdb.com/en/decklist/6d1997d9-ff3d-48bf-936a-3411db8b7dda/good-luck
+
+Event (12)
+3x Pinhole Threading
+3x Raindrops Cut Stone
+3x Steelskin Scarring
+3x Sure Gamble
+
+Hardware (6)
+1x Alarm Clock
+3x Gachapon
+2x Keiko
+
+Program (15)
+2x Buzzsaw
+2x Echelon
+3x Fermenter
+3x Gourmand
+2x Leech
+3x Rising Tide
+
+Resource (12)
+3x Daily Casts
+3x Dr. Nuka Vrolyck
+1x Fencer Fueno
+2x Paladin Poemu
+2x The Twinning
+1x Trickster Taka
