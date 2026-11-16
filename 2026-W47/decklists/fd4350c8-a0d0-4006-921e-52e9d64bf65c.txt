@@ -1,0 +1,33 @@
+;; title: [HOL VII] Red Padma
+;; identity-code: 33021
+;; notes: https://netrunnerdb.com/en/decklist/fd4350c8-a0d0-4006-921e-52e9d64bf65c/-hol-vii-red-padma
+
+Event (23)
+2x Chastushka
+2x Creative Commission
+2x Finality
+2x Katorga Breakout
+3x Raindrops Cut Stone
+2x Running Hot
+3x Steelskin Scarring
+3x Strike Fund
+3x Sure Gamble
+1x Wildcat Strike
+
+Hardware (8)
+3x Ghosttongue
+3x Marrow
+2x Time Bomb
+
+Program (11)
+1x Abaasy
+2x Begemot
+3x Botulus
+3x Fermenter
+1x Revolver
+1x Rising Tide
+
+Resource (7)
+3x Cacophony
+1x Daeg, First Net-Cat
+3x Dr. Nuka Vrolyck

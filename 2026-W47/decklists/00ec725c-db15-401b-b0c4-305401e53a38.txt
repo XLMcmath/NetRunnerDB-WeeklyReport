@@ -1,0 +1,31 @@
+;; title: Vic Oh Without You (with lyrics)
+;; identity-code: 36009
+;; notes: https://netrunnerdb.com/en/decklist/00ec725c-db15-401b-b0c4-305401e53a38/vic-oh-without-you-with-lyrics-
+
+Event (14)
+3x Bravado
+2x Katorga Breakout
+2x Maintenance Access
+1x Mutual Favor
+3x Sure Gamble
+3x Transfer of Wealth
+
+Hardware (11)
+1x Docklands Pass
+3x Maglectric Rapid (748 Mod)
+2x PAN-Weave
+2x Pennyshaver
+3x Simulchip
+
+Program (10)
+2x Cat's Cradle
+1x Curupira
+1x Marjanah
+3x Revolver
+3x Tranquilizer
+
+Resource (10)
+3x Daily Casts
+3x DreamNet
+1x Eru Ayase-Pessoa
+3x “Baklan” Bochkin

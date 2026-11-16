@@ -1,0 +1,33 @@
+;; title: Anarch Padma (1-2, 5th @ Hack O' Lantern VII)
+;; identity-code: 33021
+;; notes: https://netrunnerdb.com/en/decklist/091bfd11-fc4d-4a6e-8d49-54535ad19fa3/anarch-padma-1-2-5th-hack-o-lantern-vii-
+
+Event (14)
+3x Chastushka
+1x Pinhole Threading
+3x Raindrops Cut Stone
+2x Steelskin Scarring
+2x Strike Fund
+3x Sure Gamble
+
+Hardware (7)
+2x Gachapon
+2x Keiko
+3x Time Bomb
+
+Program (13)
+2x Echelon
+3x Fermenter
+3x Gourmand
+3x Rising Tide
+2x Unity
+
+Resource (15)
+3x Cacophony
+2x Daeg, First Net-Cat
+3x Daily Casts
+2x Dr. Nuka Vrolyck
+1x Fencer Fueno
+1x Nurse Hạnh
+1x Paladin Poemu
+2x The Twinning

@@ -1,0 +1,34 @@
+;; title: -------------
+;; identity-code: 36046
+;; notes: https://netrunnerdb.com/en/decklist/02ac2622-036c-49d2-bc07-1ba34cc679a8/-
+
+Agenda (9)
+3x Embedded Reporting
+2x Next Big Thing
+1x Tomorrowʼs Headline
+3x Witch Hunt
+
+Asset (12)
+3x B-1001
+3x Luana Campos
+3x Nihilo Agent
+3x Spin Doctor
+
+Upgrade (3)
+3x The Holo Man
+
+Operation (14)
+1x Bigger Picture
+2x Game Over
+3x Hedge Fund
+1x IP Enforcement
+3x Oppo Research
+1x Shipment from Vladisibirsk
+3x Vulture Fund
+
+ICE (11)
+3x Grubber
+2x Ping
+3x Piranhas
+2x Unsmiling Tsarevna
+1x Valentão

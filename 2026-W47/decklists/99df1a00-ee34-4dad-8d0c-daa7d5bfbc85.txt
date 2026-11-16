@@ -1,0 +1,33 @@
+;; title: I love hate [1st @ NANPC Boston]
+;; identity-code: 30001
+;; notes: https://netrunnerdb.com/en/decklist/99df1a00-ee34-4dad-8d0c-daa7d5bfbc85/i-love-hate-1st-nanpc-boston-
+
+Event (14)
+1x Finality
+3x Raindrops Cut Stone
+2x Rigging Up
+2x Ritual
+3x Steelskin Scarring
+3x Sure Gamble
+
+Hardware (7)
+1x Demolisher
+3x Gachapon
+1x Keiko
+2x The Tungsten Tailor
+
+Program (11)
+1x Afterimage
+1x Azimat
+2x Buzzsaw
+1x Echelon
+1x Hush
+2x Leech
+3x Rising Tide
+
+Resource (9)
+2x Daily Casts
+1x Fencer Fueno
+2x Paladin Poemu
+2x The Twinning
+2x Trickster Taka

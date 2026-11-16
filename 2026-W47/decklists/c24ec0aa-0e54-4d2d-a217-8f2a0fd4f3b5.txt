@@ -1,0 +1,34 @@
+;; title: CyberPsychosis
+;; identity-code: 26010
+;; notes: https://netrunnerdb.com/en/decklist/c24ec0aa-0e54-4d2d-a217-8f2a0fd4f3b5/cyberpsychosis
+
+Event (16)
+2x Clean Getaway
+2x Lie Low
+2x Maintenance Access
+1x Mutual Favor
+1x Pinhole Threading
+3x Sure Gamble
+2x Tailgate
+3x Transfer of Wealth
+
+Hardware (17)
+1x Basilar Synthgland 2KVJ
+1x Buffer Drive
+3x Docklands Pass
+1x Gachapon
+1x Ghosttongue
+1x Hippocampic Mechanocytes
+1x Lucky Charm
+2x Marrow
+1x PAN-Weave
+1x Prognostic Q-Loop
+2x T400 Memory Diamond
+1x WAKE Implant v2A-JRJ
+1x Zenit Chip JZ-2MJ
+
+Program (12)
+3x Carmen
+3x Cupellation
+3x Sang Kancil
+3x Tremolo

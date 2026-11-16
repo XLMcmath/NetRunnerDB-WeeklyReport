@@ -1,0 +1,33 @@
+;; title: Dark Fate But Its Synapse So Its Not
+;; identity-code: 35058
+;; notes: https://netrunnerdb.com/en/decklist/32f8c596-02b2-4d34-9bfd-36724197f78d/dark-fate-but-its-synapse-so-its-not
+
+Agenda (11)
+2x Artificial Cryptocrash
+3x Embedded Reporting
+3x Let Them Dream
+2x Oracle Thinktank
+1x Tomorrowʼs Headline
+
+Asset (24)
+3x B-1001
+3x Federal Fundraising
+2x Magistrate Revontulet
+2x Nihilo Agent
+3x Public Access Plaza
+2x Regolith Mining License
+3x Spin Doctor
+3x Wage Workers
+3x Warm Reception
+
+Operation (8)
+3x Oppo Research
+2x Predictive Planogram
+1x Shipment from Vladisibirsk
+2x SYNC Rerouting
+
+ICE (6)
+2x Funhouse
+2x Paywall
+1x Unsmiling Tsarevna
+1x Virtual Service Agent

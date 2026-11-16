@@ -1,0 +1,34 @@
+;; title: Drip Drop Tick Tock - Worlds Showdown
+;; identity-code: 35035
+;; notes: https://netrunnerdb.com/en/decklist/db7549fa-d033-4a0d-9c6c-2544fc81d311/drip-drop-tick-tock-worlds-showdown
+
+Agenda (7)
+3x Méliès City Luxury Line
+1x Project Ingatan
+3x Send a Message
+
+Asset (8)
+3x Regolith Mining License
+3x Spin Doctor
+2x Wall to Wall
+
+Upgrade (8)
+2x Isaac Liberdade
+3x Mercia B4LL4RD
+3x Tranquility Home Grid
+
+Operation (9)
+3x Caveat Emptor
+3x Hedge Fund
+1x Retirement Plan
+1x Scapenet
+1x Sprint
+
+ICE (17)
+3x Brân 1.0
+3x Bumi 1.0
+1x Drafter
+3x M.I.C.
+2x Rime
+3x Sleipnir
+2x Tree Line

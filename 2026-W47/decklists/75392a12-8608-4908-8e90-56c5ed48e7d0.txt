@@ -1,0 +1,30 @@
+;; title: Caramelldansen (Combo PD Killer)
+;; identity-code: 35013
+;; notes: https://netrunnerdb.com/en/decklist/75392a12-8608-4908-8e90-56c5ed48e7d0/caramelldansen-combo-pd-killer-
+
+Event (32)
+3x Bravado
+3x Carpe Diem
+3x Clean Getaway
+3x Concerto
+3x Deep Dive
+3x Jailbreak
+1x Mutual Favor
+1x Overclock
+2x Pinhole Threading
+1x Reprise
+2x S-Dobrado
+3x Sure Gamble
+1x Tailgate
+3x Transfer of Wealth
+
+Hardware (3)
+3x Swift
+
+Program (7)
+2x Curupira
+3x Revolver
+2x Sang Kancil
+
+Resource (3)
+3x The Class Act

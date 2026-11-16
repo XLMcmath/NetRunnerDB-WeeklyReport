@@ -1,0 +1,29 @@
+;; title: Flower in a Hurricane [1st @ NANPC Boston]
+;; identity-code: 30043
+;; notes: https://netrunnerdb.com/en/decklist/a588a79e-cb72-469a-882b-03df83197b22/flower-in-a-hurricane-1st-nanpc-boston-
+
+Agenda (6)
+3x Fujii Asset Retrieval
+3x Send a Message
+
+Asset (6)
+3x Charlotte Caçador
+3x Spin Doctor
+
+Upgrade (10)
+3x Anoetic Void
+3x La Costa Grid
+1x Malapert Data Vault
+3x Manegarm Skunkworks
+
+Operation (8)
+3x Hansei Review
+3x Hedge Fund
+2x Neurospike
+
+ICE (14)
+2x Anemone
+3x Attini
+3x Boto
+3x Tatu-Bola
+3x Vampyronassa

@@ -1,0 +1,33 @@
+;; title: Magdalene (with lyrics)
+;; identity-code: 35024
+;; notes: https://netrunnerdb.com/en/decklist/baa02f6d-64e9-4615-8c44-c43532072a17/magdalene-with-lyrics-
+
+Event (20)
+2x Aircheck
+3x Creative Commission
+1x Harmony AR Therapy
+2x Into the Depths
+3x Overclock
+3x Ritual
+3x Steelskin Scarring
+3x Sure Gamble
+
+Hardware (9)
+2x Aniccam
+1x DZMZ Optimizer
+1x GAMEDRAGON™ Pro
+2x Simulchip
+2x Touchstone
+1x WAKE Implant v2A-JRJ
+
+Program (9)
+1x Afterimage
+3x Mantle
+1x Penrose
+1x Pressure Spike
+3x Self-modifying Code
+
+Resource (7)
+3x Daily Casts
+3x Dr. Nuka Vrolyck
+1x The Twinning

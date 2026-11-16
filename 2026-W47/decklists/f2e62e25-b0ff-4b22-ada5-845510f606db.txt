@@ -1,0 +1,36 @@
+;; title: Vic but I'm on a bus and need to get coffee [9:22am]-4-1@CoS
+;; identity-code: 36009
+;; notes: https://netrunnerdb.com/en/decklist/f2e62e25-b0ff-4b22-ada5-845510f606db/vic-but-i-m-on-a-bus-and-need-to-get-coffee-9-22am-4-1-cos
+
+Event (15)
+3x Bravado
+3x Clean Getaway
+2x Pinhole Threading
+1x Privileged Access
+3x Sure Gamble
+3x Transfer of Wealth
+
+Hardware (2)
+2x Hermes
+
+Program (11)
+1x Carmen
+1x Cezve
+1x Cupellation
+2x Curupira
+1x Laser Pointer
+1x Mayfly
+2x Revolver
+1x Shibboleth
+1x Unity
+
+Resource (17)
+3x Daily Casts
+1x Dr. Nuka Vrolyck
+3x DreamNet
+1x Fencer Fueno
+1x Mystic Maemi
+3x Open Market
+3x The Class Act
+1x The Twinning
+1x “Knickknack” O’Brian

@@ -1,0 +1,6685 @@
+{
+  "issue": {
+    "week_id": "2026-W47",
+    "year": 2026,
+    "week_no": 47,
+    "days": 7,
+    "start": "2026-11-09T07:48:17.324073+00:00",
+    "generated": "2026-11-16T07:48:17.324073+00:00",
+    "generated_text": "2026-11-16 07:48",
+    "window_text": "2026-11-09 → 2026-11-16（最近 7 天）",
+    "total": 103,
+    "decks_shown": 23,
+    "stats": {
+      "total": 103,
+      "factions": [
+        [
+          "Criminal",
+          24
+        ],
+        [
+          "NBN",
+          18
+        ],
+        [
+          "Shaper",
+          16
+        ],
+        [
+          "Jinteki",
+          14
+        ],
+        [
+          "Anarch",
+          12
+        ],
+        [
+          "Haas-Bioroid",
+          12
+        ],
+        [
+          "Weyland",
+          5
+        ],
+        [
+          "Neutral",
+          2
+        ]
+      ],
+      "identities": [
+        [
+          "人间会社: 修复人性",
+          6
+        ],
+        [
+          "勒内·“野狼”·阿斯蒙特: 派对野兽",
+          6
+        ],
+        [
+          "网际传媒: 身临其境",
+          6
+        ],
+        [
+          "虚拟智能私家侦探: “你可以叫我维克”",
+          5
+        ],
+        [
+          "哈斯生化: 精密设计",
+          4
+        ],
+        [
+          "扎赫亚·萨迪吉: 多才多艺的走私者",
+          4
+        ],
+        [
+          "涛·萨隆加: 网真魔术师",
+          4
+        ],
+        [
+          "莉拉·帕特尔：受训实用派",
+          4
+        ]
+      ],
+      "sides": {
+        "runner": 54,
+        "corp": 49
+      },
+      "votes": 63,
+      "favorites": 18,
+      "comments": 20,
+      "unique_identities": 50
+    },
+    "sections": {
+      "dotw": [
+        "75392a12-8608-4908-8e90-56c5ed48e7d0",
+        "6d1997d9-ff3d-48bf-936a-3411db8b7dda",
+        "9cc37751-7395-4dd2-a495-a7b4a1cb4e00",
+        "b3dad49d-7727-471a-a404-6630be5fd993",
+        "405d5ac0-10d0-4974-bbb8-56a486a5b37d",
+        "40ef70d6-a0ef-4993-aed8-58247ba9f7b4"
+      ],
+      "hot": [
+        "f2e62e25-b0ff-4b22-ada5-845510f606db",
+        "e075c0fc-9e95-4790-93b0-c85901767150",
+        "a588a79e-cb72-469a-882b-03df83197b22",
+        "c2e5f2b9-5264-4dcc-877d-db78cb5a4b5b",
+        "99df1a00-ee34-4dad-8d0c-daa7d5bfbc85",
+        "32f8c596-02b2-4d34-9bfd-36724197f78d",
+        "c24ec0aa-0e54-4d2d-a217-8f2a0fd4f3b5",
+        "fd4350c8-a0d0-4006-921e-52e9d64bf65c",
+        "091bfd11-fc4d-4a6e-8d49-54535ad19fa3",
+        "db7549fa-d033-4a0d-9c6c-2544fc81d311",
+        "15ff6a4e-8bb9-4536-8442-abd51998f34a",
+        "484f3931-f79c-4386-85e5-14035239eadd"
+      ],
+      "alltime": [
+        "32d600be-4e93-4af8-ac82-bc9d91530f76",
+        "baa02f6d-64e9-4615-8c44-c43532072a17",
+        "8595679f-d563-4001-8e81-ec736ed7d287",
+        "00ec725c-db15-401b-b0c4-305401e53a38",
+        "02ac2622-036c-49d2-bc07-1ba34cc679a8"
+      ]
+    }
+  },
+  "decks": [
+    {
+      "uuid": "75392a12-8608-4908-8e90-56c5ed48e7d0",
+      "url": "https://netrunnerdb.com/en/decklist/75392a12-8608-4908-8e90-56c5ed48e7d0/caramelldansen-combo-pd-killer-",
+      "title": "Caramelldansen (Combo PD Killer)",
+      "identity_title": "MuslihaT: Multifarious Marketeer",
+      "identity_code": "35013",
+      "author": "NotAgain",
+      "author_url": "https://netrunnerdb.com/en/profile/40924/NotAgain",
+      "reputation": "3800",
+      "votes": 41,
+      "favorites": 27,
+      "comments": 6,
+      "faction": "criminal",
+      "side": "runner",
+      "event": "",
+      "rotation": "Seventh Rotation",
+      "date": "2026-11-07T21:42:52+00:00",
+      "identity_zh": "穆斯莉哈特: 多面营销专家",
+      "format": "standard",
+      "format_confident": false,
+      "faction_name": "Criminal",
+      "faction_color": "#3b82f6",
+      "n_cards": 45,
+      "agenda_points": 0,
+      "influence": 15,
+      "influence_limit": 15,
+      "min_deck_size": 45,
+      "score": 183,
+      "groups": [
+        {
+          "type": "event",
+          "label_zh": "事件",
+          "label_en": "Event",
+          "items": [
+            {
+              "code": "26074",
+              "title": "Bravado",
+              "title_zh": "虚张声势",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "33012",
+              "title": "Carpe Diem",
+              "title_zh": "时不再来",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "35014",
+              "title": "Clean Getaway",
+              "title_zh": "利落脱身",
+              "pack": "elev",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "33075",
+              "title": "Concerto",
+              "title_zh": "协奏曲",
+              "pack": "ph",
+              "cost": 0,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "33022",
+              "title": "Deep Dive",
+              "title_zh": "深潜",
+              "pack": "ms",
+              "cost": 2,
+              "faction": "shaper",
+              "faction_cost": 5,
+              "qty": 3,
+              "inf": 5
+            },
+            {
+              "code": "30028",
+              "title": "Jailbreak",
+              "title_zh": "越狱",
+              "pack": "sg",
+              "cost": 0,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "30011",
+              "title": "Mutual Favor",
+              "title_zh": "互惠互利",
+              "pack": "sg",
+              "cost": 0,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "30029",
+              "title": "Overclock",
+              "title_zh": "超频",
+              "pack": "sg",
+              "cost": 1,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 1
+            },
+            {
+              "code": "33013",
+              "title": "Pinhole Threading",
+              "title_zh": "穿针引线",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 1,
+              "qty": 2
+            },
+            {
+              "code": "33076",
+              "title": "Reprise",
+              "title_zh": "再现部",
+              "pack": "ph",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "34012",
+              "title": "S-Dobrado",
+              "title_zh": "S型猴翻",
+              "pack": "tai",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "30030",
+              "title": "Sure Gamble",
+              "title_zh": "胜券在握",
+              "pack": "sg",
+              "cost": 5,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "36012",
+              "title": "Tailgate",
+              "title_zh": "尾随",
+              "pack": "vp",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "35017",
+              "title": "Transfer of Wealth",
+              "title_zh": "财富转移",
+              "pack": "elev",
+              "cost": 0,
+              "faction": "criminal",
+              "faction_cost": 4,
+              "qty": 3
+            }
+          ],
+          "count": 32
+        },
+        {
+          "type": "hardware",
+          "label_zh": "硬件",
+          "label_en": "Hardware",
+          "items": [
+            {
+              "code": "27002",
+              "title": "Swift",
+              "title_zh": "雨燕",
+              "pack": "urbp",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 3
+            }
+          ],
+          "count": 3
+        },
+        {
+          "type": "program",
+          "label_zh": "程序",
+          "label_en": "Program",
+          "items": [
+            {
+              "code": "34015",
+              "title": "Curupira",
+              "title_zh": "库鲁皮拉",
+              "pack": "tai",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "33018",
+              "title": "Revolver",
+              "title_zh": "左轮手枪",
+              "pack": "ms",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "35020",
+              "title": "Sang Kancil",
+              "title_zh": "百灵鹿",
+              "pack": "elev",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 2
+            }
+          ],
+          "count": 7
+        },
+        {
+          "type": "resource",
+          "label_zh": "资源",
+          "label_en": "Resource",
+          "items": [
+            {
+              "code": "26018",
+              "title": "The Class Act",
+              "title_zh": "一流选手",
+              "pack": "df",
+              "cost": 4,
+              "faction": "criminal",
+              "faction_cost": 5,
+              "qty": 3
+            }
+          ],
+          "count": 3
+        }
+      ],
+      "api_votes": 41,
+      "api_favorites": 27,
+      "api_comments": 6
+    },
+    {
+      "uuid": "6d1997d9-ff3d-48bf-936a-3411db8b7dda",
+      "url": "https://netrunnerdb.com/en/decklist/6d1997d9-ff3d-48bf-936a-3411db8b7dda/good-luck",
+      "title": "Good Luck",
+      "identity_title": "René “Loup” Arcemont: Party Animal",
+      "identity_code": "30001",
+      "author": "Sindarin",
+      "author_url": "https://netrunnerdb.com/en/profile/17150/Sindarin",
+      "reputation": "652",
+      "votes": 85,
+      "favorites": 43,
+      "comments": 17,
+      "faction": "anarch",
+      "side": "runner",
+      "event": "",
+      "rotation": "Seventh Rotation",
+      "date": "2026-11-01T21:45:01+00:00",
+      "identity_zh": "勒内·“野狼”·阿斯蒙特: 派对野兽",
+      "format": "standard",
+      "format_confident": false,
+      "faction_name": "Anarch",
+      "faction_color": "#e08b0c",
+      "n_cards": 45,
+      "agenda_points": 0,
+      "influence": 15,
+      "influence_limit": 15,
+      "min_deck_size": 40,
+      "score": 358,
+      "groups": [
+        {
+          "type": "event",
+          "label_zh": "事件",
+          "label_en": "Event",
+          "items": [
+            {
+              "code": "33013",
+              "title": "Pinhole Threading",
+              "title_zh": "穿针引线",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 1,
+              "qty": 3,
+              "inf": 1
+            },
+            {
+              "code": "33068",
+              "title": "Raindrops Cut Stone",
+              "title_zh": "滴水穿石",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "33004",
+              "title": "Steelskin Scarring",
+              "title_zh": "钢肤疤痕",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "30030",
+              "title": "Sure Gamble",
+              "title_zh": "胜券在握",
+              "pack": "sg",
+              "cost": 5,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            }
+          ],
+          "count": 12
+        },
+        {
+          "type": "hardware",
+          "label_zh": "硬件",
+          "label_en": "Hardware",
+          "items": [
+            {
+              "code": "34078",
+              "title": "Alarm Clock",
+              "title_zh": "闹钟",
+              "pack": "rwr",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 4,
+              "qty": 1,
+              "inf": 4
+            },
+            {
+              "code": "26069",
+              "title": "Gachapon",
+              "title_zh": "扭蛋机",
+              "pack": "ur",
+              "cost": 0,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "26070",
+              "title": "Keiko",
+              "title_zh": "惠子",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 2
+            }
+          ],
+          "count": 6
+        },
+        {
+          "type": "program",
+          "label_zh": "程序",
+          "label_en": "Program",
+          "items": [
+            {
+              "code": "30005",
+              "title": "Buzzsaw",
+              "title_zh": "电锯",
+              "pack": "sg",
+              "cost": 4,
+              "faction": "anarch",
+              "faction_cost": 1,
+              "qty": 2
+            },
+            {
+              "code": "30025",
+              "title": "Echelon",
+              "title_zh": "梯队",
+              "pack": "sg",
+              "cost": 3,
+              "faction": "shaper",
+              "faction_cost": 1,
+              "qty": 2,
+              "inf": 1
+            },
+            {
+              "code": "30007",
+              "title": "Fermenter",
+              "title_zh": "发酵罐",
+              "pack": "sg",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "35007",
+              "title": "Gourmand",
+              "title_zh": "贪食者",
+              "pack": "elev",
+              "cost": 0,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "30008",
+              "title": "Leech",
+              "title_zh": "水蛭",
+              "pack": "sg",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 1,
+              "qty": 2
+            },
+            {
+              "code": "35009",
+              "title": "Rising Tide",
+              "title_zh": "暗潮汹涌",
+              "pack": "elev",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 3
+            }
+          ],
+          "count": 15
+        },
+        {
+          "type": "resource",
+          "label_zh": "资源",
+          "label_en": "Resource",
+          "items": [
+            {
+              "code": "26094",
+              "title": "Daily Casts",
+              "title_zh": "每日播报",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "33092",
+              "title": "Dr. Nuka Vrolyck",
+              "title_zh": "努卡·弗罗丽克博士",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 3,
+              "inf": 2
+            },
+            {
+              "code": "26007",
+              "title": "Fencer Fueno",
+              "title_zh": "剑术师弗恩诺",
+              "pack": "df",
+              "cost": 0,
+              "faction": "anarch",
+              "faction_cost": 1,
+              "qty": 1
+            },
+            {
+              "code": "26073",
+              "title": "Paladin Poemu",
+              "title_zh": "圣骑士诗梦",
+              "pack": "ur",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "33010",
+              "title": "The Twinning",
+              "title_zh": "孪晶",
+              "pack": "ms",
+              "cost": 3,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "26009",
+              "title": "Trickster Taka",
+              "title_zh": "诡术师塔卡",
+              "pack": "df",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 1
+            }
+          ],
+          "count": 12
+        }
+      ],
+      "api_votes": 85,
+      "api_favorites": 43,
+      "api_comments": 17
+    },
+    {
+      "uuid": "9cc37751-7395-4dd2-a495-a7b4a1cb4e00",
+      "url": "https://netrunnerdb.com/en/decklist/9cc37751-7395-4dd2-a495-a7b4a1cb4e00/goodstuff-muslihat-worlds-2026-winner-",
+      "title": "goodstuff MuslihaT (Worlds 2026 winner)",
+      "identity_title": "MuslihaT: Multifarious Marketeer",
+      "identity_code": "35013",
+      "author": "Crunchums",
+      "author_url": "https://netrunnerdb.com/en/profile/2219/Crunchums",
+      "reputation": "897",
+      "votes": 58,
+      "favorites": 33,
+      "comments": 9,
+      "faction": "criminal",
+      "side": "runner",
+      "event": "2026 World Champs",
+      "rotation": "Seventh Rotation",
+      "date": "2026-10-25T06:04:58+00:00",
+      "identity_zh": "穆斯莉哈特: 多面营销专家",
+      "format": "standard",
+      "format_confident": false,
+      "faction_name": "Criminal",
+      "faction_color": "#3b82f6",
+      "n_cards": 45,
+      "agenda_points": 0,
+      "influence": 15,
+      "influence_limit": 15,
+      "min_deck_size": 45,
+      "score": 249,
+      "groups": [
+        {
+          "type": "event",
+          "label_zh": "事件",
+          "label_en": "Event",
+          "items": [
+            {
+              "code": "34030",
+              "title": "Bahia Bands",
+              "title_zh": "巴伊亚手环",
+              "pack": "tai",
+              "cost": 2,
+              "faction": "neutral-runner",
+              "faction_cost": 1,
+              "qty": 3,
+              "inf": 1
+            },
+            {
+              "code": "26074",
+              "title": "Bravado",
+              "title_zh": "虚张声势",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "33012",
+              "title": "Carpe Diem",
+              "title_zh": "时不再来",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "35014",
+              "title": "Clean Getaway",
+              "title_zh": "利落脱身",
+              "pack": "elev",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "33066",
+              "title": "Finality",
+              "title_zh": "终局",
+              "pack": "ph",
+              "cost": 2,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 1,
+              "inf": 3
+            },
+            {
+              "code": "30028",
+              "title": "Jailbreak",
+              "title_zh": "越狱",
+              "pack": "sg",
+              "cost": 0,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 2
+            },
+            {
+              "code": "30029",
+              "title": "Overclock",
+              "title_zh": "超频",
+              "pack": "sg",
+              "cost": 1,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 1
+            },
+            {
+              "code": "33013",
+              "title": "Pinhole Threading",
+              "title_zh": "穿针引线",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 1,
+              "qty": 3
+            },
+            {
+              "code": "30030",
+              "title": "Sure Gamble",
+              "title_zh": "胜券在握",
+              "pack": "sg",
+              "cost": 5,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "35017",
+              "title": "Transfer of Wealth",
+              "title_zh": "财富转移",
+              "pack": "elev",
+              "cost": 0,
+              "faction": "criminal",
+              "faction_cost": 4,
+              "qty": 3
+            }
+          ],
+          "count": 25
+        },
+        {
+          "type": "hardware",
+          "label_zh": "硬件",
+          "label_en": "Hardware",
+          "items": [
+            {
+              "code": "26075",
+              "title": "Boomerang",
+              "title_zh": "回力镖",
+              "pack": "ur",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "34014",
+              "title": "Hermes",
+              "title_zh": "赫耳墨斯",
+              "pack": "tai",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 2
+            }
+          ],
+          "count": 3
+        },
+        {
+          "type": "program",
+          "label_zh": "程序",
+          "label_en": "Program",
+          "items": [
+            {
+              "code": "33017",
+              "title": "Cezve",
+              "title_zh": "土耳其咖啡壶",
+              "pack": "ms",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "34015",
+              "title": "Curupira",
+              "title_zh": "库鲁皮拉",
+              "pack": "tai",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "30008",
+              "title": "Leech",
+              "title_zh": "水蛭",
+              "pack": "sg",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 1,
+              "qty": 1,
+              "inf": 1
+            },
+            {
+              "code": "32002",
+              "title": "Revolver",
+              "title_zh": "左轮手枪",
+              "pack": "msbp",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "34018",
+              "title": "Shibboleth",
+              "title_zh": "示播列",
+              "pack": "tai",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 2
+            }
+          ],
+          "count": 9
+        },
+        {
+          "type": "resource",
+          "label_zh": "资源",
+          "label_en": "Resource",
+          "items": [
+            {
+              "code": "34019",
+              "title": "Debbie \"Downtown\" Moreira",
+              "title_zh": "黛比·“闹市”·莫雷拉",
+              "pack": "tai",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "26007",
+              "title": "Fencer Fueno",
+              "title_zh": "剑术师弗恩诺",
+              "pack": "df",
+              "cost": 0,
+              "faction": "anarch",
+              "faction_cost": 1,
+              "qty": 1,
+              "inf": 1
+            },
+            {
+              "code": "26072",
+              "title": "Mystic Maemi",
+              "title_zh": "秘法师鸣蝉",
+              "pack": "ur",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 2,
+              "inf": 2
+            },
+            {
+              "code": "26018",
+              "title": "The Class Act",
+              "title_zh": "一流选手",
+              "pack": "df",
+              "cost": 4,
+              "faction": "criminal",
+              "faction_cost": 5,
+              "qty": 3
+            },
+            {
+              "code": "33010",
+              "title": "The Twinning",
+              "title_zh": "孪晶",
+              "pack": "ms",
+              "cost": 3,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 1,
+              "inf": 3
+            }
+          ],
+          "count": 8
+        }
+      ],
+      "api_votes": 58,
+      "api_favorites": 33,
+      "api_comments": 9
+    },
+    {
+      "uuid": "b3dad49d-7727-471a-a404-6630be5fd993",
+      "url": "https://netrunnerdb.com/en/decklist/b3dad49d-7727-471a-a404-6630be5fd993/52-card-pickup-and-other-cultural-experiences-16th-worlds-",
+      "title": "52 card pickup and other cultural experiences (16th @Worlds)",
+      "identity_title": "Mercury: Chrome Libertador",
+      "identity_code": "34010",
+      "author": "OF15-15",
+      "author_url": "https://netrunnerdb.com/en/profile/34833/OF15-15",
+      "reputation": "893",
+      "votes": 39,
+      "favorites": 24,
+      "comments": 11,
+      "faction": "criminal",
+      "side": "runner",
+      "event": "2026 World Champs",
+      "rotation": "Seventh Rotation",
+      "date": "2026-10-18T07:56:17+00:00",
+      "identity_zh": "墨丘利: 铬金解放者",
+      "format": "standard",
+      "format_confident": false,
+      "faction_name": "Criminal",
+      "faction_color": "#3b82f6",
+      "n_cards": 52,
+      "agenda_points": 0,
+      "influence": 15,
+      "influence_limit": 15,
+      "min_deck_size": 45,
+      "score": 176,
+      "groups": [
+        {
+          "type": "event",
+          "label_zh": "事件",
+          "label_en": "Event",
+          "items": [
+            {
+              "code": "26074",
+              "title": "Bravado",
+              "title_zh": "虚张声势",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "33012",
+              "title": "Carpe Diem",
+              "title_zh": "时不再来",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "35014",
+              "title": "Clean Getaway",
+              "title_zh": "利落脱身",
+              "pack": "elev",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "35015",
+              "title": "Lie Low",
+              "title_zh": "避风头",
+              "pack": "elev",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 1,
+              "qty": 3
+            },
+            {
+              "code": "35016",
+              "title": "Maintenance Access",
+              "title_zh": "检修通道",
+              "pack": "elev",
+              "cost": 0,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "33013",
+              "title": "Pinhole Threading",
+              "title_zh": "穿针引线",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 1,
+              "qty": 3
+            },
+            {
+              "code": "33076",
+              "title": "Reprise",
+              "title_zh": "再现部",
+              "pack": "ph",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "34012",
+              "title": "S-Dobrado",
+              "title_zh": "S型猴翻",
+              "pack": "tai",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "33004",
+              "title": "Steelskin Scarring",
+              "title_zh": "钢肤疤痕",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 3,
+              "inf": 2
+            },
+            {
+              "code": "30030",
+              "title": "Sure Gamble",
+              "title_zh": "胜券在握",
+              "pack": "sg",
+              "cost": 5,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "35017",
+              "title": "Transfer of Wealth",
+              "title_zh": "财富转移",
+              "pack": "elev",
+              "cost": 0,
+              "faction": "criminal",
+              "faction_cost": 4,
+              "qty": 3
+            },
+            {
+              "code": "30012",
+              "title": "Tread Lightly",
+              "title_zh": "蹑手蹑脚",
+              "pack": "sg",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 1,
+              "qty": 2
+            },
+            {
+              "code": "30002",
+              "title": "Wildcat Strike",
+              "title_zh": "野猫罢工",
+              "pack": "sg",
+              "cost": 2,
+              "faction": "anarch",
+              "faction_cost": 1,
+              "qty": 3,
+              "inf": 1
+            }
+          ],
+          "count": 35
+        },
+        {
+          "type": "hardware",
+          "label_zh": "硬件",
+          "label_en": "Hardware",
+          "items": [
+            {
+              "code": "34014",
+              "title": "Hermes",
+              "title_zh": "赫耳墨斯",
+              "pack": "tai",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "33078",
+              "title": "WAKE Implant v2A-JRJ",
+              "title_zh": "尾迹植入体v2A-JRJ",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 2
+            }
+          ],
+          "count": 5
+        },
+        {
+          "type": "program",
+          "label_zh": "程序",
+          "label_en": "Program",
+          "items": [
+            {
+              "code": "34080",
+              "title": "Cupellation",
+              "title_zh": "灰吹精炼",
+              "pack": "rwr",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 2
+            },
+            {
+              "code": "34081",
+              "title": "Malandragem",
+              "title_zh": "街头智慧",
+              "pack": "rwr",
+              "cost": 4,
+              "faction": "criminal",
+              "faction_cost": 4,
+              "qty": 3
+            },
+            {
+              "code": "34082",
+              "title": "Physarum Entangler",
+              "title_zh": "纠缠绒泡菌",
+              "pack": "rwr",
+              "cost": 0,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 2
+            }
+          ],
+          "count": 7
+        },
+        {
+          "type": "resource",
+          "label_zh": "资源",
+          "label_en": "Resource",
+          "items": [
+            {
+              "code": "34073",
+              "title": "Arruaceiras Crew",
+              "title_zh": "暴力团伙",
+              "pack": "rwr",
+              "cost": 2,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 2,
+              "inf": 3
+            },
+            {
+              "code": "26018",
+              "title": "The Class Act",
+              "title_zh": "一流选手",
+              "pack": "df",
+              "cost": 4,
+              "faction": "criminal",
+              "faction_cost": 5,
+              "qty": 3
+            }
+          ],
+          "count": 5
+        }
+      ],
+      "api_votes": 39,
+      "api_favorites": 24,
+      "api_comments": 11
+    },
+    {
+      "uuid": "405d5ac0-10d0-4974-bbb8-56a486a5b37d",
+      "url": "https://netrunnerdb.com/en/decklist/405d5ac0-10d0-4974-bbb8-56a486a5b37d/how-to-win-worlds-170th-at-worlds-2026-",
+      "title": "How To Win Worlds (170th At Worlds 2026)",
+      "identity_title": "René “Loup” Arcemont: Party Animal",
+      "identity_code": "30001",
+      "author": "rongydoge",
+      "author_url": "https://netrunnerdb.com/en/profile/30031/rongydoge",
+      "reputation": "1979",
+      "votes": 81,
+      "favorites": 38,
+      "comments": 22,
+      "faction": "anarch",
+      "side": "runner",
+      "event": "2026 World Champs",
+      "rotation": "Seventh Rotation",
+      "date": "2026-10-11T22:24:38+00:00",
+      "identity_zh": "勒内·“野狼”·阿斯蒙特: 派对野兽",
+      "format": "standard",
+      "format_confident": false,
+      "faction_name": "Anarch",
+      "faction_color": "#e08b0c",
+      "n_cards": 42,
+      "agenda_points": 0,
+      "influence": 15,
+      "influence_limit": 15,
+      "min_deck_size": 40,
+      "score": 341,
+      "groups": [
+        {
+          "type": "event",
+          "label_zh": "事件",
+          "label_en": "Event",
+          "items": [
+            {
+              "code": "33013",
+              "title": "Pinhole Threading",
+              "title_zh": "穿针引线",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 1,
+              "qty": 2,
+              "inf": 1
+            },
+            {
+              "code": "34068",
+              "title": "Privileged Access",
+              "title_zh": "特权访问",
+              "pack": "rwr",
+              "cost": 0,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "33068",
+              "title": "Raindrops Cut Stone",
+              "title_zh": "滴水穿石",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "33004",
+              "title": "Steelskin Scarring",
+              "title_zh": "钢肤疤痕",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "30030",
+              "title": "Sure Gamble",
+              "title_zh": "胜券在握",
+              "pack": "sg",
+              "cost": 5,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "34002",
+              "title": "The Price",
+              "title_zh": "代价",
+              "pack": "tai",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 2
+            }
+          ],
+          "count": 13
+        },
+        {
+          "type": "hardware",
+          "label_zh": "硬件",
+          "label_en": "Hardware",
+          "items": [
+            {
+              "code": "26069",
+              "title": "Gachapon",
+              "title_zh": "扭蛋机",
+              "pack": "ur",
+              "cost": 0,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "26070",
+              "title": "Keiko",
+              "title_zh": "惠子",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 2
+            }
+          ],
+          "count": 5
+        },
+        {
+          "type": "program",
+          "label_zh": "程序",
+          "label_en": "Program",
+          "items": [
+            {
+              "code": "26079",
+              "title": "Afterimage",
+              "title_zh": "残影",
+              "pack": "ur",
+              "cost": 4,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 1,
+              "inf": 3
+            },
+            {
+              "code": "34004",
+              "title": "Audrey v2",
+              "title_zh": "“吸血花”奥黛丽v2",
+              "pack": "tai",
+              "cost": 3,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "30007",
+              "title": "Fermenter",
+              "title_zh": "发酵罐",
+              "pack": "sg",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "33071",
+              "title": "Hush",
+              "title_zh": "消音",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 1,
+              "qty": 1
+            },
+            {
+              "code": "36005",
+              "title": "Lampades",
+              "title_zh": "拉姆帕德斯",
+              "pack": "vp",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "26088",
+              "title": "Mantle",
+              "title_zh": "披风",
+              "pack": "ur",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 1,
+              "inf": 2
+            },
+            {
+              "code": "26089",
+              "title": "Penrose",
+              "title_zh": "彭罗斯",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 2,
+              "inf": 2
+            },
+            {
+              "code": "35009",
+              "title": "Rising Tide",
+              "title_zh": "暗潮汹涌",
+              "pack": "elev",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 2
+            }
+          ],
+          "count": 12
+        },
+        {
+          "type": "resource",
+          "label_zh": "资源",
+          "label_en": "Resource",
+          "items": [
+            {
+              "code": "26094",
+              "title": "Daily Casts",
+              "title_zh": "每日播报",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 2
+            },
+            {
+              "code": "33092",
+              "title": "Dr. Nuka Vrolyck",
+              "title_zh": "努卡·弗罗丽克博士",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 2,
+              "inf": 2
+            },
+            {
+              "code": "26007",
+              "title": "Fencer Fueno",
+              "title_zh": "剑术师弗恩诺",
+              "pack": "df",
+              "cost": 0,
+              "faction": "anarch",
+              "faction_cost": 1,
+              "qty": 1
+            },
+            {
+              "code": "34008",
+              "title": "Hannah \"Wheels\" Pilintra",
+              "title_zh": "汉娜·“驭手”·皮林特拉",
+              "pack": "tai",
+              "cost": 2,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "26073",
+              "title": "Paladin Poemu",
+              "title_zh": "圣骑士诗梦",
+              "pack": "ur",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "33010",
+              "title": "The Twinning",
+              "title_zh": "孪晶",
+              "pack": "ms",
+              "cost": 3,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "26009",
+              "title": "Trickster Taka",
+              "title_zh": "诡术师塔卡",
+              "pack": "df",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 2
+            }
+          ],
+          "count": 12
+        }
+      ],
+      "api_votes": 81,
+      "api_favorites": 38,
+      "api_comments": 22
+    },
+    {
+      "uuid": "40ef70d6-a0ef-4993-aed8-58247ba9f7b4",
+      "url": "https://netrunnerdb.com/en/decklist/40ef70d6-a0ef-4993-aed8-58247ba9f7b4/khusyum-11th-12th-at-worlds-2026-undefeated-7-0-",
+      "title": "KhusYUM [11th, 12th at Worlds 2026, Undefeated 7-0]",
+      "identity_title": "Magdalene Keino-Chemutai: Cryptarchitect",
+      "identity_code": "35024",
+      "author": "London",
+      "author_url": "https://netrunnerdb.com/en/profile/40920/London",
+      "reputation": "1467",
+      "votes": 132,
+      "favorites": 81,
+      "comments": 28,
+      "faction": "shaper",
+      "side": "runner",
+      "event": "2026 World Champs",
+      "rotation": "Seventh Rotation",
+      "date": "2026-10-06T21:35:03+00:00",
+      "identity_zh": "玛格达琳·凯诺-切穆泰: 幕后建筑师",
+      "format": "standard",
+      "format_confident": false,
+      "faction_name": "Shaper",
+      "faction_color": "#22a05a",
+      "n_cards": 47,
+      "agenda_points": 0,
+      "influence": 15,
+      "influence_limit": 15,
+      "min_deck_size": 45,
+      "score": 586,
+      "groups": [
+        {
+          "type": "event",
+          "label_zh": "事件",
+          "label_en": "Event",
+          "items": [
+            {
+              "code": "34085",
+              "title": "Burner",
+              "title_zh": "大涂鸦",
+              "pack": "rwr",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "30020",
+              "title": "Creative Commission",
+              "title_zh": "创作委托",
+              "pack": "sg",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "34021",
+              "title": "Joy Ride",
+              "title_zh": "兜风",
+              "pack": "tai",
+              "cost": 2,
+              "faction": "shaper",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "26021",
+              "title": "Khusyuk",
+              "title_zh": "庄严肃穆",
+              "pack": "df",
+              "cost": 3,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "33013",
+              "title": "Pinhole Threading",
+              "title_zh": "穿针引线",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 1,
+              "qty": 2,
+              "inf": 1
+            },
+            {
+              "code": "35026",
+              "title": "Ritual",
+              "title_zh": "仪式",
+              "pack": "elev",
+              "cost": 0,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "26022",
+              "title": "Spec Work",
+              "title_zh": "竞稿",
+              "pack": "df",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 1,
+              "qty": 2
+            }
+          ],
+          "count": 17
+        },
+        {
+          "type": "hardware",
+          "label_zh": "硬件",
+          "label_en": "Hardware",
+          "items": [
+            {
+              "code": "30022",
+              "title": "DZMZ Optimizer",
+              "title_zh": "DZMZ优化器",
+              "pack": "sg",
+              "cost": 2,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "35028",
+              "title": "Madani",
+              "title_zh": "承创",
+              "pack": "elev",
+              "cost": 2,
+              "faction": "shaper",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "26085",
+              "title": "Simulchip",
+              "title_zh": "模拟芯片",
+              "pack": "ur",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 3
+            }
+          ],
+          "count": 9
+        },
+        {
+          "type": "program",
+          "label_zh": "程序",
+          "label_en": "Program",
+          "items": [
+            {
+              "code": "30004",
+              "title": "Botulus",
+              "title_zh": "肉毒杆菌",
+              "pack": "sg",
+              "cost": 2,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 1,
+              "inf": 3
+            },
+            {
+              "code": "34089",
+              "title": "Coalescence",
+              "title_zh": "凝露",
+              "pack": "rwr",
+              "cost": 2,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "34080",
+              "title": "Cupellation",
+              "title_zh": "灰吹精炼",
+              "pack": "rwr",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 1,
+              "inf": 2
+            },
+            {
+              "code": "26087",
+              "title": "Euler",
+              "title_zh": "欧拉",
+              "pack": "ur",
+              "cost": 2,
+              "faction": "shaper",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "30007",
+              "title": "Fermenter",
+              "title_zh": "发酵罐",
+              "pack": "sg",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 2,
+              "inf": 2
+            },
+            {
+              "code": "26024",
+              "title": "Gauss",
+              "title_zh": "高斯",
+              "pack": "df",
+              "cost": 2,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "33071",
+              "title": "Hush",
+              "title_zh": "消音",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 1,
+              "qty": 1,
+              "inf": 1
+            },
+            {
+              "code": "34091",
+              "title": "Muse",
+              "title_zh": "缪斯",
+              "pack": "rwr",
+              "cost": 2,
+              "faction": "shaper",
+              "faction_cost": 4,
+              "qty": 3
+            },
+            {
+              "code": "33027",
+              "title": "Propeller",
+              "title_zh": "螺旋桨",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "33018",
+              "title": "Revolver",
+              "title_zh": "左轮手枪",
+              "pack": "ms",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 1,
+              "inf": 3
+            }
+          ],
+          "count": 15
+        },
+        {
+          "type": "resource",
+          "label_zh": "资源",
+          "label_en": "Resource",
+          "items": [
+            {
+              "code": "26094",
+              "title": "Daily Casts",
+              "title_zh": "每日播报",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 2
+            },
+            {
+              "code": "33092",
+              "title": "Dr. Nuka Vrolyck",
+              "title_zh": "努卡·弗罗丽克博士",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "35033",
+              "title": "“Knickknack” O’Brian",
+              "title_zh": "“珍奇阁主”奥布莱恩",
+              "pack": "elev",
+              "cost": 2,
+              "faction": "shaper",
+              "faction_cost": 3,
+              "qty": 1
+            }
+          ],
+          "count": 6
+        }
+      ],
+      "api_votes": 132,
+      "api_favorites": 81,
+      "api_comments": 28
+    },
+    {
+      "uuid": "f2e62e25-b0ff-4b22-ada5-845510f606db",
+      "url": "https://netrunnerdb.com/en/decklist/f2e62e25-b0ff-4b22-ada5-845510f606db/vic-but-i-m-on-a-bus-and-need-to-get-coffee-9-22am-4-1-cos",
+      "title": "Vic but I'm on a bus and need to get coffee [9:22am]-4-1@CoS",
+      "identity_title": "Virtual Intelligence, P.I.: “You Can Call Me Vic”",
+      "identity_code": "36009",
+      "author": "cablooshe",
+      "author_url": "https://netrunnerdb.com/en/profile/31678/cablooshe",
+      "reputation": "920",
+      "votes": 9,
+      "favorites": 3,
+      "comments": 3,
+      "faction": "criminal",
+      "side": "runner",
+      "event": "",
+      "rotation": "Seventh Rotation",
+      "date": "2026-11-16T01:17:29+00:00",
+      "identity_zh": "虚拟智能私家侦探: “你可以叫我维克”",
+      "format": "standard",
+      "format_confident": false,
+      "faction_name": "Criminal",
+      "faction_color": "#3b82f6",
+      "n_cards": 45,
+      "agenda_points": 0,
+      "influence": 15,
+      "influence_limit": 15,
+      "min_deck_size": 45,
+      "score": 36,
+      "groups": [
+        {
+          "type": "event",
+          "label_zh": "事件",
+          "label_en": "Event",
+          "items": [
+            {
+              "code": "26074",
+              "title": "Bravado",
+              "title_zh": "虚张声势",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "35014",
+              "title": "Clean Getaway",
+              "title_zh": "利落脱身",
+              "pack": "elev",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "33013",
+              "title": "Pinhole Threading",
+              "title_zh": "穿针引线",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 1,
+              "qty": 2
+            },
+            {
+              "code": "34068",
+              "title": "Privileged Access",
+              "title_zh": "特权访问",
+              "pack": "rwr",
+              "cost": 0,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 1,
+              "inf": 2
+            },
+            {
+              "code": "30030",
+              "title": "Sure Gamble",
+              "title_zh": "胜券在握",
+              "pack": "sg",
+              "cost": 5,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "35017",
+              "title": "Transfer of Wealth",
+              "title_zh": "财富转移",
+              "pack": "elev",
+              "cost": 0,
+              "faction": "criminal",
+              "faction_cost": 4,
+              "qty": 3
+            }
+          ],
+          "count": 15
+        },
+        {
+          "type": "hardware",
+          "label_zh": "硬件",
+          "label_en": "Hardware",
+          "items": [
+            {
+              "code": "34014",
+              "title": "Hermes",
+              "title_zh": "赫耳墨斯",
+              "pack": "tai",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 2
+            }
+          ],
+          "count": 2
+        },
+        {
+          "type": "program",
+          "label_zh": "程序",
+          "label_en": "Program",
+          "items": [
+            {
+              "code": "30015",
+              "title": "Carmen",
+              "title_zh": "卡门",
+              "pack": "sg",
+              "cost": 5,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "33017",
+              "title": "Cezve",
+              "title_zh": "土耳其咖啡壶",
+              "pack": "ms",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "34080",
+              "title": "Cupellation",
+              "title_zh": "灰吹精炼",
+              "pack": "rwr",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "34015",
+              "title": "Curupira",
+              "title_zh": "库鲁皮拉",
+              "pack": "tai",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "34016",
+              "title": "Laser Pointer",
+              "title_zh": "激光笔",
+              "pack": "tai",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "30032",
+              "title": "Mayfly",
+              "title_zh": "蜉蝣",
+              "pack": "sg",
+              "cost": 1,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 1
+            },
+            {
+              "code": "33018",
+              "title": "Revolver",
+              "title_zh": "左轮手枪",
+              "pack": "ms",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "34018",
+              "title": "Shibboleth",
+              "title_zh": "示播列",
+              "pack": "tai",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "30026",
+              "title": "Unity",
+              "title_zh": "团结",
+              "pack": "sg",
+              "cost": 3,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 1,
+              "inf": 2
+            }
+          ],
+          "count": 11
+        },
+        {
+          "type": "resource",
+          "label_zh": "资源",
+          "label_en": "Resource",
+          "items": [
+            {
+              "code": "26094",
+              "title": "Daily Casts",
+              "title_zh": "每日播报",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "33092",
+              "title": "Dr. Nuka Vrolyck",
+              "title_zh": "努卡·弗罗丽克博士",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 1,
+              "inf": 2
+            },
+            {
+              "code": "26095",
+              "title": "DreamNet",
+              "title_zh": "梦网",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "26007",
+              "title": "Fencer Fueno",
+              "title_zh": "剑术师弗恩诺",
+              "pack": "df",
+              "cost": 0,
+              "faction": "anarch",
+              "faction_cost": 1,
+              "qty": 1,
+              "inf": 1
+            },
+            {
+              "code": "27001",
+              "title": "Mystic Maemi",
+              "title_zh": "秘法师鸣蝉",
+              "pack": "urbp",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 1,
+              "inf": 2
+            },
+            {
+              "code": "35022",
+              "title": "Open Market",
+              "title_zh": "自由市场",
+              "pack": "elev",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "26018",
+              "title": "The Class Act",
+              "title_zh": "一流选手",
+              "pack": "df",
+              "cost": 4,
+              "faction": "criminal",
+              "faction_cost": 5,
+              "qty": 3
+            },
+            {
+              "code": "33010",
+              "title": "The Twinning",
+              "title_zh": "孪晶",
+              "pack": "ms",
+              "cost": 3,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 1,
+              "inf": 3
+            },
+            {
+              "code": "35033",
+              "title": "“Knickknack” O’Brian",
+              "title_zh": "“珍奇阁主”奥布莱恩",
+              "pack": "elev",
+              "cost": 2,
+              "faction": "shaper",
+              "faction_cost": 3,
+              "qty": 1,
+              "inf": 3
+            }
+          ],
+          "count": 17
+        }
+      ],
+      "api_votes": 9,
+      "api_favorites": 3,
+      "api_comments": 3
+    },
+    {
+      "uuid": "e075c0fc-9e95-4790-93b0-c85901767150",
+      "url": "https://netrunnerdb.com/en/decklist/e075c0fc-9e95-4790-93b0-c85901767150/dive-musli-pd-killer-ultimate-showdown-3-0-9th",
+      "title": "Dive Musli, PD Killer- Ultimate Showdown 3-0, 9th",
+      "identity_title": "MuslihaT: Multifarious Marketeer",
+      "identity_code": "35013",
+      "author": "Wynaut",
+      "author_url": "https://netrunnerdb.com/en/profile/50049/Wynaut",
+      "reputation": "335",
+      "votes": 7,
+      "favorites": 4,
+      "comments": 1,
+      "faction": "criminal",
+      "side": "runner",
+      "event": "",
+      "rotation": "",
+      "date": "2026-11-15T14:52:48+00:00",
+      "identity_zh": "穆斯莉哈特: 多面营销专家",
+      "format": "standard",
+      "format_confident": false,
+      "faction_name": "Criminal",
+      "faction_color": "#3b82f6",
+      "n_cards": 45,
+      "agenda_points": 0,
+      "influence": 15,
+      "influence_limit": 15,
+      "min_deck_size": 45,
+      "score": 30,
+      "groups": [
+        {
+          "type": "event",
+          "label_zh": "事件",
+          "label_en": "Event",
+          "items": [
+            {
+              "code": "26074",
+              "title": "Bravado",
+              "title_zh": "虚张声势",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "34085",
+              "title": "Burner",
+              "title_zh": "大涂鸦",
+              "pack": "rwr",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 3,
+              "qty": 1,
+              "inf": 3
+            },
+            {
+              "code": "33012",
+              "title": "Carpe Diem",
+              "title_zh": "时不再来",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "35014",
+              "title": "Clean Getaway",
+              "title_zh": "利落脱身",
+              "pack": "elev",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "32003",
+              "title": "Deep Dive",
+              "title_zh": "深潜",
+              "pack": "msbp",
+              "cost": 2,
+              "faction": "shaper",
+              "faction_cost": 5,
+              "qty": 2,
+              "inf": 5
+            },
+            {
+              "code": "30028",
+              "title": "Jailbreak",
+              "title_zh": "越狱",
+              "pack": "sg",
+              "cost": 0,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "30011",
+              "title": "Mutual Favor",
+              "title_zh": "互惠互利",
+              "pack": "sg",
+              "cost": 0,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "30029",
+              "title": "Overclock",
+              "title_zh": "超频",
+              "pack": "sg",
+              "cost": 1,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 2
+            },
+            {
+              "code": "33013",
+              "title": "Pinhole Threading",
+              "title_zh": "穿针引线",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 1,
+              "qty": 2
+            },
+            {
+              "code": "33076",
+              "title": "Reprise",
+              "title_zh": "再现部",
+              "pack": "ph",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "01050",
+              "title": "Sure Gamble",
+              "title_zh": "胜券在握",
+              "pack": "core",
+              "cost": 5,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "36012",
+              "title": "Tailgate",
+              "title_zh": "尾随",
+              "pack": "vp",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "35017",
+              "title": "Transfer of Wealth",
+              "title_zh": "财富转移",
+              "pack": "elev",
+              "cost": 0,
+              "faction": "criminal",
+              "faction_cost": 4,
+              "qty": 3
+            },
+            {
+              "code": "30012",
+              "title": "Tread Lightly",
+              "title_zh": "蹑手蹑脚",
+              "pack": "sg",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 1,
+              "qty": 1
+            }
+          ],
+          "count": 29
+        },
+        {
+          "type": "hardware",
+          "label_zh": "硬件",
+          "label_en": "Hardware",
+          "items": [
+            {
+              "code": "26078",
+              "title": "Swift",
+              "title_zh": "雨燕",
+              "pack": "ur",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 3
+            }
+          ],
+          "count": 3
+        },
+        {
+          "type": "program",
+          "label_zh": "程序",
+          "label_en": "Program",
+          "items": [
+            {
+              "code": "33017",
+              "title": "Cezve",
+              "title_zh": "土耳其咖啡壶",
+              "pack": "ms",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "34015",
+              "title": "Curupira",
+              "title_zh": "库鲁皮拉",
+              "pack": "tai",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "32002",
+              "title": "Revolver",
+              "title_zh": "左轮手枪",
+              "pack": "msbp",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "35020",
+              "title": "Sang Kancil",
+              "title_zh": "百灵鹿",
+              "pack": "elev",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 2
+            }
+          ],
+          "count": 9
+        },
+        {
+          "type": "resource",
+          "label_zh": "资源",
+          "label_en": "Resource",
+          "items": [
+            {
+              "code": "26072",
+              "title": "Mystic Maemi",
+              "title_zh": "秘法师鸣蝉",
+              "pack": "ur",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 1,
+              "inf": 2
+            },
+            {
+              "code": "26018",
+              "title": "The Class Act",
+              "title_zh": "一流选手",
+              "pack": "df",
+              "cost": 4,
+              "faction": "criminal",
+              "faction_cost": 5,
+              "qty": 3
+            }
+          ],
+          "count": 4
+        }
+      ],
+      "api_votes": 7,
+      "api_favorites": 4,
+      "api_comments": 1
+    },
+    {
+      "uuid": "a588a79e-cb72-469a-882b-03df83197b22",
+      "url": "https://netrunnerdb.com/en/decklist/a588a79e-cb72-469a-882b-03df83197b22/flower-in-a-hurricane-1st-nanpc-boston-",
+      "title": "Flower in a Hurricane [1st @ NANPC Boston]",
+      "identity_title": "Jinteki: Restoring Humanity",
+      "identity_code": "30043",
+      "author": "NotAgain",
+      "author_url": "https://netrunnerdb.com/en/profile/40924/NotAgain",
+      "reputation": "3800",
+      "votes": 8,
+      "favorites": 3,
+      "comments": 0,
+      "faction": "jinteki",
+      "side": "corp",
+      "event": "",
+      "rotation": "Seventh Rotation",
+      "date": "2026-11-15T02:43:57+00:00",
+      "identity_zh": "人间会社: 修复人性",
+      "format": "standard",
+      "format_confident": false,
+      "faction_name": "Jinteki",
+      "faction_color": "#e5484d",
+      "n_cards": 44,
+      "agenda_points": 18,
+      "influence": 15,
+      "influence_limit": 15,
+      "min_deck_size": 40,
+      "score": 30,
+      "groups": [
+        {
+          "type": "agenda",
+          "label_zh": "议案",
+          "label_en": "Agenda",
+          "items": [
+            {
+              "code": "34040",
+              "title": "Fujii Asset Retrieval",
+              "title_zh": "藤井资产回收",
+              "pack": "tai",
+              "cost": null,
+              "faction": "jinteki",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "30069",
+              "title": "Send a Message",
+              "title_zh": "以儆效尤",
+              "pack": "sg",
+              "cost": null,
+              "faction": "neutral-corp",
+              "faction_cost": 0,
+              "qty": 3
+            }
+          ],
+          "count": 6
+        },
+        {
+          "type": "asset",
+          "label_zh": "资产",
+          "label_en": "Asset",
+          "items": [
+            {
+              "code": "34107",
+              "title": "Charlotte Caçador",
+              "title_zh": "夏洛特·卡萨多尔",
+              "pack": "rwr",
+              "cost": 0,
+              "faction": "jinteki",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "30053",
+              "title": "Spin Doctor",
+              "title_zh": "舆论操盘手",
+              "pack": "sg",
+              "cost": 0,
+              "faction": "nbn",
+              "faction_cost": 1,
+              "qty": 3,
+              "inf": 1
+            }
+          ],
+          "count": 6
+        },
+        {
+          "type": "upgrade",
+          "label_zh": "升级",
+          "label_en": "Upgrade",
+          "items": [
+            {
+              "code": "30050",
+              "title": "Anoetic Void",
+              "title_zh": "无明虚空",
+              "pack": "sg",
+              "cost": 0,
+              "faction": "jinteki",
+              "faction_cost": 4,
+              "qty": 3
+            },
+            {
+              "code": "27005",
+              "title": "La Costa Grid",
+              "title_zh": "拉科斯塔网阵",
+              "pack": "urbp",
+              "cost": 3,
+              "faction": "jinteki",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "30066",
+              "title": "Malapert Data Vault",
+              "title_zh": "马拉柏特数据密库",
+              "pack": "sg",
+              "cost": 1,
+              "faction": "weyland-consortium",
+              "faction_cost": 3,
+              "qty": 1,
+              "inf": 3
+            },
+            {
+              "code": "30042",
+              "title": "Manegarm Skunkworks",
+              "title_zh": "逐月狼秘密开发部",
+              "pack": "sg",
+              "cost": 2,
+              "faction": "haas-bioroid",
+              "faction_cost": 3,
+              "qty": 3,
+              "inf": 3
+            }
+          ],
+          "count": 10
+        },
+        {
+          "type": "operation",
+          "label_zh": "事务",
+          "label_en": "Operation",
+          "items": [
+            {
+              "code": "30048",
+              "title": "Hansei Review",
+              "title_zh": "自我反省",
+              "pack": "sg",
+              "cost": 5,
+              "faction": "jinteki",
+              "faction_cost": 1,
+              "qty": 3
+            },
+            {
+              "code": "30075",
+              "title": "Hedge Fund",
+              "title_zh": "对冲基金",
+              "pack": "sg",
+              "cost": 5,
+              "faction": "neutral-corp",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "30049",
+              "title": "Neurospike",
+              "title_zh": "神经突刺",
+              "pack": "sg",
+              "cost": 3,
+              "faction": "jinteki",
+              "faction_cost": 3,
+              "qty": 2
+            }
+          ],
+          "count": 8
+        },
+        {
+          "type": "ice",
+          "label_zh": "防火墙",
+          "label_en": "ICE",
+          "items": [
+            {
+              "code": "33043",
+              "title": "Anemone",
+              "title_zh": "海葵",
+              "pack": "ms",
+              "cost": 3,
+              "faction": "jinteki",
+              "faction_cost": 2,
+              "qty": 2
+            },
+            {
+              "code": "34042",
+              "title": "Attini",
+              "title_zh": "切叶蚁",
+              "pack": "tai",
+              "cost": 6,
+              "faction": "jinteki",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "34109",
+              "title": "Boto",
+              "title_zh": "亚马逊河鲀",
+              "pack": "rwr",
+              "cost": 6,
+              "faction": "jinteki",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "34044",
+              "title": "Tatu-Bola",
+              "title_zh": "三带犰狳",
+              "pack": "tai",
+              "cost": 2,
+              "faction": "jinteki",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "33109",
+              "title": "Vampyronassa",
+              "title_zh": "陷阱幽灵蛸",
+              "pack": "ph",
+              "cost": 7,
+              "faction": "jinteki",
+              "faction_cost": 3,
+              "qty": 3
+            }
+          ],
+          "count": 14
+        }
+      ],
+      "api_votes": 8,
+      "api_favorites": 3,
+      "api_comments": 0
+    },
+    {
+      "uuid": "c2e5f2b9-5264-4dcc-877d-db78cb5a4b5b",
+      "url": "https://netrunnerdb.com/en/decklist/c2e5f2b9-5264-4dcc-877d-db78cb5a4b5b/hosh-in-a-trench-coat-5th-ultimate-showdown-",
+      "title": "Hosh in a Trench Coat (5th @ Ultimate Showdown)",
+      "identity_title": "Virtual Intelligence, P.I.: “You Can Call Me Vic”",
+      "identity_code": "36009",
+      "author": "Santa",
+      "author_url": "https://netrunnerdb.com/en/profile/43033/Santa",
+      "reputation": "2107",
+      "votes": 5,
+      "favorites": 3,
+      "comments": 1,
+      "faction": "criminal",
+      "side": "runner",
+      "event": "",
+      "rotation": "Seventh Rotation",
+      "date": "2026-11-15T03:28:47+00:00",
+      "identity_zh": "虚拟智能私家侦探: “你可以叫我维克”",
+      "format": "standard",
+      "format_confident": false,
+      "faction_name": "Criminal",
+      "faction_color": "#3b82f6",
+      "n_cards": 45,
+      "agenda_points": 0,
+      "influence": 15,
+      "influence_limit": 15,
+      "min_deck_size": 45,
+      "score": 22,
+      "groups": [
+        {
+          "type": "event",
+          "label_zh": "事件",
+          "label_en": "Event",
+          "items": [
+            {
+              "code": "26074",
+              "title": "Bravado",
+              "title_zh": "虚张声势",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "35014",
+              "title": "Clean Getaway",
+              "title_zh": "利落脱身",
+              "pack": "elev",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "33013",
+              "title": "Pinhole Threading",
+              "title_zh": "穿针引线",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 1,
+              "qty": 3
+            },
+            {
+              "code": "36011",
+              "title": "Sell Out",
+              "title_zh": "出卖",
+              "pack": "vp",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 1,
+              "qty": 1
+            },
+            {
+              "code": "30030",
+              "title": "Sure Gamble",
+              "title_zh": "胜券在握",
+              "pack": "sg",
+              "cost": 5,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "35017",
+              "title": "Transfer of Wealth",
+              "title_zh": "财富转移",
+              "pack": "elev",
+              "cost": 0,
+              "faction": "criminal",
+              "faction_cost": 4,
+              "qty": 3
+            }
+          ],
+          "count": 16
+        },
+        {
+          "type": "hardware",
+          "label_zh": "硬件",
+          "label_en": "Hardware",
+          "items": [
+            {
+              "code": "26075",
+              "title": "Boomerang",
+              "title_zh": "回力镖",
+              "pack": "ur",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 2
+            },
+            {
+              "code": "34014",
+              "title": "Hermes",
+              "title_zh": "赫耳墨斯",
+              "pack": "tai",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 2
+            }
+          ],
+          "count": 4
+        },
+        {
+          "type": "program",
+          "label_zh": "程序",
+          "label_en": "Program",
+          "items": [
+            {
+              "code": "33017",
+              "title": "Cezve",
+              "title_zh": "土耳其咖啡壶",
+              "pack": "ms",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "34080",
+              "title": "Cupellation",
+              "title_zh": "灰吹精炼",
+              "pack": "rwr",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "34015",
+              "title": "Curupira",
+              "title_zh": "库鲁皮拉",
+              "pack": "tai",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "30008",
+              "title": "Leech",
+              "title_zh": "水蛭",
+              "pack": "sg",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 1,
+              "qty": 1,
+              "inf": 1
+            },
+            {
+              "code": "32002",
+              "title": "Revolver",
+              "title_zh": "左轮手枪",
+              "pack": "msbp",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "34018",
+              "title": "Shibboleth",
+              "title_zh": "示播列",
+              "pack": "tai",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 2
+            }
+          ],
+          "count": 10
+        },
+        {
+          "type": "resource",
+          "label_zh": "资源",
+          "label_en": "Resource",
+          "items": [
+            {
+              "code": "33092",
+              "title": "Dr. Nuka Vrolyck",
+              "title_zh": "努卡·弗罗丽克博士",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 1,
+              "inf": 2
+            },
+            {
+              "code": "26095",
+              "title": "DreamNet",
+              "title_zh": "梦网",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "26007",
+              "title": "Fencer Fueno",
+              "title_zh": "剑术师弗恩诺",
+              "pack": "df",
+              "cost": 0,
+              "faction": "anarch",
+              "faction_cost": 1,
+              "qty": 1,
+              "inf": 1
+            },
+            {
+              "code": "26072",
+              "title": "Mystic Maemi",
+              "title_zh": "秘法师鸣蝉",
+              "pack": "ur",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 1,
+              "inf": 2
+            },
+            {
+              "code": "35022",
+              "title": "Open Market",
+              "title_zh": "自由市场",
+              "pack": "elev",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "26073",
+              "title": "Paladin Poemu",
+              "title_zh": "圣骑士诗梦",
+              "pack": "ur",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 1,
+              "inf": 3
+            },
+            {
+              "code": "26018",
+              "title": "The Class Act",
+              "title_zh": "一流选手",
+              "pack": "df",
+              "cost": 4,
+              "faction": "criminal",
+              "faction_cost": 5,
+              "qty": 3
+            },
+            {
+              "code": "33010",
+              "title": "The Twinning",
+              "title_zh": "孪晶",
+              "pack": "ms",
+              "cost": 3,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 2,
+              "inf": 3
+            }
+          ],
+          "count": 15
+        }
+      ],
+      "api_votes": 5,
+      "api_favorites": 3,
+      "api_comments": 1
+    },
+    {
+      "uuid": "99df1a00-ee34-4dad-8d0c-daa7d5bfbc85",
+      "url": "https://netrunnerdb.com/en/decklist/99df1a00-ee34-4dad-8d0c-daa7d5bfbc85/i-love-hate-1st-nanpc-boston-",
+      "title": "I love hate [1st @ NANPC Boston]",
+      "identity_title": "René “Loup” Arcemont: Party Animal",
+      "identity_code": "30001",
+      "author": "NotAgain",
+      "author_url": "https://netrunnerdb.com/en/profile/40924/NotAgain",
+      "reputation": "3800",
+      "votes": 5,
+      "favorites": 2,
+      "comments": 2,
+      "faction": "anarch",
+      "side": "runner",
+      "event": "",
+      "rotation": "Seventh Rotation",
+      "date": "2026-11-15T02:24:17+00:00",
+      "identity_zh": "勒内·“野狼”·阿斯蒙特: 派对野兽",
+      "format": "standard",
+      "format_confident": false,
+      "faction_name": "Anarch",
+      "faction_color": "#e08b0c",
+      "n_cards": 41,
+      "agenda_points": 0,
+      "influence": 15,
+      "influence_limit": 15,
+      "min_deck_size": 40,
+      "score": 21,
+      "groups": [
+        {
+          "type": "event",
+          "label_zh": "事件",
+          "label_en": "Event",
+          "items": [
+            {
+              "code": "33066",
+              "title": "Finality",
+              "title_zh": "终局",
+              "pack": "ph",
+              "cost": 2,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "33068",
+              "title": "Raindrops Cut Stone",
+              "title_zh": "滴水穿石",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "33024",
+              "title": "Rigging Up",
+              "title_zh": "设备装配",
+              "pack": "ms",
+              "cost": 0,
+              "faction": "shaper",
+              "faction_cost": 3,
+              "qty": 2,
+              "inf": 3
+            },
+            {
+              "code": "35026",
+              "title": "Ritual",
+              "title_zh": "仪式",
+              "pack": "elev",
+              "cost": 0,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 2,
+              "inf": 2
+            },
+            {
+              "code": "33004",
+              "title": "Steelskin Scarring",
+              "title_zh": "钢肤疤痕",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "30030",
+              "title": "Sure Gamble",
+              "title_zh": "胜券在握",
+              "pack": "sg",
+              "cost": 5,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            }
+          ],
+          "count": 14
+        },
+        {
+          "type": "hardware",
+          "label_zh": "硬件",
+          "label_en": "Hardware",
+          "items": [
+            {
+              "code": "26002",
+              "title": "Demolisher",
+              "title_zh": "毁坏者",
+              "pack": "df",
+              "cost": 4,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "26069",
+              "title": "Gachapon",
+              "title_zh": "扭蛋机",
+              "pack": "ur",
+              "cost": 0,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "26070",
+              "title": "Keiko",
+              "title_zh": "惠子",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "36003",
+              "title": "The Tungsten Tailor",
+              "title_zh": "点冰点降",
+              "pack": "vp",
+              "cost": 3,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 2
+            }
+          ],
+          "count": 7
+        },
+        {
+          "type": "program",
+          "label_zh": "程序",
+          "label_en": "Program",
+          "items": [
+            {
+              "code": "26079",
+              "title": "Afterimage",
+              "title_zh": "残影",
+              "pack": "ur",
+              "cost": 4,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 1,
+              "inf": 3
+            },
+            {
+              "code": "35029",
+              "title": "Azimat",
+              "title_zh": "阿齐玛灵符",
+              "pack": "elev",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 1,
+              "qty": 1,
+              "inf": 1
+            },
+            {
+              "code": "30005",
+              "title": "Buzzsaw",
+              "title_zh": "电锯",
+              "pack": "sg",
+              "cost": 4,
+              "faction": "anarch",
+              "faction_cost": 1,
+              "qty": 2
+            },
+            {
+              "code": "30025",
+              "title": "Echelon",
+              "title_zh": "梯队",
+              "pack": "sg",
+              "cost": 3,
+              "faction": "shaper",
+              "faction_cost": 1,
+              "qty": 1,
+              "inf": 1
+            },
+            {
+              "code": "33071",
+              "title": "Hush",
+              "title_zh": "消音",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 1,
+              "qty": 1
+            },
+            {
+              "code": "30008",
+              "title": "Leech",
+              "title_zh": "水蛭",
+              "pack": "sg",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 1,
+              "qty": 2
+            },
+            {
+              "code": "35009",
+              "title": "Rising Tide",
+              "title_zh": "暗潮汹涌",
+              "pack": "elev",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 3
+            }
+          ],
+          "count": 11
+        },
+        {
+          "type": "resource",
+          "label_zh": "资源",
+          "label_en": "Resource",
+          "items": [
+            {
+              "code": "26094",
+              "title": "Daily Casts",
+              "title_zh": "每日播报",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 2
+            },
+            {
+              "code": "26007",
+              "title": "Fencer Fueno",
+              "title_zh": "剑术师弗恩诺",
+              "pack": "df",
+              "cost": 0,
+              "faction": "anarch",
+              "faction_cost": 1,
+              "qty": 1
+            },
+            {
+              "code": "26073",
+              "title": "Paladin Poemu",
+              "title_zh": "圣骑士诗梦",
+              "pack": "ur",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "33010",
+              "title": "The Twinning",
+              "title_zh": "孪晶",
+              "pack": "ms",
+              "cost": 3,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "26009",
+              "title": "Trickster Taka",
+              "title_zh": "诡术师塔卡",
+              "pack": "df",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 2
+            }
+          ],
+          "count": 9
+        }
+      ],
+      "api_votes": 5,
+      "api_favorites": 2,
+      "api_comments": 2
+    },
+    {
+      "uuid": "32f8c596-02b2-4d34-9bfd-36724197f78d",
+      "url": "https://netrunnerdb.com/en/decklist/32f8c596-02b2-4d34-9bfd-36724197f78d/dark-fate-but-its-synapse-so-its-not",
+      "title": "Dark Fate But Its Synapse So Its Not",
+      "identity_title": "Synapse Global: Faster than Thought",
+      "identity_code": "35058",
+      "author": "Countzer0",
+      "author_url": "https://netrunnerdb.com/en/profile/14901/Countzer0",
+      "reputation": "331",
+      "votes": 5,
+      "favorites": 1,
+      "comments": 4,
+      "faction": "nbn",
+      "side": "corp",
+      "event": "",
+      "rotation": "Seventh Rotation",
+      "date": "2026-11-11T09:24:47+00:00",
+      "identity_zh": "突触环球: 先你所想",
+      "format": "standard",
+      "format_confident": false,
+      "faction_name": "NBN",
+      "faction_color": "#eab308",
+      "n_cards": 49,
+      "agenda_points": 20,
+      "influence": 15,
+      "influence_limit": 15,
+      "min_deck_size": 45,
+      "score": 21,
+      "groups": [
+        {
+          "type": "agenda",
+          "label_zh": "议案",
+          "label_en": "Agenda",
+          "items": [
+            {
+              "code": "33049",
+              "title": "Artificial Cryptocrash",
+              "title_zh": "币圈洗盘",
+              "pack": "ms",
+              "cost": null,
+              "faction": "nbn",
+              "faction_cost": 0,
+              "qty": 2
+            },
+            {
+              "code": "35059",
+              "title": "Embedded Reporting",
+              "title_zh": "卧底报道",
+              "pack": "elev",
+              "cost": null,
+              "faction": "nbn",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "36066",
+              "title": "Let Them Dream",
+              "title_zh": "让他们做个美梦",
+              "pack": "vp",
+              "cost": null,
+              "faction": "neutral-corp",
+              "faction_cost": 1,
+              "qty": 3,
+              "inf": 1
+            },
+            {
+              "code": "34049",
+              "title": "Oracle Thinktank",
+              "title_zh": "神谕智库",
+              "pack": "tai",
+              "cost": null,
+              "faction": "nbn",
+              "faction_cost": 0,
+              "qty": 2
+            },
+            {
+              "code": "30052",
+              "title": "Tomorrowʼs Headline",
+              "title_zh": "明日头条",
+              "pack": "sg",
+              "cost": null,
+              "faction": "nbn",
+              "faction_cost": 0,
+              "qty": 1
+            }
+          ],
+          "count": 11
+        },
+        {
+          "type": "asset",
+          "label_zh": "资产",
+          "label_en": "Asset",
+          "items": [
+            {
+              "code": "34065",
+              "title": "B-1001",
+              "title_zh": "B-1001",
+              "pack": "tai",
+              "cost": 1,
+              "faction": "neutral-corp",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "34052",
+              "title": "Federal Fundraising",
+              "title_zh": "联邦筹资宴",
+              "pack": "tai",
+              "cost": 0,
+              "faction": "nbn",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "36048",
+              "title": "Magistrate Revontulet",
+              "title_zh": "雷冯图莱长官",
+              "pack": "vp",
+              "cost": 2,
+              "faction": "nbn",
+              "faction_cost": 4,
+              "qty": 2
+            },
+            {
+              "code": "36049",
+              "title": "Nihilo Agent",
+              "title_zh": "虚无特工",
+              "pack": "vp",
+              "cost": 1,
+              "faction": "nbn",
+              "faction_cost": 2,
+              "qty": 2
+            },
+            {
+              "code": "35062",
+              "title": "Public Access Plaza",
+              "title_zh": "公共接入广场",
+              "pack": "elev",
+              "cost": 1,
+              "faction": "nbn",
+              "faction_cost": 1,
+              "qty": 3
+            },
+            {
+              "code": "30071",
+              "title": "Regolith Mining License",
+              "title_zh": "表岩屑开采许可",
+              "pack": "sg",
+              "cost": 2,
+              "faction": "neutral-corp",
+              "faction_cost": 0,
+              "qty": 2
+            },
+            {
+              "code": "30053",
+              "title": "Spin Doctor",
+              "title_zh": "舆论操盘手",
+              "pack": "sg",
+              "cost": 0,
+              "faction": "nbn",
+              "faction_cost": 1,
+              "qty": 3
+            },
+            {
+              "code": "34033",
+              "title": "Wage Workers",
+              "title_zh": "受雇工人",
+              "pack": "tai",
+              "cost": 2,
+              "faction": "haas-bioroid",
+              "faction_cost": 2,
+              "qty": 3,
+              "inf": 2
+            },
+            {
+              "code": "34098",
+              "title": "Warm Reception",
+              "title_zh": "热情接待",
+              "pack": "rwr",
+              "cost": 1,
+              "faction": "haas-bioroid",
+              "faction_cost": 2,
+              "qty": 3,
+              "inf": 2
+            }
+          ],
+          "count": 24
+        },
+        {
+          "type": "operation",
+          "label_zh": "事务",
+          "label_en": "Operation",
+          "items": [
+            {
+              "code": "34055",
+              "title": "Oppo Research",
+              "title_zh": "竞对调研",
+              "pack": "tai",
+              "cost": 2,
+              "faction": "nbn",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "30056",
+              "title": "Predictive Planogram",
+              "title_zh": "消费预测智慧商城",
+              "pack": "sg",
+              "cost": 0,
+              "faction": "nbn",
+              "faction_cost": 1,
+              "qty": 2
+            },
+            {
+              "code": "33119",
+              "title": "Shipment from Vladisibirsk",
+              "title_zh": "符拉迪西比尔斯克的货物",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "nbn",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "26118",
+              "title": "SYNC Rerouting",
+              "title_zh": "信网改道",
+              "pack": "ur",
+              "cost": 0,
+              "faction": "nbn",
+              "faction_cost": 3,
+              "qty": 2
+            }
+          ],
+          "count": 8
+        },
+        {
+          "type": "ice",
+          "label_zh": "防火墙",
+          "label_en": "ICE",
+          "items": [
+            {
+              "code": "30054",
+              "title": "Funhouse",
+              "title_zh": "欢乐屋",
+              "pack": "sg",
+              "cost": 5,
+              "faction": "nbn",
+              "faction_cost": 2,
+              "qty": 2
+            },
+            {
+              "code": "36052",
+              "title": "Paywall",
+              "title_zh": "付费墙",
+              "pack": "vp",
+              "cost": 1,
+              "faction": "nbn",
+              "faction_cost": 1,
+              "qty": 2
+            },
+            {
+              "code": "33117",
+              "title": "Unsmiling Tsarevna",
+              "title_zh": "不会笑的查瑞芙娜",
+              "pack": "ph",
+              "cost": 4,
+              "faction": "nbn",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "34054",
+              "title": "Virtual Service Agent",
+              "title_zh": "虚拟服务代理",
+              "pack": "tai",
+              "cost": 2,
+              "faction": "nbn",
+              "faction_cost": 2,
+              "qty": 1
+            }
+          ],
+          "count": 6
+        }
+      ],
+      "api_votes": 5,
+      "api_favorites": 1,
+      "api_comments": 4
+    },
+    {
+      "uuid": "c24ec0aa-0e54-4d2d-a217-8f2a0fd4f3b5",
+      "url": "https://netrunnerdb.com/en/decklist/c24ec0aa-0e54-4d2d-a217-8f2a0fd4f3b5/cyberpsychosis",
+      "title": "CyberPsychosis",
+      "identity_title": "Az McCaffrey: Mechanical Prodigy",
+      "identity_code": "26010",
+      "author": "Sire_N1chaulas",
+      "author_url": "https://netrunnerdb.com/en/profile/58370/Sire_N1chaulas",
+      "reputation": "14",
+      "votes": 2,
+      "favorites": 1,
+      "comments": 4,
+      "faction": "criminal",
+      "side": "runner",
+      "event": "",
+      "rotation": "",
+      "date": "2026-11-11T01:29:28+00:00",
+      "identity_zh": "阿兹·麦卡弗瑞: 机械奇才",
+      "format": "standard",
+      "format_confident": false,
+      "faction_name": "Criminal",
+      "faction_color": "#3b82f6",
+      "n_cards": 45,
+      "agenda_points": 0,
+      "influence": 15,
+      "influence_limit": 15,
+      "min_deck_size": 45,
+      "score": 12,
+      "groups": [
+        {
+          "type": "event",
+          "label_zh": "事件",
+          "label_en": "Event",
+          "items": [
+            {
+              "code": "35014",
+              "title": "Clean Getaway",
+              "title_zh": "利落脱身",
+              "pack": "elev",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 2
+            },
+            {
+              "code": "35015",
+              "title": "Lie Low",
+              "title_zh": "避风头",
+              "pack": "elev",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 1,
+              "qty": 2
+            },
+            {
+              "code": "35016",
+              "title": "Maintenance Access",
+              "title_zh": "检修通道",
+              "pack": "elev",
+              "cost": 0,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "30011",
+              "title": "Mutual Favor",
+              "title_zh": "互惠互利",
+              "pack": "sg",
+              "cost": 0,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "33013",
+              "title": "Pinhole Threading",
+              "title_zh": "穿针引线",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 1,
+              "qty": 1
+            },
+            {
+              "code": "01050",
+              "title": "Sure Gamble",
+              "title_zh": "胜券在握",
+              "pack": "core",
+              "cost": 5,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "36012",
+              "title": "Tailgate",
+              "title_zh": "尾随",
+              "pack": "vp",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 2
+            },
+            {
+              "code": "35017",
+              "title": "Transfer of Wealth",
+              "title_zh": "财富转移",
+              "pack": "elev",
+              "cost": 0,
+              "faction": "criminal",
+              "faction_cost": 4,
+              "qty": 3
+            }
+          ],
+          "count": 16
+        },
+        {
+          "type": "hardware",
+          "label_zh": "硬件",
+          "label_en": "Hardware",
+          "items": [
+            {
+              "code": "33086",
+              "title": "Basilar Synthgland 2KVJ",
+              "title_zh": "基底动脉合成腺体2KVJ",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 3,
+              "qty": 1,
+              "inf": 3
+            },
+            {
+              "code": "26093",
+              "title": "Buffer Drive",
+              "title_zh": "缓存驱动器",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "neutral-runner",
+              "faction_cost": 1,
+              "qty": 1,
+              "inf": 1
+            },
+            {
+              "code": "30013",
+              "title": "Docklands Pass",
+              "title_zh": "码头区通行证",
+              "pack": "sg",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "26069",
+              "title": "Gachapon",
+              "title_zh": "扭蛋机",
+              "pack": "ur",
+              "cost": 0,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 1,
+              "inf": 2
+            },
+            {
+              "code": "33005",
+              "title": "Ghosttongue",
+              "title_zh": "幽灵之舌",
+              "pack": "ms",
+              "cost": 2,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 1,
+              "inf": 3
+            },
+            {
+              "code": "33085",
+              "title": "Hippocampic Mechanocytes",
+              "title_zh": "海马体机械细胞",
+              "pack": "ph",
+              "cost": 0,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 1,
+              "inf": 2
+            },
+            {
+              "code": "26014",
+              "title": "Lucky Charm",
+              "title_zh": "幸运护符",
+              "pack": "df",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "33006",
+              "title": "Marrow",
+              "title_zh": "骨髓",
+              "pack": "ms",
+              "cost": 2,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 2,
+              "inf": 2
+            },
+            {
+              "code": "33014",
+              "title": "PAN-Weave",
+              "title_zh": "个域网编织",
+              "pack": "ms",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 4,
+              "qty": 1
+            },
+            {
+              "code": "26077",
+              "title": "Prognostic Q-Loop",
+              "title_zh": "预测量子循环芯片",
+              "pack": "ur",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "30031",
+              "title": "T400 Memory Diamond",
+              "title_zh": "T400记忆钻石",
+              "pack": "sg",
+              "cost": 2,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 2
+            },
+            {
+              "code": "33078",
+              "title": "WAKE Implant v2A-JRJ",
+              "title_zh": "尾迹植入体v2A-JRJ",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "33079",
+              "title": "Zenit Chip JZ-2MJ",
+              "title_zh": "天顶芯片JZ-2MJ",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 1
+            }
+          ],
+          "count": 17
+        },
+        {
+          "type": "program",
+          "label_zh": "程序",
+          "label_en": "Program",
+          "items": [
+            {
+              "code": "30015",
+              "title": "Carmen",
+              "title_zh": "卡门",
+              "pack": "sg",
+              "cost": 5,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "34080",
+              "title": "Cupellation",
+              "title_zh": "灰吹精炼",
+              "pack": "rwr",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "35020",
+              "title": "Sang Kancil",
+              "title_zh": "百灵鹿",
+              "pack": "elev",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "33080",
+              "title": "Tremolo",
+              "title_zh": "震音",
+              "pack": "ph",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 1,
+              "qty": 3
+            }
+          ],
+          "count": 12
+        }
+      ],
+      "api_votes": 2,
+      "api_favorites": 1,
+      "api_comments": 4
+    },
+    {
+      "uuid": "fd4350c8-a0d0-4006-921e-52e9d64bf65c",
+      "url": "https://netrunnerdb.com/en/decklist/fd4350c8-a0d0-4006-921e-52e9d64bf65c/-hol-vii-red-padma",
+      "title": "[HOL VII] Red Padma",
+      "identity_title": "Captain Padma Isbister: Intrepid Explorer",
+      "identity_code": "33021",
+      "author": "Houston_Jeff",
+      "author_url": "https://netrunnerdb.com/en/profile/22787/Houston_Jeff",
+      "reputation": "32",
+      "votes": 2,
+      "favorites": 0,
+      "comments": 2,
+      "faction": "shaper",
+      "side": "runner",
+      "event": "",
+      "rotation": "Seventh Rotation",
+      "date": "2026-11-10T01:42:24+00:00",
+      "identity_zh": "帕德玛·伊斯比斯特船长: 无畏探索者",
+      "format": "standard",
+      "format_confident": false,
+      "faction_name": "Shaper",
+      "faction_color": "#22a05a",
+      "n_cards": 49,
+      "agenda_points": 0,
+      "influence": 108,
+      "influence_limit": 15,
+      "min_deck_size": 45,
+      "score": 8,
+      "groups": [
+        {
+          "type": "event",
+          "label_zh": "事件",
+          "label_en": "Event",
+          "items": [
+            {
+              "code": "33002",
+              "title": "Chastushka",
+              "title_zh": "恰斯图什卡",
+              "pack": "ms",
+              "cost": 3,
+              "faction": "anarch",
+              "faction_cost": 4,
+              "qty": 2,
+              "inf": 4
+            },
+            {
+              "code": "30020",
+              "title": "Creative Commission",
+              "title_zh": "创作委托",
+              "pack": "sg",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 2
+            },
+            {
+              "code": "33066",
+              "title": "Finality",
+              "title_zh": "终局",
+              "pack": "ph",
+              "cost": 2,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 2,
+              "inf": 3
+            },
+            {
+              "code": "33067",
+              "title": "Katorga Breakout",
+              "title_zh": "卡托加脱逃",
+              "pack": "ph",
+              "cost": 2,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 2,
+              "inf": 3
+            },
+            {
+              "code": "33068",
+              "title": "Raindrops Cut Stone",
+              "title_zh": "滴水穿石",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 3,
+              "inf": 3
+            },
+            {
+              "code": "33003",
+              "title": "Running Hot",
+              "title_zh": "过热运行",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 2,
+              "inf": 3
+            },
+            {
+              "code": "33004",
+              "title": "Steelskin Scarring",
+              "title_zh": "钢肤疤痕",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 3,
+              "inf": 2
+            },
+            {
+              "code": "34001",
+              "title": "Strike Fund",
+              "title_zh": "罢工基金",
+              "pack": "tai",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 1,
+              "qty": 3,
+              "inf": 1
+            },
+            {
+              "code": "30030",
+              "title": "Sure Gamble",
+              "title_zh": "胜券在握",
+              "pack": "sg",
+              "cost": 5,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "30002",
+              "title": "Wildcat Strike",
+              "title_zh": "野猫罢工",
+              "pack": "sg",
+              "cost": 2,
+              "faction": "anarch",
+              "faction_cost": 1,
+              "qty": 1,
+              "inf": 1
+            }
+          ],
+          "count": 23
+        },
+        {
+          "type": "hardware",
+          "label_zh": "硬件",
+          "label_en": "Hardware",
+          "items": [
+            {
+              "code": "33005",
+              "title": "Ghosttongue",
+              "title_zh": "幽灵之舌",
+              "pack": "ms",
+              "cost": 2,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 3,
+              "inf": 3
+            },
+            {
+              "code": "33006",
+              "title": "Marrow",
+              "title_zh": "骨髓",
+              "pack": "ms",
+              "cost": 2,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 3,
+              "inf": 2
+            },
+            {
+              "code": "33069",
+              "title": "Time Bomb",
+              "title_zh": "定时炸弹",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 2,
+              "inf": 3
+            }
+          ],
+          "count": 8
+        },
+        {
+          "type": "program",
+          "label_zh": "程序",
+          "label_en": "Program",
+          "items": [
+            {
+              "code": "33070",
+              "title": "Abaasy",
+              "title_zh": "阿巴契",
+              "pack": "ph",
+              "cost": 2,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 1,
+              "inf": 2
+            },
+            {
+              "code": "33007",
+              "title": "Begemot",
+              "title_zh": "别格莫特",
+              "pack": "ms",
+              "cost": 5,
+              "faction": "anarch",
+              "faction_cost": 4,
+              "qty": 2,
+              "inf": 4
+            },
+            {
+              "code": "30004",
+              "title": "Botulus",
+              "title_zh": "肉毒杆菌",
+              "pack": "sg",
+              "cost": 2,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 3,
+              "inf": 3
+            },
+            {
+              "code": "30007",
+              "title": "Fermenter",
+              "title_zh": "发酵罐",
+              "pack": "sg",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 3,
+              "inf": 2
+            },
+            {
+              "code": "33018",
+              "title": "Revolver",
+              "title_zh": "左轮手枪",
+              "pack": "ms",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 1,
+              "inf": 3
+            },
+            {
+              "code": "35009",
+              "title": "Rising Tide",
+              "title_zh": "暗潮汹涌",
+              "pack": "elev",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 1,
+              "inf": 2
+            }
+          ],
+          "count": 11
+        },
+        {
+          "type": "resource",
+          "label_zh": "资源",
+          "label_en": "Resource",
+          "items": [
+            {
+              "code": "35010",
+              "title": "Cacophony",
+              "title_zh": "喧嚣",
+              "pack": "elev",
+              "cost": 3,
+              "faction": "anarch",
+              "faction_cost": 4,
+              "qty": 3,
+              "inf": 4
+            },
+            {
+              "code": "33028",
+              "title": "Daeg, First Net-Cat",
+              "title_zh": "网域猫首领戴格",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "33092",
+              "title": "Dr. Nuka Vrolyck",
+              "title_zh": "努卡·弗罗丽克博士",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 3
+            }
+          ],
+          "count": 7
+        }
+      ],
+      "api_votes": 2,
+      "api_favorites": 0,
+      "api_comments": 2
+    },
+    {
+      "uuid": "091bfd11-fc4d-4a6e-8d49-54535ad19fa3",
+      "url": "https://netrunnerdb.com/en/decklist/091bfd11-fc4d-4a6e-8d49-54535ad19fa3/anarch-padma-1-2-5th-hack-o-lantern-vii-",
+      "title": "Anarch Padma (1-2, 5th @ Hack O' Lantern VII)",
+      "identity_title": "Captain Padma Isbister: Intrepid Explorer",
+      "identity_code": "33021",
+      "author": "oliviac",
+      "author_url": "https://netrunnerdb.com/en/profile/42360/oliviac",
+      "reputation": "4",
+      "votes": 2,
+      "favorites": 0,
+      "comments": 1,
+      "faction": "shaper",
+      "side": "runner",
+      "event": "",
+      "rotation": "Seventh Rotation",
+      "date": "2026-11-09T17:40:17+00:00",
+      "identity_zh": "帕德玛·伊斯比斯特船长: 无畏探索者",
+      "format": "standard",
+      "format_confident": false,
+      "faction_name": "Shaper",
+      "faction_color": "#22a05a",
+      "n_cards": 49,
+      "agenda_points": 0,
+      "influence": 88,
+      "influence_limit": 15,
+      "min_deck_size": 45,
+      "score": 7,
+      "groups": [
+        {
+          "type": "event",
+          "label_zh": "事件",
+          "label_en": "Event",
+          "items": [
+            {
+              "code": "33002",
+              "title": "Chastushka",
+              "title_zh": "恰斯图什卡",
+              "pack": "ms",
+              "cost": 3,
+              "faction": "anarch",
+              "faction_cost": 4,
+              "qty": 3,
+              "inf": 4
+            },
+            {
+              "code": "33013",
+              "title": "Pinhole Threading",
+              "title_zh": "穿针引线",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 1,
+              "qty": 1,
+              "inf": 1
+            },
+            {
+              "code": "33068",
+              "title": "Raindrops Cut Stone",
+              "title_zh": "滴水穿石",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 3,
+              "inf": 3
+            },
+            {
+              "code": "33004",
+              "title": "Steelskin Scarring",
+              "title_zh": "钢肤疤痕",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 2,
+              "inf": 2
+            },
+            {
+              "code": "34001",
+              "title": "Strike Fund",
+              "title_zh": "罢工基金",
+              "pack": "tai",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 1,
+              "qty": 2,
+              "inf": 1
+            },
+            {
+              "code": "30030",
+              "title": "Sure Gamble",
+              "title_zh": "胜券在握",
+              "pack": "sg",
+              "cost": 5,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            }
+          ],
+          "count": 14
+        },
+        {
+          "type": "hardware",
+          "label_zh": "硬件",
+          "label_en": "Hardware",
+          "items": [
+            {
+              "code": "26069",
+              "title": "Gachapon",
+              "title_zh": "扭蛋机",
+              "pack": "ur",
+              "cost": 0,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 2,
+              "inf": 2
+            },
+            {
+              "code": "26070",
+              "title": "Keiko",
+              "title_zh": "惠子",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 2,
+              "inf": 3
+            },
+            {
+              "code": "33069",
+              "title": "Time Bomb",
+              "title_zh": "定时炸弹",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 3,
+              "inf": 3
+            }
+          ],
+          "count": 7
+        },
+        {
+          "type": "program",
+          "label_zh": "程序",
+          "label_en": "Program",
+          "items": [
+            {
+              "code": "30025",
+              "title": "Echelon",
+              "title_zh": "梯队",
+              "pack": "sg",
+              "cost": 3,
+              "faction": "shaper",
+              "faction_cost": 1,
+              "qty": 2
+            },
+            {
+              "code": "30007",
+              "title": "Fermenter",
+              "title_zh": "发酵罐",
+              "pack": "sg",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 3,
+              "inf": 2
+            },
+            {
+              "code": "35007",
+              "title": "Gourmand",
+              "title_zh": "贪食者",
+              "pack": "elev",
+              "cost": 0,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 3,
+              "inf": 2
+            },
+            {
+              "code": "35009",
+              "title": "Rising Tide",
+              "title_zh": "暗潮汹涌",
+              "pack": "elev",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 3,
+              "inf": 2
+            },
+            {
+              "code": "30026",
+              "title": "Unity",
+              "title_zh": "团结",
+              "pack": "sg",
+              "cost": 3,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 2
+            }
+          ],
+          "count": 13
+        },
+        {
+          "type": "resource",
+          "label_zh": "资源",
+          "label_en": "Resource",
+          "items": [
+            {
+              "code": "35010",
+              "title": "Cacophony",
+              "title_zh": "喧嚣",
+              "pack": "elev",
+              "cost": 3,
+              "faction": "anarch",
+              "faction_cost": 4,
+              "qty": 3,
+              "inf": 4
+            },
+            {
+              "code": "33028",
+              "title": "Daeg, First Net-Cat",
+              "title_zh": "网域猫首领戴格",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 2
+            },
+            {
+              "code": "26094",
+              "title": "Daily Casts",
+              "title_zh": "每日播报",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "33092",
+              "title": "Dr. Nuka Vrolyck",
+              "title_zh": "努卡·弗罗丽克博士",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 2
+            },
+            {
+              "code": "26007",
+              "title": "Fencer Fueno",
+              "title_zh": "剑术师弗恩诺",
+              "pack": "df",
+              "cost": 0,
+              "faction": "anarch",
+              "faction_cost": 1,
+              "qty": 1,
+              "inf": 1
+            },
+            {
+              "code": "36007",
+              "title": "Nurse Hạnh",
+              "title_zh": "幸护士",
+              "pack": "vp",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 1,
+              "qty": 1,
+              "inf": 1
+            },
+            {
+              "code": "26073",
+              "title": "Paladin Poemu",
+              "title_zh": "圣骑士诗梦",
+              "pack": "ur",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 1,
+              "inf": 3
+            },
+            {
+              "code": "33010",
+              "title": "The Twinning",
+              "title_zh": "孪晶",
+              "pack": "ms",
+              "cost": 3,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 2,
+              "inf": 3
+            }
+          ],
+          "count": 15
+        }
+      ],
+      "api_votes": 2,
+      "api_favorites": 0,
+      "api_comments": 1
+    },
+    {
+      "uuid": "db7549fa-d033-4a0d-9c6c-2544fc81d311",
+      "url": "https://netrunnerdb.com/en/decklist/db7549fa-d033-4a0d-9c6c-2544fc81d311/drip-drop-tick-tock-worlds-showdown",
+      "title": "Drip Drop Tick Tock - Worlds Showdown",
+      "identity_title": "LEO Construction: Labor Solutions",
+      "identity_code": "35035",
+      "author": "ZomZraft",
+      "author_url": "https://netrunnerdb.com/en/profile/40402/ZomZraft",
+      "reputation": "991",
+      "votes": 2,
+      "favorites": 0,
+      "comments": 0,
+      "faction": "haas-bioroid",
+      "side": "corp",
+      "event": "",
+      "rotation": "Seventh Rotation",
+      "date": "2026-11-14T14:43:57+00:00",
+      "identity_zh": "利奥建工: 劳工解决方案",
+      "format": "standard",
+      "format_confident": false,
+      "faction_name": "Haas-Bioroid",
+      "faction_color": "#8b5cf6",
+      "n_cards": 49,
+      "agenda_points": 20,
+      "influence": 15,
+      "influence_limit": 15,
+      "min_deck_size": 45,
+      "score": 6,
+      "groups": [
+        {
+          "type": "agenda",
+          "label_zh": "议案",
+          "label_en": "Agenda",
+          "items": [
+            {
+              "code": "36026",
+              "title": "Méliès City Luxury Line",
+              "title_zh": "梅里爱城奢华线",
+              "pack": "vp",
+              "cost": null,
+              "faction": "haas-bioroid",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "35038",
+              "title": "Project Ingatan",
+              "title_zh": "忆存计划",
+              "pack": "elev",
+              "cost": null,
+              "faction": "haas-bioroid",
+              "faction_cost": 0,
+              "qty": 1
+            },
+            {
+              "code": "30069",
+              "title": "Send a Message",
+              "title_zh": "以儆效尤",
+              "pack": "sg",
+              "cost": null,
+              "faction": "neutral-corp",
+              "faction_cost": 0,
+              "qty": 3
+            }
+          ],
+          "count": 7
+        },
+        {
+          "type": "asset",
+          "label_zh": "资产",
+          "label_en": "Asset",
+          "items": [
+            {
+              "code": "30071",
+              "title": "Regolith Mining License",
+              "title_zh": "表岩屑开采许可",
+              "pack": "sg",
+              "cost": 2,
+              "faction": "neutral-corp",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "30053",
+              "title": "Spin Doctor",
+              "title_zh": "舆论操盘手",
+              "pack": "sg",
+              "cost": 0,
+              "faction": "nbn",
+              "faction_cost": 1,
+              "qty": 3,
+              "inf": 1
+            },
+            {
+              "code": "26122",
+              "title": "Wall to Wall",
+              "title_zh": "地毯式投放",
+              "pack": "ur",
+              "cost": 1,
+              "faction": "weyland-consortium",
+              "faction_cost": 3,
+              "qty": 2,
+              "inf": 3
+            }
+          ],
+          "count": 8
+        },
+        {
+          "type": "upgrade",
+          "label_zh": "升级",
+          "label_en": "Upgrade",
+          "items": [
+            {
+              "code": "34129",
+              "title": "Isaac Liberdade",
+              "title_zh": "伊萨克·利贝尔达德",
+              "pack": "rwr",
+              "cost": 3,
+              "faction": "weyland-consortium",
+              "faction_cost": 2,
+              "qty": 2,
+              "inf": 2
+            },
+            {
+              "code": "35045",
+              "title": "Mercia B4LL4RD",
+              "title_zh": "梅西娅 B4LL4RD",
+              "pack": "elev",
+              "cost": 2,
+              "faction": "haas-bioroid",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "26105",
+              "title": "Tranquility Home Grid",
+              "title_zh": "宁静家园网阵",
+              "pack": "ur",
+              "cost": 1,
+              "faction": "haas-bioroid",
+              "faction_cost": 2,
+              "qty": 3
+            }
+          ],
+          "count": 8
+        },
+        {
+          "type": "operation",
+          "label_zh": "事务",
+          "label_en": "Operation",
+          "items": [
+            {
+              "code": "36032",
+              "title": "Caveat Emptor",
+              "title_zh": "买者自慎",
+              "pack": "vp",
+              "cost": 5,
+              "faction": "haas-bioroid",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "30075",
+              "title": "Hedge Fund",
+              "title_zh": "对冲基金",
+              "pack": "sg",
+              "cost": 5,
+              "faction": "neutral-corp",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "36034",
+              "title": "Retirement Plan",
+              "title_zh": "退休方案",
+              "pack": "vp",
+              "cost": 1,
+              "faction": "haas-bioroid",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "26104",
+              "title": "Scapenet",
+              "title_zh": "盛景网络",
+              "pack": "ur",
+              "cost": 1,
+              "faction": "haas-bioroid",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "30041",
+              "title": "Sprint",
+              "title_zh": "疾跑",
+              "pack": "sg",
+              "cost": 0,
+              "faction": "haas-bioroid",
+              "faction_cost": 1,
+              "qty": 1
+            }
+          ],
+          "count": 9
+        },
+        {
+          "type": "ice",
+          "label_zh": "防火墙",
+          "label_en": "ICE",
+          "items": [
+            {
+              "code": "30039",
+              "title": "Brân 1.0",
+              "title_zh": "布兰1.0",
+              "pack": "sg",
+              "cost": 6,
+              "faction": "haas-bioroid",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "35041",
+              "title": "Bumi 1.0",
+              "title_zh": "布米1.0",
+              "pack": "elev",
+              "cost": 3,
+              "faction": "haas-bioroid",
+              "faction_cost": 1,
+              "qty": 3
+            },
+            {
+              "code": "26101",
+              "title": "Drafter",
+              "title_zh": "制图师",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "haas-bioroid",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "34036",
+              "title": "M.I.C.",
+              "title_zh": "军工复合体",
+              "pack": "tai",
+              "cost": 6,
+              "faction": "haas-bioroid",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "26065",
+              "title": "Rime",
+              "title_zh": "白霜",
+              "pack": "df",
+              "cost": 0,
+              "faction": "neutral-corp",
+              "faction_cost": 0,
+              "qty": 2
+            },
+            {
+              "code": "36030",
+              "title": "Sleipnir",
+              "title_zh": "斯莱泼尼尔",
+              "pack": "vp",
+              "cost": 4,
+              "faction": "haas-bioroid",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "34059",
+              "title": "Tree Line",
+              "title_zh": "林木线",
+              "pack": "tai",
+              "cost": 4,
+              "faction": "weyland-consortium",
+              "faction_cost": 1,
+              "qty": 2,
+              "inf": 1
+            }
+          ],
+          "count": 17
+        }
+      ],
+      "api_votes": 2,
+      "api_favorites": 0,
+      "api_comments": 0
+    },
+    {
+      "uuid": "15ff6a4e-8bb9-4536-8442-abd51998f34a",
+      "url": "https://netrunnerdb.com/en/decklist/15ff6a4e-8bb9-4536-8442-abd51998f34a/cyberpsychosis",
+      "title": "CyberPsychosis",
+      "identity_title": "Esâ Afontov: Eco-Insurrectionist",
+      "identity_code": "33001",
+      "author": "Sire_N1chaulas",
+      "author_url": "https://netrunnerdb.com/en/profile/58370/Sire_N1chaulas",
+      "reputation": "14",
+      "votes": 2,
+      "favorites": 0,
+      "comments": 0,
+      "faction": "anarch",
+      "side": "runner",
+      "event": "",
+      "rotation": "",
+      "date": "2026-11-13T21:28:26+00:00",
+      "identity_zh": "艾萨·阿方托夫: 生态起义者",
+      "format": "standard",
+      "format_confident": false,
+      "faction_name": "Anarch",
+      "faction_color": "#e08b0c",
+      "n_cards": 45,
+      "agenda_points": 0,
+      "influence": 15,
+      "influence_limit": 15,
+      "min_deck_size": 45,
+      "score": 6,
+      "groups": [
+        {
+          "type": "event",
+          "label_zh": "事件",
+          "label_en": "Event",
+          "items": [
+            {
+              "code": "33066",
+              "title": "Finality",
+              "title_zh": "终局",
+              "pack": "ph",
+              "cost": 2,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "33068",
+              "title": "Raindrops Cut Stone",
+              "title_zh": "滴水穿石",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "33004",
+              "title": "Steelskin Scarring",
+              "title_zh": "钢肤疤痕",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "34001",
+              "title": "Strike Fund",
+              "title_zh": "罢工基金",
+              "pack": "tai",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 1,
+              "qty": 3
+            },
+            {
+              "code": "01050",
+              "title": "Sure Gamble",
+              "title_zh": "胜券在握",
+              "pack": "core",
+              "cost": 5,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "34002",
+              "title": "The Price",
+              "title_zh": "代价",
+              "pack": "tai",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 3
+            }
+          ],
+          "count": 17
+        },
+        {
+          "type": "hardware",
+          "label_zh": "硬件",
+          "label_en": "Hardware",
+          "items": [
+            {
+              "code": "33086",
+              "title": "Basilar Synthgland 2KVJ",
+              "title_zh": "基底动脉合成腺体2KVJ",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 3,
+              "qty": 1,
+              "inf": 3
+            },
+            {
+              "code": "33005",
+              "title": "Ghosttongue",
+              "title_zh": "幽灵之舌",
+              "pack": "ms",
+              "cost": 2,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "33085",
+              "title": "Hippocampic Mechanocytes",
+              "title_zh": "海马体机械细胞",
+              "pack": "ph",
+              "cost": 0,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 2,
+              "inf": 2
+            },
+            {
+              "code": "33006",
+              "title": "Marrow",
+              "title_zh": "骨髓",
+              "pack": "ms",
+              "cost": 2,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "36003",
+              "title": "The Tungsten Tailor",
+              "title_zh": "点冰点降",
+              "pack": "vp",
+              "cost": 3,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "33079",
+              "title": "Zenit Chip JZ-2MJ",
+              "title_zh": "天顶芯片JZ-2MJ",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 2,
+              "inf": 2
+            }
+          ],
+          "count": 12
+        },
+        {
+          "type": "program",
+          "label_zh": "程序",
+          "label_en": "Program",
+          "items": [
+            {
+              "code": "33070",
+              "title": "Abaasy",
+              "title_zh": "阿巴契",
+              "pack": "ph",
+              "cost": 2,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "33007",
+              "title": "Begemot",
+              "title_zh": "别格莫特",
+              "pack": "ms",
+              "cost": 5,
+              "faction": "anarch",
+              "faction_cost": 4,
+              "qty": 2
+            },
+            {
+              "code": "30005",
+              "title": "Buzzsaw",
+              "title_zh": "电锯",
+              "pack": "sg",
+              "cost": 4,
+              "faction": "anarch",
+              "faction_cost": 1,
+              "qty": 1
+            },
+            {
+              "code": "30025",
+              "title": "Echelon",
+              "title_zh": "梯队",
+              "pack": "sg",
+              "cost": 3,
+              "faction": "shaper",
+              "faction_cost": 1,
+              "qty": 1,
+              "inf": 1
+            },
+            {
+              "code": "30007",
+              "title": "Fermenter",
+              "title_zh": "发酵罐",
+              "pack": "sg",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 2
+            },
+            {
+              "code": "34006",
+              "title": "Monkeywrench",
+              "title_zh": "活动扳手",
+              "pack": "tai",
+              "cost": 2,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 2
+            },
+            {
+              "code": "32002",
+              "title": "Revolver",
+              "title_zh": "左轮手枪",
+              "pack": "msbp",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 1,
+              "inf": 3
+            }
+          ],
+          "count": 10
+        },
+        {
+          "type": "resource",
+          "label_zh": "资源",
+          "label_en": "Resource",
+          "items": [
+            {
+              "code": "26094",
+              "title": "Daily Casts",
+              "title_zh": "每日播报",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "36007",
+              "title": "Nurse Hạnh",
+              "title_zh": "幸护士",
+              "pack": "vp",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 1,
+              "qty": 2
+            },
+            {
+              "code": "30034",
+              "title": "Verbal Plasticity",
+              "title_zh": "口才再塑",
+              "pack": "sg",
+              "cost": 3,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 1
+            }
+          ],
+          "count": 6
+        }
+      ],
+      "api_votes": 2,
+      "api_favorites": 0,
+      "api_comments": 0
+    },
+    {
+      "uuid": "484f3931-f79c-4386-85e5-14035239eadd",
+      "url": "https://netrunnerdb.com/en/decklist/484f3931-f79c-4386-85e5-14035239eadd/hold-my-beer-i-mean-beard-i-mean-bear",
+      "title": "Hold my beer, I mean beard, I mean bear",
+      "identity_title": "Tāo Salonga: Telepresence Magician",
+      "identity_code": "30019",
+      "author": "Diogene",
+      "author_url": "https://netrunnerdb.com/en/profile/30772/Diogene",
+      "reputation": "5572",
+      "votes": 2,
+      "favorites": 0,
+      "comments": 0,
+      "faction": "shaper",
+      "side": "runner",
+      "event": "",
+      "rotation": "Seventh Rotation",
+      "date": "2026-11-13T18:45:51+00:00",
+      "identity_zh": "涛·萨隆加: 网真魔术师",
+      "format": "standard",
+      "format_confident": false,
+      "faction_name": "Shaper",
+      "faction_color": "#22a05a",
+      "n_cards": 40,
+      "agenda_points": 0,
+      "influence": 15,
+      "influence_limit": 15,
+      "min_deck_size": 40,
+      "score": 6,
+      "groups": [
+        {
+          "type": "event",
+          "label_zh": "事件",
+          "label_en": "Event",
+          "items": [
+            {
+              "code": "30020",
+              "title": "Creative Commission",
+              "title_zh": "创作委托",
+              "pack": "sg",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "35025",
+              "title": "Illumination",
+              "title_zh": "映照",
+              "pack": "elev",
+              "cost": 0,
+              "faction": "shaper",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "35026",
+              "title": "Ritual",
+              "title_zh": "仪式",
+              "pack": "elev",
+              "cost": 0,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "30030",
+              "title": "Sure Gamble",
+              "title_zh": "胜券在握",
+              "pack": "sg",
+              "cost": 5,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            }
+          ],
+          "count": 11
+        },
+        {
+          "type": "hardware",
+          "label_zh": "硬件",
+          "label_en": "Hardware",
+          "items": [
+            {
+              "code": "34022",
+              "title": "AirbladeX (JSRF Ed.)",
+              "title_zh": "天空之刃X（街头涂鸦未来版）",
+              "pack": "tai",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 1,
+              "qty": 1
+            },
+            {
+              "code": "34088",
+              "title": "Cataloguer",
+              "title_zh": "编目器",
+              "pack": "rwr",
+              "cost": 2,
+              "faction": "shaper",
+              "faction_cost": 4,
+              "qty": 1
+            },
+            {
+              "code": "30022",
+              "title": "DZMZ Optimizer",
+              "title_zh": "DZMZ优化器",
+              "pack": "sg",
+              "cost": 2,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "30023",
+              "title": "Pantograph",
+              "title_zh": "缩放仪",
+              "pack": "sg",
+              "cost": 2,
+              "faction": "shaper",
+              "faction_cost": 3,
+              "qty": 1
+            }
+          ],
+          "count": 4
+        },
+        {
+          "type": "program",
+          "label_zh": "程序",
+          "label_en": "Program",
+          "items": [
+            {
+              "code": "34080",
+              "title": "Cupellation",
+              "title_zh": "灰吹精炼",
+              "pack": "rwr",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 3,
+              "inf": 2
+            },
+            {
+              "code": "35031",
+              "title": "Devadatta Drone",
+              "title_zh": "提婆达多雄蜂",
+              "pack": "elev",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 1,
+              "qty": 2
+            },
+            {
+              "code": "30007",
+              "title": "Fermenter",
+              "title_zh": "发酵罐",
+              "pack": "sg",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 3,
+              "inf": 2
+            },
+            {
+              "code": "33088",
+              "title": "Nanuq",
+              "title_zh": "北极熊",
+              "pack": "ph",
+              "cost": 4,
+              "faction": "shaper",
+              "faction_cost": 5,
+              "qty": 3
+            },
+            {
+              "code": "34026",
+              "title": "Slap Vandal",
+              "title_zh": "贴纸拍击者",
+              "pack": "tai",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 2
+            }
+          ],
+          "count": 13
+        },
+        {
+          "type": "resource",
+          "label_zh": "资源",
+          "label_en": "Resource",
+          "items": [
+            {
+              "code": "34028",
+              "title": "Beatriz Friere Gonzalez",
+              "title_zh": "碧翠丝·弗里尔·冈萨雷斯",
+              "pack": "tai",
+              "cost": 2,
+              "faction": "shaper",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "26094",
+              "title": "Daily Casts",
+              "title_zh": "每日播报",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "33092",
+              "title": "Dr. Nuka Vrolyck",
+              "title_zh": "努卡·弗罗丽克博士",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "34007",
+              "title": "Eru Ayase-Pessoa",
+              "title_zh": "爱瑠·绫濑·佩索阿",
+              "pack": "tai",
+              "cost": 2,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 1,
+              "inf": 3
+            },
+            {
+              "code": "33030",
+              "title": "Stoneship Chart Room",
+              "title_zh": "石船海图室",
+              "pack": "ms",
+              "cost": 0,
+              "faction": "shaper",
+              "faction_cost": 1,
+              "qty": 3
+            },
+            {
+              "code": "34093",
+              "title": "“Pretty” Mary da Silva",
+              "title_zh": "“小美”·玛丽·达席尔瓦",
+              "pack": "rwr",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 1,
+              "qty": 1
+            }
+          ],
+          "count": 12
+        }
+      ],
+      "api_votes": 2,
+      "api_favorites": 0,
+      "api_comments": 0
+    },
+    {
+      "uuid": "32d600be-4e93-4af8-ac82-bc9d91530f76",
+      "url": "https://netrunnerdb.com/en/decklist/32d600be-4e93-4af8-ac82-bc9d91530f76/bad-pub-s-a-big-deal",
+      "title": "Bad pub's a big deal",
+      "identity_title": "Nuvem SA: Law of the Land",
+      "identity_code": "34121",
+      "author": "steveYeah",
+      "author_url": "https://netrunnerdb.com/en/profile/39178/steveYeah",
+      "reputation": "21",
+      "votes": 1,
+      "favorites": 0,
+      "comments": 1,
+      "faction": "weyland-consortium",
+      "side": "corp",
+      "event": "",
+      "rotation": "Seventh Rotation",
+      "date": "2026-11-15T10:45:42+00:00",
+      "identity_zh": "纽文股份有限公司: 土地之法",
+      "format": "standard",
+      "format_confident": false,
+      "faction_name": "Weyland",
+      "faction_color": "#0e9f8a",
+      "n_cards": 54,
+      "agenda_points": 22,
+      "influence": 15,
+      "influence_limit": 15,
+      "min_deck_size": 50,
+      "score": 4,
+      "groups": [
+        {
+          "type": "agenda",
+          "label_zh": "议案",
+          "label_en": "Agenda",
+          "items": [
+            {
+              "code": "35070",
+              "title": "Greenmail",
+              "title_zh": "绿票讹诈",
+              "pack": "elev",
+              "cost": null,
+              "faction": "weyland-consortium",
+              "faction_cost": 0,
+              "qty": 1
+            },
+            {
+              "code": "33120",
+              "title": "Regulatory Capture",
+              "title_zh": "监管俘获",
+              "pack": "ph",
+              "cost": null,
+              "faction": "weyland-consortium",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "26056",
+              "title": "SDS Drone Deployment",
+              "title_zh": "自卫无人机部署",
+              "pack": "df",
+              "cost": null,
+              "faction": "weyland-consortium",
+              "faction_cost": 0,
+              "qty": 2
+            },
+            {
+              "code": "34123",
+              "title": "The Basalt Spire",
+              "title_zh": "玄武岩尖塔",
+              "pack": "rwr",
+              "cost": null,
+              "faction": "weyland-consortium",
+              "faction_cost": 0,
+              "qty": 3
+            }
+          ],
+          "count": 9
+        },
+        {
+          "type": "upgrade",
+          "label_zh": "升级",
+          "label_en": "Upgrade",
+          "items": [
+            {
+              "code": "36064",
+              "title": "Flagship",
+              "title_zh": "旗舰大厦",
+              "pack": "vp",
+              "cost": 3,
+              "faction": "weyland-consortium",
+              "faction_cost": 2,
+              "qty": 2
+            }
+          ],
+          "count": 2
+        },
+        {
+          "type": "operation",
+          "label_zh": "事务",
+          "label_en": "Operation",
+          "items": [
+            {
+              "code": "33038",
+              "title": "Big Deal",
+              "title_zh": "大手笔",
+              "pack": "ms",
+              "cost": 17,
+              "faction": "haas-bioroid",
+              "faction_cost": 5,
+              "qty": 3,
+              "inf": 5
+            },
+            {
+              "code": "30064",
+              "title": "Government Subsidy",
+              "title_zh": "政府补贴",
+              "pack": "sg",
+              "cost": 10,
+              "faction": "weyland-consortium",
+              "faction_cost": 1,
+              "qty": 2
+            },
+            {
+              "code": "30075",
+              "title": "Hedge Fund",
+              "title_zh": "对冲基金",
+              "pack": "sg",
+              "cost": 5,
+              "faction": "neutral-corp",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "35077",
+              "title": "Key Performance Indicators",
+              "title_zh": "关键绩效指标",
+              "pack": "elev",
+              "cost": 1,
+              "faction": "weyland-consortium",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "35078",
+              "title": "Measured Response",
+              "title_zh": "精准响应",
+              "pack": "elev",
+              "cost": 5,
+              "faction": "weyland-consortium",
+              "faction_cost": 4,
+              "qty": 2
+            },
+            {
+              "code": "35081",
+              "title": "Petty Cash",
+              "title_zh": "零用现金",
+              "pack": "elev",
+              "cost": 3,
+              "faction": "neutral-corp",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "34062",
+              "title": "Pivot",
+              "title_zh": "转变策略",
+              "pack": "tai",
+              "cost": 1,
+              "faction": "weyland-consortium",
+              "faction_cost": 2,
+              "qty": 2
+            },
+            {
+              "code": "36062",
+              "title": "Reanimation Protocol",
+              "title_zh": "复生协议",
+              "pack": "vp",
+              "cost": 2,
+              "faction": "weyland-consortium",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "36063",
+              "title": "Vulture Fund",
+              "title_zh": "秃鹫基金",
+              "pack": "vp",
+              "cost": 7,
+              "faction": "weyland-consortium",
+              "faction_cost": 2,
+              "qty": 3
+            }
+          ],
+          "count": 24
+        },
+        {
+          "type": "ice",
+          "label_zh": "防火墙",
+          "label_en": "ICE",
+          "items": [
+            {
+              "code": "34125",
+              "title": "Descent",
+              "title_zh": "下降",
+              "pack": "rwr",
+              "cost": 2,
+              "faction": "weyland-consortium",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "36058",
+              "title": "Event Horizon",
+              "title_zh": "事件视界",
+              "pack": "vp",
+              "cost": 4,
+              "faction": "weyland-consortium",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "34127",
+              "title": "Logjam",
+              "title_zh": "阻塞",
+              "pack": "rwr",
+              "cost": 6,
+              "faction": "weyland-consortium",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "30063",
+              "title": "Pharos",
+              "title_zh": "大灯塔",
+              "pack": "sg",
+              "cost": 7,
+              "faction": "weyland-consortium",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "36060",
+              "title": "Tocsin",
+              "title_zh": "警钟",
+              "pack": "vp",
+              "cost": 8,
+              "faction": "weyland-consortium",
+              "faction_cost": 2,
+              "qty": 2
+            },
+            {
+              "code": "26060",
+              "title": "Trebuchet",
+              "title_zh": "投石车",
+              "pack": "df",
+              "cost": 7,
+              "faction": "weyland-consortium",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "34059",
+              "title": "Tree Line",
+              "title_zh": "林木线",
+              "pack": "tai",
+              "cost": 4,
+              "faction": "weyland-consortium",
+              "faction_cost": 1,
+              "qty": 1
+            },
+            {
+              "code": "34060",
+              "title": "Valentão",
+              "title_zh": "霸凌者",
+              "pack": "tai",
+              "cost": 5,
+              "faction": "weyland-consortium",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "26125",
+              "title": "Winchester",
+              "title_zh": "温彻斯特",
+              "pack": "ur",
+              "cost": 4,
+              "faction": "weyland-consortium",
+              "faction_cost": 4,
+              "qty": 2
+            }
+          ],
+          "count": 19
+        }
+      ],
+      "api_votes": 1,
+      "api_favorites": 0,
+      "api_comments": 1
+    },
+    {
+      "uuid": "baa02f6d-64e9-4615-8c44-c43532072a17",
+      "url": "https://netrunnerdb.com/en/decklist/baa02f6d-64e9-4615-8c44-c43532072a17/magdalene-with-lyrics-",
+      "title": "Magdalene (with lyrics)",
+      "identity_title": "Magdalene Keino-Chemutai: Cryptarchitect",
+      "identity_code": "35024",
+      "author": "DoubleK",
+      "author_url": "https://netrunnerdb.com/en/profile/21980/DoubleK",
+      "reputation": "906",
+      "votes": 1,
+      "favorites": 0,
+      "comments": 0,
+      "faction": "shaper",
+      "side": "runner",
+      "event": "",
+      "rotation": "Seventh Rotation",
+      "date": "2026-11-15T10:59:55+00:00",
+      "identity_zh": "玛格达琳·凯诺-切穆泰: 幕后建筑师",
+      "format": "standard",
+      "format_confident": false,
+      "faction_name": "Shaper",
+      "faction_color": "#22a05a",
+      "n_cards": 45,
+      "agenda_points": 0,
+      "influence": 15,
+      "influence_limit": 15,
+      "min_deck_size": 45,
+      "score": 3,
+      "groups": [
+        {
+          "type": "event",
+          "label_zh": "事件",
+          "label_en": "Event",
+          "items": [
+            {
+              "code": "36018",
+              "title": "Aircheck",
+              "title_zh": "无线通",
+              "pack": "vp",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 2
+            },
+            {
+              "code": "30020",
+              "title": "Creative Commission",
+              "title_zh": "创作委托",
+              "pack": "sg",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "26083",
+              "title": "Harmony AR Therapy",
+              "title_zh": "和谐医学院AR心理治疗",
+              "pack": "ur",
+              "cost": 2,
+              "faction": "shaper",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "33023",
+              "title": "Into the Depths",
+              "title_zh": "深海探险",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "30029",
+              "title": "Overclock",
+              "title_zh": "超频",
+              "pack": "sg",
+              "cost": 1,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "35026",
+              "title": "Ritual",
+              "title_zh": "仪式",
+              "pack": "elev",
+              "cost": 0,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "33004",
+              "title": "Steelskin Scarring",
+              "title_zh": "钢肤疤痕",
+              "pack": "ms",
+              "cost": 1,
+              "faction": "anarch",
+              "faction_cost": 2,
+              "qty": 3,
+              "inf": 2
+            },
+            {
+              "code": "30030",
+              "title": "Sure Gamble",
+              "title_zh": "胜券在握",
+              "pack": "sg",
+              "cost": 5,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            }
+          ],
+          "count": 20
+        },
+        {
+          "type": "hardware",
+          "label_zh": "硬件",
+          "label_en": "Hardware",
+          "items": [
+            {
+              "code": "26084",
+              "title": "Aniccam",
+              "title_zh": "诸行无常",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "shaper",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "30022",
+              "title": "DZMZ Optimizer",
+              "title_zh": "DZMZ优化器",
+              "pack": "sg",
+              "cost": 2,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "35027",
+              "title": "GAMEDRAGON™ Pro",
+              "title_zh": "游龙™ Pro",
+              "pack": "elev",
+              "cost": 2,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "26085",
+              "title": "Simulchip",
+              "title_zh": "模拟芯片",
+              "pack": "ur",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 2
+            },
+            {
+              "code": "36021",
+              "title": "Touchstone",
+              "title_zh": "试金石",
+              "pack": "vp",
+              "cost": 2,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 2
+            },
+            {
+              "code": "33078",
+              "title": "WAKE Implant v2A-JRJ",
+              "title_zh": "尾迹植入体v2A-JRJ",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 1,
+              "inf": 3
+            }
+          ],
+          "count": 9
+        },
+        {
+          "type": "program",
+          "label_zh": "程序",
+          "label_en": "Program",
+          "items": [
+            {
+              "code": "26079",
+              "title": "Afterimage",
+              "title_zh": "残影",
+              "pack": "ur",
+              "cost": 4,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 1,
+              "inf": 3
+            },
+            {
+              "code": "26088",
+              "title": "Mantle",
+              "title_zh": "披风",
+              "pack": "ur",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "26089",
+              "title": "Penrose",
+              "title_zh": "彭罗斯",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "34092",
+              "title": "Pressure Spike",
+              "title_zh": "压力峰值",
+              "pack": "rwr",
+              "cost": 4,
+              "faction": "shaper",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "26090",
+              "title": "Self-modifying Code",
+              "title_zh": "自修正代码",
+              "pack": "ur",
+              "cost": 0,
+              "faction": "shaper",
+              "faction_cost": 3,
+              "qty": 3
+            }
+          ],
+          "count": 9
+        },
+        {
+          "type": "resource",
+          "label_zh": "资源",
+          "label_en": "Resource",
+          "items": [
+            {
+              "code": "26094",
+              "title": "Daily Casts",
+              "title_zh": "每日播报",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "33092",
+              "title": "Dr. Nuka Vrolyck",
+              "title_zh": "努卡·弗罗丽克博士",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "33010",
+              "title": "The Twinning",
+              "title_zh": "孪晶",
+              "pack": "ms",
+              "cost": 3,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 1,
+              "inf": 3
+            }
+          ],
+          "count": 7
+        }
+      ],
+      "api_votes": 1,
+      "api_favorites": 0,
+      "api_comments": 0
+    },
+    {
+      "uuid": "8595679f-d563-4001-8e81-ec736ed7d287",
+      "url": "https://netrunnerdb.com/en/decklist/8595679f-d563-4001-8e81-ec736ed7d287/we-will-tag-you-with-lyrics-",
+      "title": "We Will Tag You (with lyrics)",
+      "identity_title": "NBN: Reality Plus",
+      "identity_code": "30051",
+      "author": "DoubleK",
+      "author_url": "https://netrunnerdb.com/en/profile/21980/DoubleK",
+      "reputation": "906",
+      "votes": 1,
+      "favorites": 0,
+      "comments": 0,
+      "faction": "nbn",
+      "side": "corp",
+      "event": "",
+      "rotation": "Seventh Rotation",
+      "date": "2026-11-15T11:00:12+00:00",
+      "identity_zh": "网际传媒: 身临其境",
+      "format": "standard",
+      "format_confident": false,
+      "faction_name": "NBN",
+      "faction_color": "#eab308",
+      "n_cards": 44,
+      "agenda_points": 18,
+      "influence": 15,
+      "influence_limit": 15,
+      "min_deck_size": 40,
+      "score": 3,
+      "groups": [
+        {
+          "type": "agenda",
+          "label_zh": "议案",
+          "label_en": "Agenda",
+          "items": [
+            {
+              "code": "33049",
+              "title": "Artificial Cryptocrash",
+              "title_zh": "币圈洗盘",
+              "pack": "ms",
+              "cost": null,
+              "faction": "nbn",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "34049",
+              "title": "Oracle Thinktank",
+              "title_zh": "神谕智库",
+              "pack": "tai",
+              "cost": null,
+              "faction": "nbn",
+              "faction_cost": 0,
+              "qty": 2
+            },
+            {
+              "code": "30068",
+              "title": "Orbital Superiority",
+              "title_zh": "轨道压制",
+              "pack": "sg",
+              "cost": null,
+              "faction": "neutral-corp",
+              "faction_cost": 0,
+              "qty": 1
+            },
+            {
+              "code": "30052",
+              "title": "Tomorrowʼs Headline",
+              "title_zh": "明日头条",
+              "pack": "sg",
+              "cost": null,
+              "faction": "nbn",
+              "faction_cost": 0,
+              "qty": 1
+            },
+            {
+              "code": "36047",
+              "title": "Witch Hunt",
+              "title_zh": "猎巫",
+              "pack": "vp",
+              "cost": null,
+              "faction": "nbn",
+              "faction_cost": 0,
+              "qty": 3
+            }
+          ],
+          "count": 10
+        },
+        {
+          "type": "asset",
+          "label_zh": "资产",
+          "label_en": "Asset",
+          "items": [
+            {
+              "code": "34051",
+              "title": "Behold!",
+              "title_zh": "看啊!",
+              "pack": "tai",
+              "cost": 0,
+              "faction": "nbn",
+              "faction_cost": 2,
+              "qty": 2
+            },
+            {
+              "code": "33050",
+              "title": "Chekist Scion",
+              "title_zh": "契卡子弟",
+              "pack": "ms",
+              "cost": 0,
+              "faction": "nbn",
+              "faction_cost": 2,
+              "qty": 2
+            },
+            {
+              "code": "30071",
+              "title": "Regolith Mining License",
+              "title_zh": "表岩屑开采许可",
+              "pack": "sg",
+              "cost": 2,
+              "faction": "neutral-corp",
+              "faction_cost": 0,
+              "qty": 1
+            }
+          ],
+          "count": 5
+        },
+        {
+          "type": "upgrade",
+          "label_zh": "升级",
+          "label_en": "Upgrade",
+          "items": [
+            {
+              "code": "30058",
+              "title": "AMAZE Amusements",
+              "title_zh": "惊奇迷乐园",
+              "pack": "sg",
+              "cost": 1,
+              "faction": "nbn",
+              "faction_cost": 3,
+              "qty": 3
+            }
+          ],
+          "count": 3
+        },
+        {
+          "type": "operation",
+          "label_zh": "事务",
+          "label_en": "Operation",
+          "items": [
+            {
+              "code": "33125",
+              "title": "End of the Line",
+              "title_zh": "穷途末路",
+              "pack": "ph",
+              "cost": 3,
+              "faction": "weyland-consortium",
+              "faction_cost": 4,
+              "qty": 3,
+              "inf": 4
+            },
+            {
+              "code": "30075",
+              "title": "Hedge Fund",
+              "title_zh": "对冲基金",
+              "pack": "sg",
+              "cost": 5,
+              "faction": "neutral-corp",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "34055",
+              "title": "Oppo Research",
+              "title_zh": "竞对调研",
+              "pack": "tai",
+              "cost": 2,
+              "faction": "nbn",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "35081",
+              "title": "Petty Cash",
+              "title_zh": "零用现金",
+              "pack": "elev",
+              "cost": 3,
+              "faction": "neutral-corp",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "30056",
+              "title": "Predictive Planogram",
+              "title_zh": "消费预测智慧商城",
+              "pack": "sg",
+              "cost": 0,
+              "faction": "nbn",
+              "faction_cost": 1,
+              "qty": 3
+            },
+            {
+              "code": "33119",
+              "title": "Shipment from Vladisibirsk",
+              "title_zh": "符拉迪西比尔斯克的货物",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "nbn",
+              "faction_cost": 3,
+              "qty": 1
+            }
+          ],
+          "count": 16
+        },
+        {
+          "type": "ice",
+          "label_zh": "防火墙",
+          "label_en": "ICE",
+          "items": [
+            {
+              "code": "30054",
+              "title": "Funhouse",
+              "title_zh": "欢乐屋",
+              "pack": "sg",
+              "cost": 5,
+              "faction": "nbn",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "30055",
+              "title": "Ping",
+              "title_zh": "PING",
+              "pack": "sg",
+              "cost": 2,
+              "faction": "nbn",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "34053",
+              "title": "Starlit Knight",
+              "title_zh": "星夜骑士",
+              "pack": "tai",
+              "cost": 5,
+              "faction": "nbn",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "36042",
+              "title": "Vicsek",
+              "title_zh": "维切克",
+              "pack": "vp",
+              "cost": 2,
+              "faction": "jinteki",
+              "faction_cost": 3,
+              "qty": 1,
+              "inf": 3
+            }
+          ],
+          "count": 10
+        }
+      ],
+      "api_votes": 1,
+      "api_favorites": 0,
+      "api_comments": 0
+    },
+    {
+      "uuid": "00ec725c-db15-401b-b0c4-305401e53a38",
+      "url": "https://netrunnerdb.com/en/decklist/00ec725c-db15-401b-b0c4-305401e53a38/vic-oh-without-you-with-lyrics-",
+      "title": "Vic Oh Without You (with lyrics)",
+      "identity_title": "Virtual Intelligence, P.I.: “You Can Call Me Vic”",
+      "identity_code": "36009",
+      "author": "DoubleK",
+      "author_url": "https://netrunnerdb.com/en/profile/21980/DoubleK",
+      "reputation": "906",
+      "votes": 1,
+      "favorites": 0,
+      "comments": 0,
+      "faction": "criminal",
+      "side": "runner",
+      "event": "",
+      "rotation": "Seventh Rotation",
+      "date": "2026-11-15T11:00:38+00:00",
+      "identity_zh": "虚拟智能私家侦探: “你可以叫我维克”",
+      "format": "standard",
+      "format_confident": false,
+      "faction_name": "Criminal",
+      "faction_color": "#3b82f6",
+      "n_cards": 45,
+      "agenda_points": 0,
+      "influence": 15,
+      "influence_limit": 15,
+      "min_deck_size": 45,
+      "score": 3,
+      "groups": [
+        {
+          "type": "event",
+          "label_zh": "事件",
+          "label_en": "Event",
+          "items": [
+            {
+              "code": "26074",
+              "title": "Bravado",
+              "title_zh": "虚张声势",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "33067",
+              "title": "Katorga Breakout",
+              "title_zh": "卡托加脱逃",
+              "pack": "ph",
+              "cost": 2,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 2,
+              "inf": 3
+            },
+            {
+              "code": "35016",
+              "title": "Maintenance Access",
+              "title_zh": "检修通道",
+              "pack": "elev",
+              "cost": 0,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "30011",
+              "title": "Mutual Favor",
+              "title_zh": "互惠互利",
+              "pack": "sg",
+              "cost": 0,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "30030",
+              "title": "Sure Gamble",
+              "title_zh": "胜券在握",
+              "pack": "sg",
+              "cost": 5,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "35017",
+              "title": "Transfer of Wealth",
+              "title_zh": "财富转移",
+              "pack": "elev",
+              "cost": 0,
+              "faction": "criminal",
+              "faction_cost": 4,
+              "qty": 3
+            }
+          ],
+          "count": 14
+        },
+        {
+          "type": "hardware",
+          "label_zh": "硬件",
+          "label_en": "Hardware",
+          "items": [
+            {
+              "code": "30013",
+              "title": "Docklands Pass",
+              "title_zh": "码头区通行证",
+              "pack": "sg",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "35019",
+              "title": "Maglectric Rapid (748 Mod)",
+              "title_zh": "磁电迅雷(748式改)",
+              "pack": "elev",
+              "cost": 1,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "33014",
+              "title": "PAN-Weave",
+              "title_zh": "个域网编织",
+              "pack": "ms",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 4,
+              "qty": 2
+            },
+            {
+              "code": "30014",
+              "title": "Pennyshaver",
+              "title_zh": "便士刮刀",
+              "pack": "sg",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "26085",
+              "title": "Simulchip",
+              "title_zh": "模拟芯片",
+              "pack": "ur",
+              "cost": 1,
+              "faction": "shaper",
+              "faction_cost": 2,
+              "qty": 3,
+              "inf": 2
+            }
+          ],
+          "count": 11
+        },
+        {
+          "type": "program",
+          "label_zh": "程序",
+          "label_en": "Program",
+          "items": [
+            {
+              "code": "33016",
+              "title": "Cat's Cradle",
+              "title_zh": "翻花绳",
+              "pack": "ms",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 2,
+              "qty": 2
+            },
+            {
+              "code": "34015",
+              "title": "Curupira",
+              "title_zh": "库鲁皮拉",
+              "pack": "tai",
+              "cost": 3,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "30016",
+              "title": "Marjanah",
+              "title_zh": "玛雅娜",
+              "pack": "sg",
+              "cost": 0,
+              "faction": "criminal",
+              "faction_cost": 1,
+              "qty": 1
+            },
+            {
+              "code": "33018",
+              "title": "Revolver",
+              "title_zh": "左轮手枪",
+              "pack": "ms",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "30017",
+              "title": "Tranquilizer",
+              "title_zh": "镇静剂",
+              "pack": "sg",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 3
+            }
+          ],
+          "count": 10
+        },
+        {
+          "type": "resource",
+          "label_zh": "资源",
+          "label_en": "Resource",
+          "items": [
+            {
+              "code": "26094",
+              "title": "Daily Casts",
+              "title_zh": "每日播报",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "26095",
+              "title": "DreamNet",
+              "title_zh": "梦网",
+              "pack": "ur",
+              "cost": 3,
+              "faction": "neutral-runner",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "34007",
+              "title": "Eru Ayase-Pessoa",
+              "title_zh": "爱瑠·绫濑·佩索阿",
+              "pack": "tai",
+              "cost": 2,
+              "faction": "anarch",
+              "faction_cost": 3,
+              "qty": 1,
+              "inf": 3
+            },
+            {
+              "code": "26017",
+              "title": "“Baklan” Bochkin",
+              "title_zh": "“鸬鹚”·博奇金",
+              "pack": "df",
+              "cost": 2,
+              "faction": "criminal",
+              "faction_cost": 3,
+              "qty": 3
+            }
+          ],
+          "count": 10
+        }
+      ],
+      "api_votes": 1,
+      "api_favorites": 0,
+      "api_comments": 0
+    },
+    {
+      "uuid": "02ac2622-036c-49d2-bc07-1ba34cc679a8",
+      "url": "https://netrunnerdb.com/en/decklist/02ac2622-036c-49d2-bc07-1ba34cc679a8/-",
+      "title": "-------------",
+      "identity_title": "Editorial Division: Ad Nihilum",
+      "identity_code": "36046",
+      "author": "debufed",
+      "author_url": "https://netrunnerdb.com/en/profile/59635/debufed",
+      "reputation": "2",
+      "votes": 1,
+      "favorites": 0,
+      "comments": 0,
+      "faction": "nbn",
+      "side": "corp",
+      "event": "",
+      "rotation": "Seventh Rotation",
+      "date": "2026-11-15T13:48:30+00:00",
+      "identity_zh": "编辑部: 归于虚无",
+      "format": "standard",
+      "format_confident": false,
+      "faction_name": "NBN",
+      "faction_color": "#eab308",
+      "n_cards": 49,
+      "agenda_points": 20,
+      "influence": 15,
+      "influence_limit": 15,
+      "min_deck_size": 45,
+      "score": 3,
+      "groups": [
+        {
+          "type": "agenda",
+          "label_zh": "议案",
+          "label_en": "Agenda",
+          "items": [
+            {
+              "code": "35059",
+              "title": "Embedded Reporting",
+              "title_zh": "卧底报道",
+              "pack": "elev",
+              "cost": null,
+              "faction": "nbn",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "35060",
+              "title": "Next Big Thing",
+              "title_zh": "下一波热潮",
+              "pack": "elev",
+              "cost": null,
+              "faction": "nbn",
+              "faction_cost": 0,
+              "qty": 2
+            },
+            {
+              "code": "30052",
+              "title": "Tomorrowʼs Headline",
+              "title_zh": "明日头条",
+              "pack": "sg",
+              "cost": null,
+              "faction": "nbn",
+              "faction_cost": 0,
+              "qty": 1
+            },
+            {
+              "code": "36047",
+              "title": "Witch Hunt",
+              "title_zh": "猎巫",
+              "pack": "vp",
+              "cost": null,
+              "faction": "nbn",
+              "faction_cost": 0,
+              "qty": 3
+            }
+          ],
+          "count": 9
+        },
+        {
+          "type": "asset",
+          "label_zh": "资产",
+          "label_en": "Asset",
+          "items": [
+            {
+              "code": "34065",
+              "title": "B-1001",
+              "title_zh": "B-1001",
+              "pack": "tai",
+              "cost": 1,
+              "faction": "neutral-corp",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "36057",
+              "title": "Luana Campos",
+              "title_zh": "卢安娜・坎波斯",
+              "pack": "vp",
+              "cost": 1,
+              "faction": "weyland-consortium",
+              "faction_cost": 2,
+              "qty": 3,
+              "inf": 2
+            },
+            {
+              "code": "36049",
+              "title": "Nihilo Agent",
+              "title_zh": "虚无特工",
+              "pack": "vp",
+              "cost": 1,
+              "faction": "nbn",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "30053",
+              "title": "Spin Doctor",
+              "title_zh": "舆论操盘手",
+              "pack": "sg",
+              "cost": 0,
+              "faction": "nbn",
+              "faction_cost": 1,
+              "qty": 3
+            }
+          ],
+          "count": 12
+        },
+        {
+          "type": "upgrade",
+          "label_zh": "升级",
+          "label_en": "Upgrade",
+          "items": [
+            {
+              "code": "34120",
+              "title": "The Holo Man",
+              "title_zh": "全息人",
+              "pack": "rwr",
+              "cost": 2,
+              "faction": "nbn",
+              "faction_cost": 3,
+              "qty": 3
+            }
+          ],
+          "count": 3
+        },
+        {
+          "type": "operation",
+          "label_zh": "事务",
+          "label_en": "Operation",
+          "items": [
+            {
+              "code": "35065",
+              "title": "Bigger Picture",
+              "title_zh": "广阔视野",
+              "pack": "elev",
+              "cost": 0,
+              "faction": "nbn",
+              "faction_cost": 2,
+              "qty": 1
+            },
+            {
+              "code": "26053",
+              "title": "Game Over",
+              "title_zh": "游戏结束",
+              "pack": "df",
+              "cost": 4,
+              "faction": "nbn",
+              "faction_cost": 3,
+              "qty": 2
+            },
+            {
+              "code": "30075",
+              "title": "Hedge Fund",
+              "title_zh": "对冲基金",
+              "pack": "sg",
+              "cost": 5,
+              "faction": "neutral-corp",
+              "faction_cost": 0,
+              "qty": 3
+            },
+            {
+              "code": "35066",
+              "title": "IP Enforcement",
+              "title_zh": "知识产权执法",
+              "pack": "elev",
+              "cost": null,
+              "faction": "nbn",
+              "faction_cost": 5,
+              "qty": 1
+            },
+            {
+              "code": "34055",
+              "title": "Oppo Research",
+              "title_zh": "竞对调研",
+              "pack": "tai",
+              "cost": 2,
+              "faction": "nbn",
+              "faction_cost": 2,
+              "qty": 3
+            },
+            {
+              "code": "33119",
+              "title": "Shipment from Vladisibirsk",
+              "title_zh": "符拉迪西比尔斯克的货物",
+              "pack": "ph",
+              "cost": 1,
+              "faction": "nbn",
+              "faction_cost": 3,
+              "qty": 1
+            },
+            {
+              "code": "36063",
+              "title": "Vulture Fund",
+              "title_zh": "秃鹫基金",
+              "pack": "vp",
+              "cost": 7,
+              "faction": "weyland-consortium",
+              "faction_cost": 2,
+              "qty": 3,
+              "inf": 2
+            }
+          ],
+          "count": 14
+        },
+        {
+          "type": "ice",
+          "label_zh": "防火墙",
+          "label_en": "ICE",
+          "items": [
+            {
+              "code": "36050",
+              "title": "Grubber",
+              "title_zh": "贪占者",
+              "pack": "vp",
+              "cost": 5,
+              "faction": "nbn",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "30055",
+              "title": "Ping",
+              "title_zh": "PING",
+              "pack": "sg",
+              "cost": 2,
+              "faction": "nbn",
+              "faction_cost": 2,
+              "qty": 2
+            },
+            {
+              "code": "34117",
+              "title": "Piranhas",
+              "title_zh": "水虎鱼",
+              "pack": "rwr",
+              "cost": 5,
+              "faction": "nbn",
+              "faction_cost": 3,
+              "qty": 3
+            },
+            {
+              "code": "33117",
+              "title": "Unsmiling Tsarevna",
+              "title_zh": "不会笑的查瑞芙娜",
+              "pack": "ph",
+              "cost": 4,
+              "faction": "nbn",
+              "faction_cost": 2,
+              "qty": 2
+            },
+            {
+              "code": "34060",
+              "title": "Valentão",
+              "title_zh": "霸凌者",
+              "pack": "tai",
+              "cost": 5,
+              "faction": "weyland-consortium",
+              "faction_cost": 3,
+              "qty": 1,
+              "inf": 3
+            }
+          ],
+          "count": 11
+        }
+      ],
+      "api_votes": 1,
+      "api_favorites": 0,
+      "api_comments": 0
+    }
+  ]
+}

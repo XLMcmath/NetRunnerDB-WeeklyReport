@@ -1,0 +1,33 @@
+;; title: CyberPsychosis
+;; identity-code: 33001
+;; notes: https://netrunnerdb.com/en/decklist/15ff6a4e-8bb9-4536-8442-abd51998f34a/cyberpsychosis
+
+Event (17)
+2x Finality
+3x Raindrops Cut Stone
+3x Steelskin Scarring
+3x Strike Fund
+3x Sure Gamble
+3x The Price
+
+Hardware (12)
+1x Basilar Synthgland 2KVJ
+2x Ghosttongue
+2x Hippocampic Mechanocytes
+3x Marrow
+2x The Tungsten Tailor
+2x Zenit Chip JZ-2MJ
+
+Program (10)
+1x Abaasy
+2x Begemot
+1x Buzzsaw
+1x Echelon
+2x Fermenter
+2x Monkeywrench
+1x Revolver
+
+Resource (6)
+3x Daily Casts
+2x Nurse Hạnh
+1x Verbal Plasticity

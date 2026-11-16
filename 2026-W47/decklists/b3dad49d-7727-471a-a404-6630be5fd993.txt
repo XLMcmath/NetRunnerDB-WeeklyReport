@@ -1,0 +1,31 @@
+;; title: 52 card pickup and other cultural experiences (16th @Worlds)
+;; identity-code: 34010
+;; notes: https://netrunnerdb.com/en/decklist/b3dad49d-7727-471a-a404-6630be5fd993/52-card-pickup-and-other-cultural-experiences-16th-worlds-
+
+Event (35)
+3x Bravado
+3x Carpe Diem
+3x Clean Getaway
+3x Lie Low
+2x Maintenance Access
+3x Pinhole Threading
+2x Reprise
+2x S-Dobrado
+3x Steelskin Scarring
+3x Sure Gamble
+3x Transfer of Wealth
+2x Tread Lightly
+3x Wildcat Strike
+
+Hardware (5)
+3x Hermes
+2x WAKE Implant v2A-JRJ
+
+Program (7)
+2x Cupellation
+3x Malandragem
+2x Physarum Entangler
+
+Resource (5)
+2x Arruaceiras Crew
+3x The Class Act

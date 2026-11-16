@@ -1,0 +1,32 @@
+;; title: We Will Tag You (with lyrics)
+;; identity-code: 30051
+;; notes: https://netrunnerdb.com/en/decklist/8595679f-d563-4001-8e81-ec736ed7d287/we-will-tag-you-with-lyrics-
+
+Agenda (10)
+3x Artificial Cryptocrash
+2x Oracle Thinktank
+1x Orbital Superiority
+1x Tomorrowʼs Headline
+3x Witch Hunt
+
+Asset (5)
+2x Behold!
+2x Chekist Scion
+1x Regolith Mining License
+
+Upgrade (3)
+3x AMAZE Amusements
+
+Operation (16)
+3x End of the Line
+3x Hedge Fund
+3x Oppo Research
+3x Petty Cash
+3x Predictive Planogram
+1x Shipment from Vladisibirsk
+
+ICE (10)
+3x Funhouse
+3x Ping
+3x Starlit Knight
+1x Vicsek

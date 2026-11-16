@@ -1,0 +1,32 @@
+;; title: Dive Musli, PD Killer- Ultimate Showdown 3-0, 9th
+;; identity-code: 35013
+;; notes: https://netrunnerdb.com/en/decklist/e075c0fc-9e95-4790-93b0-c85901767150/dive-musli-pd-killer-ultimate-showdown-3-0-9th
+
+Event (29)
+3x Bravado
+1x Burner
+3x Carpe Diem
+3x Clean Getaway
+2x Deep Dive
+3x Jailbreak
+1x Mutual Favor
+2x Overclock
+2x Pinhole Threading
+1x Reprise
+3x Sure Gamble
+1x Tailgate
+3x Transfer of Wealth
+1x Tread Lightly
+
+Hardware (3)
+3x Swift
+
+Program (9)
+2x Cezve
+2x Curupira
+3x Revolver
+2x Sang Kancil
+
+Resource (4)
+1x Mystic Maemi
+3x The Class Act

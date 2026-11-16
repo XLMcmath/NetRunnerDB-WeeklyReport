@@ -1,0 +1,30 @@
+;; title: Hold my beer, I mean beard, I mean bear
+;; identity-code: 30019
+;; notes: https://netrunnerdb.com/en/decklist/484f3931-f79c-4386-85e5-14035239eadd/hold-my-beer-i-mean-beard-i-mean-bear
+
+Event (11)
+3x Creative Commission
+2x Illumination
+3x Ritual
+3x Sure Gamble
+
+Hardware (4)
+1x AirbladeX (JSRF Ed.)
+1x Cataloguer
+1x DZMZ Optimizer
+1x Pantograph
+
+Program (13)
+3x Cupellation
+2x Devadatta Drone
+3x Fermenter
+3x Nanuq
+2x Slap Vandal
+
+Resource (12)
+1x Beatriz Friere Gonzalez
+3x Daily Casts
+3x Dr. Nuka Vrolyck
+1x Eru Ayase-Pessoa
+3x Stoneship Chart Room
+1x “Pretty” Mary da Silva

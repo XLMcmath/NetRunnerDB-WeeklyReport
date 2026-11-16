@@ -1,0 +1,33 @@
+;; title: Hosh in a Trench Coat (5th @ Ultimate Showdown)
+;; identity-code: 36009
+;; notes: https://netrunnerdb.com/en/decklist/c2e5f2b9-5264-4dcc-877d-db78cb5a4b5b/hosh-in-a-trench-coat-5th-ultimate-showdown-
+
+Event (16)
+3x Bravado
+3x Clean Getaway
+3x Pinhole Threading
+1x Sell Out
+3x Sure Gamble
+3x Transfer of Wealth
+
+Hardware (4)
+2x Boomerang
+2x Hermes
+
+Program (10)
+1x Cezve
+1x Cupellation
+2x Curupira
+1x Leech
+3x Revolver
+2x Shibboleth
+
+Resource (15)
+1x Dr. Nuka Vrolyck
+3x DreamNet
+1x Fencer Fueno
+1x Mystic Maemi
+3x Open Market
+1x Paladin Poemu
+3x The Class Act
+2x The Twinning
